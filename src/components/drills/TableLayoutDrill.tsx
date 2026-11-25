@@ -8,6 +8,7 @@ import { TrilingualBlock } from '@/components/text/TrilingualBlock';
 import { Chip } from '@/components/ui/Chip';
 import { Sparkle } from '@/components/ui/Sparkle';
 import { InteractiveSurface } from '@/components/motion/InteractiveSurface';
+import { useViewTransition } from '@/components/motion/ViewTransitionProvider';
 import { emitFeedback } from '@/lib/motion/feedbackBus';
 
 interface TableLayoutDrillProps {
@@ -18,6 +19,7 @@ type RoundMode = 'washoku' | 'western' | 'etiquette';
 
 export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
   const { settings, saveDrillResult } = useApp();
+  const { runDomTransition } = useViewTransition();
   const [round, setRound] = useState<RoundMode>('washoku');
   const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
   const [placements, setPlacements] = useState<Record<string, string>>({});
@@ -37,10 +39,20 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
   const roundComplete = items.every((it) => placedItemIds.has(it.id));
 
   const switchRound = (nextRound: RoundMode) => {
-    setRound(nextRound);
-    setSelectedItemId(null);
-    setPlacements({});
-    setSpatialError(null);
+    runDomTransition(
+      () => {
+        setRound(nextRound);
+        setSelectedItemId(null);
+        setPlacements({});
+        setSpatialError(null);
+      },
+      {
+        type: 'state-morph',
+        sourceId: 'drill-table',
+        targetId: 'drill-table',
+        focusSelector: null,
+      }
+    );
   };
 
   const handleZoneTap = (zoneId: string) => {
@@ -173,7 +185,10 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
           const current = etiquetteList[etiquetteIdx];
           if (!current) return null;
           return (
-            <section className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-soft)] space-y-4">
+            <section
+              data-vt-id="drill-table"
+              className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-soft)] space-y-4"
+            >
               <div className="flex items-center justify-between">
                 <span className="eyebrow text-[#4D3EA3]">
                   Question {etiquetteIdx + 1}/{etiquetteList.length} · p.{current.pdfPage}
@@ -240,7 +255,10 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
           );
         })()
       ) : (
-        <section className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-soft)] space-y-4">
+        <section
+          data-vt-id="drill-table"
+          className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-soft)] space-y-4"
+        >
           <div className="flex items-center justify-between">
             <div>
               <span className="eyebrow text-[#4D3EA3]">

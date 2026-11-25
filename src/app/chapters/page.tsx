@@ -114,6 +114,7 @@ export default function ChaptersPage() {
             return (
               <article
                 key={ch.id}
+                data-vt-id={`chapter-${ch.id}`}
                 style={{ backgroundColor: ch.toneBg, color: ch.toneBody }}
                 className="rounded-[var(--radius-hero)] p-5 shadow-[var(--shadow-soft)] flex flex-col justify-between gap-4"
               >
@@ -174,6 +175,9 @@ export default function ChaptersPage() {
                   </p>
                   <ArrowButton
                     href={studyHref}
+                    morphId={`chapter-${ch.id}`}
+                    targetMorphId="study-card"
+                    originRoute="/chapters"
                     variant="outline"
                     darkSurface={ch.isDarkSurface}
                     ariaLabel={`Study ${ch.code} ${ch.enTitle}`}

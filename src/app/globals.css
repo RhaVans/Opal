@@ -486,3 +486,202 @@
     transform: translateY(0);
   }
 }
+
+/* View Transitions API: static shader backdrop + shared card morphs + directional tabs */
+::view-transition-group(root) {
+  z-index: 0;
+  animation: none;
+}
+
+::view-transition-old(root) {
+  opacity: 0;
+  animation: none;
+}
+
+::view-transition-new(root) {
+  animation: none;
+}
+
+::view-transition-group(app-stage) {
+  z-index: 10;
+  animation-duration: 280ms;
+  animation-timing-function: var(--ease-standard);
+}
+
+::view-transition-group(morph-stage) {
+  z-index: 30;
+  animation-duration: 340ms;
+  animation-timing-function: var(--ease-standard);
+  overflow: clip;
+  border-radius: var(--radius-hero);
+}
+
+::view-transition-old(morph-stage),
+::view-transition-new(morph-stage) {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top center;
+  mix-blend-mode: normal;
+  animation-duration: 300ms;
+  animation-timing-function: var(--ease-standard);
+}
+
+::view-transition-old(morph-stage) {
+  animation-name: vt-morph-out;
+}
+
+::view-transition-new(morph-stage) {
+  animation-name: vt-morph-in;
+}
+
+::view-transition-group(bottom-dock) {
+  z-index: 40;
+  animation-duration: 240ms;
+  animation-timing-function: var(--ease-standard);
+}
+
+html[data-vt-type="morph"]::view-transition-old(app-stage),
+html:active-view-transition-type(morph)::view-transition-old(app-stage),
+html[data-vt-type="state-morph"]::view-transition-old(app-stage),
+html:active-view-transition-type(state-morph)::view-transition-old(app-stage) {
+  animation: vt-stage-fade-out 220ms var(--ease-standard) both;
+}
+
+html[data-vt-type="morph"]::view-transition-new(app-stage),
+html:active-view-transition-type(morph)::view-transition-new(app-stage),
+html[data-vt-type="state-morph"]::view-transition-new(app-stage),
+html:active-view-transition-type(state-morph)::view-transition-new(app-stage) {
+  animation: vt-stage-fade-in 280ms var(--ease-decel) both;
+}
+
+html[data-vt-type="nav-forward"]::view-transition-old(app-stage),
+html:active-view-transition-type(nav-forward)::view-transition-old(app-stage) {
+  animation: vt-slide-left-out 240ms var(--ease-standard) both;
+}
+
+html[data-vt-type="nav-forward"]::view-transition-new(app-stage),
+html:active-view-transition-type(nav-forward)::view-transition-new(app-stage) {
+  animation: vt-slide-right-in 290ms var(--ease-standard) both;
+}
+
+html[data-vt-type="nav-backward"]::view-transition-old(app-stage),
+html:active-view-transition-type(nav-backward)::view-transition-old(app-stage) {
+  animation: vt-slide-right-out 240ms var(--ease-standard) both;
+}
+
+html[data-vt-type="nav-backward"]::view-transition-new(app-stage),
+html:active-view-transition-type(nav-backward)::view-transition-new(app-stage) {
+  animation: vt-slide-left-in 290ms var(--ease-standard) both;
+}
+
+html[data-vt-type="orb-reveal"]::view-transition-old(app-stage),
+html:active-view-transition-type(orb-reveal)::view-transition-old(app-stage) {
+  animation: vt-orb-old 220ms var(--ease-standard) both;
+}
+
+html[data-vt-type="orb-reveal"]::view-transition-new(app-stage),
+html:active-view-transition-type(orb-reveal)::view-transition-new(app-stage) {
+  z-index: 25;
+  animation: vt-orb-clip-in 380ms var(--ease-decel) both;
+}
+
+@keyframes vt-morph-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes vt-morph-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes vt-stage-fade-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+}
+
+@keyframes vt-stage-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes vt-slide-left-out {
+  to {
+    opacity: 0;
+    transform: translate3d(-32px, 0, 0);
+  }
+}
+
+@keyframes vt-slide-right-in {
+  from {
+    opacity: 0;
+    transform: translate3d(32px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes vt-slide-right-out {
+  to {
+    opacity: 0;
+    transform: translate3d(32px, 0, 0);
+  }
+}
+
+@keyframes vt-slide-left-in {
+  from {
+    opacity: 0;
+    transform: translate3d(-32px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes vt-orb-old {
+  to {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+@keyframes vt-orb-clip-in {
+  from {
+    clip-path: circle(24px at 50% calc(100% - 48px));
+    opacity: 0.7;
+  }
+  to {
+    clip-path: circle(150% at 50% calc(100% - 48px));
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
+:root[data-motion-mode="reduced"]::view-transition-group(*),
+:root[data-motion-mode="reduced"]::view-transition-old(*),
+:root[data-motion-mode="reduced"]::view-transition-new(*) {
+  animation: none !important;
+}

@@ -1,9 +1,9 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { ArrowLeft, Bookmark, RotateCw } from 'lucide-react';
+import { TransitionLink, useViewTransition } from '@/components/motion/ViewTransitionProvider';
 import { useApp } from '@/components/AppProvider';
 import { ALL_FLASHCARDS } from '@/lib/curriculum';
 import { createInitialSRSState, getRatingPreviews } from '@/lib/srs';
@@ -49,6 +49,7 @@ export function StudyStudio() {
     reviewCard,
     toggleBookmark,
   } = useApp();
+  const { runDomTransition, getStudyReturn } = useViewTransition();
 
   const chapterParam = searchParams.get('chapter');
   const explicitMode = searchParams.get('mode');
@@ -168,6 +169,15 @@ export function StudyStudio() {
     [currentCard, queueIds, reviewCard]
   );
 
+  const handleReveal = useCallback(() => {
+    runDomTransition(() => setFlipped(true), {
+      type: 'state-morph',
+      sourceId: 'study-card',
+      targetId: 'study-card',
+      focusSelector: null,
+    });
+  }, [runDomTransition]);
+
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (!currentCard) return;
@@ -175,7 +185,7 @@ export function StudyStudio() {
       if (e.key === ' ' || e.key === 'Enter') {
         if (!flipped && document.activeElement?.tagName !== 'BUTTON') {
           e.preventDefault();
-          setFlipped(true);
+          handleReveal();
         }
       } else if (flipped) {
         if (e.key === '1') void handleRate('again');
@@ -186,7 +196,7 @@ export function StudyStudio() {
     };
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, [currentCard, flipped, handleRate]);
+  }, [currentCard, flipped, handleRate, handleReveal]);
 
   const cycleLangPreset = () => {
     const idx = LANG_ORDER.indexOf(settings.langPreset);
@@ -197,18 +207,24 @@ export function StudyStudio() {
   const totalRemaining = queueIds?.length ?? 0;
   const totalSession = reviewedCount + totalRemaining;
   const progressPct = totalSession === 0 ? 100 : Math.round((reviewedCount / totalSession) * 100);
+  const studyOrigin = getStudyReturn();
+  const backHref = studyOrigin?.fromHref === '/' ? '/' : '/chapters';
+  const backTargetMorph =
+    studyOrigin?.pairId ?? (parsedChapter ? `chapter-${parsedChapter}` : undefined);
 
   return (
-    <div className="space-y-4 pb-36 route-enter">
+    <div className="space-y-4 pb-36">
       <header className="space-y-3">
         <div className="flex items-center justify-between gap-2">
-          <Link
-            href="/chapters"
-            aria-label="Back to chapters"
-            className="inline-flex items-center justify-center w-12 h-12 min-w-[48px] min-h-[48px] rounded-[var(--radius-chip)] bg-white text-[#1D1D1F] shadow-[var(--shadow-soft)] hover:bg-[#F5F5F7] shrink-0"
+          <TransitionLink
+            href={backHref}
+            morphId="study-card"
+            targetMorphId={backTargetMorph}
+            aria-label={backHref === '/' ? 'Back to home' : 'Back to chapters'}
+            className="inline-flex items-center justify-center w-12 h-12 min-w-[48px] min-h-[48px] rounded-[var(--radius-chip)] bg-white text-[#1D1D1F] shadow-[var(--shadow-soft)] hover:bg-[#F5F5F7] shrink-0 active:scale-95 transition-transform"
           >
             <ArrowLeft size={20} aria-hidden="true" />
-          </Link>
+          </TransitionLink>
 
           <SegmentedControl<FuriganaMode>
             ariaLabel="Furigana display mode"
@@ -283,18 +299,18 @@ export function StudyStudio() {
               : 'Try another filter or select a chapter to practice.'}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-            <Link
+            <TransitionLink
               href="/chapters"
-              className="inline-flex items-center justify-center min-h-[48px] px-5 rounded-[var(--radius-chip)] bg-[#1D1D1F] text-white text-sm font-semibold"
+              className="inline-flex items-center justify-center min-h-[48px] px-5 rounded-[var(--radius-chip)] bg-[#1D1D1F] text-white text-sm font-semibold active:scale-95 transition-transform"
             >
               Browse Chapters
-            </Link>
-            <Link
+            </TransitionLink>
+            <TransitionLink
               href="/"
-              className="inline-flex items-center justify-center min-h-[48px] px-5 rounded-[var(--radius-chip)] bg-[#E1DAFB] text-[#4D3EA3] text-sm font-semibold"
+              className="inline-flex items-center justify-center min-h-[48px] px-5 rounded-[var(--radius-chip)] bg-[#E1DAFB] text-[#4D3EA3] text-sm font-semibold active:scale-95 transition-transform"
             >
               Home
-            </Link>
+            </TransitionLink>
           </div>
         </section>
       ) : (
@@ -303,6 +319,7 @@ export function StudyStudio() {
 
           <StateTransition keyId={currentCard.id} direction="forward">
             <article
+              data-vt-id="study-card"
               className={[
                 'rounded-[var(--radius-hero)] p-5 shadow-[var(--shadow-medium)] transition-colors space-y-4',
                 flipped ? 'bg-[#1D1D1F] text-white' : 'bg-white text-[#1D1D1F]',
@@ -378,7 +395,7 @@ export function StudyStudio() {
                   type="button"
                   intent="primary"
                   pressScale={0.97}
-                  onClick={() => setFlipped(true)}
+                  onClick={handleReveal}
                   className="w-full min-h-[56px] rounded-[var(--radius-card)] bg-[#4D3EA3] text-white text-base font-bold hover:bg-[#3f328b] flex items-center justify-center gap-2"
                 >
                   <RotateCw size={18} aria-hidden="true" />

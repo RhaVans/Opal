@@ -171,7 +171,10 @@ export function MathSprintDrill({ onExit }: MathSprintDrillProps) {
       ) : current ? (
         <>
           <StateTransition keyId={current.id} direction="forward">
-            <section className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-soft)] space-y-3">
+            <section
+              data-vt-id="drill-math"
+              className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-soft)] space-y-3"
+            >
               <span className="eyebrow text-[#4D3EA3]">{current.formulaLabel}</span>
               <p lang="ja" className="text-lg font-bold text-[#1D1D1F] leading-relaxed">
                 {current.prompt.ja}

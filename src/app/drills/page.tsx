@@ -7,6 +7,7 @@ import type { DrillId } from '@/lib/types';
 import { DrillsCbtSwitch } from '@/components/layout/DrillsCbtSwitch';
 import { Sparkle } from '@/components/ui/Sparkle';
 import { ArrowButton } from '@/components/ui/ArrowButton';
+import { useViewTransition } from '@/components/motion/ViewTransitionProvider';
 import { SequenceDrill } from '@/components/drills/SequenceDrill';
 import { TableLayoutDrill } from '@/components/drills/TableLayoutDrill';
 import { MathSprintDrill } from '@/components/drills/MathSprintDrill';
@@ -64,7 +65,13 @@ const DRILL_CARDS: DrillCardConfig[] = [
 function DrillsHubInner() {
   const searchParams = useSearchParams();
   const { hydrated, drillProgress, setHideDockOverride } = useApp();
-  const [activeDrill, setActiveDrill] = useState<DrillId | null>(null);
+  const { runDomTransition } = useViewTransition();
+  const initialParam = searchParams.get('drill') as DrillId | null;
+  const initialDrill =
+    initialParam && ['sequence', 'table', 'math', 'ojigi_keigo'].includes(initialParam)
+      ? initialParam
+      : null;
+  const [activeDrill, setActiveDrill] = useState<DrillId | null>(initialDrill);
 
   useEffect(() => {
     const param = searchParams.get('drill') as DrillId | null;
@@ -78,17 +85,34 @@ function DrillsHubInner() {
     return () => setHideDockOverride(false);
   }, [activeDrill, setHideDockOverride]);
 
+  const openDrill = (id: DrillId) => {
+    runDomTransition(() => setActiveDrill(id), {
+      type: 'morph',
+      sourceId: `drill-${id}`,
+      targetId: `drill-${id}`,
+    });
+  };
+
+  const exitDrill = () => {
+    const exitingId = activeDrill;
+    runDomTransition(() => setActiveDrill(null), {
+      type: 'morph',
+      sourceId: exitingId ? `drill-${exitingId}` : undefined,
+      targetId: exitingId ? `drill-${exitingId}` : undefined,
+    });
+  };
+
   if (activeDrill === 'sequence') {
-    return <SequenceDrill onExit={() => setActiveDrill(null)} />;
+    return <SequenceDrill onExit={exitDrill} />;
   }
   if (activeDrill === 'table') {
-    return <TableLayoutDrill onExit={() => setActiveDrill(null)} />;
+    return <TableLayoutDrill onExit={exitDrill} />;
   }
   if (activeDrill === 'math') {
-    return <MathSprintDrill onExit={() => setActiveDrill(null)} />;
+    return <MathSprintDrill onExit={exitDrill} />;
   }
   if (activeDrill === 'ojigi_keigo') {
-    return <OjigiKeigoDrill onExit={() => setActiveDrill(null)} />;
+    return <OjigiKeigoDrill onExit={exitDrill} />;
   }
 
   return (
@@ -113,6 +137,7 @@ function DrillsHubInner() {
             return (
               <article
                 key={card.id}
+                data-vt-id={`drill-${card.id}`}
                 style={{ backgroundColor: card.bg, color: card.bodyColor }}
                 className="min-w-0 rounded-[var(--radius-hero)] p-4 shadow-[var(--shadow-soft)] flex flex-col justify-between min-h-[198px] gap-3"
               >
@@ -151,7 +176,7 @@ function DrillsHubInner() {
 
                 <div className="flex justify-end">
                   <ArrowButton
-                    onClick={() => setActiveDrill(card.id)}
+                    onClick={() => openDrill(card.id)}
                     variant="outline"
                     darkSurface={card.isDark}
                     ariaLabel={`Start ${card.title}`}

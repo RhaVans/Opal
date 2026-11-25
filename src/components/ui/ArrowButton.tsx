@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { InteractiveSurface } from '@/components/motion/InteractiveSurface';
 import { SemanticIcon } from '@/components/motion/SemanticIcon';
+import type { RouteTransitionType } from '@/components/motion/ViewTransitionProvider';
 
 interface ArrowButtonBaseProps {
   ariaLabel: string;
@@ -14,12 +15,20 @@ interface ArrowButtonBaseProps {
 
 interface ArrowButtonAsLink extends ArrowButtonBaseProps {
   href: string;
+  morphId?: string;
+  targetMorphId?: string;
+  transitionType?: RouteTransitionType;
+  originRoute?: string;
   onClick?: never;
   disabled?: never;
 }
 
 interface ArrowButtonAsButton extends ArrowButtonBaseProps {
   href?: never;
+  morphId?: never;
+  targetMorphId?: never;
+  transitionType?: never;
+  originRoute?: never;
   onClick: () => void;
   disabled?: boolean;
 }
@@ -30,6 +39,10 @@ export function ArrowButton({
   darkSurface = false,
   className = '',
   href,
+  morphId,
+  targetMorphId,
+  transitionType,
+  originRoute,
   onClick,
   disabled = false,
 }: ArrowButtonAsLink | ArrowButtonAsButton) {
@@ -61,6 +74,10 @@ export function ArrowButton({
       <InteractiveSurface
         as="a"
         href={href}
+        morphId={morphId}
+        targetMorphId={targetMorphId}
+        transitionType={transitionType}
+        originRoute={originRoute}
         ariaLabel={ariaLabel}
         pressScale={0.94}
         onPointerDown={() => setNudgeTick((n) => n + 1)}

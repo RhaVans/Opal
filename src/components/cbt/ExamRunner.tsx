@@ -208,7 +208,10 @@ export function ExamRunner({
       </div>
 
       <StateTransition keyId={currentQ.id} direction="forward">
-        <article className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-medium)] space-y-4">
+        <article
+          data-vt-id="cbt-stage"
+          className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-medium)] space-y-4"
+        >
         <div className="flex items-center justify-between gap-2">
           <span className="eyebrow text-[#4D3EA3]">
             CH 0{currentQ.chapter} · p.{currentQ.pdfPage}

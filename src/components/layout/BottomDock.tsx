@@ -1,12 +1,12 @@
 'use client';
 
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { BarChart3, BookOpen, Home, Layers } from 'lucide-react';
 import { useApp } from '@/components/AppProvider';
 import { FluidDockOrb } from '@/components/layout/FluidDockOrb';
 import { SharedPill } from '@/components/motion/SharedPill';
 import { SemanticIcon } from '@/components/motion/SemanticIcon';
+import { TransitionLink } from '@/components/motion/ViewTransitionProvider';
 
 export function BottomDock() {
   const pathname = usePathname() || '/';
@@ -28,10 +28,11 @@ export function BottomDock() {
       style={{
         bottom: 'calc(16px + env(safe-area-inset-bottom, 0px))',
         width: 'min(calc(100% - 32px), 440px)',
+        viewTransitionName: 'bottom-dock',
       }}
       className="fixed left-1/2 -translate-x-1/2 z-40 h-16 rounded-[var(--radius-pill)] bg-[#1D1D1F] border border-white/12 shadow-[var(--shadow-medium)] px-2 flex items-center justify-between"
     >
-      <Link
+      <TransitionLink
         href="/"
         aria-label="Home"
         aria-current={isHome ? 'page' : undefined}
@@ -45,9 +46,9 @@ export function BottomDock() {
           <Home size={22} strokeWidth={2} aria-hidden="true" />
         </SemanticIcon>
         <span className="relative z-10 text-[10px] font-semibold mt-0.5 leading-none">Home</span>
-      </Link>
+      </TransitionLink>
 
-      <Link
+      <TransitionLink
         href="/chapters"
         aria-label="Chapters"
         aria-current={isChapters ? 'page' : undefined}
@@ -61,14 +62,14 @@ export function BottomDock() {
           <BookOpen size={22} strokeWidth={2} aria-hidden="true" />
         </SemanticIcon>
         <span className="relative z-10 text-[10px] font-semibold mt-0.5 leading-none">Chapters</span>
-      </Link>
+      </TransitionLink>
 
       <FluidDockOrb
         href="/study?mode=due"
         ariaLabel="Start due flashcard review"
       />
 
-      <Link
+      <TransitionLink
         href="/drills"
         aria-label="Drills and CBT"
         aria-current={isDrillsOrCbt ? 'page' : undefined}
@@ -82,9 +83,9 @@ export function BottomDock() {
           <Layers size={22} strokeWidth={2} aria-hidden="true" />
         </SemanticIcon>
         <span className="relative z-10 text-[10px] font-semibold mt-0.5 leading-none">Drills</span>
-      </Link>
+      </TransitionLink>
 
-      <Link
+      <TransitionLink
         href="/stats"
         aria-label="Progress and settings"
         aria-current={isStats ? 'page' : undefined}
@@ -98,7 +99,7 @@ export function BottomDock() {
           <BarChart3 size={22} strokeWidth={2} aria-hidden="true" />
         </SemanticIcon>
         <span className="relative z-10 text-[10px] font-semibold mt-0.5 leading-none">Stats</span>
-      </Link>
+      </TransitionLink>
     </nav>
   );
 }

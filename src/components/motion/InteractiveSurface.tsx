@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { TransitionLink, type RouteTransitionType } from './ViewTransitionProvider';
 import {
   useEffect,
   useRef,
@@ -35,6 +35,10 @@ interface InteractiveSurfaceProps {
   ariaLabel?: string;
   ariaPressed?: boolean;
   ariaCurrent?: 'page' | 'step' | 'location' | 'date' | 'time' | 'true' | 'false' | boolean;
+  morphId?: string;
+  targetMorphId?: string;
+  transitionType?: RouteTransitionType;
+  originRoute?: string;
   children: ReactNode;
 }
 
@@ -54,6 +58,10 @@ export function InteractiveSurface({
   ariaLabel,
   ariaPressed,
   ariaCurrent,
+  morphId,
+  targetMorphId,
+  transitionType,
+  originRoute,
   children,
 }: InteractiveSurfaceProps) {
   const { reduced } = useMotionMode();
@@ -169,11 +177,15 @@ export function InteractiveSurface({
 
   if (as === 'a' && href) {
     return (
-      <Link
+      <TransitionLink
         ref={(el) => {
           hostRef.current = el;
         }}
         href={href}
+        morphId={morphId}
+        targetMorphId={targetMorphId}
+        transitionType={transitionType}
+        originRoute={originRoute}
         aria-label={ariaLabel}
         aria-current={ariaCurrent}
         onClick={onClick as MouseEventHandler<HTMLAnchorElement> | undefined}
@@ -186,7 +198,7 @@ export function InteractiveSurface({
       >
         {children}
         {overlay}
-      </Link>
+      </TransitionLink>
     );
   }
 

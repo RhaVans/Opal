@@ -3,6 +3,7 @@
 import { Suspense, useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useApp } from '@/components/AppProvider';
+import { useViewTransition } from '@/components/motion/ViewTransitionProvider';
 import { ALL_CBT_QUESTIONS } from '@/lib/curriculum';
 import type { CBTAttemptRecord, CBTQuestionItem, ChapterId } from '@/lib/types';
 import { DrillsCbtSwitch } from '@/components/layout/DrillsCbtSwitch';
@@ -29,6 +30,7 @@ function shuffle<T>(arr: T[]): T[] {
 function CbtHubInner() {
   const searchParams = useSearchParams();
   const { hydrated, cbtAttempts, cbtWeakList, setHideDockOverride } = useApp();
+  const { runDomTransition } = useViewTransition();
 
   const [scope, setScope] = useState<ScopeOption>('all');
   const [mode, setMode] = useState<'practice' | 'exam'>('practice');
@@ -71,12 +73,24 @@ function CbtHubInner() {
     const shuffled = shuffle(pool);
     const limit = countOverride ?? (targetMode === 'exam' ? 30 : shuffled.length);
     const selected = shuffled.slice(0, Math.min(limit, shuffled.length));
+    const launch = () => {
+      setSummaryData(null);
+      setActiveSession({
+        questions: selected,
+        mode: targetMode,
+        chapters,
+      });
+    };
 
-    setSummaryData(null);
-    setActiveSession({
-      questions: selected,
-      mode: targetMode,
-      chapters,
+    if (countOverride !== undefined) {
+      launch();
+      return;
+    }
+
+    runDomTransition(launch, {
+      type: 'morph',
+      sourceId: 'cbt-stage',
+      targetId: 'cbt-stage',
     });
   };
 
@@ -113,7 +127,13 @@ function CbtHubInner() {
       <ExamSummary
         attempt={summaryData.attempt}
         results={summaryData.results}
-        onDone={() => setSummaryData(null)}
+        onDone={() =>
+          runDomTransition(() => setSummaryData(null), {
+            type: 'morph',
+            sourceId: 'cbt-stage',
+            targetId: 'cbt-stage',
+          })
+        }
       />
     );
   }
@@ -125,10 +145,25 @@ function CbtHubInner() {
         mode={activeSession.mode}
         chaptersIncluded={activeSession.chapters}
         onComplete={(attempt, results) => {
-          setActiveSession(null);
-          setSummaryData({ attempt, results });
+          runDomTransition(
+            () => {
+              setActiveSession(null);
+              setSummaryData({ attempt, results });
+            },
+            {
+              type: 'morph',
+              sourceId: 'cbt-stage',
+              targetId: 'cbt-stage',
+            }
+          );
         }}
-        onExit={() => setActiveSession(null)}
+        onExit={() =>
+          runDomTransition(() => setActiveSession(null), {
+            type: 'morph',
+            sourceId: 'cbt-stage',
+            targetId: 'cbt-stage',
+          })
+        }
       />
     );
   }
@@ -143,6 +178,7 @@ function CbtHubInner() {
       {/* Config Card */}
       <section
         aria-label="Configure CBT session"
+        data-vt-id="cbt-stage"
         className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-soft)] space-y-4"
       >
         <div className="space-y-2">

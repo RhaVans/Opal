@@ -27,6 +27,7 @@ const MIME_TYPES: Record<string, string> = {
   '.woff': 'font/woff',
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
+  '.txt': 'text/plain; charset=utf-8',
   '.webmanifest': 'application/manifest+json',
 };
 
@@ -471,6 +472,33 @@ async function run() {
       }
       await page.emulateMedia({ reducedMotion: null });
     }
+
+    // Verify View Transition morph navigation (Chapters -> Chapter 1 Study -> Back to Chapters)
+    await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+    await Promise.all([
+      page.waitForURL(/\/chapters/, { timeout: 5000 }),
+      page.locator('nav[aria-label="Primary navigation"] a[href="/chapters"]').click(),
+    ]);
+    await page.waitForTimeout(420);
+    await Promise.all([
+      page.waitForURL(/\/study\?chapter=1/, { timeout: 5000 }),
+      page.getByRole('link', { name: /Study CH 01/i }).click(),
+    ]);
+    await page.waitForSelector('[data-vt-id="study-card"]');
+    await page.waitForTimeout(420);
+    const lingeringVtCount = await page.evaluate(() => {
+      return Array.from(document.querySelectorAll<HTMLElement>('[data-vt-id]')).filter(
+        (el) => Boolean(el.style.viewTransitionName)
+      ).length;
+    });
+    if (lingeringVtCount > 0) {
+      failures.push(`ViewTransition left ${lingeringVtCount} lingering viewTransitionName attribute(s)`);
+    }
+    await Promise.all([
+      page.waitForURL(/\/chapters$/, { timeout: 5000 }),
+      page.getByRole('link', { name: 'Back to chapters' }).click(),
+    ]);
+    await page.waitForTimeout(420);
 
     await page.goto(`${baseUrl}/cbt`, { waitUntil: 'networkidle' });
     await page.getByRole('button', { name: 'Start', exact: true }).click();

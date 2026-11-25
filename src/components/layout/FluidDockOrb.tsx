@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Sparkle } from '@/components/ui/Sparkle';
+import { useViewTransition } from '@/components/motion/ViewTransitionProvider';
 
 interface FluidDockOrbProps {
   href: string;
@@ -13,6 +14,7 @@ interface FluidDockOrbProps {
 
 export function FluidDockOrb({ href, ariaLabel, active = false }: FluidDockOrbProps) {
   const router = useRouter();
+  const { navigate } = useViewTransition();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const pressedRef = useRef(false);
   const impulseRef = useRef(0);
@@ -218,7 +220,7 @@ export function FluidDockOrb({ href, ariaLabel, active = false }: FluidDockOrbPr
     impulseRef.current = 1.4;
     setIsLaunching(true);
     navTimerRef.current = window.setTimeout(() => {
-      router.push(href);
+      navigate(href, { type: 'orb-reveal', targetMorphId: 'study-card' });
     }, 150);
   };
 

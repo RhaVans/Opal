@@ -8,6 +8,7 @@ import '@fontsource/noto-sans-jp/japanese-700.css';
 import './globals.css';
 import { AppProvider } from '@/components/AppProvider';
 import { MotionProvider } from '@/components/motion/MotionProvider';
+import { ViewTransitionProvider } from '@/components/motion/ViewTransitionProvider';
 import { LiquidBackground } from '@/components/canvas/LiquidBackground';
 import { BottomDock } from '@/components/layout/BottomDock';
 
@@ -49,15 +50,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         <AppProvider>
           <MotionProvider>
-            <LiquidBackground />
-            <main
-              id="main-content"
-              tabIndex={-1}
-              className="relative z-10 min-h-dvh mx-auto w-full max-w-[480px] md:max-w-3xl px-4 pt-6 pb-[calc(7.5rem+env(safe-area-inset-bottom,0px))] outline-none"
-            >
-              {children}
-            </main>
-            <BottomDock />
+            <ViewTransitionProvider>
+              <LiquidBackground />
+              <main
+                id="main-content"
+                tabIndex={-1}
+                style={{ viewTransitionName: 'app-stage' }}
+                className="relative z-10 min-h-dvh mx-auto w-full max-w-[480px] md:max-w-3xl px-4 pt-6 pb-[calc(7.5rem+env(safe-area-inset-bottom,0px))] outline-none"
+              >
+                {children}
+              </main>
+              <BottomDock />
+            </ViewTransitionProvider>
           </MotionProvider>
         </AppProvider>
       </body>

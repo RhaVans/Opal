@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { Flame, AlertCircle, RotateCcw } from 'lucide-react';
 import { useApp } from '@/components/AppProvider';
 import { ALL_FLASHCARDS } from '@/lib/curriculum';
@@ -18,6 +17,7 @@ import { RingBadge } from '@/components/ui/RingBadge';
 import { StatCard } from '@/components/ui/StatCard';
 import { Sparkle } from '@/components/ui/Sparkle';
 import { AnimatedNumber } from '@/components/motion/AnimatedNumber';
+import { TransitionLink } from '@/components/motion/ViewTransitionProvider';
 
 export default function HomePage() {
   const {
@@ -182,6 +182,7 @@ export default function HomePage() {
           {dueCount > 0 ? (
             <section
               aria-label="Due review queue"
+              data-vt-id="home-due"
               className="rounded-[var(--radius-hero)] bg-[#4D3EA3] text-white p-5 shadow-[var(--shadow-soft)] flex items-center justify-between gap-4"
             >
               <div className="space-y-1">
@@ -193,6 +194,9 @@ export default function HomePage() {
               </div>
               <ArrowButton
                 href="/study?mode=due"
+                morphId="home-due"
+                targetMorphId="study-card"
+                originRoute="/"
                 variant="light"
                 ariaLabel={`Start review for ${dueCount} due cards`}
               />
@@ -213,6 +217,7 @@ export default function HomePage() {
               </div>
               <ArrowButton
                 href="/chapters"
+                transitionType="nav-forward"
                 variant="dark"
                 ariaLabel="Browse chapters"
               />
@@ -246,6 +251,7 @@ export default function HomePage() {
           {totalWeakCount > 0 ? (
             <section
               aria-label="Weak spot focus"
+              data-vt-id="home-weak"
               className="rounded-[var(--radius-card)] bg-[#FFD2F4] text-[#1D1D1F] p-4 shadow-[var(--shadow-soft)] flex items-center justify-between gap-3"
             >
               <div>
@@ -259,6 +265,9 @@ export default function HomePage() {
               </div>
               <ArrowButton
                 href={weakCardCount > 0 ? '/study?mode=weak' : '/cbt?scope=weak'}
+                morphId="home-weak"
+                targetMorphId={weakCardCount > 0 ? 'study-card' : 'cbt-stage'}
+                originRoute="/"
                 variant="dark"
                 ariaLabel="Review weak spot items"
               />
@@ -267,9 +276,13 @@ export default function HomePage() {
 
           {/* 2-col Quick Launch */}
           <section aria-label="Quick launch" className="grid grid-cols-2 gap-3">
-            <Link
+            <TransitionLink
               href="/drills?drill=math"
-              className="rounded-[var(--radius-card)] bg-[#E1DAFB] text-[#1D1D1F] p-4 shadow-[var(--shadow-soft)] flex flex-col justify-between min-h-[124px] hover:brightness-97 transition"
+              morphId="drill-math"
+              targetMorphId="drill-math"
+              originRoute="/"
+              data-vt-id="drill-math"
+              className="rounded-[var(--radius-card)] bg-[#E1DAFB] text-[#1D1D1F] p-4 shadow-[var(--shadow-soft)] flex flex-col justify-between min-h-[124px] hover:brightness-97 transition active:scale-[0.98]"
             >
               <div className="w-10 h-10 rounded-[var(--radius-icon)] bg-white/75 flex items-center justify-center">
                 <Sparkle size={18} color="#4D3EA3" />
@@ -279,11 +292,15 @@ export default function HomePage() {
                 <p className="text-base font-bold text-[#4D3EA3] mt-0.5">Math Sprint</p>
                 <p className="text-xs text-[#1D1D1F]">OCC, ADR, RevPAR</p>
               </div>
-            </Link>
+            </TransitionLink>
 
-            <Link
+            <TransitionLink
               href="/cbt?quick=10"
-              className="rounded-[var(--radius-card)] bg-[#1D1D1F] text-white p-4 shadow-[var(--shadow-soft)] flex flex-col justify-between min-h-[124px] hover:bg-[#2a2a2d] transition"
+              morphId="cbt-quick"
+              targetMorphId="cbt-stage"
+              originRoute="/"
+              data-vt-id="cbt-quick"
+              className="rounded-[var(--radius-card)] bg-[#1D1D1F] text-white p-4 shadow-[var(--shadow-soft)] flex flex-col justify-between min-h-[124px] hover:bg-[#2a2a2d] transition active:scale-[0.98]"
             >
               <div className="w-10 h-10 rounded-[var(--radius-icon)] bg-white/12 flex items-center justify-center">
                 <Sparkle size={18} color="#FFD2F4" />
@@ -293,7 +310,7 @@ export default function HomePage() {
                 <p className="text-base font-bold text-white mt-0.5">10-Q Quick CBT</p>
                 <p className="text-xs text-[#B4B4B8]">Instant rationale</p>
               </div>
-            </Link>
+            </TransitionLink>
           </section>
         </>
       )}

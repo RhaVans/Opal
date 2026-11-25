@@ -145,7 +145,10 @@ export function SequenceDrill({ onExit }: SequenceDrillProps) {
         ))}
       </div>
 
-      <section className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-soft)] space-y-3">
+      <section
+        data-vt-id="drill-sequence"
+        className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-soft)] space-y-3"
+      >
         <div className="flex items-center justify-between gap-2">
           <span className="eyebrow text-[#4D3EA3]">p.{active.pdfPage}</span>
           <span className="text-xs font-semibold text-[#5B5B62] tabular-nums">

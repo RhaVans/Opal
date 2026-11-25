@@ -147,7 +147,10 @@ export function OjigiKeigoDrill({ onExit }: OjigiKeigoDrillProps) {
         </section>
       ) : (
         <StateTransition keyId={`${mode}:${idx}`} direction="forward">
-          <section className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-soft)] space-y-4">
+          <section
+            data-vt-id="drill-ojigi_keigo"
+            className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-soft)] space-y-4"
+          >
           <div className="flex items-center justify-between">
             <span className="eyebrow text-[#4D3EA3]">
               Item {idx + 1}/{list.length} · p.

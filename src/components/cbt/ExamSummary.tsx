@@ -40,7 +40,10 @@ export function ExamSummary({ attempt, results, onDone }: ExamSummaryProps) {
   return (
     <div className="space-y-4 pb-10">
       {/* Dark Hero Score Card */}
-      <section className="rounded-[var(--radius-hero)] bg-[#1D1D1F] text-white p-6 shadow-[var(--shadow-medium)] space-y-4">
+      <section
+        data-vt-id="cbt-stage"
+        className="rounded-[var(--radius-hero)] bg-[#1D1D1F] text-white p-6 shadow-[var(--shadow-medium)] space-y-4"
+      >
         <div className="flex items-start justify-between gap-3">
           <div>
             <span className="eyebrow text-[#B4B4B8]">
