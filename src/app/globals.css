@@ -150,7 +150,7 @@
     transition-behavior: allow-discrete;
   }
 
-  dialog:modal[open] {
+  dialog:modal:not(.streak-dialog)[open] {
     opacity: 1;
   }
 
@@ -170,13 +170,42 @@
   }
 
   @starting-style {
-    dialog:modal[open] {
+    dialog:modal:not(.streak-dialog)[open] {
       opacity: 0;
     }
 
-    dialog[open]::backdrop {
+    dialog[open]:not(.streak-dialog)::backdrop {
       opacity: 0;
     }
+  }
+
+  /* Full-screen Obsidian Streak modal: participates directly in morph-stage View Transition */
+  dialog.streak-dialog:modal {
+    max-width: none;
+    max-height: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+    background: #0B0B0F;
+    color: #FFFFFF;
+    box-shadow: none;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  dialog.streak-dialog:modal[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  dialog.streak-dialog::backdrop {
+    background: #0B0B0F;
+    opacity: 1;
+    transition: none;
   }
 }
 
@@ -376,17 +405,17 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  :root:not([data-motion-mode="reduced"]) dialog:modal {
+  :root:not([data-motion-mode="reduced"]) dialog:modal:not(.streak-dialog) {
     transform: translateY(10px) scale(0.985);
     transition-property: opacity, transform, display, overlay;
   }
 
-  :root:not([data-motion-mode="reduced"]) dialog:modal[open] {
+  :root:not([data-motion-mode="reduced"]) dialog:modal:not(.streak-dialog)[open] {
     transform: translateY(0) scale(1);
   }
 
   @starting-style {
-    :root:not([data-motion-mode="reduced"]) dialog:modal[open] {
+    :root:not([data-motion-mode="reduced"]) dialog:modal:not(.streak-dialog)[open] {
       transform: translateY(10px) scale(0.985);
     }
   }

@@ -431,7 +431,7 @@ async function run() {
 
     // Verify Concierge headline + FluidDockOrb animated transition to /study?mode=due + Study TTS buttons
     await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
-    const homeHeadline = await page.locator('h1').innerText();
+    const homeHeadline = await page.locator('h1.display-headline').innerText();
     if (/ulas/i.test(homeHeadline) || !homeHeadline.includes('Concierge')) {
       failures.push(`Home headline did not switch to Concierge: ${homeHeadline}`);
     }
@@ -465,12 +465,54 @@ async function run() {
 
       // Verify OS prefers-reduced-motion dynamically switches document data-motion-mode
       await page.emulateMedia({ reducedMotion: 'reduce' });
-      await page.waitForTimeout(60);
-      const motionModeReduced = await page.evaluate(() => document.documentElement.dataset.motionMode);
-      if (motionModeReduced !== 'reduced') {
+      try {
+        await page.waitForFunction(
+          () => document.documentElement.dataset.motionMode === 'reduced',
+          undefined,
+          { timeout: 2000 }
+        );
+      } catch {
+        const motionModeReduced = await page.evaluate(() => document.documentElement.dataset.motionMode);
         failures.push(`Expected data-motion-mode="reduced" under prefers-reduced-motion, got ${motionModeReduced}`);
       }
       await page.emulateMedia({ reducedMotion: null });
+    }
+
+    // Verify Streak pill opens full-screen Obsidian Streak modal + Day 1..7 + zero overflow + Continue dismissal
+    await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+    await page.getByRole('button', { name: /Open streak tracker/i }).first().click();
+    await page.waitForSelector('dialog.streak-dialog[open]');
+    await page.waitForTimeout(420);
+    const streakDialogCheck = await page.evaluate(() => {
+      const d = document.querySelector<HTMLDialogElement>('dialog.streak-dialog');
+      if (!d) return { exists: false, overflow: true, dayCount: 0 };
+      const dayLabels = Array.from(d.querySelectorAll('span')).filter((el) =>
+        /^Day \d+$/.test(el.textContent?.trim() ?? '')
+      );
+      return {
+        exists: true,
+        overflow: d.scrollWidth > d.clientWidth + 1,
+        dayCount: dayLabels.length,
+      };
+    });
+    if (!streakDialogCheck.exists || streakDialogCheck.overflow || streakDialogCheck.dayCount !== 7) {
+      failures.push(`Streak dialog check failed: ${JSON.stringify(streakDialogCheck)}`);
+    }
+    await page.addScriptTag({ content: axeScript });
+    const streakAxe = (await page.evaluate(`axe.run('dialog.streak-dialog', { runOnly: { type: 'rule', values: ['color-contrast'] } })`)) as {
+      violations: Array<{ id: string }>;
+    };
+    if (streakAxe.violations.length > 0) {
+      failures.push(`Streak dialog color-contrast violations: ${streakAxe.violations.length}`);
+    }
+    await page.screenshot({ path: path.join(SHOT_DIR, `360x800_streak.png`) });
+    await page.getByRole('button', { name: 'Continue', exact: true }).click();
+    await page.waitForTimeout(420);
+    const streakClosed = await page.evaluate(
+      `(() => { const d = document.querySelector('dialog.streak-dialog'); return d ? !d.hasAttribute('open') : false; })()`
+    );
+    if (!streakClosed) {
+      failures.push('Streak dialog stayed open after clicking Continue');
     }
 
     // Verify View Transition morph navigation (Chapters -> Chapter 1 Study -> Back to Chapters)

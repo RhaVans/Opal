@@ -6,7 +6,7 @@
 - External network requests: 0
 - Console/page errors: 0
 - Shader mode detected on /: eco
-- Visibility pause rAF delta: visible=19, hidden=0
+- Visibility pause rAF delta: visible=43, hidden=0
 - Persistence round-trip (SRS -> Export -> Reset -> Import): PASS (1 states restored)
 - Offline reload across all 6 routes: PASS
 - Axe color-contrast (WebGL + ecoMode): PASS

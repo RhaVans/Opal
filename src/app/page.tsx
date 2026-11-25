@@ -1,5 +1,6 @@
 'use client';
 
+import { useCallback, useRef } from 'react';
 import { Flame, AlertCircle, RotateCcw } from 'lucide-react';
 import { useApp } from '@/components/AppProvider';
 import { ALL_FLASHCARDS } from '@/lib/curriculum';
@@ -17,9 +18,14 @@ import { RingBadge } from '@/components/ui/RingBadge';
 import { StatCard } from '@/components/ui/StatCard';
 import { Sparkle } from '@/components/ui/Sparkle';
 import { AnimatedNumber } from '@/components/motion/AnimatedNumber';
-import { TransitionLink } from '@/components/motion/ViewTransitionProvider';
+import { InteractiveSurface } from '@/components/motion/InteractiveSurface';
+import { TransitionLink, useViewTransition } from '@/components/motion/ViewTransitionProvider';
+import { StreakDialog } from '@/components/home/StreakDialog';
 
 export default function HomePage() {
+  const streakDialogRef = useRef<HTMLDialogElement>(null);
+  const streakOriginRef = useRef<'pill' | 'card'>('pill');
+  const { runDomTransition } = useViewTransition();
   const {
     hydrated,
     dbError,
@@ -92,14 +98,67 @@ export default function HomePage() {
   );
   const totalMastered = weakChapterCounts.reduce((acc, c) => acc + c.mature, 0);
 
+  const openStreakOverlay = useCallback(
+    (origin: 'pill' | 'card') => {
+      streakOriginRef.current = origin;
+      runDomTransition(
+        () => {
+          const dialog = streakDialogRef.current;
+          if (dialog && !dialog.open) {
+            dialog.showModal();
+          }
+        },
+        {
+          type: 'morph',
+          sourceId: origin === 'pill' ? 'streak-trigger-pill' : 'streak-trigger-card',
+          targetId: 'streak-stage',
+          focusSelector: '.streak-continue-btn',
+        }
+      );
+    },
+    [runDomTransition]
+  );
+
+  const closeStreakOverlay = useCallback(() => {
+    const returnTargetId =
+      streakOriginRef.current === 'pill' ? 'streak-trigger-pill' : 'streak-trigger-card';
+    runDomTransition(
+      () => {
+        const dialog = streakDialogRef.current;
+        if (dialog?.open) {
+          dialog.close('continue');
+        }
+      },
+      {
+        type: 'morph',
+        sourceId: 'streak-stage',
+        targetId: returnTargetId,
+        focusSelector: `[data-vt-id="${returnTargetId}"]`,
+      }
+    );
+  }, [runDomTransition]);
+
+  const handleNativeStreakClose = useCallback(() => {
+    // Native Esc/backdrop close already closed the dialog and returned focus to invoker.
+  }, []);
+
   return (
     <div className="space-y-4">
       <header className="space-y-3">
         <div className="flex items-center justify-between gap-3">
           <span className="eyebrow text-[#5B5B62]">{dateLabel}</span>
-          <div className="inline-flex items-center gap-1.5 min-h-[36px] px-3.5 py-1.5 rounded-[var(--radius-chip)] bg-[#FF7A1A] text-[#1D1D1F] text-xs font-bold shadow-[var(--shadow-soft)]">
-            <Flame size={15} aria-hidden="true" />
-            <span className="tabular-nums">{streak}d streak</span>
+          <div data-vt-id="streak-trigger-pill" className="rounded-[var(--radius-chip)]">
+            <InteractiveSurface
+              type="button"
+              intent="caution"
+              pressScale={0.94}
+              onClick={() => openStreakOverlay('pill')}
+              ariaLabel={`${streak} day streak. Open streak tracker`}
+              className="inline-flex items-center gap-1.5 min-w-[48px] min-h-[48px] px-4 py-2 rounded-[var(--radius-chip)] bg-[#FF7A1A] text-[#1D1D1F] text-xs font-bold shadow-[var(--shadow-soft)] hover:brightness-95"
+            >
+              <Flame size={15} aria-hidden="true" />
+              <span className="tabular-nums">{streak}d streak</span>
+            </InteractiveSurface>
           </div>
         </div>
 
@@ -239,12 +298,21 @@ export default function HomePage() {
                 />
               }
             />
-            <StatCard
-              eyebrow="Streak"
-              value={<AnimatedNumber value={streak} suffix="d" />}
-              sublabel={streak === 1 ? '1 day active' : 'local days'}
-              variant="dark"
-            />
+            <button
+              type="button"
+              data-vt-id="streak-trigger-card"
+              onClick={() => openStreakOverlay('card')}
+              aria-label={`Streak: ${streak} days. Open streak tracker`}
+              className="block w-full h-full text-left rounded-[var(--radius-card)] active:scale-[0.98] transition-transform"
+            >
+              <StatCard
+                eyebrow="Streak"
+                value={<AnimatedNumber value={streak} suffix="d" />}
+                sublabel={streak === 1 ? '1 day active' : 'local days'}
+                variant="dark"
+                className="h-full"
+              />
+            </button>
           </div>
 
           {/* Weak Spot Banner (only when weak items exist) */}
@@ -314,6 +382,14 @@ export default function HomePage() {
           </section>
         </>
       )}
+      <StreakDialog
+        dialogRef={streakDialogRef}
+        streak={streak}
+        todayReviews={todayReviews}
+        dailyGoal={settings.dailyGoal}
+        onContinue={closeStreakOverlay}
+        onNativeClose={handleNativeStreakClose}
+      />
     </div>
   );
 }

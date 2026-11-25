@@ -21,7 +21,7 @@ export function AnimatedNumber({
   const currentRef = useRef(value);
 
   useEffect(() => {
-    if (reduced) {
+    if (reduced || (typeof document !== 'undefined' && document.hidden)) {
       currentRef.current = value;
       setDisplay(value);
       return;
@@ -35,6 +35,11 @@ export function AnimatedNumber({
     const startTs = performance.now();
 
     const step = (now: number) => {
+      if (typeof document !== 'undefined' && document.hidden) {
+        currentRef.current = value;
+        setDisplay(value);
+        return;
+      }
       const t = Math.min(1, (now - startTs) / durationMs);
       const eased = 1 - Math.pow(1 - t, 3);
       const next = Math.round(startVal + delta * eased);
@@ -45,8 +50,20 @@ export function AnimatedNumber({
       }
     };
 
+    const onVisibility = () => {
+      if (document.hidden) {
+        if (rafId) window.cancelAnimationFrame(rafId);
+        currentRef.current = value;
+        setDisplay(value);
+      }
+    };
+
+    document.addEventListener('visibilitychange', onVisibility);
     rafId = window.requestAnimationFrame(step);
-    return () => window.cancelAnimationFrame(rafId);
+    return () => {
+      window.cancelAnimationFrame(rafId);
+      document.removeEventListener('visibilitychange', onVisibility);
+    };
   }, [value, durationMs, reduced]);
 
   return (

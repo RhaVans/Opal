@@ -22,6 +22,7 @@ import {
   computeExamReadiness,
   computeStreak,
   getLocalDateKey,
+  getStreakCycleDays,
   isCardWeakSpot,
 } from '../analytics';
 import { hasMalformedHtmlOutsideRuby, parseRubyTokens } from '../furigana';
@@ -141,6 +142,21 @@ describe('Analytics & Leech detection', () => {
       today
     );
     expect(streak).toBe(3);
+  });
+
+  it('computes 7-day rolling streak cycle badges cleanly across milestones', () => {
+    const zero = getStreakCycleDays(0);
+    expect(zero).toHaveLength(7);
+    expect(zero.every((d) => !d.completed)).toBe(true);
+    expect(zero[0].label).toBe('Day 1');
+
+    const two = getStreakCycleDays(2);
+    expect(two.filter((d) => d.completed).map((d) => d.label)).toEqual(['Day 1', 'Day 2']);
+    expect(two[6].label).toBe('Day 7');
+
+    const eight = getStreakCycleDays(8);
+    expect(eight[0]).toEqual({ dayNumber: 8, label: 'Day 8', completed: true });
+    expect(eight[1]).toEqual({ dayNumber: 9, label: 'Day 9', completed: false });
   });
 });
 

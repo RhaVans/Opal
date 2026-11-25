@@ -226,3 +226,24 @@ export function getLast7DaysSummary(
   }
   return out;
 }
+
+export interface StreakCycleDay {
+  dayNumber: number;
+  label: string;
+  completed: boolean;
+}
+
+export function getStreakCycleDays(streak: number): StreakCycleDay[] {
+  const safeStreak = Math.max(0, Math.floor(streak));
+  const cycleStart = safeStreak === 0 ? 1 : Math.floor((safeStreak - 1) / 7) * 7 + 1;
+  const completedInCycle = safeStreak === 0 ? 0 : ((safeStreak - 1) % 7) + 1;
+
+  return Array.from({ length: 7 }, (_, idx) => {
+    const dayNumber = cycleStart + idx;
+    return {
+      dayNumber,
+      label: `Day ${dayNumber}`,
+      completed: idx < completedInCycle,
+    };
+  });
+}
