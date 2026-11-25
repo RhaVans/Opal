@@ -1,0 +1,846 @@
+[
+  {
+    "id": "ch02_001",
+    "chapter": 2,
+    "section": "2.1 企画の基本とターゲット",
+    "pdfPage": 23,
+    "tags": ["concept", "planning", "pr"],
+    "prompt": {
+      "jaRuby": "<ruby>宿泊<rt>しゅくはく</rt></ruby><ruby>施設<rt>しせつ</rt></ruby>における「<ruby>企画<rt>きかく</rt></ruby>」と「<ruby>広報<rt>こうほう</rt></ruby>」の<ruby>役割<rt>やくわり</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "宿泊施設における「企画」と「広報」の役割は何ですか。",
+      "id": "Apa peran Perencanaan (Kikaku) dan Hubungan Masyarakat / PR (Kouhou) di fasilitas penginapan?",
+      "en": "What are the roles of Planning and Public Relations (PR) at a lodging facility?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>企画<rt>きかく</rt></ruby>はターゲットに<ruby>合<rt>あ</rt></ruby>わせた<ruby>宿泊<rt>しゅくはく</rt></ruby>プランを<ruby>考<rt>かんが</rt></ruby>えること、<ruby>広報<rt>こうほう</rt></ruby>は<ruby>施設<rt>しせつ</rt></ruby>の<ruby>強<rt>つよ</rt></ruby>みや<ruby>情報<rt>じょうほう</rt></ruby>を<ruby>社会<rt>しゃかい</rt></ruby>へ<ruby>発信<rt>はっしん</rt></ruby>することです。",
+      "jaPlain": "企画はターゲットに合わせた宿泊プランを考えること、広報は施設の強みや情報を社会へ発信することです。",
+      "id": "Perencanaan (Kikaku) merancang paket menginap sesuai segmen target, sedangkan PR (Kouhou) menyampaikan keunggulan dan informasi fasilitas kepada publik.",
+      "en": "Planning creates stay plans tailored to target guest segments, while PR communicates the facility's strengths and information to the public."
+    },
+    "ttsText": "企画はターゲットに合わせた宿泊プランを考えること、広報は施設の強みや情報を社会へ発信することです。"
+  },
+  {
+    "id": "ch02_002",
+    "chapter": 2,
+    "section": "2.1 企画の基本とターゲット",
+    "pdfPage": 24,
+    "tags": ["planning", "segment", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>宿泊<rt>しゅくはく</rt></ruby>と<ruby>地域<rt>ちいき</rt></ruby>の<ruby>日本<rt>にほん</rt></ruby><ruby>文化<rt>ぶんか</rt></ruby><ruby>体験<rt>たいけん</rt></ruby>を<ruby>組<rt>く</rt></ruby>み<ruby>合<rt>あ</rt></ruby>わせたプランは、どのターゲット<ruby>層<rt>そう</rt></ruby>を<ruby>狙<rt>ねら</rt></ruby>った<ruby>企画<rt>きかく</rt></ruby>ですか。",
+      "jaPlain": "宿泊と地域の日本文化体験を組み合わせたプランは、どのターゲット層を狙った企画ですか。",
+      "id": "Paket menginap yang dipadukan dengan pengalaman budaya lokal Jepang ditujukan untuk segmen target mana?",
+      "en": "Which target segment is a plan combining a stay with a local Japanese cultural experience aimed at?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>海外<rt>かいがい</rt></ruby>からのインバウンド（<ruby>訪日<rt>ほうにち</rt></ruby><ruby>外国人<rt>がいこくじん</rt></ruby><ruby>旅行者<rt>りょこうしゃ</rt></ruby>）<ruby>層<rt>そう</rt></ruby>です。",
+      "jaPlain": "海外からのインバウンド（訪日外国人旅行者）層です。",
+      "id": "Segmen Inbound luar negeri (wisatawan mancanegara yang berkunjung ke Jepang).",
+      "en": "The overseas Inbound segment."
+    },
+    "ttsText": "海外からのインバウンド、訪日外国人旅行者層です。",
+    "examTip": {
+      "id": "Ingat 3 contoh segmen perencanaan (p.24): Budaya lokal -> Inbound, Makanan sehat lokal -> Vegetarian/Vegan, Kamar suite -> Kalangan berada (富裕層).",
+      "en": "Memorize the 3 planning examples (p.24): local cultural experience -> Inbound, healthy local-ingredient meals -> Vegetarian/Vegan, suite room -> Affluent."
+    }
+  },
+  {
+    "id": "ch02_003",
+    "chapter": 2,
+    "section": "2.1 企画の基本とターゲット",
+    "pdfPage": 24,
+    "tags": ["planning", "segment", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>宿泊<rt>しゅくはく</rt></ruby>と<ruby>地元<rt>じもと</rt></ruby><ruby>食材<rt>しょくざい</rt></ruby>を<ruby>使<rt>つか</rt></ruby>ったヘルシーな<ruby>食事<rt>しょくじ</rt></ruby>を<ruby>組<rt>く</rt></ruby>み<ruby>合<rt>あ</rt></ruby>わせたプランは、どのターゲット<ruby>層<rt>そう</rt></ruby>を<ruby>狙<rt>ねら</rt></ruby>った<ruby>企画<rt>きかく</rt></ruby>ですか。",
+      "jaPlain": "宿泊と地元食材を使ったヘルシーな食事を組み合わせたプランは、どのターゲット層を狙った企画ですか。",
+      "id": "Paket menginap dengan hidangan sehat berbahan lokal ditujukan untuk segmen target mana?",
+      "en": "Which target segment is a plan combining a stay with healthy local-ingredient meals aimed at?"
+    },
+    "answer": {
+      "jaRuby": "ベジタリアン・ヴィーガン<ruby>層<rt>そう</rt></ruby>です。",
+      "jaPlain": "ベジタリアン・ヴィーガン層です。",
+      "id": "Segmen Vegetarian / Vegan.",
+      "en": "The Vegetarian / Vegan segment."
+    },
+    "ttsText": "ベジタリアン・ヴィーガン層です。"
+  },
+  {
+    "id": "ch02_004",
+    "chapter": 2,
+    "section": "2.1 企画の基本とターゲット",
+    "pdfPage": 24,
+    "tags": ["planning", "segment", "vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "スイートルームへの<ruby>宿泊<rt>しゅくはく</rt></ruby>プランはどのターゲット<ruby>層<rt>そう</rt></ruby>を<ruby>狙<rt>ねら</rt></ruby>ったものですか。また、その<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読<rt>よ</rt></ruby>みは<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "スイートルームへの宿泊プランはどのターゲット層を狙ったものですか。また、その漢字の読みは何ですか。",
+      "id": "Paket menginap di kamar suite ditujukan untuk segmen target mana, dan bagaimana cara baca kanjinya?",
+      "en": "Which target segment is a suite room stay plan aimed at, and what is its kanji reading?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>富裕層<rt>ふゆうそう</rt></ruby>（ふゆうそう）です。",
+      "jaPlain": "富裕層（ふゆうそう）です。",
+      "id": "Segmen kalangan berada / Affluent (富裕層 / fuyuusou).",
+      "en": "The Affluent segment (富裕層 / fuyuusou)."
+    },
+    "ttsText": "富裕層、ふゆうそうです。",
+    "examTip": {
+      "id": "Hafalkan bacaan kanji 富裕層 (ふゆうそう = kalangan berada) karena sering diujikan di soal kosakata CBT.",
+      "en": "Memorize the reading 富裕層 (fuyuusou = affluent) as kanji readings are frequently tested on CBT."
+    }
+  },
+  {
+    "id": "ch02_005",
+    "chapter": 2,
+    "section": "2.2 宿泊プラン・予約用語",
+    "pdfPage": 25,
+    "tags": ["vocab", "plan", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>1泊2食<rt>いっぱくにしょく</rt></ruby>とは<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "1泊2食とは何ですか。",
+      "id": "Apa yang dimaksud dengan 1泊2食 (ippaku nishoku)?",
+      "en": "What does 1泊2食 (ippaku nishoku) mean?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>客室<rt>きゃくしつ</rt></ruby>と<ruby>夕食<rt>ゆうしょく</rt></ruby>・<ruby>朝食<rt>ちょうしょく</rt></ruby>がセットになった<ruby>宿泊<rt>しゅくはく</rt></ruby>プランで、<ruby>主<rt>おも</rt></ruby>に<ruby>旅館<rt>りょかん</rt></ruby>で<ruby>提供<rt>ていきょう</rt></ruby>されます。",
+      "jaPlain": "客室と夕食・朝食がセットになった宿泊プランで、主に旅館で提供されます。",
+      "id": "Paket kamar ditambah makan malam dan sarapan (terutama disediakan di ryokan).",
+      "en": "Room plus dinner and breakfast (mainly at ryokan)."
+    },
+    "ttsText": "いっぱくにしょくとは、客室と夕食、朝食がセットになった宿泊プランで、主に旅館で提供されます。",
+    "examTip": {
+      "id": "Bedakan 1泊2食 (kamar + makan malam & sarapan, khas ryokan) dengan B&B (kamar + sarapan saja, khas hotel).",
+      "en": "Contrast 1泊2食 (room + dinner & breakfast, mainly ryokan) with B&B (room + breakfast only, mainly hotels)."
+    }
+  },
+  {
+    "id": "ch02_006",
+    "chapter": 2,
+    "section": "2.2 宿泊プラン・予約用語",
+    "pdfPage": 25,
+    "tags": ["vocab", "plan", "high-yield"],
+    "prompt": {
+      "jaRuby": "ベッド&ブレックファースト（B&B）とは<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "ベッド&ブレックファースト（B&B）とは何ですか。",
+      "id": "Apa yang dimaksud dengan Bed & Breakfast (B&B)?",
+      "en": "What does Bed & Breakfast (B&B) mean?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>客室<rt>きゃくしつ</rt></ruby>と<ruby>朝食<rt>ちょうしょく</rt></ruby>のみがセットになったプランで、<ruby>主<rt>おも</rt></ruby>にホテルで<ruby>提供<rt>ていきょう</rt></ruby>されます。",
+      "jaPlain": "客室と朝食のみがセットになったプランで、主にホテルで提供されます。",
+      "id": "Paket kamar ditambah sarapan saja (terutama disediakan di hotel).",
+      "en": "Room plus breakfast only (mainly at hotels)."
+    },
+    "ttsText": "ベッドアンドブレックファーストとは、客室と朝食のみがセットになったプランで、主にホテルで提供されます。"
+  },
+  {
+    "id": "ch02_007",
+    "chapter": 2,
+    "section": "2.2 宿泊プラン・予約用語",
+    "pdfPage": 25,
+    "tags": ["vocab", "plan"],
+    "prompt": {
+      "jaRuby": "<ruby>連泊<rt>れんぱく</rt></ruby>とは<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "連泊とは何ですか。",
+      "id": "Apa yang dimaksud dengan 連泊 (renpaku)?",
+      "en": "What does 連泊 (renpaku) mean?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>同<rt>おな</rt></ruby>じ<ruby>宿泊<rt>しゅくはく</rt></ruby><ruby>施設<rt>しせつ</rt></ruby>に2<ruby>泊<rt>はく</rt></ruby><ruby>以上<rt>いじょう</rt></ruby><ruby>続<rt>つづ</rt></ruby>けて<ruby>宿泊<rt>しゅくはく</rt></ruby>することです（<ruby>割引<rt>わりびき</rt></ruby>や<ruby>特典<rt>とくてん</rt></ruby>が<ruby>付<rt>つ</rt></ruby>く<ruby>場合<rt>ばあい</rt></ruby>もあります）。",
+      "jaPlain": "同じ宿泊施設に2泊以上続けて宿泊することです（割引や特典が付く場合もあります）。",
+      "id": "Menginap berturut-turut selama 2 malam atau lebih (terkadang disertai diskon atau keuntungan tambahan).",
+      "en": "Consecutive stay of 2 or more nights (may include discounts or perks)."
+    },
+    "ttsText": "連泊とは、同じ宿泊施設に2泊以上続けて宿泊することです。割引や特典が付く場合もあります。"
+  },
+  {
+    "id": "ch02_008",
+    "chapter": 2,
+    "section": "2.2 宿泊プラン・予約用語",
+    "pdfPage": 25,
+    "tags": ["vocab", "reservation"],
+    "prompt": {
+      "jaRuby": "ウォークイン（Walk-In）とはどのようなお<ruby>客様<rt>きゃくさま</rt></ruby>のことですか。",
+      "jaPlain": "ウォークイン（Walk-In）とはどのようなお客様のことですか。",
+      "id": "Siapa yang dimaksud dengan tamu Walk-In (ウォークイン)?",
+      "en": "What is a Walk-In (ウォークイン) guest?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>事前<rt>じぜん</rt></ruby>の<ruby>予約<rt>よやく</rt></ruby>なしで<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>施設<rt>しせつ</rt></ruby>を<ruby>訪<rt>おとず</rt></ruby>れて<ruby>宿泊<rt>しゅくはく</rt></ruby>するお<ruby>客様<rt>きゃくさま</rt></ruby>です。",
+      "jaPlain": "事前の予約なしで直接施設を訪れて宿泊するお客様です。",
+      "id": "Tamu yang datang langsung dan menginap tanpa reservasi sebelumnya.",
+      "en": "Visiting and staying without a prior reservation."
+    },
+    "ttsText": "ウォークインとは、事前の予約なしで直接施設を訪れて宿泊するお客様のことです。"
+  },
+  {
+    "id": "ch02_009",
+    "chapter": 2,
+    "section": "2.2 宿泊プラン・予約用語",
+    "pdfPage": 26,
+    "tags": ["vocab", "billing", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>預<rt>あずか</rt></ruby>り<ruby>金<rt>きん</rt></ruby>（デポジット）とは<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "預り金（デポジット）とは何ですか。",
+      "id": "Apa yang dimaksud dengan 預り金 (azukarikin / deposit)?",
+      "en": "What is 預り金 (azukarikin / deposit)?"
+    },
+    "answer": {
+      "jaRuby": "サービスの<ruby>利用<rt>りよう</rt></ruby>を<ruby>保証<rt>ほしょう</rt></ruby>するために<ruby>支払<rt>しはら</rt></ruby>われる<ruby>保証金<rt>ほしょうきん</rt></ruby>のことです。",
+      "jaPlain": "サービスの利用を保証するために支払われる保証金のことです。",
+      "id": "Uang jaminan (deposit) yang dibayarkan untuk menjamin penggunaan layanan.",
+      "en": "A deposit paid to guarantee service usage."
+    },
+    "ttsText": "あずかりきん、デポジットとは、サービスの利用を保証するために支払われる保証金のことです。"
+  },
+  {
+    "id": "ch02_010",
+    "chapter": 2,
+    "section": "2.2 宿泊プラン・予約用語",
+    "pdfPage": 26,
+    "tags": ["vocab", "reservation", "high-yield"],
+    "prompt": {
+      "jaRuby": "ダイレクトブッキング（Direct Booking）とは<ruby>何<rt>なん</rt></ruby>ですか。また<ruby>施設側<rt>しせつがわ</rt></ruby>のメリットは<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "ダイレクトブッキング（Direct Booking）とは何ですか。また施設側のメリットは何ですか。",
+      "id": "Apa itu Direct Booking (ダイレクトブッキング) dan apa keuntungannya bagi penginapan?",
+      "en": "What is Direct Booking (ダイレクトブッキング), and what is its benefit?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>旅行会社<rt>りょこうがいしゃ</rt></ruby>やOTAを<ruby>通<rt>とお</rt></ruby>さずに<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>予約<rt>よやく</rt></ruby>することで、<ruby>販売<rt>はんばい</rt></ruby><ruby>手数料<rt>てすうりょう</rt></ruby>を<ruby>削減<rt>さくげん</rt></ruby>できるメリットがあります。",
+      "jaPlain": "旅行会社やOTAを通さずに直接予約することで、販売手数料を削減できるメリットがあります。",
+      "id": "Pemesanan langsung tanpa agen perjalanan atau OTA sehingga mengurangi biaya komisi.",
+      "en": "Booking directly without travel agencies or OTAs, which reduces commission fees."
+    },
+    "ttsText": "ダイレクトブッキングとは、旅行会社やOTAを通さずに直接予約することで、販売手数料を削減できるメリットがあります。"
+  },
+  {
+    "id": "ch02_011",
+    "chapter": 2,
+    "section": "2.2 宿泊プラン・予約用語",
+    "pdfPage": 26,
+    "tags": ["vocab", "reservation", "high-yield"],
+    "prompt": {
+      "jaRuby": "OTA（Online Travel Agent）とは<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "OTA（Online Travel Agent）とは何ですか。",
+      "id": "Apa yang dimaksud dengan OTA (Online Travel Agent)?",
+      "en": "What is an OTA (Online Travel Agent)?"
+    },
+    "answer": {
+      "jaRuby": "インターネット<ruby>上<rt>じょう</rt></ruby>で<ruby>宿泊<rt>しゅくはく</rt></ruby><ruby>予約<rt>よやく</rt></ruby>などを<ruby>仲介<rt>ちゅうかい</rt></ruby>するオンライン<ruby>旅行会社<rt>りょこうがいしゃ</rt></ruby>のことです。",
+      "jaPlain": "インターネット上で宿泊予約などを仲介するオンライン旅行会社のことです。",
+      "id": "Agen perjalanan daring (Online Travel Agent) yang memfasilitasi pemesanan lewat internet.",
+      "en": "An online travel agency operating via the internet."
+    },
+    "ttsText": "OTAとは、インターネット上で宿泊予約などを仲介するオンライン旅行会社のことです。"
+  },
+  {
+    "id": "ch02_012",
+    "chapter": 2,
+    "section": "2.2 宿泊プラン・予約用語",
+    "pdfPage": 26,
+    "tags": ["number", "reservation", "high-yield"],
+    "prompt": {
+      "jaRuby": "OTAを<ruby>利用<rt>りよう</rt></ruby>した<ruby>場合<rt>ばあい</rt></ruby>、<ruby>施設<rt>しせつ</rt></ruby>が<ruby>支払<rt>しはら</rt></ruby>う<ruby>一般的<rt>いっぱんてき</rt></ruby>な<ruby>手数料<rt>てすうりょう</rt></ruby>は<ruby>売上<rt>うりあげ</rt></ruby>の<ruby>何<rt>なん</rt></ruby>%ですか。",
+      "jaPlain": "OTAを利用した場合、施設が支払う一般的な手数料は売上の何%ですか。",
+      "id": "Berapa kisaran biaya komisi standar OTA dari pendapatan penjualan?",
+      "en": "What is the typical OTA commission fee percentage of sales revenue?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>一般的<rt>いっぱんてき</rt></ruby>に<ruby>売上<rt>うりあげ</rt></ruby>の8〜15%です。",
+      "jaPlain": "一般的に売上の8〜15%です。",
+      "id": "Umumnya 8-15% dari pendapatan penjualan.",
+      "en": "Typically 8-15% of sales revenue."
+    },
+    "ttsText": "一般的に売上の8パーセントから15パーセントです。",
+    "examTip": {
+      "id": "Angka wajib hafal: Komisi standar OTA adalah 8-15% dari pendapatan penjualan.",
+      "en": "Must-memorize threshold: typical OTA commission fee is 8-15% of sales revenue."
+    }
+  },
+  {
+    "id": "ch02_013",
+    "chapter": 2,
+    "section": "2.2 宿泊プラン・予約用語",
+    "pdfPage": 27,
+    "tags": ["vocab", "segment", "high-yield"],
+    "prompt": {
+      "jaRuby": "FIT（Free Independent Traveler）とはどのような<ruby>旅行者<rt>りょこうしゃ</rt></ruby>ですか。",
+      "jaPlain": "FIT（Free Independent Traveler）とはどのような旅行者ですか。",
+      "id": "Siapa yang dimaksud dengan FIT (Free Independent Traveler)?",
+      "en": "Who is a FIT (Free Independent Traveler)?"
+    },
+    "answer": {
+      "jaRuby": "パッケージツアーを<ruby>利用<rt>りよう</rt></ruby>せず、<ruby>自分<rt>じぶん</rt></ruby>で<ruby>旅行<rt>りょこう</rt></ruby><ruby>行程<rt>こうてい</rt></ruby>を<ruby>組<rt>く</rt></ruby>んで<ruby>旅<rt>たび</rt></ruby>をする<ruby>個人<rt>こじん</rt></ruby><ruby>旅行者<rt>りょこうしゃ</rt></ruby>のことです。",
+      "jaPlain": "パッケージツアーを利用せず、自分で旅行行程を組んで旅をする個人旅行者のことです。",
+      "id": "Wisatawan mandiri yang menyusun jadwal perjalanannya sendiri tanpa menggunakan paket tur.",
+      "en": "An independent traveler creating their own itinerary without tour packages."
+    },
+    "ttsText": "FITとは、パッケージツアーを利用せず、自分で旅行行程を組んで旅をする個人旅行者のことです。"
+  },
+  {
+    "id": "ch02_014",
+    "chapter": 2,
+    "section": "2.2 宿泊プラン・予約用語",
+    "pdfPage": 27,
+    "tags": ["vocab", "revenue", "high-yield"],
+    "prompt": {
+      "jaRuby": "ダイナミックプライシング（Dynamic Pricing）とは<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "ダイナミックプライシング（Dynamic Pricing）とは何ですか。",
+      "id": "Apa yang dimaksud dengan Dynamic Pricing (ダイナミックプライシング)?",
+      "en": "What is Dynamic Pricing (ダイナミックプライシング)?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>需要<rt>じゅよう</rt></ruby>や<ruby>空室<rt>くうしつ</rt></ruby><ruby>状況<rt>じょうきょう</rt></ruby>に<ruby>応<rt>おう</rt></ruby>じて<ruby>客室<rt>きゃくしつ</rt></ruby><ruby>料金<rt>りょうきん</rt></ruby>を<ruby>上下<rt>じょうげ</rt></ruby>に<ruby>変動<rt>へんどう</rt></ruby>させ、<ruby>利益<rt>りえき</rt></ruby>を<ruby>最大化<rt>さいだいか</rt></ruby>する<ruby>価格<rt>かかく</rt></ruby><ruby>設定<rt>せってい</rt></ruby>です。",
+      "jaPlain": "需要や空室状況に応じて客室料金を上下に変動させ、利益を最大化する価格設定です。",
+      "id": "Menyesuaikan harga kamar naik atau turun berdasarkan permintaan dan ketersediaan kamar untuk memaksimalkan laba.",
+      "en": "Adjusting room prices up or down based on demand and availability to maximize profit."
+    },
+    "ttsText": "ダイナミックプライシングとは、需要や空室状況に応じて客室料金を上下に変動させ、利益を最大化する価格設定です。"
+  },
+  {
+    "id": "ch02_015",
+    "chapter": 2,
+    "section": "2.2 宿泊プラン・予約用語",
+    "pdfPage": 27,
+    "tags": ["vocab", "plan"],
+    "prompt": {
+      "jaRuby": "オールインクルーシブ（All-Inclusive）とはどのような<ruby>料金<rt>りょうきん</rt></ruby>プランですか。",
+      "jaPlain": "オールインクルーシブ（All-Inclusive）とはどのような料金プランですか。",
+      "id": "Apa yang dimaksud dengan tarif All-Inclusive (オールインクルーシブ)?",
+      "en": "What is an All-Inclusive (オールインクルーシブ) rate?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>宿泊<rt>しゅくはく</rt></ruby><ruby>料金<rt>りょうきん</rt></ruby>にドリンク、<ruby>軽食<rt>けいしょく</rt></ruby>、アクティビティなどのサービスがすべて<ruby>含<rt>ふく</rt></ruby>まれているプランです。",
+      "jaPlain": "宿泊料金にドリンク、軽食、アクティビティなどのサービスがすべて含まれているプランです。",
+      "id": "Tarif kamar yang sudah mencakup semua layanan (minuman, camilan, dan aktivitas).",
+      "en": "A room rate that includes all services (drinks, snacks, activities)."
+    },
+    "ttsText": "オールインクルーシブとは、宿泊料金にドリンク、軽食、アクティビティなどのサービスがすべて含まれているプランです。"
+  },
+  {
+    "id": "ch02_016",
+    "chapter": 2,
+    "section": "2.2 宿泊プラン・予約用語",
+    "pdfPage": 28,
+    "tags": ["vocab", "segment"],
+    "prompt": {
+      "jaRuby": "リピーター（Repeat Guest）とはどのようなお<ruby>客様<rt>きゃくさま</rt></ruby>ですか。",
+      "jaPlain": "リピーター（Repeat Guest）とはどのようなお客様ですか。",
+      "id": "Siapa yang dimaksud dengan Repeat Guest (リピーター)?",
+      "en": "What is a Repeat Guest (リピーター)?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>一度<rt>いちど</rt></ruby>だけでなく、<ruby>何度<rt>なんど</rt></ruby>も<ruby>繰<rt>く</rt></ruby>り<ruby>返<rt>かえ</rt></ruby>し<ruby>利用<rt>りよう</rt></ruby>してくれる<ruby>顧客<rt>こきゃく</rt></ruby>（<ruby>常連<rt>じょうれん</rt></ruby>）のことです。",
+      "jaPlain": "一度だけでなく、何度も繰り返し利用してくれる顧客（常連）のことです。",
+      "id": "Pelanggan setia yang kembali berkunjung dan menginap lagi.",
+      "en": "A returning loyal customer."
+    },
+    "ttsText": "リピーターとは、一度だけでなく、何度も繰り返し利用してくれる顧客のことです。"
+  },
+  {
+    "id": "ch02_017",
+    "chapter": 2,
+    "section": "2.3 収益管理・KPI (OCC・ADR・RevPAR)",
+    "pdfPage": 28,
+    "tags": ["formula", "math", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>稼働率<rt>かどうりつ</rt></ruby>（OCC）の<ruby>意味<rt>いみ</rt></ruby>と<ruby>計算式<rt>けいさんしき</rt></ruby>を<ruby>答<rt>こた</rt></ruby>えてください。",
+      "jaPlain": "稼働率（OCC）の意味と計算式を答えてください。",
+      "id": "Apa arti dan rumus Tingkat Hunian / OCC (稼働率 / Kadouritsu)?",
+      "en": "What is the meaning and formula for Occupancy Rate / OCC (稼働率)?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>総<rt>そう</rt></ruby><ruby>客室数<rt>きゃくしつすう</rt></ruby>に<ruby>対<rt>たい</rt></ruby>する<ruby>予約<rt>よやく</rt></ruby><ruby>客室数<rt>きゃくしつすう</rt></ruby>の<ruby>割合<rt>わりあい</rt></ruby>です。<ruby>計算式<rt>けいさんしき</rt></ruby>：（<ruby>予約<rt>よやく</rt></ruby><ruby>客室数<rt>きゃくしつすう</rt></ruby> ÷ <ruby>総<rt>そう</rt></ruby><ruby>客室数<rt>きゃくしつすう</rt></ruby>）× 100",
+      "jaPlain": "総客室数に対する予約客室数の割合です。計算式：（予約客室数 ÷ 総客室数）× 100",
+      "id": "Persentase kamar terpesan terhadap total kamar. Rumus: (Kamar Dipesan / Total Kamar) x 100.",
+      "en": "Percentage of reserved rooms out of total rooms. Formula: (Reserved Rooms / Total Rooms) x 100."
+    },
+    "ttsText": "稼働率、OCCとは、総客室数に対する予約客室数の割合です。計算式は、予約客室数割る総客室数かける100です。",
+    "examTip": {
+      "id": "Pembagi rumus OCC adalah Total Kamar (総客室数), lalu hasilnya dikali 100 menjadi persen.",
+      "en": "OCC divides Reserved Rooms by Total Rooms, then multiplies by 100 for a percentage."
+    }
+  },
+  {
+    "id": "ch02_018",
+    "chapter": 2,
+    "section": "2.3 収益管理・KPI (OCC・ADR・RevPAR)",
+    "pdfPage": 28,
+    "tags": ["rule", "revenue", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>稼働率<rt>かどうりつ</rt></ruby>（OCC）はどのような<ruby>時期<rt>じき</rt></ruby>に<ruby>高<rt>たか</rt></ruby>くなり、どのような<ruby>時期<rt>じき</rt></ruby>に<ruby>低<rt>ひく</rt></ruby>くなりますか。",
+      "jaPlain": "稼働率（OCC）はどのような時期に高くなり、どのような時期に低くなりますか。",
+      "id": "Kapan Tingkat Hunian (OCC) cenderung tinggi dan kapan cenderung rendah?",
+      "en": "When is Occupancy Rate (OCC) higher, and when is it lower?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>大型<rt>おおがた</rt></ruby><ruby>連休<rt>れんきゅう</rt></ruby>やゴールデンウィークなどの<ruby>繁忙期<rt>はんぼうき</rt></ruby>に<ruby>高<rt>たか</rt></ruby>くなり、オフシーズン（<ruby>閑散期<rt>かんさんき</rt></ruby>）に<ruby>低<rt>ひく</rt></ruby>くなります。",
+      "jaPlain": "大型連休やゴールデンウィークなどの繁忙期に高くなり、オフシーズン（閑散期）に低くなります。",
+      "id": "Lebih tinggi pada musim ramai (libur panjang, Golden Week) dan lebih rendah saat musim sepi (off-season).",
+      "en": "Higher in peak seasons (long holidays, Golden Week) and lower in the off-season."
+    },
+    "ttsText": "大型連休やゴールデンウィークなどの繁忙期に高くなり、オフシーズンに低くなります。"
+  },
+  {
+    "id": "ch02_019",
+    "chapter": 2,
+    "section": "2.3 収益管理・KPI (OCC・ADR・RevPAR)",
+    "pdfPage": 28,
+    "tags": ["formula", "math", "high-yield"],
+    "prompt": {
+      "jaRuby": "ADR（Average Daily Rate）の<ruby>意味<rt>いみ</rt></ruby>と<ruby>計算式<rt>けいさんしき</rt></ruby>を<ruby>答<rt>こた</rt></ruby>えてください。",
+      "jaPlain": "ADR（Average Daily Rate）の意味と計算式を答えてください。",
+      "id": "Apa arti dan rumus ADR (Average Daily Rate)?",
+      "en": "What is the meaning and formula for ADR (Average Daily Rate)?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>平均<rt>へいきん</rt></ruby><ruby>客室<rt>きゃくしつ</rt></ruby><ruby>単価<rt>たんか</rt></ruby>のことです。<ruby>計算式<rt>けいさんしき</rt></ruby>：<ruby>客室<rt>きゃくしつ</rt></ruby><ruby>総売上<rt>そううりあげ</rt></ruby> ÷ <ruby>販売<rt>はんばい</rt></ruby><ruby>客室数<rt>きゃくしつすう</rt></ruby>",
+      "jaPlain": "平均客室単価のことです。計算式：客室総売上 ÷ 販売客室数",
+      "id": "Harga rata-rata kamar harian. Rumus: Total Pendapatan Kamar / Kamar Terisi (Terjual).",
+      "en": "Average Daily Rate. Formula: Total Room Revenue / Occupied Rooms."
+    },
+    "ttsText": "ADRは平均客室単価のことです。計算式は、客室総売上割る販売客室数です。",
+    "examTip": {
+      "id": "Jangan tertukar dengan OCC: pembagi ADR adalah Kamar Terisi/Terjual (販売客室数), bukan total seluruh kamar.",
+      "en": "Do not mix up with OCC: ADR divides by Occupied Rooms, not total rooms."
+    }
+  },
+  {
+    "id": "ch02_020",
+    "chapter": 2,
+    "section": "2.3 収益管理・KPI (OCC・ADR・RevPAR)",
+    "pdfPage": 29,
+    "tags": ["formula", "math", "high-yield"],
+    "prompt": {
+      "jaRuby": "RevPAR（Revenue Per Available Room）の<ruby>計算式<rt>けいさんしき</rt></ruby>と、<ruby>経営<rt>けいえい</rt></ruby>における<ruby>役割<rt>やくわり</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "RevPAR（Revenue Per Available Room）の計算式と、経営における役割は何ですか。",
+      "id": "Apa rumus RevPAR (Revenue Per Available Room) dan apa perannya?",
+      "en": "What is the formula for RevPAR (Revenue Per Available Room) and what does it balance?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>計算式<rt>けいさんしき</rt></ruby>は OCC × ADR です。<ruby>客室<rt>きゃくしつ</rt></ruby><ruby>単価<rt>たんか</rt></ruby>と<ruby>稼働率<rt>かどうりつ</rt></ruby>のバランスを<ruby>評価<rt>ひょうか</rt></ruby>する<ruby>指標<rt>しひょう</rt></ruby>です。",
+      "jaPlain": "計算式は OCC × ADR です。客室単価と稼働率のバランスを評価する指標です。",
+      "id": "Rumus: OCC x ADR. Indikator ini menyeimbangkan antara tarif kamar (rate) dan tingkat hunian (occupancy).",
+      "en": "Formula: OCC x ADR. It balances room rate versus occupancy."
+    },
+    "ttsText": "レブパーの計算式は、OCCかけるADRです。客室単価と稼働率のバランスを評価する指標です。",
+    "examTip": {
+      "id": "Saat menghitung RevPAR = OCC x ADR, ubah persentase OCC (misal 80%) ke desimal (0,8) terlebih dahulu.",
+      "en": "When computing RevPAR = OCC x ADR, convert OCC percentage (e.g., 80%) to decimal (0.8) first."
+    }
+  },
+  {
+    "id": "ch02_021",
+    "chapter": 2,
+    "section": "2.3 収益管理・KPI (OCC・ADR・RevPAR)",
+    "pdfPage": 29,
+    "tags": ["math", "calculation", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>総<rt>そう</rt></ruby><ruby>客室数<rt>きゃくしつすう</rt></ruby>100<ruby>室<rt>しつ</rt></ruby>のうち80<ruby>室<rt>しつ</rt></ruby>が<ruby>販売<rt>はんばい</rt></ruby>され、<ruby>客室<rt>きゃくしつ</rt></ruby><ruby>総売上<rt>そううりあげ</rt></ruby>が800,000<ruby>円<rt>えん</rt></ruby>のとき、OCC・ADR・RevPARはいくらですか。",
+      "jaPlain": "総客室数100室のうち80室が販売され、客室総売上が800,000円のとき、OCC・ADR・RevPARはいくらですか。",
+      "id": "Dari total 100 kamar, 80 kamar terisi dengan total pendapatan kamar ¥800,000. Berapa OCC, ADR, dan RevPAR?",
+      "en": "Out of 100 total rooms, 80 are occupied with ¥800,000 total room revenue. What are OCC, ADR, and RevPAR?"
+    },
+    "answer": {
+      "jaRuby": "OCCは80%（80 ÷ 100 × 100）、ADRは10,000<ruby>円<rt>えん</rt></ruby>（800,000 ÷ 80）、RevPARは8,000<ruby>円<rt>えん</rt></ruby>（0.8 × 10,000）です。",
+      "jaPlain": "OCCは80%（80 ÷ 100 × 100）、ADRは10,000円（800,000 ÷ 80）、RevPARは8,000円（0.8 × 10,000）です。",
+      "id": "OCC = 80% (80 / 100 x 100), ADR = ¥10,000 (800,000 / 80), dan RevPAR = ¥8,000 (0.8 x 10,000).",
+      "en": "OCC = 80% (80 / 100 x 100), ADR = ¥10,000 (800,000 / 80), and RevPAR = ¥8,000 (0.8 x 10,000)."
+    },
+    "ttsText": "OCCは80パーセント、ADRは10,000円、レブパーは8,000円です。"
+  },
+  {
+    "id": "ch02_022",
+    "chapter": 2,
+    "section": "2.3 収益管理・KPI (OCC・ADR・RevPAR)",
+    "pdfPage": 29,
+    "tags": ["vocab", "revenue", "high-yield"],
+    "prompt": {
+      "jaRuby": "レベニューマネジメント（Revenue Management）とは<ruby>何<rt>なん</rt></ruby>ですか。どのような<ruby>業界<rt>ぎょうかい</rt></ruby>で<ruby>使<rt>つか</rt></ruby>われますか。",
+      "jaPlain": "レベニューマネジメント（Revenue Management）とは何ですか。どのような業界で使われますか。",
+      "id": "Apa itu Revenue Management (レベニューマネジメント) dan di industri apa konsep ini digunakan?",
+      "en": "What is Revenue Management (レベニューマネジメント), and in which industries is it used?"
+    },
+    "answer": {
+      "jaRuby": "ホテルや<ruby>航空会社<rt>こうくうがいしゃ</rt></ruby>など、<ruby>在庫<rt>ざいこ</rt></ruby>を<ruby>持<rt>も</rt></ruby>ち<ruby>越<rt>こ</rt></ruby>せない<ruby>商品<rt>しょうひん</rt></ruby>に対し、<ruby>戦略的<rt>せんりゃくてき</rt></ruby>に<ruby>価格<rt>かかく</rt></ruby>をコントロールする<ruby>手法<rt>しゅほう</rt></ruby>です。",
+      "jaPlain": "ホテルや航空会社など、在庫を持ち越せない商品に対し、戦略的に価格をコントロールする手法です。",
+      "id": "Pengendalian harga secara strategis untuk inventaris yang tidak dapat disimpan ke hari berikutnya (seperti hotel dan maskapai penerbangan).",
+      "en": "Strategic price control for perishable inventory (such as hotels and airlines)."
+    },
+    "ttsText": "レベニューマネジメントとは、ホテルや航空会社など、在庫を持ち越せない商品に対し、戦略的に価格をコントロールする手法です。",
+    "examTip": {
+      "id": "Kunci konsepnya: kamar hotel dan kursi pesawat bersifat perishable (stok hari ini hangus jika tidak terjual hari ini).",
+      "en": "Key concept: hotel rooms and airline seats are perishable inventory that cannot be carried over."
+    }
+  },
+  {
+    "id": "ch02_023",
+    "chapter": 2,
+    "section": "2.4 広報の基本と口コミ",
+    "pdfPage": 30,
+    "tags": ["concept", "pr"],
+    "prompt": {
+      "jaRuby": "<ruby>宿泊<rt>しゅくはく</rt></ruby><ruby>施設<rt>しせつ</rt></ruby>の<ruby>広報<rt>こうほう</rt></ruby>（PR）で<ruby>情報<rt>じょうほう</rt></ruby>を<ruby>発信<rt>はっしん</rt></ruby>するとき、とくに<ruby>何<rt>なに</rt></ruby>をアピールすることが<ruby>大切<rt>たいせつ</rt></ruby>ですか。",
+      "jaPlain": "宿泊施設の広報（PR）で情報を発信するとき、とくに何をアピールすることが大切ですか。",
+      "id": "Saat menyampaikan informasi lewat PR (広報), hal apa yang penting untuk ditonjolkan?",
+      "en": "When disseminating PR information, what is especially important to highlight?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>他<rt>た</rt></ruby>の<ruby>施設<rt>しせつ</rt></ruby>にはない<ruby>自社<rt>じしゃ</rt></ruby>ならではの<ruby>強<rt>つよ</rt></ruby>みや<ruby>魅力<rt>みりょく</rt></ruby>をわかりやすく<ruby>伝<rt>つた</rt></ruby>えることです。",
+      "jaPlain": "他の施設にはない自社ならではの強みや魅力をわかりやすく伝えることです。",
+      "id": "Menonjolkan keunggulan unik dan daya tarik khas fasilitas secara jelas.",
+      "en": "Highlighting the facility's unique strengths and distinctive appeal."
+    },
+    "ttsText": "他の施設にはない自社ならではの強みや魅力をわかりやすく伝えることです。"
+  },
+  {
+    "id": "ch02_024",
+    "chapter": 2,
+    "section": "2.4 広報の基本と口コミ",
+    "pdfPage": 30,
+    "tags": ["rule", "pr", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>広報<rt>こうほう</rt></ruby>（PR）で<ruby>情報<rt>じょうほう</rt></ruby>を<ruby>届<rt>とど</rt></ruby>ける<ruby>対象<rt>たいしょう</rt></ruby>（ステークホルダー）にはだれが<ruby>含<rt>ふく</rt></ruby>まれますか。",
+      "jaPlain": "広報（PR）で情報を届ける対象（ステークホルダー）にはだれが含まれますか。",
+      "id": "Siapa saja pemangku kepentingan (stakeholders) yang menjadi sasaran informasi PR (広報)?",
+      "en": "Who are the stakeholders to whom PR disseminates information?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>旅行者<rt>りょこうしゃ</rt></ruby>、<ruby>取引先<rt>とりひきさき</rt></ruby>、<ruby>株主<rt>かぶぬし</rt></ruby>、<ruby>従業員<rt>じゅうぎょういん</rt></ruby>、<ruby>地域住民<rt>ちいきじゅうみん</rt></ruby>などのステークホルダーです。",
+      "jaPlain": "旅行者、取引先、株主、従業員、地域住民などのステークホルダーです。",
+      "id": "Wisatawan, mitra bisnis, pemegang saham, karyawan, dan penduduk lokal.",
+      "en": "Travelers, partners, shareholders, staff, and local residents."
+    },
+    "ttsText": "旅行者、取引先、株主、従業員、地域住民などのステークホルダーです。",
+    "examTip": {
+      "id": "Jangan mengira PR hanya untuk wisatawan: mitra bisnis, pemegang saham, staf internal, dan warga lokal juga termasuk stakeholder PR.",
+      "en": "Remember PR targets all stakeholders: travelers, partners, shareholders, staff, and local residents."
+    }
+  },
+  {
+    "id": "ch02_025",
+    "chapter": 2,
+    "section": "2.4 広報の基本と口コミ",
+    "pdfPage": 30,
+    "tags": ["rule", "pr"],
+    "prompt": {
+      "jaRuby": "<ruby>宿泊<rt>しゅくはく</rt></ruby><ruby>施設<rt>しせつ</rt></ruby>の<ruby>広報<rt>こうほう</rt></ruby>で<ruby>活用<rt>かつよう</rt></ruby>される<ruby>主<rt>おも</rt></ruby>な3つの<ruby>手段<rt>しゅだん</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "宿泊施設の広報で活用される主な3つの手段は何ですか。",
+      "id": "Apa 3 sarana utama yang dimanfaatkan dalam PR fasilitas penginapan?",
+      "en": "What are the 3 main channels leveraged for Public Relations?"
+    },
+    "answer": {
+      "jaRuby": "SNS、<ruby>公式<rt>こうしき</rt></ruby>サイト（<ruby>公式<rt>こうしき</rt></ruby>ホームページ）、および<ruby>宿泊後<rt>しゅくはくご</rt></ruby>の<ruby>口<rt>くち</rt></ruby>コミです。",
+      "jaPlain": "SNS、公式サイト（公式ホームページ）、および宿泊後の口コミです。",
+      "id": "SNS, situs web resmi (official website), dan ulasan setelah menginap (kuchikomi).",
+      "en": "SNS, the official website, and post-stay reviews / word-of-mouth (kuchikomi)."
+    },
+    "ttsText": "SNS、公式サイト、および宿泊後の口コミです。"
+  },
+  {
+    "id": "ch02_026",
+    "chapter": 2,
+    "section": "2.4 広報の基本と口コミ",
+    "pdfPage": 31,
+    "tags": ["vocab", "pr", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>口<rt>くち</rt></ruby>コミ（くちこみ）とは<ruby>何<rt>なん</rt></ruby>ですか。また<ruby>宿泊<rt>しゅくはく</rt></ruby><ruby>施設<rt>しせつ</rt></ruby>にとってなぜ<ruby>重要<rt>じゅうよう</rt></ruby>ですか。",
+      "jaPlain": "口コミ（くちこみ）とは何ですか。また宿泊施設にとってなぜ重要ですか。",
+      "id": "Apa yang dimaksud dengan 口コミ (kuchikomi) dan mengapa penting bagi fasilitas penginapan?",
+      "en": "What is 口コミ (kuchikomi), and why is it important for a lodging facility?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>宿泊後<rt>しゅくはくご</rt></ruby>のお<ruby>客様<rt>きゃくさま</rt></ruby>によるレビューや<ruby>評判<rt>ひょうばん</rt></ruby>のことです。<ruby>新規<rt>しんき</rt></ruby><ruby>予約<rt>よやく</rt></ruby>の<ruby>獲得<rt>かくとく</rt></ruby>やサービス<ruby>改善<rt>かいぜん</rt></ruby>に<ruby>役立<rt>やくだ</rt></ruby>ちます。",
+      "jaPlain": "宿泊後のお客様によるレビューや評判のことです。新規予約の獲得やサービス改善に役立ちます。",
+      "id": "Ulasan atau testimoni dari mulut ke mulut oleh tamu setelah menginap. Penting untuk menarik tamu baru dan meningkatkan kualitas layanan.",
+      "en": "Post-stay reviews and word-of-mouth from guests. It helps attract future guests and improve service quality."
+    },
+    "ttsText": "口コミとは、宿泊後のお客様によるレビューや評判のことです。新規予約の獲得やサービス改善に役立ちます。"
+  },
+  {
+    "id": "ch02_027",
+    "chapter": 2,
+    "section": "2.5 公式サイト運営 (7つのポイント)",
+    "pdfPage": 32,
+    "tags": ["rule", "website", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>公式<rt>こうしき</rt></ruby>サイト<ruby>運営<rt>うんえい</rt></ruby>における7つの<ruby>重要<rt>じゅうよう</rt></ruby>ポイントは<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "公式サイト運営における7つの重要ポイントは何ですか。",
+      "id": "Sebutkan 7 poin penting dalam pengelolaan situs web resmi (official website)!",
+      "en": "What are the 7 points of Official Website Management?"
+    },
+    "answer": {
+      "jaRuby": "①デザインと<ruby>使<rt>つか</rt></ruby>いやすさ、②<ruby>充実<rt>じゅうじつ</rt></ruby>した<ruby>施設<rt>しせつ</rt></ruby><ruby>情報<rt>じょうほう</rt></ruby>、③<ruby>写真<rt>しゃしん</rt></ruby>・<ruby>動画<rt>どうが</rt></ruby>、④オンライン<ruby>予約<rt>よやく</rt></ruby>システム、⑤SEO、⑥お<ruby>客様<rt>きゃくさま</rt></ruby>の<ruby>声<rt>こえ</rt></ruby>の<ruby>収集<rt>しゅうしゅう</rt></ruby>、⑦<ruby>定期的<rt>ていきてき</rt></ruby>な<ruby>更新<rt>こうしん</rt></ruby>・メンテナンスです。",
+      "jaPlain": "①デザインと使いやすさ、②充実した施設情報、③写真・動画、④オンライン予約システム、⑤SEO、⑥お客様の声の収集、⑦定期的な更新・メンテナンスです。",
+      "id": "1) Desain & kemudahan penggunaan, 2) Info fasilitas lengkap, 3) Foto/video, 4) Sistem reservasi online, 5) SEO, 6) Pengumpulan masukan tamu, 7) Pembaruan & pemeliharaan rutin.",
+      "en": "1) Design & usability, 2) Comprehensive facility info, 3) Photos/videos, 4) Online reservation system, 5) SEO, 6) Collecting customer feedback, 7) Regular updates & maintenance."
+    },
+    "ttsText": "1、デザインと使いやすさ。2、充実した施設情報。3、写真と動画。4、オンライン予約システム。5、SEO。6、お客様の声の収集。7、定期的な更新とメンテナンスです。"
+  },
+  {
+    "id": "ch02_028",
+    "chapter": 2,
+    "section": "2.5 公式サイト運営 (7つのポイント)",
+    "pdfPage": 32,
+    "tags": ["rule", "website"],
+    "prompt": {
+      "jaRuby": "<ruby>公式<rt>こうしき</rt></ruby>サイトの「デザインと<ruby>使<rt>つか</rt></ruby>いやすさ」および「<ruby>充実<rt>じゅうじつ</rt></ruby>した<ruby>施設<rt>しせつ</rt></ruby><ruby>情報<rt>じょうほう</rt></ruby>」では<ruby>何<rt>なに</rt></ruby>が<ruby>求<rt>もと</rt></ruby>められますか。",
+      "jaPlain": "公式サイトの「デザインと使いやすさ」および「充実した施設情報」では何が求められますか。",
+      "id": "Apa yang dibutuhkan pada aspek 'desain & kemudahan penggunaan' serta 'info fasilitas lengkap' di situs web resmi?",
+      "en": "What is required for 'design & usability' and 'comprehensive facility info' on the official website?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>迷<rt>まよ</rt></ruby>わず<ruby>操作<rt>そうさ</rt></ruby>できる<ruby>見<rt>み</rt></ruby>やすいデザインと、<ruby>客室<rt>きゃくしつ</rt></ruby>・<ruby>料金<rt>りょうきん</rt></ruby>・アクセス・<ruby>館内<rt>かんない</rt></ruby><ruby>設備<rt>せつび</rt></ruby>などを<ruby>網羅<rt>もうら</rt></ruby>した<ruby>正確<rt>せいかく</rt></ruby>な<ruby>情報<rt>じょうほう</rt></ruby>です。",
+      "jaPlain": "迷わず操作できる見やすいデザインと、客室・料金・アクセス・館内設備などを網羅した正確な情報です。",
+      "id": "Desain yang jelas dan mudah dinavigasi, serta informasi lengkap dan akurat tentang kamar, tarif, akses, dan fasilitas.",
+      "en": "An intuitive, user-friendly design and comprehensive, accurate details covering rooms, pricing, access, and amenities."
+    },
+    "ttsText": "迷わず操作できる見やすいデザインと、客室、料金、アクセス、館内設備などを網羅した正確な情報です。"
+  },
+  {
+    "id": "ch02_029",
+    "chapter": 2,
+    "section": "2.5 公式サイト運営 (7つのポイント)",
+    "pdfPage": 32,
+    "tags": ["rule", "website"],
+    "prompt": {
+      "jaRuby": "<ruby>公式<rt>こうしき</rt></ruby>サイトに<ruby>写真<rt>しゃしん</rt></ruby>や<ruby>動画<rt>どうが</rt></ruby>を<ruby>掲載<rt>けいさい</rt></ruby>する<ruby>目的<rt>もくてき</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "公式サイトに写真や動画を掲載する目的は何ですか。",
+      "id": "Apa tujuan menampilkan foto dan video di situs web resmi?",
+      "en": "What is the purpose of featuring photos and videos on the official website?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>客室<rt>きゃくしつ</rt></ruby>や<ruby>料理<rt>りょうり</rt></ruby>、<ruby>施設<rt>しせつ</rt></ruby>の<ruby>雰囲気<rt>ふんいき</rt></ruby>や<ruby>魅力<rt>みりょく</rt></ruby>を<ruby>視覚的<rt>しかくてき</rt></ruby>に<ruby>伝<rt>つた</rt></ruby>え、<ruby>宿泊<rt>しゅくはく</rt></ruby>への<ruby>期待感<rt>きたいかん</rt></ruby>を<ruby>高<rt>たか</rt></ruby>めるためです。",
+      "jaPlain": "客室や料理、施設の雰囲気や魅力を視覚的に伝え、宿泊への期待感を高めるためです。",
+      "id": "Menyampaikan suasana dan daya tarik kamar, makanan, serta fasilitas secara visual agar tamu tertarik menginap.",
+      "en": "To visually convey the atmosphere and appeal of rooms, meals, and facilities."
+    },
+    "ttsText": "客室や料理、施設の雰囲気や魅力を視覚的に伝え、宿泊への期待感を高めるためです。"
+  },
+  {
+    "id": "ch02_030",
+    "chapter": 2,
+    "section": "2.5 公式サイト運営 (7つのポイント)",
+    "pdfPage": 33,
+    "tags": ["rule", "website"],
+    "prompt": {
+      "jaRuby": "<ruby>公式<rt>こうしき</rt></ruby>サイトにオンライン<ruby>予約<rt>よやく</rt></ruby>システムを<ruby>設<rt>もう</rt></ruby>ける<ruby>利点<rt>りてん</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "公式サイトにオンライン予約システムを設ける利点は何ですか。",
+      "id": "Apa keuntungan menyediakan sistem reservasi online di situs web resmi?",
+      "en": "What is the benefit of providing an online reservation system on the official website?"
+    },
+    "answer": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>が24<ruby>時間<rt>じかん</rt></ruby>いつでも<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>予約<rt>よやく</rt></ruby>でき、OTAの<ruby>手数料<rt>てすうりょう</rt></ruby>を<ruby>抑<rt>おさ</rt></ruby>えながらダイレクトブッキングを<ruby>増<rt>ふ</rt></ruby>やせます。",
+      "jaPlain": "お客様が24時間いつでも直接予約でき、OTAの手数料を抑えながらダイレクトブッキングを増やせます。",
+      "id": "Tamu dapat memesan langsung kapan saja sekaligus meningkatkan pemesanan langsung dan menekan biaya komisi OTA.",
+      "en": "Guests can book directly at any time, increasing direct bookings while reducing OTA commission fees."
+    },
+    "ttsText": "お客様が24時間いつでも直接予約でき、OTAの手数料を抑えながらダイレクトブッキングを増やせます。"
+  },
+  {
+    "id": "ch02_031",
+    "chapter": 2,
+    "section": "2.5 公式サイト運営 (7つのポイント)",
+    "pdfPage": 33,
+    "tags": ["number", "website", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>自社<rt>じしゃ</rt></ruby>の<ruby>公式<rt>こうしき</rt></ruby>サイトに<ruby>掲載<rt>けいさい</rt></ruby>する<ruby>宿泊<rt>しゅくはく</rt></ruby>プランは、<ruby>何個<rt>なんこ</rt></ruby>が<ruby>最<rt>もっと</rt></ruby>も<ruby>効果的<rt>こうかてき</rt></ruby>とされていますか。",
+      "jaPlain": "自社の公式サイトに掲載する宿泊プランは、何個が最も効果的とされていますか。",
+      "id": "Berapa jumlah paket menginap yang paling efektif ditawarkan di situs web resmi sendiri?",
+      "en": "What is the most effective number of plans to offer on the property's own official website?"
+    },
+    "answer": {
+      "jaRuby": "6〜15プランが<ruby>最<rt>もっと</rt></ruby>も<ruby>効果的<rt>こうかてき</rt></ruby>とされています。",
+      "jaPlain": "6〜15プランが最も効果的とされています。",
+      "id": "6-15 paket adalah jumlah yang paling efektif di situs web sendiri.",
+      "en": "6-15 plans is the most effective number on the own website."
+    },
+    "ttsText": "6プランから15プランが最も効果的とされています。",
+    "examTip": {
+      "id": "Angka wajib hafal: Jumlah paket paling efektif di situs web resmi sendiri adalah 6-15 paket.",
+      "en": "Must-memorize number: 6-15 plans is the most effective count on the facility's own website."
+    }
+  },
+  {
+    "id": "ch02_032",
+    "chapter": 2,
+    "section": "2.5 公式サイト運営 (7つのポイント)",
+    "pdfPage": 33,
+    "tags": ["vocab", "website", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>公式<rt>こうしき</rt></ruby>サイト<ruby>運営<rt>うんえい</rt></ruby>におけるSEO（<ruby>検索<rt>けんさく</rt></ruby>エンジン<ruby>最適化<rt>さいてきか</rt></ruby>）の<ruby>目的<rt>もくてき</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "公式サイト運営におけるSEO（検索エンジン最適化）の目的は何ですか。",
+      "id": "Apa tujuan SEO dalam pengelolaan situs web resmi?",
+      "en": "What is the purpose of SEO in official website management?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>検索<rt>けんさく</rt></ruby><ruby>結果<rt>けっか</rt></ruby>で<ruby>上位<rt>じょうい</rt></ruby>に<ruby>表示<rt>ひょうじ</rt></ruby>されるように<ruby>工夫<rt>くふう</rt></ruby>し、<ruby>旅行者<rt>りょこうしゃ</rt></ruby>が<ruby>公式<rt>こうしき</rt></ruby>サイトを<ruby>見<rt>み</rt></ruby>つけやすくすることです。",
+      "jaPlain": "検索結果で上位に表示されるように工夫し、旅行者が公式サイトを見つけやすくすることです。",
+      "id": "Meningkatkan peringkat situs di mesin pencari agar calon tamu mudah menemukan situs web resmi.",
+      "en": "Improving search engine ranking so travelers can easily find the official website."
+    },
+    "ttsText": "検索結果で上位に表示されるように工夫し、旅行者が公式サイトを見つけやすくすることです。"
+  },
+  {
+    "id": "ch02_033",
+    "chapter": 2,
+    "section": "2.5 公式サイト運営 (7つのポイント)",
+    "pdfPage": 33,
+    "tags": ["rule", "website"],
+    "prompt": {
+      "jaRuby": "<ruby>公式<rt>こうしき</rt></ruby>サイトで「お<ruby>客様<rt>きゃくさま</rt></ruby>の<ruby>声<rt>こえ</rt></ruby>の<ruby>収集<rt>しゅうしゅう</rt></ruby>」と「<ruby>定期的<rt>ていきてき</rt></ruby>な<ruby>更新<rt>こうしん</rt></ruby>・メンテナンス」が<ruby>必要<rt>ひつよう</rt></ruby>な<ruby>理由<rt>りゆう</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "公式サイトで「お客様の声の収集」と「定期的な更新・メンテナンス」が必要な理由は何ですか。",
+      "id": "Mengapa pengumpulan umpan balik tamu serta pembaruan dan pemeliharaan rutin diperlukan pada situs web resmi?",
+      "en": "Why are collecting customer feedback and regular updates & maintenance required for the official website?"
+    },
+    "answer": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>の<ruby>意見<rt>いけん</rt></ruby>を<ruby>基<rt>もと</rt></ruby>にサービスを<ruby>改善<rt>かいぜん</rt></ruby>し、<ruby>季節<rt>きせつ</rt></ruby>や<ruby>料金<rt>りょうきん</rt></ruby>などの<ruby>情報<rt>じょうほう</rt></ruby>を<ruby>常<rt>つね</rt></ruby>に<ruby>最新<rt>さいしん</rt></ruby>・<ruby>正確<rt>せいかく</rt></ruby>に<ruby>保<rt>たも</rt></ruby>つためです。",
+      "jaPlain": "お客様の意見を基にサービスを改善し、季節や料金などの情報を常に最新・正確に保つためです。",
+      "id": "Untuk memperbaiki layanan dari masukan tamu serta menjaga informasi tarif, musim, dan fasilitas selalu mutakhir dan akurat.",
+      "en": "To improve services using customer feedback and keep seasonal, pricing, and facility info up to date and accurate."
+    },
+    "ttsText": "お客様の意見を基にサービスを改善し、季節や料金などの情報を常に最新かつ正確に保つためです。"
+  },
+  {
+    "id": "ch02_034",
+    "chapter": 2,
+    "section": "2.6 SNS運用 (6つのポイント)",
+    "pdfPage": 34,
+    "tags": ["rule", "sns", "high-yield"],
+    "prompt": {
+      "jaRuby": "SNS<ruby>運用<rt>うんよう</rt></ruby>における6つの<ruby>重要<rt>じゅうよう</rt></ruby>ポイントは<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "SNS運用における6つの重要ポイントは何ですか。",
+      "id": "Sebutkan 6 poin penting dalam pengelolaan SNS (media sosial)!",
+      "en": "What are the 6 points of SNS Management?"
+    },
+    "answer": {
+      "jaRuby": "①コンテンツ<ruby>戦略<rt>せんりゃく</rt></ruby>、②<ruby>定期的<rt>ていきてき</rt></ruby>な<ruby>投稿<rt>とうこう</rt></ruby>、③<ruby>積極的<rt>せっきょくてき</rt></ruby>なコミュニケーション、④<ruby>地域<rt>ちいき</rt></ruby>との<ruby>連携<rt>れんけい</rt></ruby>、⑤UGCとハッシュタグの<ruby>活用<rt>かつよう</rt></ruby>、⑥<ruby>分析<rt>ぶんせき</rt></ruby>と<ruby>改善<rt>かいぜん</rt></ruby>の<ruby>継続<rt>けいぞく</rt></ruby>です。",
+      "jaPlain": "①コンテンツ戦略、②定期的な投稿、③積極的なコミュニケーション、④地域との連携、⑤UGCとハッシュタグの活用、⑥分析と改善の継続です。",
+      "id": "1) Strategi konten, 2) Posting rutin, 3) Komunikasi aktif, 4) Kolaborasi komunitas lokal, 5) UGC & hashtag, 6) Analitik & perbaikan berkelanjutan.",
+      "en": "1) Content strategy, 2) Regular posting, 3) Active communication, 4) Local community collaboration, 5) User-Generated Content (UGC/hashtags), 6) Analytics & iterative improvement."
+    },
+    "ttsText": "1、コンテンツ戦略。2、定期的な投稿。3、積極的なコミュニケーション。4、地域との連携。5、UGCとハッシュタグの活用。6、分析と改善の継続です。"
+  },
+  {
+    "id": "ch02_035",
+    "chapter": 2,
+    "section": "2.6 SNS運用 (6つのポイント)",
+    "pdfPage": 34,
+    "tags": ["rule", "sns"],
+    "prompt": {
+      "jaRuby": "SNS<ruby>運用<rt>うんよう</rt></ruby>における「コンテンツ<ruby>戦略<rt>せんりゃく</rt></ruby>」とは<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "SNS運用における「コンテンツ戦略」とは何ですか。",
+      "id": "Apa yang dimaksud dengan 'strategi konten' dalam pengelolaan SNS?",
+      "en": "What is 'content strategy' in SNS management?"
+    },
+    "answer": {
+      "jaRuby": "ターゲットに<ruby>合<rt>あ</rt></ruby>わせて、<ruby>客室<rt>きゃくしつ</rt></ruby>・<ruby>料理<rt>りょうり</rt></ruby>・<ruby>周辺<rt>しゅうへん</rt></ruby><ruby>観光<rt>かんこう</rt></ruby>など<ruby>何<rt>なに</rt></ruby>をどのような<ruby>方向性<rt>ほうこうせい</rt></ruby>で<ruby>発信<rt>はっしん</rt></ruby>するか<ruby>計画<rt>けいかく</rt></ruby>することです。",
+      "jaPlain": "ターゲットに合わせて、客室・料理・周辺観光など何をどのような方向性で発信するか計画することです。",
+      "id": "Merencanakan tema, gaya penyampaian, dan topik (kamar, hidangan, wisata sekitar) yang sesuai dengan target audiens.",
+      "en": "Planning topics, themes, and messaging (rooms, meals, local sights) aligned with the target audience."
+    },
+    "ttsText": "ターゲットに合わせて、客室、料理、周辺観光など何をどのような方向性で発信するか計画することです。"
+  },
+  {
+    "id": "ch02_036",
+    "chapter": 2,
+    "section": "2.6 SNS運用 (6つのポイント)",
+    "pdfPage": 34,
+    "tags": ["rule", "number", "sns", "high-yield"],
+    "prompt": {
+      "jaRuby": "SNSの「<ruby>定期的<rt>ていきてき</rt></ruby>な<ruby>投稿<rt>とうこう</rt></ruby>」では、どのくらいの<ruby>頻度<rt>ひんど</rt></ruby>が<ruby>推奨<rt>すいしょう</rt></ruby>されていますか。",
+      "jaPlain": "SNSの「定期的な投稿」では、どのくらいの頻度が推奨されていますか。",
+      "id": "Berapa frekuensi unggahan yang disarankan untuk 'posting rutin' di SNS?",
+      "en": "What posting frequency is recommended for 'regular posting' in SNS management?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>週<rt>しゅう</rt></ruby>に<ruby>数回<rt>すうかい</rt></ruby>から<ruby>毎日<rt>まいにち</rt></ruby><ruby>投稿<rt>とうこう</rt></ruby>することが<ruby>推奨<rt>すいしょう</rt></ruby>されています。",
+      "jaPlain": "週に数回から毎日投稿することが推奨されています。",
+      "id": "Beberapa kali seminggu hingga setiap hari.",
+      "en": "Posting regularly from several times a week to daily."
+    },
+    "ttsText": "週に数回から毎日投稿することが推奨されています。",
+    "examTip": {
+      "id": "Hafalkan patokan frekuensi SNS: beberapa kali seminggu sampai setiap hari (週に数回〜毎日).",
+      "en": "Remember the textbook SNS frequency benchmark: several times/week to daily."
+    }
+  },
+  {
+    "id": "ch02_037",
+    "chapter": 2,
+    "section": "2.6 SNS運用 (6つのポイント)",
+    "pdfPage": 34,
+    "tags": ["rule", "sns", "high-yield"],
+    "prompt": {
+      "jaRuby": "SNS<ruby>運用<rt>うんよう</rt></ruby>の「<ruby>積極的<rt>せっきょくてき</rt></ruby>なコミュニケーション」では<ruby>何<rt>なに</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>いますか。",
+      "jaPlain": "SNS運用の「積極的なコミュニケーション」では何を行いますか。",
+      "id": "Apa saja yang dilakukan dalam 'komunikasi aktif' di SNS?",
+      "en": "What actions are part of 'active communication' in SNS management?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>質問<rt>しつもん</rt></ruby>やコメントへ<ruby>素早<rt>すばや</rt></ruby>く<ruby>返信<rt>へんしん</rt></ruby>し、お<ruby>客様<rt>きゃくさま</rt></ruby>の<ruby>投稿<rt>とうこう</rt></ruby>に「いいね」やコメントをすることです。",
+      "jaPlain": "質問やコメントへ素早く返信し、お客様の投稿に「いいね」やコメントをすることです。",
+      "id": "Membalas komentar/pertanyaan dengan cepat serta memberi like dan komentar pada unggahan tamu.",
+      "en": "Giving prompt replies and liking or commenting on guest posts."
+    },
+    "ttsText": "質問やコメントへ素早く返信し、お客様の投稿にいいねやコメントをすることです。"
+  },
+  {
+    "id": "ch02_038",
+    "chapter": 2,
+    "section": "2.6 SNS運用 (6つのポイント)",
+    "pdfPage": 35,
+    "tags": ["rule", "sns", "high-yield"],
+    "prompt": {
+      "jaRuby": "SNS<ruby>運用<rt>うんよう</rt></ruby>における「<ruby>地域<rt>ちいき</rt></ruby>との<ruby>連携<rt>れんけい</rt></ruby>」とはどのような<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>みですか。",
+      "jaPlain": "SNS運用における「地域との連携」とはどのような取り組みですか。",
+      "id": "Apa bentuk 'kolaborasi dengan komunitas lokal' dalam pengelolaan SNS?",
+      "en": "What does 'local community collaboration' involve in SNS management?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>観光協会<rt>かんこうきょうかい</rt></ruby>や<ruby>地元<rt>じもと</rt></ruby><ruby>企業<rt>きぎょう</rt></ruby>と<ruby>連携<rt>れんけい</rt></ruby>し、タグ<ruby>付<rt>づ</rt></ruby>けや<ruby>共同<rt>きょうどう</rt></ruby>キャンペーンを<ruby>行<rt>おこな</rt></ruby>うことです。",
+      "jaPlain": "観光協会や地元企業と連携し、タグ付けや共同キャンペーンを行うことです。",
+      "id": "Bekerja sama dengan asosiasi pariwisata atau bisnis lokal melalui penandaan akun (tagging) dan kampanye bersama.",
+      "en": "Partnering with tourism associations or local businesses through tagging and joint campaigns."
+    },
+    "ttsText": "観光協会や地元企業と連携し、タグ付けや共同キャンペーンを行うことです。"
+  },
+  {
+    "id": "ch02_039",
+    "chapter": 2,
+    "section": "2.6 SNS運用 (6つのポイント)",
+    "pdfPage": 35,
+    "tags": ["vocab", "sns", "high-yield"],
+    "prompt": {
+      "jaRuby": "SNSでUGC（User-Generated Content）とハッシュタグを<ruby>活用<rt>かつよう</rt></ruby>するとはどういうことですか。",
+      "jaPlain": "SNSでUGC（User-Generated Content）とハッシュタグを活用するとはどういうことですか。",
+      "id": "Apa arti memanfaatkan UGC (User-Generated Content) dan hashtag di SNS?",
+      "en": "What does leveraging User-Generated Content (UGC) and hashtags mean in SNS management?"
+    },
+    "answer": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>が<ruby>指定<rt>してい</rt></ruby>のハッシュタグを<ruby>付<rt>つ</rt></ruby>けて<ruby>宿泊<rt>しゅくはく</rt></ruby>の<ruby>写真<rt>しゃしん</rt></ruby>や<ruby>感想<rt>かんそう</rt></ruby>を<ruby>投稿<rt>とうこう</rt></ruby>・<ruby>共有<rt>きょうゆう</rt></ruby>し、<ruby>自然<rt>しぜん</rt></ruby>な<ruby>宣伝<rt>せんでん</rt></ruby><ruby>効果<rt>こうか</rt></ruby>を<ruby>得<rt>え</rt></ruby>ることです。",
+      "jaPlain": "お客様が指定のハッシュタグを付けて宿泊の写真や感想を投稿・共有し、自然な宣伝効果を得ることです。",
+      "id": "Mendorong tamu mengunggah foto atau ulasan mereka sendiri dengan hashtag tertentu sehingga promosi tersebar secara alami.",
+      "en": "Encouraging guests to create and share posts with hashtags to generate organic promotion."
+    },
+    "ttsText": "お客様が指定のハッシュタグを付けて宿泊の写真や感想を投稿し、共有してもらうことで自然な宣伝効果を得ることです。"
+  },
+  {
+    "id": "ch02_040",
+    "chapter": 2,
+    "section": "2.6 SNS運用 (6つのポイント)",
+    "pdfPage": 35,
+    "tags": ["rule", "sns"],
+    "prompt": {
+      "jaRuby": "SNS<ruby>運用<rt>うんよう</rt></ruby>における「<ruby>分析<rt>ぶんせき</rt></ruby>と<ruby>改善<rt>かいぜん</rt></ruby>の<ruby>継続<rt>けいぞく</rt></ruby>」では<ruby>何<rt>なに</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>いますか。",
+      "jaPlain": "SNS運用における「分析と改善の継続」では何を行いますか。",
+      "id": "Apa yang dilakukan dalam tahap 'analitik dan perbaikan berkelanjutan' pada pengelolaan SNS?",
+      "en": "What is done in 'analytics & iterative improvement' for SNS management?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>投稿<rt>とうこう</rt></ruby>のリーチ<ruby>数<rt>すう</rt></ruby>やエンゲージメントを<ruby>分析<rt>ぶんせき</rt></ruby>し、<ruby>発信<rt>はっしん</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>や<ruby>手法<rt>しゅほう</rt></ruby>を<ruby>見直<rt>みなお</rt></ruby>して<ruby>継続的<rt>けいぞくてき</rt></ruby>に<ruby>改善<rt>かいぜん</rt></ruby>します。",
+      "jaPlain": "投稿のリーチ数やエンゲージメントを分析し、発信内容や手法を見直して継続的に改善します。",
+      "id": "Menganalisis data jangkauan dan interaksi unggahan lalu terus menyempurnakan isi dan strategi posting.",
+      "en": "Analyzing post performance metrics and iteratively improving content and strategy."
+    },
+    "ttsText": "投稿のリーチ数やエンゲージメントを分析し、発信内容や手法を見直して継続的に改善します。"
+  }
+]

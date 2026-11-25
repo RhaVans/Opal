@@ -1,0 +1,1058 @@
+[
+  {
+    "id": "ch04_001",
+    "chapter": 4,
+    "section": "4.1 おもてなし・基本動作",
+    "pdfPage": 52,
+    "tags": ["vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "「おもてなし」とは<ruby>何<rt>なに</rt></ruby>ですか？",
+      "jaPlain": "「おもてなし」とは何ですか？",
+      "id": "Apa arti istilah \"Omotenashi\"?",
+      "en": "What does \"Omotenashi\" mean?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>心<rt>こころ</rt></ruby>を<ruby>込<rt>こ</rt></ruby>めてお<ruby>客様<rt>きゃくさま</rt></ruby>を<ruby>迎<rt>むか</rt></ruby>える<ruby>姿勢<rt>しせい</rt></ruby>（ホスピタリティ）です。",
+      "jaPlain": "心を込めてお客様を迎える姿勢（ホスピタリティ）です。",
+      "id": "Keramahtamahan (hospitality), yaitu sikap menyambut dan melayani tamu dengan sepenuh hati.",
+      "en": "Hospitality: serving and welcoming guests wholeheartedly."
+    },
+    "ttsText": "おもてなしとは、心を込めてお客様を迎える姿勢、ホスピタリティのことです。"
+  },
+  {
+    "id": "ch04_002",
+    "chapter": 4,
+    "section": "4.1 おもてなし・基本動作",
+    "pdfPage": 52,
+    "tags": ["rule", "service"],
+    "prompt": {
+      "jaRuby": "レストランで<ruby>挨拶<rt>あいさつ</rt></ruby>をする<ruby>時<rt>とき</rt></ruby>の<ruby>基本<rt>きほん</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか？",
+      "jaPlain": "レストランで挨拶をする時の基本は何ですか？",
+      "id": "Bagaimana cara dasar memberi salam di restoran?",
+      "en": "What is the basic rule for greeting guests in a restaurant?"
+    },
+    "answer": {
+      "jaRuby": "アイコンタクトを<ruby>取<rt>と</rt></ruby>り、はっきりした<ruby>声<rt>こえ</rt></ruby>で<ruby>積極的<rt>せっきょくてき</rt></ruby>に<ruby>挨拶<rt>あいさつ</rt></ruby>します。",
+      "jaPlain": "アイコンタクトを取り、はっきりした声で積極的に挨拶します。",
+      "id": "Menyapa secara proaktif dengan kontak mata dan suara yang jelas.",
+      "en": "Greet proactively with eye contact and a clear voice."
+    },
+    "ttsText": "アイコンタクトを取り、はっきりした声で積極的に挨拶します。"
+  },
+  {
+    "id": "ch04_003",
+    "chapter": 4,
+    "section": "4.1 おもてなし・基本動作",
+    "pdfPage": 53,
+    "tags": ["rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>自然<rt>しぜん</rt></ruby>で<ruby>良<rt>よ</rt></ruby>い<ruby>笑顔<rt>えがお</rt></ruby>の<ruby>作<rt>つく</rt></ruby>り<ruby>方<rt>かた</rt></ruby>（2つのポイント）は？",
+      "jaPlain": "自然で良い笑顔の作り方（2つのポイント）は？",
+      "id": "Apa 2 teknik membuat senyuman yang baik saat melayani tamu?",
+      "en": "What are the 2 techniques for making a warm smile?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>口<rt>くち</rt></ruby>の<ruby>両端<rt>りょうはし</rt></ruby>をあげて、<ruby>目<rt>め</rt></ruby>じりをさげます。",
+      "jaPlain": "口の両端をあげて、目じりをさげます。",
+      "id": "Mengangkat kedua ujung mulut (口の両端をあげる) dan menurunkan sudut luar mata secara lembut (目じりをさげる).",
+      "en": "Lift both corners of the mouth (口の両端をあげる) and gently lower the outer eye corners (目じりをさげる)."
+    },
+    "ttsText": "口の両端をあげて、目じりをさげます。",
+    "examTip": {
+      "id": "Sering keluar di ujian CBT! Ingat pasangan gerakannya: ujung mulut naik (あげる), sudut luar mata turun (さげる).",
+      "en": "Frequent CBT item: mouth corners go UP (あげる), outer eye corners go DOWN (さげる)."
+    }
+  },
+  {
+    "id": "ch04_004",
+    "chapter": 4,
+    "section": "4.2 身だしなみ（9項目）",
+    "pdfPage": 54,
+    "tags": ["rule", "grooming"],
+    "prompt": {
+      "jaRuby": "<ruby>身<rt>み</rt></ruby>だしなみ（<ruby>髪<rt>かみ</rt></ruby>・ひげ・<ruby>化粧<rt>けしょう</rt></ruby>）の3つの<ruby>基準<rt>きじゅん</rt></ruby>は？",
+      "jaPlain": "身だしなみ（髪・ひげ・化粧）の3つの基準は？",
+      "id": "Apa 3 standar kerapian untuk rambut, janggut, dan riasan wajah?",
+      "en": "What are the 3 grooming rules for hair, shaving, and makeup?"
+    },
+    "answer": {
+      "jaRuby": "1. <ruby>顔<rt>かお</rt></ruby>にかからない<ruby>清潔<rt>せいけつ</rt></ruby>な<ruby>髪型<rt>かみがた</rt></ruby> 2. <ruby>長<rt>なが</rt></ruby>い<ruby>髪<rt>かみ</rt></ruby>はヘアネットやカチューシャでまとめる 3. <ruby>毎日<rt>まいにち</rt></ruby>ひげをそり、<ruby>必要<rt>ひつよう</rt></ruby>に<ruby>応<rt>おう</rt></ruby>じて<ruby>控<rt>ひか</rt></ruby>えめで<ruby>自然<rt>しぜん</rt></ruby>な<ruby>化粧<rt>けしょう</rt></ruby>をする。",
+      "jaPlain": "1. 顔にかからない清潔な髪型 2. 長い髪はヘアネットやカチューシャでまとめる 3. 毎日ひげをそり、必要に応じて控えめで自然な化粧をする。",
+      "id": "1. Rambut rapi tidak menutupi wajah; 2. Rambut panjang diikat dengan hairnet atau bando; 3. Bercukur setiap hari dan memakai riasan natural tipis jika diperlukan.",
+      "en": "1. Neat hair off the face; 2. Long hair tied with a hairnet or headband; 3. Shave daily and wear light natural makeup if needed."
+    },
+    "ttsText": "顔にかからない清潔な髪型にし、長い髪はヘアネットやカチューシャでまとめます。毎日ひげをそり、必要に応じて控えめで自然な化粧をします。"
+  },
+  {
+    "id": "ch04_005",
+    "chapter": 4,
+    "section": "4.2 身だしなみ（9項目）",
+    "pdfPage": 54,
+    "tags": ["rule", "grooming"],
+    "prompt": {
+      "jaRuby": "<ruby>身<rt>み</rt></ruby>だしなみにおける「<ruby>爪<rt>つめ</rt></ruby>」の2つのルールは？",
+      "jaPlain": "身だしなみにおける「爪」の2つのルールは？",
+      "id": "Apa 2 aturan kerapian untuk kuku bagi staf restoran?",
+      "en": "What are the 2 grooming rules for nails in restaurant service?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>爪<rt>つめ</rt></ruby>は<ruby>短<rt>みじか</rt></ruby>く<ruby>清潔<rt>せいけつ</rt></ruby>に<ruby>保<rt>たも</rt></ruby>ち、ネイルアートや<ruby>派手<rt>はで</rt></ruby>なマニキュアは<ruby>避<rt>さ</rt></ruby>けます。",
+      "jaPlain": "爪は短く清潔に保ち、ネイルアートや派手なマニキュアは避けます。",
+      "id": "Kuku harus pendek dan bersih, serta hindari nail art atau cat kuku yang mencolok.",
+      "en": "Keep nails short and clean, and avoid nail art or flashy polish."
+    },
+    "ttsText": "爪は短く清潔に保ち、ネイルアートや派手なマニキュアは避けます。"
+  },
+  {
+    "id": "ch04_006",
+    "chapter": 4,
+    "section": "4.2 身だしなみ（9項目）",
+    "pdfPage": 54,
+    "tags": ["rule", "grooming"],
+    "prompt": {
+      "jaRuby": "<ruby>制服<rt>せいふく</rt></ruby>と<ruby>靴<rt>くつ</rt></ruby>の<ruby>身<rt>み</rt></ruby>だしなみルールは<ruby>何<rt>なん</rt></ruby>ですか？",
+      "jaPlain": "制服と靴の身だしなみルールは何ですか？",
+      "id": "Bagaimana aturan seragam dan sepatu pada standar penampilan?",
+      "en": "What are the grooming rules for uniform and shoes?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>清潔<rt>せいけつ</rt></ruby>でシワのない<ruby>制服<rt>せいふく</rt></ruby>のボタンをすべて<ruby>留<rt>と</rt></ruby>め、<ruby>清潔<rt>せいけつ</rt></ruby>な<ruby>靴<rt>くつ</rt></ruby>を<ruby>履<rt>は</rt></ruby>きます。",
+      "jaPlain": "清潔でシワのない制服のボタンをすべて留め、清潔な靴を履きます。",
+      "id": "Memakai seragam yang bersih tanpa kusut dengan semua kancing terpasang rapi, serta memakai sepatu yang bersih.",
+      "en": "Wear a clean, wrinkle-free uniform with all buttons fastened, and wear clean shoes."
+    },
+    "ttsText": "清潔でシワのない制服のボタンをすべて留め、清潔な靴を履きます。"
+  },
+  {
+    "id": "ch04_007",
+    "chapter": 4,
+    "section": "4.2 身だしなみ（9項目）",
+    "pdfPage": 54,
+    "tags": ["rule", "grooming", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>装飾品<rt>そうしょくひん</rt></ruby>・<ruby>時計<rt>とけい</rt></ruby>と<ruby>香水<rt>こうすい</rt></ruby>についての<ruby>禁止事項<rt>きんしじこう</rt></ruby>は？",
+      "jaPlain": "装飾品・時計と香水についての禁止事項は？",
+      "id": "Apa larangan terkait perhiasan, jam tangan, dan parfum saat bertugas?",
+      "en": "What are the prohibitions regarding jewelry, watches, and perfume?"
+    },
+    "answer": {
+      "jaRuby": "アクセサリーや<ruby>派手<rt>はで</rt></ruby>な<ruby>時計<rt>とけい</rt></ruby>を<ruby>身<rt>み</rt></ruby>につけず、<ruby>強<rt>つよ</rt></ruby>い<ruby>香水<rt>こうすい</rt></ruby>は<ruby>使用<rt>しよう</rt></ruby>しません。",
+      "jaPlain": "アクセサリーや派手な時計を身につけず、強い香水は使用しません。",
+      "id": "Tidak memakai perhiasan atau jam tangan mencolok, dan dilarang memakai parfum yang menyengat.",
+      "en": "Wear no jewelry or flashy watches, and use no strong perfume."
+    },
+    "ttsText": "アクセサリーや派手な時計を身につけず、強い香水は使用しません。",
+    "examTip": {
+      "id": "Parfum menyengat mengganggu aroma makanan dan kenyamanan tamu, sehingga dilarang keras di layanan restoran.",
+      "en": "Strong perfume interferes with food aroma and guest comfort, making it a frequent CBT test trap."
+    }
+  },
+  {
+    "id": "ch04_008",
+    "chapter": 4,
+    "section": "4.2 身だしなみ（9項目）",
+    "pdfPage": 54,
+    "tags": ["rule", "grooming", "high-yield"],
+    "prompt": {
+      "jaRuby": "レストランの<ruby>身<rt>み</rt></ruby>だしなみ9つのポイントをすべて<ruby>挙<rt>あ</rt></ruby>げてください。",
+      "jaPlain": "レストランの身だしなみ9つのポイントをすべて挙げてください。",
+      "id": "Sebutkan seluruh 9 poin kerapian penampilan di layanan restoran.",
+      "en": "List all 9 grooming checkpoints for restaurant service."
+    },
+    "answer": {
+      "jaRuby": "1.<ruby>顔<rt>かお</rt></ruby>にかからない<ruby>髪<rt>かみ</rt></ruby> 2.<ruby>長<rt>なが</rt></ruby>い<ruby>髪<rt>かみ</rt></ruby>はネット<ruby>等<rt>など</rt></ruby>でまとめる 3.<ruby>毎日<rt>まいにち</rt></ruby>ひげそり・<ruby>自然<rt>しぜん</rt></ruby>な<ruby>化粧<rt>けしょう</rt></ruby> 4.<ruby>短<rt>みじか</rt></ruby>く<ruby>清潔<rt>せいけつ</rt></ruby>な<ruby>爪<rt>つめ</rt></ruby> 5.<ruby>派手<rt>はで</rt></ruby>なネイル<ruby>禁止<rt>きんし</rt></ruby> 6.シワのない<ruby>制服<rt>せいふく</rt></ruby>・<ruby>全<rt>ぜん</rt></ruby>ボタン<ruby>留<rt>と</rt></ruby>め 7.<ruby>清潔<rt>せいけつ</rt></ruby>な<ruby>靴<rt>くつ</rt></ruby> 8.<ruby>装飾品<rt>そうしょくひん</rt></ruby>・<ruby>派手<rt>はで</rt></ruby>な<ruby>時計<rt>とけい</rt></ruby>なし 9.<ruby>強<rt>つよ</rt></ruby>い<ruby>香水<rt>こうすい</rt></ruby>なし。",
+      "jaPlain": "1.顔にかからない髪 2.長い髪はネット等でまとめる 3.毎日ひげそり・自然な化粧 4.短く清潔な爪 5.派手なネイル禁止 6.シワのない制服・全ボタン留め 7.清潔な靴 8.装飾品・派手な時計なし 9.強い香水なし。",
+      "id": "1. Rambut rapi tidak menutupi wajah; 2. Rambut panjang diikat hairnet/bando; 3. Bercukur setiap hari dan riasan natural tipis; 4. Kuku pendek bersih; 5. Hindari nail art/cat kuku mencolok; 6. Seragam bersih tanpa kusut dan semua kancing tertutup; 7. Sepatu bersih; 8. Tanpa perhiasan/jam mencolok; 9. Tanpa parfum menyengat.",
+      "en": "1. Neat hair off face; 2. Long hair tied with hairnet/headband; 3. Daily shave & light natural makeup if needed; 4. Short clean nails; 5. Avoid nail art/flashy polish; 6. Clean wrinkle-free uniform with all buttons fastened; 7. Clean shoes; 8. No jewelry/flashy watches; 9. No strong perfume."
+    },
+    "ttsText": "顔にかからない清潔な髪、長い髪をまとめる、毎日のひげそりと自然な化粧、短く清潔な爪、派手なネイル禁止、シワのない制服と全ボタン留め、清潔な靴、装飾品や派手な時計なし、強い香水なしの9項目です。"
+  },
+  {
+    "id": "ch04_009",
+    "chapter": 4,
+    "section": "4.3 接客の基本",
+    "pdfPage": 55,
+    "tags": ["rule", "service"],
+    "prompt": {
+      "jaRuby": "レストランの<ruby>接客<rt>せっきゃく</rt></ruby>で<ruby>大切<rt>たいせつ</rt></ruby>な4つの<ruby>姿勢<rt>しせい</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか？",
+      "jaPlain": "レストランの接客で大切な4つの姿勢は何ですか？",
+      "id": "Apa 4 prinsip sikap pelayanan tamu di restoran?",
+      "en": "What are the 4 key customer service principles in restaurant service?"
+    },
+    "answer": {
+      "jaRuby": "1. お<ruby>客様<rt>きゃくさま</rt></ruby>を<ruby>理解<rt>りかい</rt></ruby>する 2. <ruby>意向<rt>いこう</rt></ruby>・<ruby>要望<rt>ようぼう</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>する 3. <ruby>気配<rt>きくば</rt></ruby>りと<ruby>柔軟<rt>じゅうなん</rt></ruby>な<ruby>対応<rt>たいおう</rt></ruby>をする 4. お<ruby>客様<rt>きゃくさま</rt></ruby>を<ruby>尊重<rt>そんちょう</rt></ruby>する。",
+      "jaPlain": "1. お客様を理解する 2. 意向・要望を確認する 3. 気配りと柔軟な対応をする 4. お客様を尊重する。",
+      "id": "1. Memahami tamu; 2. Mengonfirmasi maksud dan permintaan tamu; 3. Memberikan perhatian dan respons yang fleksibel; 4. Menghormati tamu.",
+      "en": "1. Understand the customer; 2. Confirm intentions and requests; 3. Be attentive and flexible; 4. Respect the customer."
+    },
+    "ttsText": "お客様を理解する、意向や要望を確認する、気配りと柔軟な対応をする、お客様を尊重することの4つです。"
+  },
+  {
+    "id": "ch04_010",
+    "chapter": 4,
+    "section": "4.4 料理・飲料の提供",
+    "pdfPage": 56,
+    "tags": ["rule", "service"],
+    "prompt": {
+      "jaRuby": "<ruby>料理<rt>りょうり</rt></ruby>のお<ruby>皿<rt>さら</rt></ruby>を<ruby>持<rt>も</rt></ruby>つ<ruby>時<rt>とき</rt></ruby>、どのような<ruby>点<rt>てん</rt></ruby>に<ruby>注意<rt>ちゅうい</rt></ruby>しますか？",
+      "jaPlain": "料理のお皿を持つ時、どのような点に注意しますか？",
+      "id": "Hal apa yang harus diperhatikan saat memegang piring makanan?",
+      "en": "What must you avoid when holding plates of food?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>親指<rt>おやゆび</rt></ruby>が<ruby>料理<rt>りょうり</rt></ruby>に<ruby>触<rt>ふ</rt></ruby>れたり、お<ruby>皿<rt>さら</rt></ruby>に<ruby>指紋<rt>しもん</rt></ruby>を<ruby>残<rt>のこ</rt></ruby>したりしないようにします。",
+      "jaPlain": "親指が料理に触れたり、お皿に指紋を残したりしないようにします。",
+      "id": "Pastikan ibu jari tidak menyentuh makanan dan tidak meninggalkan sidik jari pada piring.",
+      "en": "Avoid letting your thumb touch the food or leaving fingerprints on plates."
+    },
+    "ttsText": "親指が料理に触れたり、お皿に指紋を残したりしないように注意します。"
+  },
+  {
+    "id": "ch04_011",
+    "chapter": 4,
+    "section": "4.4 料理・飲料の提供",
+    "pdfPage": 56,
+    "tags": ["rule", "etiquette"],
+    "prompt": {
+      "jaRuby": "<ruby>料理<rt>りょうり</rt></ruby>をテーブルに<ruby>置<rt>お</rt></ruby>くときの<ruby>向<rt>む</rt></ruby>きのルールは？",
+      "jaPlain": "料理をテーブルに置くときの向きのルールは？",
+      "id": "Bagaimana aturan arah penyajian hidangan di meja tamu?",
+      "en": "How should you orient a dish when placing it before a guest?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>料理<rt>りょうり</rt></ruby>の<ruby>正面<rt>しょうめん</rt></ruby>がお<ruby>客様<rt>きゃくさま</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>に<ruby>向<rt>む</rt></ruby>くように<ruby>提供<rt>ていきょう</rt></ruby>します。",
+      "jaPlain": "料理の正面がお客様の方に向くように提供します。",
+      "id": "Arahkan bagian depan hidangan menghadap langsung ke tamu.",
+      "en": "Orient the dish so the front faces the guest."
+    },
+    "ttsText": "料理の正面がお客様の方に向くように提供します。"
+  },
+  {
+    "id": "ch04_012",
+    "chapter": 4,
+    "section": "4.4 料理・飲料の提供",
+    "pdfPage": 56,
+    "tags": ["rule", "etiquette", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>洋食<rt>ようしょく</rt></ruby>サービスで<ruby>料理<rt>りょうり</rt></ruby>と<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>はそれぞれどちら<ruby>側<rt>がわ</rt></ruby>から<ruby>提供<rt>ていきょう</rt></ruby>しますか？",
+      "jaPlain": "洋食サービスで料理と飲み物はそれぞれどちら側から提供しますか？",
+      "id": "Dalam penyajian ala Barat, dari sisi mana makanan dan minuman disajikan?",
+      "en": "In Western dining service, from which side do you serve food and drinks?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>料理<rt>りょうり</rt></ruby>は<ruby>左側<rt>ひだりがわ</rt></ruby>から、<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>は<ruby>右側<rt>みぎがわ</rt></ruby>から<ruby>提供<rt>ていきょう</rt></ruby>します。",
+      "jaPlain": "料理は左側から、飲み物は右側から提供します。",
+      "id": "Sajikan makanan dari sebelah kiri tamu, dan sajikan minuman dari sebelah kanan tamu.",
+      "en": "Serve food from the left, and serve drinks from the right."
+    },
+    "ttsText": "料理は左側から、飲み物は右側から提供します。",
+    "examTip": {
+      "id": "Ingat rumus kiri-kanan Western: Makanan = Kiri (左側), Minuman = Kanan (右側).",
+      "en": "High-yield Western dining rule: Food from the LEFT, Drinks from the RIGHT."
+    }
+  },
+  {
+    "id": "ch04_013",
+    "chapter": 4,
+    "section": "4.4 料理・飲料の提供",
+    "pdfPage": 56,
+    "tags": ["rule", "etiquette", "high-yield"],
+    "prompt": {
+      "jaRuby": "グラスの<ruby>持<rt>も</rt></ruby>ち<ruby>方<rt>かた</rt></ruby>とテーブルへの<ruby>置<rt>お</rt></ruby>き<ruby>方<rt>かた</rt></ruby>のルールは？",
+      "jaPlain": "グラスの持ち方とテーブルへの置き方のルールは？",
+      "id": "Bagaimana aturan memegang gelas dan meletakkannya di meja?",
+      "en": "How must you hold a glass and place it on the table?"
+    },
+    "answer": {
+      "jaRuby": "グラスの<ruby>下半分<rt>したはんぶん</rt></ruby>を<ruby>持<rt>も</rt></ruby>ち（<ruby>飲<rt>の</rt></ruby>み<ruby>口<rt>ぐち</rt></ruby>に<ruby>触<rt>ふ</rt></ruby>れない）、<ruby>音<rt>おと</rt></ruby>を<ruby>立<rt>た</rt></ruby>てずに<ruby>静<rt>しず</rt></ruby>かに<ruby>置<rt>お</rt></ruby>きます。",
+      "jaPlain": "グラスの下半分を持ち（飲み口に触れない）、音を立てずに静かに置きます。",
+      "id": "Pegang bagian setengah bawah gelas (jangan pernah menyentuh bibir gelas) dan letakkan di meja tanpa suara.",
+      "en": "Hold the glass by the bottom half (never touch the rim) and place it on the table silently."
+    },
+    "ttsText": "グラスの下半分を持ち、飲み口に触れずに、音を立てずに静かに置きます。"
+  },
+  {
+    "id": "ch04_014",
+    "chapter": 4,
+    "section": "4.4 料理・飲料の提供",
+    "pdfPage": 56,
+    "tags": ["rule", "service"],
+    "prompt": {
+      "jaRuby": "<ruby>料理<rt>りょうり</rt></ruby>に<ruby>合<rt>あ</rt></ruby>う<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>を<ruby>提案<rt>ていあん</rt></ruby>する<ruby>目的<rt>もくてき</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか？",
+      "jaPlain": "料理に合う飲み物を提案する目的は何ですか？",
+      "id": "Apa tujuan menyarankan minuman yang cocok dengan makanan?",
+      "en": "Why should staff suggest drinks that pair well with the meal?"
+    },
+    "answer": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>の<ruby>満足度<rt>まんぞくど</rt></ruby>を<ruby>高<rt>たか</rt></ruby>め、より<ruby>単価<rt>たんか</rt></ruby>の<ruby>高<rt>たか</rt></ruby>い<ruby>注文<rt>ちゅうもん</rt></ruby>につなげるためです。",
+      "jaPlain": "お客様の満足度を高め、より単価の高い注文につなげるためです。",
+      "id": "Untuk meningkatkan kepuasan tamu sekaligus mendorong pesanan bernilai lebih tinggi.",
+      "en": "To boost guest satisfaction and encourage higher-value orders."
+    },
+    "ttsText": "お客様の満足度を高め、より単価の高い注文につなげるためです。"
+  },
+  {
+    "id": "ch04_015",
+    "chapter": 4,
+    "section": "4.5 食のルールとマナー（和食）",
+    "pdfPage": 57,
+    "tags": ["rule", "washoku"],
+    "prompt": {
+      "jaRuby": "<ruby>食<rt>しょく</rt></ruby>のルールとマナーを<ruby>学<rt>まな</rt></ruby>ぶうえで<ruby>重要<rt>じゅうよう</rt></ruby>なことは<ruby>何<rt>なん</rt></ruby>ですか？",
+      "jaPlain": "食のルールとマナーを学ぶうえで重要なことは何ですか？",
+      "id": "Mengapa penting memahami aturan dan tata cara makan (Washoku dan Yoshoku)?",
+      "en": "What is the purpose of mastering food rules and dining etiquette?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>和食<rt>わしょく</rt></ruby>や<ruby>洋食<rt>ようしょく</rt></ruby>の<ruby>食文化<rt>しょくぶんか</rt></ruby>、<ruby>料理<rt>りょうり</rt></ruby>の<ruby>並<rt>なら</rt></ruby>べ<ruby>方<rt>かた</rt></ruby>、<ruby>提供<rt>ていきょう</rt></ruby>の<ruby>順番<rt>じゅんばん</rt></ruby>を<ruby>正<rt>ただ</rt></ruby>しく<ruby>理解<rt>りかい</rt></ruby>してサービスすることです。",
+      "jaPlain": "和食や洋食の食文化、料理の並べ方、提供の順番を正しく理解してサービスすることです。",
+      "id": "Memahami budaya kuliner Washoku dan Yoshoku, tata letak hidangan, serta urutan penyajian dengan benar saat melayani tamu.",
+      "en": "To properly understand Washoku and Yoshoku food culture, table placement, and serving order during service."
+    },
+    "ttsText": "和食や洋食の食文化、料理の並べ方、提供の順番を正しく理解してサービスすることです。"
+  },
+  {
+    "id": "ch04_016",
+    "chapter": 4,
+    "section": "4.5 食のルールとマナー（和食）",
+    "pdfPage": 58,
+    "tags": ["vocab", "washoku", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>旬<rt>しゅん</rt></ruby>",
+      "jaPlain": "旬",
+      "id": "Apa arti istilah \"旬\" (Shun) dalam Washoku?",
+      "en": "What does 旬 (しゅん) mean in Japanese cuisine?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>食材<rt>しょくざい</rt></ruby>が<ruby>最<rt>もっと</rt></ruby>もおいしくなる<ruby>時期<rt>じき</rt></ruby>（ピークの<ruby>季節<rt>きせつ</rt></ruby>の<ruby>食材<rt>しょくざい</rt></ruby>）のことです。",
+      "jaPlain": "食材が最もおいしくなる時期（ピークの季節の食材）のことです。",
+      "id": "Bahan makanan musiman yang sedang berada pada puncak kesegaran dan kelezatannya.",
+      "en": "Peak seasonal ingredients (when ingredients are freshest and most delicious)."
+    },
+    "ttsText": "しゅん。食材が最もおいしくなるピークの季節の食材のことです。"
+  },
+  {
+    "id": "ch04_017",
+    "chapter": 4,
+    "section": "4.5 食のルールとマナー（和食）",
+    "pdfPage": 58,
+    "tags": ["vocab", "washoku", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>地産地消<rt>ちさんちしょう</rt></ruby>",
+      "jaPlain": "地産地消",
+      "id": "Apa arti istilah \"地産地消\" (Chisanchishou)?",
+      "en": "What does 地産地消 (ちさんちしょう) mean?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>地元<rt>じもと</rt></ruby>で<ruby>生産<rt>せいさん</rt></ruby>された<ruby>食材<rt>しょくざい</rt></ruby>を<ruby>地元<rt>じもと</rt></ruby>で<ruby>消費<rt>しょうひ</rt></ruby>することです。",
+      "jaPlain": "地元で生産された食材を地元で消費することです。",
+      "id": "Produksi lokal untuk konsumsi lokal (memanfaatkan hasil panen daerah setempat di daerah tersebut).",
+      "en": "Local production for local consumption."
+    },
+    "ttsText": "ちさんちしょう。地元で生産された食材を地元で消費することです。"
+  },
+  {
+    "id": "ch04_018",
+    "chapter": 4,
+    "section": "4.5 食のルールとマナー（和食）",
+    "pdfPage": 58,
+    "tags": ["vocab", "washoku", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>一汁三菜<rt>いちじゅうさんさい</rt></ruby>",
+      "jaPlain": "一汁三菜",
+      "id": "Apa komposisi dasar dari \"一汁三菜\" (Ichijuu-sansai)?",
+      "en": "What makes up 一汁三菜 (いちじゅうさんさい)?"
+    },
+    "answer": {
+      "jaRuby": "ご<ruby>飯<rt>はん</rt></ruby>に、<ruby>汁物<rt>しるもの</rt></ruby>1<ruby>品<rt>しな</rt></ruby>と3つの<ruby>料理<rt>りょうり</rt></ruby>（<ruby>主菜<rt>しゅさい</rt></ruby>1<ruby>品<rt>しな</rt></ruby>・<ruby>副菜<rt>ふくさい</rt></ruby>2<ruby>品<rt>しな</rt></ruby>）を<ruby>組<rt>く</rt></ruby>み<ruby>合<rt>あ</rt></ruby>わせた<ruby>和食<rt>わしょく</rt></ruby>の<ruby>基本<rt>きほん</rt></ruby>です。",
+      "jaPlain": "ご飯に、汁物1品と3つの料理（主菜1品・副菜2品）を組み合わせた和食の基本です。",
+      "id": "Pola dasar Washoku yang terdiri dari 1 sup, 3 lauk (1 lauk utama dan 2 lauk pendamping), serta nasi.",
+      "en": "The core Japanese meal structure consisting of 1 soup, 3 dishes, and rice."
+    },
+    "ttsText": "いちじゅうさんさい。ご飯に、汁物1品と3つの料理を組み合わせた和食の基本です。"
+  },
+  {
+    "id": "ch04_019",
+    "chapter": 4,
+    "section": "4.5 食のルールとマナー（和食）",
+    "pdfPage": 58,
+    "tags": ["etiquette", "washoku", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>一汁三菜<rt>いちじゅうさんさい</rt></ruby>で、<ruby>手前<rt>てまえ</rt></ruby>の<ruby>左<rt>ひだり</rt></ruby>と<ruby>右<rt>みぎ</rt></ruby>にはそれぞれ<ruby>何<rt>なに</rt></ruby>を<ruby>置<rt>お</rt></ruby>きますか？",
+      "jaPlain": "一汁三菜で、手前の左と右にはそれぞれ何を置きますか？",
+      "id": "Pada tata letak Ichijuu-sansai, apa yang diletakkan di bagian depan kiri dan depan kanan?",
+      "en": "In 一汁三菜 placement, what goes on the front-left and front-right?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>手前<rt>てまえ</rt></ruby>の<ruby>左<rt>ひだり</rt></ruby>にご<ruby>飯<rt>はん</rt></ruby>、<ruby>手前<rt>てまえ</rt></ruby>の<ruby>右<rt>みぎ</rt></ruby>に<ruby>汁<rt>しる</rt></ruby>を<ruby>置<rt>お</rt></ruby>きます。",
+      "jaPlain": "手前の左にご飯、手前の右に汁を置きます。",
+      "id": "Kiri (depan) = Nasi (ご飯), Kanan (depan) = Sup (汁).",
+      "en": "Left = Rice (ご飯), Right = Soup (汁)."
+    },
+    "ttsText": "手前の左にご飯、手前の右に汁を置きます。",
+    "examTip": {
+      "id": "Posisi depan wajib hafal: Kiri adalah Nasi, Kanan adalah Sup.",
+      "en": "Must-know Washoku layout: Rice on the Left, Soup on the Right."
+    }
+  },
+  {
+    "id": "ch04_020",
+    "chapter": 4,
+    "section": "4.5 食のルールとマナー（和食）",
+    "pdfPage": 59,
+    "tags": ["etiquette", "washoku", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>一汁三菜<rt>いちじゅうさんさい</rt></ruby>で、<ruby>左奥<rt>ひだりおく</rt></ruby>と<ruby>右奥<rt>みぎおく</rt></ruby>にはそれぞれ<ruby>何<rt>なに</rt></ruby>を<ruby>置<rt>お</rt></ruby>きますか？",
+      "jaPlain": "一汁三菜で、左奥と右奥にはそれぞれ何を置きますか？",
+      "id": "Pada tata letak Ichijuu-sansai, apa yang diletakkan di belakang kiri dan belakang kanan?",
+      "en": "In 一汁三菜 placement, what goes on the left-rear and right-rear?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>左奥<rt>ひだりおく</rt></ruby>に<ruby>副菜<rt>ふくさい</rt></ruby>、<ruby>右奥<rt>みぎおく</rt></ruby>に<ruby>主菜<rt>しゅさい</rt></ruby>を<ruby>置<rt>お</rt></ruby>きます。",
+      "jaPlain": "左奥に副菜、右奥に主菜を置きます。",
+      "id": "Belakang-kiri = Lauk pendamping / Side dish (副菜), Belakang-kanan = Lauk utama / Main dish (主菜).",
+      "en": "Left-Rear = Side dish (副菜), Right-Rear = Main dish (主菜)."
+    },
+    "ttsText": "左奥に副菜、右奥に主菜を置きます。"
+  },
+  {
+    "id": "ch04_021",
+    "chapter": 4,
+    "section": "4.5 食のルールとマナー（和食）",
+    "pdfPage": 59,
+    "tags": ["sequence", "washoku", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>懐石<rt>かいせき</rt></ruby><ruby>料理<rt>りょうり</rt></ruby>の9<ruby>品<rt>しな</rt></ruby>の<ruby>提供<rt>ていきょう</rt></ruby><ruby>順番<rt>じゅんばん</rt></ruby>は？",
+      "jaPlain": "懐石料理の9品の提供順番は？",
+      "id": "Sebutkan urutan 9 hidangan dalam Kaiseki Ryori!",
+      "en": "What is the 9-course serving order of 懐石料理 (Kaiseki Ryori)?"
+    },
+    "answer": {
+      "jaRuby": "1.<ruby>前菜<rt>ぜんさい</rt></ruby> 2.<ruby>碗盛<rt>わんもり</rt></ruby> 3.お<ruby>造<rt>つく</rt></ruby>り 4.<ruby>焼<rt>や</rt></ruby>き<ruby>物<rt>もの</rt></ruby> 5.<ruby>煮物<rt>にもの</rt></ruby> 6.<ruby>揚物<rt>あげもの</rt></ruby> 7.<ruby>酢<rt>す</rt></ruby>の<ruby>物<rt>もの</rt></ruby> 8.ごはん・<ruby>香<rt>こう</rt></ruby>の<ruby>物<rt>もの</rt></ruby> 9.<ruby>水菓子<rt>みずがし</rt></ruby>",
+      "jaPlain": "1.前菜 2.碗盛 3.お造り 4.焼き物 5.煮物 6.揚物 7.酢の物 8.ごはん・香の物 9.水菓子",
+      "id": "1. Zensai (Pembuka), 2. Wanmori (Sup), 3. Otsukuri (Sashimi), 4. Yakimono (Panggang), 5. Nimono (Rebus), 6. Agemono (Goreng), 7. Sunomono (Acar/Cuka), 8. Gohan & Konomono (Nasi & Acar), 9. Mizugashi (Hidangan penutup).",
+      "en": "1. 前菜 (Appetizer), 2. 碗盛 (Soup), 3. お造り (Sashimi), 4. 焼き物 (Grilled), 5. 煮物 (Stewed), 6. 揚物 (Fried), 7. 酢の物 (Vinegared/Pickled), 8. ごはん・香の物 (Rice & pickles), 9. 水菓子 (Dessert)."
+    },
+    "ttsText": "懐石料理の順番は、前菜、碗盛、お造り、焼き物、煮物、揚物、酢の物、ごはん・香の物、水菓子です。",
+    "examTip": {
+      "id": "Ujian sering menanyakan urutan di tengah (4-7: 焼き物 -> 煮物 -> 揚物 -> 酢の物) atau makanan penutup (水菓子).",
+      "en": "CBT exams often test the middle sequence (Grilled -> Stewed -> Fried -> Vinegared) and final dessert (水菓子)."
+    }
+  },
+  {
+    "id": "ch04_022",
+    "chapter": 4,
+    "section": "4.5 食のルールとマナー（和食）",
+    "pdfPage": 59,
+    "tags": ["vocab", "washoku"],
+    "prompt": {
+      "jaRuby": "<ruby>懐石<rt>かいせき</rt></ruby><ruby>料理<rt>りょうり</rt></ruby>の1<ruby>番目<rt>ばんめ</rt></ruby>から3<ruby>番目<rt>ばんめ</rt></ruby>（<ruby>前菜<rt>ぜんさい</rt></ruby>・<ruby>碗盛<rt>わんもり</rt></ruby>・お<ruby>造<rt>つく</rt></ruby>り）の<ruby>意味<rt>いみ</rt></ruby>は？",
+      "jaPlain": "懐石料理の1番目から3番目（前菜・碗盛・お造り）の意味は？",
+      "id": "Apa arti 3 hidangan awal Kaiseki Ryori: 前菜, 碗盛, dan お造り?",
+      "en": "What are courses 1 to 3 of Kaiseki Ryori (前菜, 碗盛, お造り)?"
+    },
+    "answer": {
+      "jaRuby": "1.<ruby>前菜<rt>ぜんさい</rt></ruby>（<ruby>最初<rt>さいしょ</rt></ruby>の<ruby>小<rt>ちい</rt></ruby>さな<ruby>料理<rt>りょうり</rt></ruby>） 2.<ruby>碗盛<rt>わんもり</rt></ruby>（<ruby>汁物<rt>しるもの</rt></ruby>） 3.お<ruby>造<rt>つく</rt></ruby>り（<ruby>刺身<rt>さしみ</rt></ruby>）です。",
+      "jaPlain": "1.前菜（最初の小さな料理） 2.碗盛（汁物） 3.お造り（刺身）です。",
+      "id": "1. 前菜 (Zensai): hidangan pembuka; 2. 碗盛 (Wanmori): sup dalam mangkuk berpenutup; 3. お造り (Otsukuri): sashimi (ikan mentah).",
+      "en": "1. 前菜 (Zensai): Appetizer; 2. 碗盛 (Wanmori): Soup; 3. お造り (Otsukuri): Sashimi."
+    },
+    "ttsText": "1番目が前菜、2番目が碗盛で汁物、3番目がお造りで刺身です。"
+  },
+  {
+    "id": "ch04_023",
+    "chapter": 4,
+    "section": "4.5 食のルールとマナー（和食）",
+    "pdfPage": 59,
+    "tags": ["vocab", "washoku"],
+    "prompt": {
+      "jaRuby": "<ruby>懐石<rt>かいせき</rt></ruby><ruby>料理<rt>りょうり</rt></ruby>の4<ruby>番目<rt>ばんめ</rt></ruby>から7<ruby>番目<rt>ばんめ</rt></ruby>（<ruby>焼<rt>や</rt></ruby>き<ruby>物<rt>もの</rt></ruby>・<ruby>煮物<rt>にもの</rt></ruby>・<ruby>揚物<rt>あげもの</rt></ruby>・<ruby>酢<rt>す</rt></ruby>の<ruby>物<rt>もの</rt></ruby>）の<ruby>意味<rt>いみ</rt></ruby>と<ruby>順番<rt>じゅんばん</rt></ruby>は？",
+      "jaPlain": "懐石料理の4番目から7番目（焼き物・煮物・揚物・酢の物）の意味と順番は？",
+      "id": "Apa urutan dan arti hidangan ke-4 hingga ke-7 pada Kaiseki Ryori?",
+      "en": "What are courses 4 to 7 of Kaiseki Ryori in exact order?"
+    },
+    "answer": {
+      "jaRuby": "4.<ruby>焼<rt>や</rt></ruby>き<ruby>物<rt>もの</rt></ruby> 5.<ruby>煮物<rt>にもの</rt></ruby> 6.<ruby>揚物<rt>あげもの</rt></ruby> 7.<ruby>酢<rt>す</rt></ruby>の<ruby>物<rt>もの</rt></ruby>の<ruby>順<rt>じゅん</rt></ruby>です。",
+      "jaPlain": "4.焼き物 5.煮物 6.揚物 7.酢の物の順です。",
+      "id": "Urutannya: 4. Yakimono (panggang), 5. Nimono (rebus/semur), 6. Agemono (goreng), 7. Sunomono (hidangan cuka/acar).",
+      "en": "4. 焼き物 (Grilled) -> 5. 煮物 (Stewed) -> 6. 揚物 (Fried) -> 7. 酢の物 (Vinegared/Pickled)."
+    },
+    "ttsText": "4番目が焼き物、5番目が煮物、6番目が揚物、7番目が酢の物の順です。"
+  },
+  {
+    "id": "ch04_024",
+    "chapter": 4,
+    "section": "4.5 食のルールとマナー（和食）",
+    "pdfPage": 59,
+    "tags": ["vocab", "washoku"],
+    "prompt": {
+      "jaRuby": "<ruby>懐石<rt>かいせき</rt></ruby><ruby>料理<rt>りょうり</rt></ruby>の<ruby>最後<rt>さいご</rt></ruby>の2<ruby>品<rt>しな</rt></ruby>（8<ruby>番目<rt>ばんめ</rt></ruby>・9<ruby>番目<rt>ばんめ</rt></ruby>）は<ruby>何<rt>なん</rt></ruby>ですか？",
+      "jaPlain": "懐石料理の最後の2品（8番目・9番目）は何ですか？",
+      "id": "Apa 2 hidangan terakhir (ke-8 dan ke-9) pada Kaiseki Ryori?",
+      "en": "What are the final 2 courses (8th and 9th) of Kaiseki Ryori?"
+    },
+    "answer": {
+      "jaRuby": "8.ごはん・<ruby>香<rt>こう</rt></ruby>の<ruby>物<rt>もの</rt></ruby>（ご<ruby>飯<rt>はん</rt></ruby>と<ruby>漬物<rt>つけもの</rt></ruby>）、9.<ruby>水菓子<rt>みずがし</rt></ruby>（デザート・<ruby>果物<rt>くだもの</rt></ruby>など）です。",
+      "jaPlain": "8.ごはん・香の物（ご飯と漬物）、9.水菓子（デザート・果物など）です。",
+      "id": "8. ごはん・香の物 (nasi dan acar Jepang), dan 9. 水菓子 (hidangan penutup/buah).",
+      "en": "8. ごはん・香の物 (Rice & pickles), and 9. 水菓子 (Dessert)."
+    },
+    "ttsText": "8番目がごはん・香の物、9番目が水菓子でデザートです。"
+  },
+  {
+    "id": "ch04_025",
+    "chapter": 4,
+    "section": "4.5 食のルールとマナー（洋食）",
+    "pdfPage": 60,
+    "tags": ["sequence", "yoshoku", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>洋食<rt>ようしょく</rt></ruby>コース6<ruby>品<rt>しな</rt></ruby>の<ruby>提供<rt>ていきょう</rt></ruby><ruby>順番<rt>じゅんばん</rt></ruby>は？",
+      "jaPlain": "洋食コース6品の提供順番は？",
+      "id": "Sebutkan urutan 6 hidangan pada menu kursus ala Barat (Yoshoku)!",
+      "en": "What is the 6-course serving order in Western dining (洋食)?"
+    },
+    "answer": {
+      "jaRuby": "1.オードブル 2.スープ 3.<ruby>魚<rt>さかな</rt></ruby><ruby>料理<rt>りょうり</rt></ruby> 4.<ruby>肉<rt>にく</rt></ruby><ruby>料理<rt>りょうり</rt></ruby> 5.デザート 6.コーヒー",
+      "jaPlain": "1.オードブル 2.スープ 3.魚料理 4.肉料理 5.デザート 6.コーヒー",
+      "id": "1. Hors d'oeuvre (Pembuka), 2. Sup, 3. Hidangan Ikan (魚料理), 4. Hidangan Daging (肉料理), 5. Dessert, 6. Kopi.",
+      "en": "1. オードブル (Appetizer) -> 2. スープ (Soup) -> 3. 魚料理 (Fish) -> 4. 肉料理 (Meat) -> 5. デザート (Dessert) -> 6. コーヒー (Coffee)."
+    },
+    "ttsText": "洋食の6コースの順番は、オードブル、スープ、魚料理、肉料理、デザート、コーヒーです。",
+    "examTip": {
+      "id": "Urutan wajib: Hidangan Ikan (魚料理) selalu disajikan sebelum Hidangan Daging (肉料理).",
+      "en": "Remember: Fish (魚料理) is always served BEFORE Meat (肉料理)."
+    }
+  },
+  {
+    "id": "ch04_026",
+    "chapter": 4,
+    "section": "4.5 食のルールとマナー（洋食）",
+    "pdfPage": 60,
+    "tags": ["etiquette", "yoshoku", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>洋食<rt>ようしょく</rt></ruby>テーブルセッティングで、フォーク、ナイフ、スプーンはそれぞれどこに<ruby>置<rt>お</rt></ruby>きますか？",
+      "jaPlain": "洋食テーブルセッティングで、フォーク、ナイフ、スプーンはそれぞれどこに置きますか？",
+      "id": "Pada pengaturan meja ala Barat, di sisi mana garpu, pisau, dan sendok diletakkan?",
+      "en": "In Western cutlery placement, where are the fork, knife, and spoon placed?"
+    },
+    "answer": {
+      "jaRuby": "お<ruby>皿<rt>さら</rt></ruby>の<ruby>左側<rt>ひだりがわ</rt></ruby>にフォーク、<ruby>右側<rt>みぎがわ</rt></ruby>にナイフとスプーンを<ruby>置<rt>お</rt></ruby>きます。",
+      "jaPlain": "お皿の左側にフォーク、右側にナイフとスプーンを置きます。",
+      "id": "Garpu di sebelah kiri piring; pisau dan sendok di sebelah kanan piring.",
+      "en": "Fork on the left of the plate; Knife and Spoon on the right."
+    },
+    "ttsText": "お皿の左側にフォーク、右側にナイフとスプーンを置きます。"
+  },
+  {
+    "id": "ch04_027",
+    "chapter": 4,
+    "section": "4.5 食のルールとマナー（洋食）",
+    "pdfPage": 60,
+    "tags": ["etiquette", "yoshoku", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>洋食<rt>ようしょく</rt></ruby>テーブルで、デザート<ruby>用<rt>よう</rt></ruby>フォーク・スプーンとパン<ruby>皿<rt>ざら</rt></ruby>はどこに<ruby>置<rt>お</rt></ruby>きますか？",
+      "jaPlain": "洋食テーブルで、デザート用フォーク・スプーンとパン皿はどこに置きますか？",
+      "id": "Di mana posisi garpu/sendok pencuci mulut dan piring roti pada meja ala Barat?",
+      "en": "Where are the dessert fork/spoon and bread plate placed in Western table setting?"
+    },
+    "answer": {
+      "jaRuby": "お<ruby>皿<rt>さら</rt></ruby>の<ruby>上側<rt>うえがわ</rt></ruby>にデザート<ruby>用<rt>よう</rt></ruby>フォーク・スプーン、<ruby>左上<rt>ひだりうえ</rt></ruby>にパン<ruby>皿<rt>ざら</rt></ruby>を<ruby>置<rt>お</rt></ruby>きます。",
+      "jaPlain": "お皿の上側にデザート用フォーク・スプーン、左上にパン皿を置きます。",
+      "id": "Garpu/sendok pencuci mulut di bagian atas piring; piring roti di kiri atas piring.",
+      "en": "Dessert fork/spoon at the top of the plate; Bread plate at the top-left."
+    },
+    "ttsText": "お皿の上側にデザート用フォークとスプーン、左上にパン皿を置きます。"
+  },
+  {
+    "id": "ch04_028",
+    "chapter": 4,
+    "section": "4.5 食のルールとマナー（洋食）",
+    "pdfPage": 61,
+    "tags": ["etiquette", "yoshoku", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>洋食<rt>ようしょく</rt></ruby>のカトラリーの<ruby>持<rt>も</rt></ruby>ち<ruby>方<rt>かた</rt></ruby>と<ruby>使<rt>つか</rt></ruby>う<ruby>順番<rt>じゅんばん</rt></ruby>は？",
+      "jaPlain": "洋食のカトラリーの持ち方と使う順番は？",
+      "id": "Bagaimana cara memegang dan urutan memakai alat makan (cutlery) ala Barat?",
+      "en": "How do you hold Western cutlery and in what order are the pieces used?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>右手<rt>みぎて</rt></ruby>にナイフ、<ruby>左手<rt>ひだりて</rt></ruby>にフォークを<ruby>持<rt>も</rt></ruby>ち、<ruby>外側<rt>そとがわ</rt></ruby>から<ruby>内側<rt>うちがわ</rt></ruby>へ<ruby>順番<rt>じゅんばん</rt></ruby>に<ruby>使<rt>つか</rt></ruby>います。",
+      "jaPlain": "右手にナイフ、左手にフォークを持ち、外側から内側へ順番に使います。",
+      "id": "Pegang pisau di tangan kanan, garpu di tangan kiri, dan gunakan berurutan dari sisi luar ke dalam (outside-in).",
+      "en": "Hold the knife in the right hand and fork in the left, and use cutlery from outside-in."
+    },
+    "ttsText": "右手にナイフ、左手にフォークを持ち、外側から内側へ順番に使います。"
+  },
+  {
+    "id": "ch04_029",
+    "chapter": 4,
+    "section": "4.5 食のルールとマナー（洋食）",
+    "pdfPage": 61,
+    "tags": ["etiquette", "yoshoku", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>洋食<rt>ようしょく</rt></ruby>の<ruby>食事中<rt>しょくじちゅう</rt></ruby>（<ruby>途中<rt>とちゅう</rt></ruby>で<ruby>休<rt>やす</rt></ruby>む<ruby>時<rt>とき</rt></ruby>）のナイフとフォークの<ruby>置<rt>お</rt></ruby>き<ruby>方<rt>かた</rt></ruby>は？",
+      "jaPlain": "洋食の食事中（途中で休む時）のナイフとフォークの置き方は？",
+      "id": "Bagaimana posisi pisau dan garpu saat jeda di tengah makan ala Barat?",
+      "en": "How should the knife and fork be placed during a mid-meal pause in Western dining?"
+    },
+    "answer": {
+      "jaRuby": "お<ruby>皿<rt>さら</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>に「<ruby>八<rt>はち</rt></ruby>の<ruby>字<rt>じ</rt></ruby>」（V<ruby>字<rt>じ</rt></ruby>）になるように<ruby>置<rt>お</rt></ruby>きます。",
+      "jaPlain": "お皿の上に「八の字」（V字）になるように置きます。",
+      "id": "Letakkan di atas piring membentuk huruf V terbalik atau bentuk kanji 八 (八の字 / V-shape).",
+      "en": "Place them in a V-shape (八の字) on the plate."
+    },
+    "ttsText": "お皿の上に八の字、V字になるように置きます。"
+  },
+  {
+    "id": "ch04_030",
+    "chapter": 4,
+    "section": "4.5 食のルールとマナー（洋食）",
+    "pdfPage": 61,
+    "tags": ["etiquette", "yoshoku", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>洋食<rt>ようしょく</rt></ruby>の<ruby>食事後<rt>しょくじご</rt></ruby>（<ruby>食<rt>た</rt></ruby>べ<ruby>終<rt>お</rt></ruby>わった<ruby>時<rt>とき</rt></ruby>）のナイフとフォークの<ruby>置<rt>お</rt></ruby>き<ruby>方<rt>かた</rt></ruby>は？",
+      "jaPlain": "洋食の食事後（食べ終わった時）のナイフとフォークの置き方は？",
+      "id": "Bagaimana posisi pisau dan garpu setelah selesai makan ala Barat?",
+      "en": "How should the knife and fork be placed when finished eating in Western dining?"
+    },
+    "answer": {
+      "jaRuby": "ナイフとフォークを<ruby>揃<rt>そろ</rt></ruby>えて、お<ruby>皿<rt>さら</rt></ruby>の<ruby>右下<rt>みぎした</rt></ruby>に<ruby>並<rt>なら</rt></ruby>べて<ruby>置<rt>お</rt></ruby>きます。",
+      "jaPlain": "ナイフとフォークを揃えて、お皿の右下に並べて置きます。",
+      "id": "Sejajarkan pisau dan garpu bersamaan di bagian kanan bawah piring.",
+      "en": "Align the knife and fork together at the bottom-right of the plate."
+    },
+    "ttsText": "ナイフとフォークを揃えて、お皿の右下に並べて置きます。",
+    "examTip": {
+      "id": "Bedakan dua posisi penting: Jeda makan = bentuk V (八の字); Selesai makan = sejajar di kanan bawah (右下).",
+      "en": "Contrast clearly: Mid-meal pause = V-shape (八の字); Finished = aligned together at bottom-right."
+    }
+  },
+  {
+    "id": "ch04_031",
+    "chapter": 4,
+    "section": "4.5 食のルールとマナー（洋食）",
+    "pdfPage": 61,
+    "tags": ["etiquette", "yoshoku"],
+    "prompt": {
+      "jaRuby": "<ruby>洋食<rt>ようしょく</rt></ruby>でバターを<ruby>塗<rt>ぬ</rt></ruby>る<ruby>時<rt>とき</rt></ruby>のマナーは？",
+      "jaPlain": "洋食でバターを塗る時のマナーは？",
+      "id": "Alat apa yang digunakan untuk mengambil dan mengoles mentega dalam jamuan ala Barat?",
+      "en": "What is the proper etiquette for using butter in Western dining?"
+    },
+    "answer": {
+      "jaRuby": "バターには<ruby>専用<rt>せんよう</rt></ruby>のバターナイフ（バタースプレッダー）を<ruby>使<rt>つか</rt></ruby>います。",
+      "jaPlain": "バターには専用のバターナイフ（バタースプレッダー）を使います。",
+      "id": "Gunakan pisau mentega khusus (butter spreader / バターナイフ) untuk mentega.",
+      "en": "Use a dedicated butter spreader for butter."
+    },
+    "ttsText": "バターには専用のバターナイフを使います。"
+  },
+  {
+    "id": "ch04_032",
+    "chapter": 4,
+    "section": "4.6 食物アレルギー",
+    "pdfPage": 62,
+    "tags": ["vocab", "allergy", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>食物<rt>しょくもつ</rt></ruby>アレルギーによる<ruby>重篤<rt>じゅうとく</rt></ruby>な<ruby>症状<rt>しょうじょう</rt></ruby>を<ruby>何<rt>なん</rt></ruby>といいますか？",
+      "jaPlain": "食物アレルギーによる重篤な症状を何といいますか？",
+      "id": "Apa nama reaksi alergi makanan yang berat dan bisa mengancam nyawa?",
+      "en": "What is the severe, potentially fatal allergic reaction called?"
+    },
+    "answer": {
+      "jaRuby": "アナフィラキシーショック（<ruby>呼吸困難<rt>こきゅうこんなん</rt></ruby>などを<ruby>起<rt>お</rt></ruby>こし、<ruby>命<rt>いのち</rt></ruby>に<ruby>関<rt>かか</rt></ruby>わることもある<ruby>症状<rt>しょうじょう</rt></ruby>）です。",
+      "jaPlain": "アナフィラキシーショック（呼吸困難などを起こし、命に関わることもある症状）です。",
+      "id": "Syok anafilaksis (アナフィラキシーショック), yang menyebabkan sesak napas dan dapat berakibat fatal.",
+      "en": "Anaphylactic shock (アナフィラキシーショック), which causes breathing difficulty and can be fatal."
+    },
+    "ttsText": "アナフィラキシーショックです。呼吸困難などを起こし、命に関わることもあります。"
+  },
+  {
+    "id": "ch04_033",
+    "chapter": 4,
+    "section": "4.6 食物アレルギー",
+    "pdfPage": 62,
+    "tags": ["rule", "allergy", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>代表的<rt>だいひょうてき</rt></ruby>なアレルゲン6<ruby>品目<rt>ひんもく</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか？",
+      "jaPlain": "代表的なアレルゲン6品目は何ですか？",
+      "id": "Sebutkan 6 bahan pemicu alergi makanan yang paling umum!",
+      "en": "What are the 6 common food allergens?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>卵<rt>たまご</rt></ruby>、<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>、ナッツ<ruby>類<rt>るい</rt></ruby>、<ruby>魚介類<rt>ぎょかいるい</rt></ruby>、<ruby>小麦<rt>こむぎ</rt></ruby>、<ruby>大豆<rt>だいず</rt></ruby>の6つです。",
+      "jaPlain": "卵、牛乳、ナッツ類、魚介類、小麦、大豆の6つです。",
+      "id": "1. Telur (卵), 2. Susu (牛乳), 3. Kacang-kacangan (ナッツ類), 4. Makanan laut/seafood (魚介類), 5. Gandum (小麦), 6. Kedelai (大豆).",
+      "en": "Eggs (卵), Milk (牛乳), Nuts (ナッツ類), Seafood (魚介類), Wheat (小麦), and Soy (大豆)."
+    },
+    "ttsText": "代表的なアレルゲンは、卵、牛乳、ナッツ類、魚介類、小麦、大豆の6品目です。",
+    "examTip": {
+      "id": "Hafalkan keenam alergen utama ini: 卵, 牛乳, ナッツ類, 魚介類, 小麦, 大豆.",
+      "en": "Memorize all 6 common allergens: Eggs, Milk, Nuts, Seafood, Wheat, Soy."
+    }
+  },
+  {
+    "id": "ch04_034",
+    "chapter": 4,
+    "section": "4.6 食物アレルギー",
+    "pdfPage": 62,
+    "tags": ["rule", "allergy", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>食物<rt>しょくもつ</rt></ruby>アレルギーについて、いつ<ruby>確認<rt>かくにん</rt></ruby>し、<ruby>誰<rt>だれ</rt></ruby>と<ruby>共有<rt>きょうゆう</rt></ruby>すべきですか？",
+      "jaPlain": "食物アレルギーについて、いつ確認し、誰と共有すべきですか？",
+      "id": "Kapan informasi alergi makanan harus ditanyakan dan dengan siapa harus dibagikan?",
+      "en": "When must food allergies be confirmed and with whom must the details be shared?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>予約時<rt>よやくじ</rt></ruby>や<ruby>到着時<rt>とうちゃくじ</rt></ruby>に<ruby>必<rt>かなら</rt></ruby>ず<ruby>確認<rt>かくにん</rt></ruby>し、<ruby>正確<rt>せいかく</rt></ruby>な<ruby>情報<rt>じょうほう</rt></ruby>を<ruby>調理場<rt>ちょうりば</rt></ruby>やスタッフと<ruby>共有<rt>きょうゆう</rt></ruby>します。",
+      "jaPlain": "予約時や到着時に必ず確認し、正確な情報を調理場やスタッフと共有します。",
+      "id": "Selalu tanyakan saat reservasi atau kedatangan tamu, lalu bagikan informasi yang akurat kepada bagian dapur dan staf.",
+      "en": "Always ask at booking or arrival and share exact information with the kitchen and staff."
+    },
+    "ttsText": "予約時や到着時に必ず確認し、正確な情報を調理場やスタッフと共有します。"
+  },
+  {
+    "id": "ch04_035",
+    "chapter": 4,
+    "section": "4.7 衛生・安全管理",
+    "pdfPage": 63,
+    "tags": ["rule", "hygiene", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>食品<rt>しょくひん</rt></ruby>を<ruby>扱<rt>あつか</rt></ruby>うときの<ruby>手洗<rt>てあら</rt></ruby>い・<ruby>消毒<rt>しょうどく</rt></ruby>のルールは？",
+      "jaPlain": "食品を扱うときの手洗い・消毒のルールは？",
+      "id": "Kapan dan bagaimana aturan mencuci tangan serta sanitasi alkohol diterapkan?",
+      "en": "When and how must handwashing and sanitizing be performed in restaurant hygiene?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>食品<rt>しょくひん</rt></ruby>を<ruby>扱<rt>あつか</rt></ruby>う<ruby>前後<rt>ぜんご</rt></ruby>やトイレの<ruby>後<rt>あと</rt></ruby>に、<ruby>石<rt>せっ</rt></ruby>けんでの<ruby>手洗<rt>てあら</rt></ruby>いとアルコール<ruby>消毒<rt>しょうどく</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>います。",
+      "jaPlain": "食品を扱う前後やトイレの後に、石けんでの手洗いとアルコール消毒を行います。",
+      "id": "Cuci tangan dengan sabun serta lakukan sanitasi alkohol sebelum dan sesudah menangani makanan, serta setelah dari toilet.",
+      "en": "Wash hands with soap and apply alcohol sanitizer before and after handling food, and after using the restroom."
+    },
+    "ttsText": "食品を扱う前後やトイレの後に、石けんでの手洗いとアルコール消毒を行います。"
+  },
+  {
+    "id": "ch04_036",
+    "chapter": 4,
+    "section": "4.7 衛生・安全管理",
+    "pdfPage": 63,
+    "tags": ["rule", "hygiene", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>・<ruby>冷凍庫<rt>れいとうこ</rt></ruby>で<ruby>生<rt>なま</rt></ruby>の<ruby>肉<rt>にく</rt></ruby>や<ruby>魚<rt>さかな</rt></ruby>を<ruby>保管<rt>ほかん</rt></ruby>するルールは？",
+      "jaPlain": "冷蔵庫・冷凍庫で生の肉や魚を保管するルールは？",
+      "id": "Bagaimana aturan penyimpanan daging mentah dan ikan mentah di kulkas atau freezer?",
+      "en": "How must raw meat and fish be stored in refrigerators and freezers?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>生<rt>なま</rt></ruby>の<ruby>肉<rt>にく</rt></ruby>や<ruby>魚<rt>さかな</rt></ruby>は<ruby>他<rt>ほか</rt></ruby>の<ruby>食品<rt>しょくひん</rt></ruby>と<ruby>分<rt>わ</rt></ruby>けて<ruby>保管<rt>ほかん</rt></ruby>します。",
+      "jaPlain": "生の肉や魚は他の食品と分けて保管します。",
+      "id": "Simpan daging mentah dan ikan secara terpisah dari bahan makanan lain di dalam kulkas maupun freezer.",
+      "en": "Store raw meat and fish separately from other foods in refrigerators and freezers."
+    },
+    "ttsText": "冷蔵庫や冷凍庫では、生の肉や魚は他の食品と分けて保管します。"
+  },
+  {
+    "id": "ch04_037",
+    "chapter": 4,
+    "section": "4.7 衛生・安全管理",
+    "pdfPage": 63,
+    "tags": ["rule", "hygiene"],
+    "prompt": {
+      "jaRuby": "<ruby>開店準備<rt>かいてんじゅんび</rt></ruby>5つの<ruby>作業<rt>さぎょう</rt></ruby>のうち、<ruby>清掃<rt>せいそう</rt></ruby>とテーブルセッティングに<ruby>関<rt>かん</rt></ruby>する3つは<ruby>何<rt>なん</rt></ruby>ですか？",
+      "jaPlain": "開店準備5つの作業のうち、清掃とテーブルセッティングに関する3つは何ですか？",
+      "id": "Dari 5 tugas persiapan buka (Opening Prep), apa 3 tugas terkait kebersihan dan penataan peralatan?",
+      "en": "Of the 5 opening prep tasks, what are the 3 tasks for cleaning, equipment, and table settings?"
+    },
+    "answer": {
+      "jaRuby": "1.<ruby>店内<rt>てんない</rt></ruby>・<ruby>入口<rt>いりぐち</rt></ruby>の<ruby>清掃<rt>せいそう</rt></ruby> 2.<ruby>食器<rt>しょっき</rt></ruby>・<ruby>備品<rt>びひん</rt></ruby>の<ruby>整理<rt>せいり</rt></ruby> 3.テーブルセッティング（ナプキン、カトラリー、カスターセット）の<ruby>確認<rt>かくにん</rt></ruby>です。",
+      "jaPlain": "1.店内・入口の清掃 2.食器・備品の整理 3.テーブルセッティング（ナプキン、カトラリー、カスターセット）の確認です。",
+      "id": "1. Membersihkan area dalam restoran dan pintu masuk; 2. Merapikan piring dan perlengkapan; 3. Memeriksa penataan meja (serbet, cutlery, caster set).",
+      "en": "1. Clean interior and entrance; 2. Organize dishes and equipment; 3. Check table settings (napkins, cutlery, caster set)."
+    },
+    "ttsText": "開店準備では、店内や入口の清掃、食器や備品の整理、ナプキンやカトラリー、カスターセットなどテーブルセッティングの確認を行います。"
+  },
+  {
+    "id": "ch04_038",
+    "chapter": 4,
+    "section": "4.7 衛生・安全管理",
+    "pdfPage": 64,
+    "tags": ["rule", "hygiene"],
+    "prompt": {
+      "jaRuby": "<ruby>開店準備<rt>かいてんじゅんび</rt></ruby>の<ruby>残<rt>のこ</rt></ruby>り2つの<ruby>作業<rt>さぎょう</rt></ruby>（テーブル<ruby>配置<rt>はいち</rt></ruby>と<ruby>調理場<rt>ちょうりば</rt></ruby><ruby>連携<rt>れんけい</rt></ruby>）は<ruby>何<rt>なん</rt></ruby>ですか？",
+      "jaPlain": "開店準備の残り2つの作業（テーブル配置と調理場連携）は何ですか？",
+      "id": "Apa 2 tugas persiapan buka (Opening Prep) lainnya terkait meja/kursi dan koordinasi dapur?",
+      "en": "What are the remaining 2 opening prep tasks for tables/chairs and kitchen coordination?"
+    },
+    "answer": {
+      "jaRuby": "4.テーブル・<ruby>椅子<rt>いす</rt></ruby>の<ruby>配置<rt>はいち</rt></ruby>と<ruby>消毒<rt>しょうどく</rt></ruby> 5.<ruby>調理場<rt>ちょうりば</rt></ruby>とメニュー・お<ruby>客様<rt>きゃくさま</rt></ruby><ruby>情報<rt>じょうほう</rt></ruby>の<ruby>確認<rt>かくにん</rt></ruby>です。",
+      "jaPlain": "4.テーブル・椅子の配置と消毒 5.調理場とメニュー・お客様情報の確認です。",
+      "id": "4. Menata dan mendisinfeksi meja serta kursi; 5. Mengonfirmasi menu dan informasi tamu bersama bagian dapur.",
+      "en": "4. Set and disinfect tables and chairs; 5. Confirm menu and guest info with the kitchen."
+    },
+    "ttsText": "テーブルと椅子の配置と消毒を行い、調理場とメニューやお客様情報を確認します。"
+  },
+  {
+    "id": "ch04_039",
+    "chapter": 4,
+    "section": "4.7 衛生・安全管理",
+    "pdfPage": 64,
+    "tags": ["rule", "hygiene", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>閉店作業<rt>へいてんさぎょう</rt></ruby>の5つの<ruby>項目<rt>こうもく</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか？",
+      "jaPlain": "閉店作業の5つの項目は何ですか？",
+      "id": "Sebutkan 5 tugas pekerjaan tutup restoran (Closing Work)!",
+      "en": "What are the 5 closing work tasks in restaurant management?"
+    },
+    "answer": {
+      "jaRuby": "1.<ruby>店内<rt>てんない</rt></ruby>・<ruby>入口<rt>いりぐち</rt></ruby>の<ruby>清掃<rt>せいそう</rt></ruby> 2.<ruby>食器<rt>しょっき</rt></ruby>・<ruby>備品<rt>びひん</rt></ruby>の<ruby>補充<rt>ほじゅう</rt></ruby>と<ruby>整理<rt>せいり</rt></ruby> 3.カスターセットの<ruby>清掃<rt>せいそう</rt></ruby>・<ruby>補充<rt>ほじゅう</rt></ruby> 4.テーブル・<ruby>椅子<rt>いす</rt></ruby>の<ruby>配置<rt>はいち</rt></ruby>・<ruby>消毒<rt>しょうどく</rt></ruby> 5.<ruby>廃棄物処理<rt>はいきぶつしょり</rt></ruby>。",
+      "jaPlain": "1.店内・入口の清掃 2.食器・備品の補充と整理 3.カスターセットの清掃・補充 4.テーブル・椅子の配置・消毒 5.廃棄物処理。",
+      "id": "1. Membersihkan area dalam dan pintu masuk; 2. Mengisi ulang dan merapikan piring serta perlengkapan; 3. Membersihkan dan mengisi ulang caster set; 4. Menata dan mendisinfeksi meja serta kursi; 5. Pengolahan limbah/sampah (廃棄物処理).",
+      "en": "1. Clean interior/entrance; 2. Restock/organize dishes & equipment; 3. Clean/restock caster sets; 4. Set/disinfect tables & chairs; 5. Waste disposal (廃棄物処理)."
+    },
+    "ttsText": "閉店作業の5項目は、店内と入口の清掃、食器と備品の補充と整理、カスターセットの清掃と補充、テーブルと椅子の配置と消毒、廃棄物処理です。"
+  },
+  {
+    "id": "ch04_040",
+    "chapter": 4,
+    "section": "4.7 衛生・安全管理",
+    "pdfPage": 64,
+    "tags": ["vocab", "hygiene"],
+    "prompt": {
+      "jaRuby": "<ruby>廃棄物処理<rt>はいきぶつしょり</rt></ruby>",
+      "jaPlain": "廃棄物処理",
+      "id": "Apa arti istilah \"廃棄物処理\" (Haikibutsu shori) pada pekerjaan tutup?",
+      "en": "What does 廃棄物処理 (はいきぶつしょり) mean in closing work?"
+    },
+    "answer": {
+      "jaRuby": "レストランの<ruby>営業後<rt>えいぎょうご</rt></ruby>に<ruby>出<rt>で</rt></ruby>たゴミなどを<ruby>適切<rt>てきせつ</rt></ruby>に<ruby>処理<rt>しょり</rt></ruby>すること（<ruby>閉店作業<rt>へいてんさぎょう</rt></ruby>の1つ）です。",
+      "jaPlain": "レストランの営業後に出たゴミなどを適切に処理すること（閉店作業の1つ）です。",
+      "id": "Pengolahan dan pembuangan limbah atau sampah secara tepat sebagai salah satu tugas saat tutup.",
+      "en": "Waste disposal (one of the 5 closing work tasks)."
+    },
+    "ttsText": "はいきぶつしょり。営業後に出たゴミなどを適切に処理する閉店作業の1つです。"
+  },
+  {
+    "id": "ch04_041",
+    "chapter": 4,
+    "section": "4.8 レストラン用語11選",
+    "pdfPage": 65,
+    "tags": ["vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "シルバー",
+      "jaPlain": "シルバー",
+      "id": "Apa arti istilah restoran \"シルバー\" (Silver)?",
+      "en": "What does シルバー (Silver) mean in a restaurant?"
+    },
+    "answer": {
+      "jaRuby": "ナイフやフォークなどのカトラリー（<ruby>食卓用<rt>しょくたくよう</rt></ruby><ruby>金物類<rt>かなものるい</rt></ruby>）のことです。",
+      "jaPlain": "ナイフやフォークなどのカトラリー（食卓用金物類）のことです。",
+      "id": "Peralatan makan logam seperti pisau, garpu, dan sendok (cutlery).",
+      "en": "Knives, forks, etc. (metal cutlery)."
+    },
+    "ttsText": "シルバー。ナイフやフォークなどのカトラリーのことです。"
+  },
+  {
+    "id": "ch04_042",
+    "chapter": 4,
+    "section": "4.8 レストラン用語11選",
+    "pdfPage": 65,
+    "tags": ["vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "カスターセット",
+      "jaPlain": "カスターセット",
+      "id": "Apa arti istilah restoran \"カスターセット\" (Caster set)?",
+      "en": "What is a カスターセット (Caster set)?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>塩<rt>しお</rt></ruby>やこしょうなど、テーブルに<ruby>置<rt>お</rt></ruby>く<ruby>調味料<rt>ちょうみりょう</rt></ruby>セットのことです。",
+      "jaPlain": "塩やこしょうなど、テーブルに置く調味料セットのことです。",
+      "id": "Set bumbu meja (seperti garam, lada, kecap asin, dll.) yang diletakkan di meja tamu.",
+      "en": "Table condiment set."
+    },
+    "ttsText": "カスターセット。テーブルに置く調味料セットのことです。"
+  },
+  {
+    "id": "ch04_043",
+    "chapter": 4,
+    "section": "4.8 レストラン用語11選",
+    "pdfPage": 65,
+    "tags": ["vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>配膳<rt>はいぜん</rt></ruby>",
+      "jaPlain": "配膳",
+      "id": "Apa arti istilah \"配膳\" (Haizen)?",
+      "en": "What does 配膳 (はいぜん) mean?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>料理<rt>りょうり</rt></ruby>や<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>をテーブルへ<ruby>運<rt>はこ</rt></ruby>び、<ruby>正<rt>ただ</rt></ruby>しく<ruby>並<rt>なら</rt></ruby>べて<ruby>提供<rt>ていきょう</rt></ruby>することです。",
+      "jaPlain": "料理や飲み物をテーブルへ運び、正しく並べて提供することです。",
+      "id": "Membawa serta menata dan menyajikan makanan dan minuman dengan benar ke meja tamu.",
+      "en": "Carrying and properly serving food and drinks to the table."
+    },
+    "ttsText": "はいぜん。料理や飲み物をテーブルへ運び、正しく提供することです。"
+  },
+  {
+    "id": "ch04_044",
+    "chapter": 4,
+    "section": "4.8 レストラン用語11選",
+    "pdfPage": 65,
+    "tags": ["vocab"],
+    "prompt": {
+      "jaRuby": "ウェルカムドリンク",
+      "jaPlain": "ウェルカムドリンク",
+      "id": "Apa arti istilah \"ウェルカムドリンク\" (Welcome drink)?",
+      "en": "What is a ウェルカムドリンク (Welcome drink)?"
+    },
+    "answer": {
+      "jaRuby": "コースの<ruby>最初<rt>さいしょ</rt></ruby>に<ruby>提供<rt>ていきょう</rt></ruby>する<ruby>歓迎<rt>かんげい</rt></ruby>の<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>です。",
+      "jaPlain": "コースの最初に提供する歓迎の飲み物です。",
+      "id": "Minuman sambutan yang disajikan di awal sajian hidangan (course).",
+      "en": "Greeting drink served at the start of a course."
+    },
+    "ttsText": "ウェルカムドリンク。コースの最初に提供する歓迎の飲み物です。"
+  },
+  {
+    "id": "ch04_045",
+    "chapter": 4,
+    "section": "4.8 レストラン用語11選",
+    "pdfPage": 65,
+    "tags": ["vocab"],
+    "prompt": {
+      "jaRuby": "メインディッシュ",
+      "jaPlain": "メインディッシュ",
+      "id": "Apa arti istilah \"メインディッシュ\" (Main dish)?",
+      "en": "What is a メインディッシュ (Main dish)?"
+    },
+    "answer": {
+      "jaRuby": "コース<ruby>料理<rt>りょうり</rt></ruby>の<ruby>中心<rt>ちゅうしん</rt></ruby>となる<ruby>主菜<rt>しゅさい</rt></ruby><ruby>料理<rt>りょうり</rt></ruby>です。",
+      "jaPlain": "コース料理の中心となる主菜料理です。",
+      "id": "Hidangan utama yang menjadi pusat atau menu inti dalam satu rangkaian jamuan.",
+      "en": "The centerpiece main dish of a meal."
+    },
+    "ttsText": "メインディッシュ。コース料理の中心となる主菜料理です。"
+  },
+  {
+    "id": "ch04_046",
+    "chapter": 4,
+    "section": "4.8 レストラン用語11選",
+    "pdfPage": 65,
+    "tags": ["vocab"],
+    "prompt": {
+      "jaRuby": "ブッフェ<ruby>料理<rt>りょうり</rt></ruby>",
+      "jaPlain": "ブッフェ料理",
+      "id": "Apa arti istilah \"ブッフェ料理\" (Buffet)?",
+      "en": "What is ブッフェ料理 (Buffet)?"
+    },
+    "answer": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>が<ruby>自分<rt>じぶん</rt></ruby>で<ruby>好<rt>す</rt></ruby>きな<ruby>料理<rt>りょうり</rt></ruby>を<ruby>取<rt>と</rt></ruby>るセルフサービス<ruby>形式<rt>けいしき</rt></ruby>（ホテルの<ruby>朝食<rt>ちょうしょく</rt></ruby>に<ruby>多<rt>おお</rt></ruby>い）です。",
+      "jaPlain": "お客様が自分で好きな料理を取るセルフサービス形式（ホテルの朝食に多い）です。",
+      "id": "Hidangan prasmanan (ambil sendiri / self-serve) yang umum digunakan untuk sarapan di hotel.",
+      "en": "Self-serve buffet style (common for hotel breakfast)."
+    },
+    "ttsText": "ブッフェ料理。お客様が自分で好きな料理を取るセルフサービス形式で、ホテルの朝食に多いです。"
+  },
+  {
+    "id": "ch04_047",
+    "chapter": 4,
+    "section": "4.8 レストラン用語11選",
+    "pdfPage": 66,
+    "tags": ["vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "アラカルト",
+      "jaPlain": "アラカルト",
+      "id": "Apa arti istilah \"アラカルト\" (A la carte)?",
+      "en": "What does アラカルト (A la carte) mean?"
+    },
+    "answer": {
+      "jaRuby": "コースではなく、メニューから<ruby>好<rt>す</rt></ruby>きな<ruby>料理<rt>りょうり</rt></ruby>を1<ruby>品<rt>しな</rt></ruby>ずつ<ruby>個別<rt>こべつ</rt></ruby>に<ruby>注文<rt>ちゅうもん</rt></ruby>することです。",
+      "jaPlain": "コースではなく、メニューから好きな料理を1品ずつ個別に注文することです。",
+      "id": "Memesan hidangan satuan secara terpisah dari daftar menu (bukan paket course).",
+      "en": "Ordering individual dishes from the menu."
+    },
+    "ttsText": "アラカルト。メニューから好きな料理を1品ずつ個別に注文することです。"
+  },
+  {
+    "id": "ch04_048",
+    "chapter": 4,
+    "section": "4.8 レストラン用語11選",
+    "pdfPage": 66,
+    "tags": ["vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "ソムリエ",
+      "jaPlain": "ソムリエ",
+      "id": "Siapakah yang disebut \"ソムリエ\" (Sommelier)?",
+      "en": "What is a ソムリエ (Sommelier)?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>料理<rt>りょうり</rt></ruby>に<ruby>合<rt>あ</rt></ruby>うワインを<ruby>提案<rt>ていあん</rt></ruby>・<ruby>提供<rt>ていきょう</rt></ruby>するワインの<ruby>専門家<rt>せんもんか</rt></ruby>です。",
+      "jaPlain": "料理に合うワインを提案・提供するワインの専門家です。",
+      "id": "Ahli wine yang merekomendasikan pasangan wine yang cocok dengan hidangan.",
+      "en": "A wine specialist who recommends pairings."
+    },
+    "ttsText": "ソムリエ。料理に合うワインを提案するワインの専門家です。"
+  },
+  {
+    "id": "ch04_049",
+    "chapter": 4,
+    "section": "4.8 レストラン用語11選",
+    "pdfPage": 66,
+    "tags": ["vocab"],
+    "prompt": {
+      "jaRuby": "テイクアウト",
+      "jaPlain": "テイクアウト",
+      "id": "Apa arti istilah \"テイクアウト\" (Takeout)?",
+      "en": "What does テイクアウト (Takeout) mean?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>店内<rt>てんない</rt></ruby>で<ruby>食事<rt>しょくじ</rt></ruby>せず、<ruby>料理<rt>りょうり</rt></ruby>を<ruby>持<rt>も</rt></ruby>ち<ruby>帰<rt>かえ</rt></ruby>ることです。",
+      "jaPlain": "店内で食事せず、料理を持ち帰ることです。",
+      "id": "Membawa pulang makanan tanpa makan di dalam restoran.",
+      "en": "Taking food out without dining in."
+    },
+    "ttsText": "テイクアウト。店内で食事せず、料理を持ち帰ることです。"
+  },
+  {
+    "id": "ch04_050",
+    "chapter": 4,
+    "section": "4.8 レストラン用語11選",
+    "pdfPage": 66,
+    "tags": ["vocab", "rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "ハラール（Halal）とは<ruby>何<rt>なん</rt></ruby>ですか？<ruby>禁止<rt>きんし</rt></ruby>されている<ruby>食材<rt>しょくざい</rt></ruby>は？",
+      "jaPlain": "ハラール（Halal）とは何ですか？禁止されている食材は？",
+      "id": "Apa yang dimaksud dengan makanan Halal (ハラール) dan apa yang dilarang?",
+      "en": "What is ハラール (Halal) food and what ingredients are prohibited?"
+    },
+    "answer": {
+      "jaRuby": "イスラム<ruby>法<rt>ほう</rt></ruby>に<ruby>基<rt>もと</rt></ruby>づいて<ruby>調理<rt>ちょうり</rt></ruby>された<ruby>食事<rt>しょくじ</rt></ruby>で、<ruby>豚肉<rt>ぶたにく</rt></ruby>やアルコールは<ruby>一切<rt>いっさい</rt></ruby><ruby>使<rt>つか</rt></ruby>いません。",
+      "jaPlain": "イスラム法に基づいて調理された食事で、豚肉やアルコールは一切使いません。",
+      "id": "Makanan yang disiapkan sesuai hukum Islam; tidak mengandung daging babi maupun alkohol.",
+      "en": "Food prepared per Islamic law, containing no pork or alcohol."
+    },
+    "ttsText": "ハラールとは、イスラム法に基づいて調理された食事で、豚肉やアルコールは一切使いません。",
+    "examTip": {
+      "id": "Pastikan ingat dua larangan utama Halal di ujian SSW: daging babi (豚肉) dan alkohol (アルコール, termasuk mirin/sake masak).",
+      "en": "CBT highlight: Halal strictly prohibits pork (豚肉) and alcohol (アルコール)."
+    }
+  },
+  {
+    "id": "ch04_051",
+    "chapter": 4,
+    "section": "4.8 レストラン用語11選",
+    "pdfPage": 66,
+    "tags": ["vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "ベジタリアン",
+      "jaPlain": "ベジタリアン",
+      "id": "Apa arti istilah \"ベジタリアン\" (Vegetarian)?",
+      "en": "What does ベジタリアン (Vegetarian) mean?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>肉類<rt>にくるい</rt></ruby>を<ruby>使<rt>つか</rt></ruby>わない<ruby>食事<rt>しょくじ</rt></ruby>（<ruby>菜食主義<rt>さいしょくしゅぎ</rt></ruby>）のことです。",
+      "jaPlain": "肉類を使わない食事（菜食主義）のことです。",
+      "id": "Pola makan atau hidangan tanpa daging (meat-free diet).",
+      "en": "Meat-free food or diet."
+    },
+    "ttsText": "ベジタリアン。肉類を使わない食事のことです。"
+  }
+]

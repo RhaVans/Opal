@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+dist/
+*.apk
+*.keystore
+*.jks
+tsconfig.tsbuildinfo
+.env*
+android/build/
+android/assets/
+.coworking-agent-memory/

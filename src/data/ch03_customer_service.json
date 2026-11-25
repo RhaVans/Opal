@@ -1,0 +1,1006 @@
+[
+  {
+    "id": "ch03_001",
+    "chapter": 3,
+    "section": "3.1 挨拶",
+    "pdfPage": 37,
+    "tags": ["vocab", "overview", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>第<rt>だい</rt></ruby>3<ruby>章<rt>しょう</rt></ruby>「<ruby>接客<rt>せっきゃく</rt></ruby>」で<ruby>学<rt>まな</rt></ruby>ぶ6つの<ruby>柱<rt>はしら</rt></ruby>とは<ruby>何<rt>なん</rt></ruby>ですか？",
+      "jaPlain": "第3章「接客」で学ぶ6つの柱とは何ですか？",
+      "id": "Apa 6 pilar utama yang dipelajari pada Bab 3: Pelayanan Tamu (接客)?",
+      "en": "What are the 6 core areas covered in Chapter 03: Customer Service (Sekkyaku)?"
+    },
+    "answer": {
+      "jaRuby": "①<ruby>挨拶<rt>あいさつ</rt></ruby>、②<ruby>基本姿勢<rt>きほんしせい</rt></ruby>とお<ruby>辞儀<rt>じぎ</rt></ruby>、③<ruby>話<rt>はな</rt></ruby>し<ruby>方<rt>かた</rt></ruby>と<ruby>敬語<rt>けいご</rt></ruby>、④<ruby>接客<rt>せっきゃく</rt></ruby>の<ruby>具体例<rt>ぐたいれい</rt></ruby>(16<ruby>例<rt>れい</rt></ruby>)、⑤<ruby>電話対応<rt>でんわたいおう</rt></ruby>、⑥クレーム<ruby>対応<rt>たいおう</rt></ruby>の6つです。",
+      "jaPlain": "①挨拶、②基本姿勢とお辞儀、③話し方と敬語、④接客の具体例(16例)、⑤電話対応、⑥クレーム対応の6つです。",
+      "id": "1) Salam (aisatsu), 2) Postur dasar dan membungkuk (ojigi), 3) Cara berbicara dan bahasa hormat (keigo), 4) 16 skenario pelayanan khusus, 5) Penanganan telepon, dan 6) Penanganan keluhan.",
+      "en": "1) Greetings, 2) Basic posture and bowing, 3) Speaking and keigo, 4) 16 specific service scenarios, 5) Phone handling, and 6) Complaint handling."
+    },
+    "ttsText": "第3章「接客」で学ぶ6つの柱は、挨拶、基本姿勢とお辞儀、話し方と敬語、接客の具体例16例、電話対応、クレーム対応です。",
+    "examTip": {
+      "id": "Bab 3 (hal. 37-50) memiliki bobot ujian CBT tinggi, terutama sudut ojigi, keigo, dan aturan pelaporan keluhan.",
+      "en": "Chapter 03 (p.37-50) is high-yield for the CBT exam, especially bow angles, keigo types, and complaint reporting rules."
+    }
+  },
+  {
+    "id": "ch03_002",
+    "chapter": 3,
+    "section": "3.1 挨拶",
+    "pdfPage": 38,
+    "tags": ["greeting", "rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>接客<rt>せっきゃく</rt></ruby>の<ruby>挨拶<rt>あいさつ</rt></ruby>で<ruby>大切<rt>たいせつ</rt></ruby>な4つの<ruby>基本原則<rt>きほんげんそく</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか？",
+      "jaPlain": "接客の挨拶で大切な4つの基本原則は何ですか？",
+      "id": "Apa 4 prinsip dasar saat memberi salam dalam pelayanan tamu?",
+      "en": "What are the 4 core principles of customer service greetings?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>明<rt>あか</rt></ruby>るく<ruby>元気<rt>げんき</rt></ruby>な<ruby>笑顔<rt>えがお</rt></ruby>、<ruby>相手<rt>あいて</rt></ruby>に<ruby>聞<rt>き</rt></ruby>こえる<ruby>声<rt>こえ</rt></ruby>、アイコンタクト(<ruby>目<rt>め</rt></ruby>を<ruby>見<rt>み</rt></ruby>る)、<ruby>誠意<rt>せいい</rt></ruby>(<ruby>真心<rt>まごころ</rt></ruby>)の4つです。",
+      "jaPlain": "明るく元気な笑顔、相手に聞こえる声、アイコンタクト(目を見る)、誠意(真心)の4つです。",
+      "id": "Senyum yang cerah dan ceria, suara yang terdengar jelas, kontak mata, dan ketulusan hati.",
+      "en": "A bright, cheerful smile, an audible voice, eye contact, and sincerity."
+    },
+    "ttsText": "接客の挨拶では、明るく元気な笑顔、相手に聞こえる声、アイコンタクト、誠意の4つが大切です。"
+  },
+  {
+    "id": "ch03_003",
+    "chapter": 3,
+    "section": "3.1 挨拶",
+    "pdfPage": 38,
+    "tags": ["greeting", "phrase", "vocab"],
+    "prompt": {
+      "jaRuby": "ホテル・<ruby>旅館<rt>りょかん</rt></ruby>・レストランにお<ruby>客様<rt>きゃくさま</rt></ruby>が<ruby>到着<rt>とうちゃく</rt></ruby>したときの<ruby>挨拶<rt>あいさつ</rt></ruby>は？",
+      "jaPlain": "ホテル・旅館・レストランにお客様が到着したときの挨拶は？",
+      "id": "Ungkapan salam apa yang diucapkan saat tamu tiba di hotel, ryokan, atau restoran?",
+      "en": "Which greeting phrase is used when a guest arrives at a hotel, ryokan, or restaurant?"
+    },
+    "answer": {
+      "jaRuby": "いらっしゃいませ",
+      "jaPlain": "いらっしゃいませ",
+      "id": "Irasshaimase (Selamat datang)",
+      "en": "Irasshaimase (Welcome)"
+    },
+    "ttsText": "いらっしゃいませ"
+  },
+  {
+    "id": "ch03_004",
+    "chapter": 3,
+    "section": "3.1 挨拶",
+    "pdfPage": 38,
+    "tags": ["greeting", "phrase", "vocab"],
+    "prompt": {
+      "jaRuby": "ホテル・<ruby>旅館<rt>りょかん</rt></ruby>・レストランからお<ruby>客様<rt>きゃくさま</rt></ruby>が<ruby>出発<rt>しゅっぱつ</rt></ruby>・<ruby>退店<rt>たいてん</rt></ruby>するときの<ruby>挨拶<rt>あいさつ</rt></ruby>は？",
+      "jaPlain": "ホテル・旅館・レストランからお客様が出発・退店するときの挨拶は？",
+      "id": "Ungkapan apa yang diucapkan saat tamu berangkat atau meninggalkan hotel, ryokan, atau restoran?",
+      "en": "Which greeting phrase is used upon a guest's departure from a hotel, ryokan, or restaurant?"
+    },
+    "answer": {
+      "jaRuby": "ありがとうございました",
+      "jaPlain": "ありがとうございました",
+      "id": "Arigatou gozaimashita (Terima kasih banyak)",
+      "en": "Arigatou gozaimashita (Thank you very much)"
+    },
+    "ttsText": "ありがとうございました"
+  },
+  {
+    "id": "ch03_005",
+    "chapter": 3,
+    "section": "3.1 挨拶",
+    "pdfPage": 38,
+    "tags": ["greeting", "phrase", "keigo"],
+    "prompt": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>の<ruby>要望<rt>ようぼう</rt></ruby>を<ruby>受<rt>う</rt></ruby>け<ruby>入<rt>い</rt></ruby>れるときに<ruby>使<rt>つか</rt></ruby>う<ruby>表現<rt>ひょうげん</rt></ruby>は？",
+      "jaPlain": "お客様の要望を受け入れるときに使う表現は？",
+      "id": "Ungkapan apa yang digunakan saat menerima atau menyanggupi permintaan tamu?",
+      "en": "Which phrase is used when accepting a guest's request?"
+    },
+    "answer": {
+      "jaRuby": "はい、かしこまりました",
+      "jaPlain": "はい、かしこまりました",
+      "id": "Hai, kashikomarimashita (Baik, siap kami laksanakan)",
+      "en": "Hai, kashikomarimashita (Certainly / Understood)"
+    },
+    "ttsText": "はい、かしこまりました",
+    "examTip": {
+      "id": "Jangan gunakan 'ryoukai shimashita' atau 'wakarimashita' kepada tamu; wajib gunakan 'kashikomarimashita'.",
+      "en": "Never say 'wakarimashita' to guests; always use 'hai, kashikomarimashita'."
+    }
+  },
+  {
+    "id": "ch03_006",
+    "chapter": 3,
+    "section": "3.1 挨拶",
+    "pdfPage": 39,
+    "tags": ["greeting", "phrase", "complaint", "rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>謝罪<rt>しゃざい</rt></ruby>するときやクレームを<ruby>受<rt>う</rt></ruby>けたときの<ruby>表現<rt>ひょうげん</rt></ruby>と、その<ruby>後<rt>あと</rt></ruby>の<ruby>行動<rt>こうどう</rt></ruby>ルールは？",
+      "jaPlain": "謝罪するときやクレームを受けたときの表現と、その後の行動ルールは？",
+      "id": "Ungkapan apa yang digunakan saat meminta maaf atau menerima keluhan, dan apa aturan tindakan setelahnya?",
+      "en": "Which phrase is used when apologizing or receiving a complaint, and what is the mandatory follow-up rule?"
+    },
+    "answer": {
+      "jaRuby": "「<ruby>申<rt>もう</rt></ruby>し<ruby>訳<rt>わけ</rt></ruby>ございません」とまず<ruby>謝罪<rt>しゃざい</rt></ruby>し、そのあとすぐにチームの<ruby>責任者<rt>せきにんしゃ</rt></ruby>(<ruby>上司<rt>じょうし</rt></ruby>)に<ruby>報告<rt>ほうこく</rt></ruby>します。",
+      "jaPlain": "「申し訳ございません」とまず謝罪し、そのあとすぐにチームの責任者(上司)に報告します。",
+      "id": "Ucapkan 'Moushiwake gozaimasen' untuk meminta maaf terlebih dahulu, lalu segera laporkan kepada supervisor tim.",
+      "en": "Say 'Moushiwake gozaimasen' to apologize first, then immediately report to the team supervisor."
+    },
+    "ttsText": "申し訳ございません。まず謝罪し、そのあとすぐにチームの責任者に報告します。",
+    "examTip": {
+      "id": "Urutan krusial: minta maaf dulu baru segera lapor atasan.",
+      "en": "Key order: apologize first, then immediately report to your team supervisor."
+    }
+  },
+  {
+    "id": "ch03_007",
+    "chapter": 3,
+    "section": "3.1 挨拶",
+    "pdfPage": 39,
+    "tags": ["greeting", "phrase", "keigo"],
+    "prompt": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>に<ruby>丁寧<rt>ていねい</rt></ruby>にお<ruby>願<rt>ねが</rt></ruby>いをするときのクッション<ruby>言葉<rt>ことば</rt></ruby>は？",
+      "jaPlain": "お客様に丁寧にお願いをするときのクッション言葉は？",
+      "id": "Ungkapan pembuka sopan apa yang digunakan saat mengajukan permintaan kepada tamu?",
+      "en": "Which phrase is used to make a polite request to a guest?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>恐<rt>おそ</rt></ruby>れ<ruby>入<rt>い</rt></ruby>りますが、……",
+      "jaPlain": "恐れ入りますが、……",
+      "id": "Osore irimasu ga, ... (Mohon maaf merepotkan, ...)",
+      "en": "Osore irimasu ga, ... (Excuse me / I am sorry to trouble you, ...)"
+    },
+    "ttsText": "恐れ入りますが"
+  },
+  {
+    "id": "ch03_008",
+    "chapter": 3,
+    "section": "3.1 挨拶",
+    "pdfPage": 39,
+    "tags": ["greeting", "phrase", "high-yield"],
+    "prompt": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>を<ruby>待<rt>ま</rt></ruby>たせた「<ruby>後<rt>あと</rt></ruby>」に<ruby>使<rt>つか</rt></ruby>う<ruby>表現<rt>ひょうげん</rt></ruby>は？",
+      "jaPlain": "お客様を待たせた「後」に使う表現は？",
+      "id": "Ungkapan apa yang digunakan SETELAH membuat tamu menunggu?",
+      "en": "Which phrase is used AFTER making a guest wait?"
+    },
+    "answer": {
+      "jaRuby": "お<ruby>待<rt>ま</rt></ruby>たせいたしました",
+      "jaPlain": "お待たせいたしました",
+      "id": "Omatase itashimashita (Terima kasih telah menunggu / Maaf telah membuat Anda menunggu)",
+      "en": "Omatase itashimashita (Thank you for waiting / Sorry to have kept you waiting)"
+    },
+    "ttsText": "お待たせいたしました"
+  },
+  {
+    "id": "ch03_009",
+    "chapter": 3,
+    "section": "3.1 挨拶",
+    "pdfPage": 39,
+    "tags": ["greeting", "phrase", "high-yield"],
+    "prompt": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>に<ruby>少<rt>すこ</rt></ruby>し<ruby>待<rt>ま</rt></ruby>っていただく「<ruby>前<rt>まえ</rt></ruby>」に<ruby>使<rt>つか</rt></ruby>う<ruby>表現<rt>ひょうげん</rt></ruby>は？",
+      "jaPlain": "お客様に少し待っていただく「前」に使う表現は？",
+      "id": "Ungkapan apa yang digunakan SEBELUM meminta tamu menunggu sebentar?",
+      "en": "Which phrase is used BEFORE asking a guest to wait briefly?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>少々<rt>しょうしょう</rt></ruby>お<ruby>待<rt>ま</rt></ruby>ちください(ませ)",
+      "jaPlain": "少々お待ちください(ませ)",
+      "id": "Shoushou omachi kudasai (mase) (Mohon tunggu sebentar)",
+      "en": "Shoushou omachi kudasai (mase) (Please wait a moment)"
+    },
+    "ttsText": "少々お待ちくださいませ"
+  },
+  {
+    "id": "ch03_010",
+    "chapter": 3,
+    "section": "3.1 挨拶",
+    "pdfPage": 39,
+    "tags": ["greeting", "phrase", "high-yield"],
+    "prompt": {
+      "jaRuby": "「<ruby>少々<rt>しょうしょう</rt></ruby>お<ruby>待<rt>ま</rt></ruby>ちください(ませ)」と「お<ruby>待<rt>ま</rt></ruby>たせいたしました」の<ruby>使<rt>つか</rt></ruby>い<ruby>分<rt>わ</rt></ruby>けは？",
+      "jaPlain": "「少々お待ちください(ませ)」と「お待たせいたしました」の使い分けは？",
+      "id": "Bagaimana membedakan penggunaan 'Shoushou omachi kudasai (mase)' dan 'Omatase itashimashita'?",
+      "en": "How do 'Shoushou omachi kudasai (mase)' and 'Omatase itashimashita' differ in timing?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>待<rt>ま</rt></ruby>っていただく「<ruby>前<rt>まえ</rt></ruby>」が「<ruby>少々<rt>しょうしょう</rt></ruby>お<ruby>待<rt>ま</rt></ruby>ちください(ませ)」、<ruby>待<rt>ま</rt></ruby>たせた「<ruby>後<rt>あと</rt></ruby>」が「お<ruby>待<rt>ま</rt></ruby>たせいたしました」です。",
+      "jaPlain": "待っていただく「前」が「少々お待ちください(ませ)」、待たせた「後」が「お待たせいたしました」です。",
+      "id": "Sebelum meminta menunggu gunakan 'Shoushou omachi kudasai (mase)'; setelah tamu selesai menunggu gunakan 'Omatase itashimashita'.",
+      "en": "Use 'Shoushou omachi kudasai (mase)' BEFORE asking a guest to wait; use 'Omatase itashimashita' AFTER making them wait."
+    },
+    "ttsText": "待っていただく前が、少々お待ちくださいませ。待たせた後が、お待たせいたしました、です。",
+    "examTip": {
+      "id": "Soal CBT sering menukar kata sebelum dan sesudah menunggu. Ingat: kudasai = sebelum, itashimashita = sesudah.",
+      "en": "CBT questions often swap before/after waiting phrases. Remember: kudasai = before, itashimashita = after."
+    }
+  },
+  {
+    "id": "ch03_011",
+    "chapter": 3,
+    "section": "3.1 挨拶",
+    "pdfPage": 39,
+    "tags": ["greeting", "phrase", "vocab"],
+    "prompt": {
+      "jaRuby": "<ruby>客室<rt>きゃくしつ</rt></ruby>やレストランのテーブルに<ruby>近<rt>ちか</rt></ruby>づくとき・<ruby>離<rt>はな</rt></ruby>れるときの<ruby>挨拶<rt>あいさつ</rt></ruby>は？",
+      "jaPlain": "客室やレストランのテーブルに近づくとき・離れるときの挨拶は？",
+      "id": "Ungkapan apa yang diucapkan saat mendekati atau meninggalkan kamar tamu maupun meja restoran?",
+      "en": "Which phrase is used when approaching or leaving a guest room or restaurant table?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>失礼<rt>しつれい</rt></ruby>します",
+      "jaPlain": "失礼します",
+      "id": "Shitsurei shimasu (Permisi)",
+      "en": "Shitsurei shimasu (Excuse me)"
+    },
+    "ttsText": "失礼します"
+  },
+  {
+    "id": "ch03_012",
+    "chapter": 3,
+    "section": "3.1 挨拶",
+    "pdfPage": 40,
+    "tags": ["greeting", "staff", "phrase"],
+    "prompt": {
+      "jaRuby": "<ruby>社内<rt>しゃない</rt></ruby>・スタッフ<ruby>同士<rt>どうし</rt></ruby>で「<ruby>出勤時<rt>しゅっきんじ</rt></ruby>」と「<ruby>休憩<rt>きゅうけい</rt></ruby>に<ruby>入<rt>はい</rt></ruby>るとき」の<ruby>挨拶<rt>あいさつ</rt></ruby>は？",
+      "jaPlain": "社内・スタッフ同士で「出勤時」と「休憩に入るとき」の挨拶は？",
+      "id": "Apa salam internal antarstaf saat tiba bekerja (masuk shift) dan saat mulai istirahat?",
+      "en": "What are the internal staff greetings when arriving for work and when starting a break?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>出勤時<rt>しゅっきんじ</rt></ruby>は「おはようございます」、<ruby>休憩<rt>きゅうけい</rt></ruby>に<ruby>入<rt>はい</rt></ruby>るときは「<ruby>休憩<rt>きゅうけい</rt></ruby>に<ruby>入<rt>はい</rt></ruby>ります」です。",
+      "jaPlain": "出勤時は「おはようございます」、休憩に入るときは「休憩に入ります」です。",
+      "id": "Saat tiba: 'Ohayou gozaimasu' (tidak peduli jam berapa). Saat mulai istirahat: 'Kyuukei ni hairimasu'.",
+      "en": "Arriving: 'Ohayou gozaimasu'; starting a break: 'Kyuukei ni hairimasu'."
+    },
+    "ttsText": "出勤時は、おはようございます。休憩に入るときは、休憩に入ります、と言います。"
+  },
+  {
+    "id": "ch03_013",
+    "chapter": 3,
+    "section": "3.1 挨拶",
+    "pdfPage": 40,
+    "tags": ["greeting", "staff", "phrase"],
+    "prompt": {
+      "jaRuby": "<ruby>社内<rt>しゃない</rt></ruby>・スタッフ<ruby>同士<rt>どうし</rt></ruby>で「<ruby>退勤時<rt>たいきんじ</rt></ruby>」と「<ruby>帰<rt>かえ</rt></ruby>る<ruby>同僚<rt>どうりょう</rt></ruby>への<ruby>言葉<rt>ことば</rt></ruby>」は？",
+      "jaPlain": "社内・スタッフ同士で「退勤時」と「帰る同僚への言葉」は？",
+      "id": "Apa salam internal antarstaf saat pulang kerja dan ucapan kepada rekan kerja yang pulang?",
+      "en": "What are the internal staff greetings when leaving work and to a colleague who is leaving?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>退勤時<rt>たいきんじ</rt></ruby>は「お<ruby>先<rt>さき</rt></ruby>に<ruby>失礼<rt>しつれい</rt></ruby>します」、<ruby>帰<rt>かえ</rt></ruby>る<ruby>同僚<rt>どうりょう</rt></ruby>には「お<ruby>疲<rt>つか</rt></ruby>れさまでした」です。",
+      "jaPlain": "退勤時は「お先に失礼します」、帰る同僚には「お疲れさまでした」です。",
+      "id": "Saat pulang: 'Osaki ni shitsurei shimasu'. Kepada rekan yang pulang: 'Otsukaresama deshita'.",
+      "en": "Leaving: 'Osaki ni shitsurei shimasu'; to a leaving colleague: 'Otsukaresama deshita'."
+    },
+    "ttsText": "退勤時は、お先に失礼します。帰る同僚には、お疲れさまでした、と言います。"
+  },
+  {
+    "id": "ch03_014",
+    "chapter": 3,
+    "section": "3.1 挨拶",
+    "pdfPage": 40,
+    "tags": ["greeting", "staff", "rule"],
+    "prompt": {
+      "jaRuby": "<ruby>職場<rt>しょくば</rt></ruby>で<ruby>同僚<rt>どうりょう</rt></ruby>やスタッフを<ruby>呼<rt>よ</rt></ruby>ぶときの<ruby>基本<rt>きほん</rt></ruby>ルールは？",
+      "jaPlain": "職場で同僚やスタッフを呼ぶときの基本ルールは？",
+      "id": "Apa aturan cara memanggil rekan kerja di lingkungan kerja perhotelan?",
+      "en": "What is the rule for addressing colleagues in the workplace?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>相手<rt>あいて</rt></ruby>の<ruby>苗字<rt>みょうじ</rt></ruby>(<ruby>名字<rt>みょうじ</rt></ruby>)に「さん」をつけて<ruby>呼<rt>よ</rt></ruby>びます。",
+      "jaPlain": "相手の苗字(名字)に「さん」をつけて呼びます。",
+      "id": "Panggil rekan kerja dengan nama belakang (marga) diikuti akhiran '-san'.",
+      "en": "Address colleagues by their surname + '-san'."
+    },
+    "ttsText": "相手の苗字に、さんをつけて呼びます。"
+  },
+  {
+    "id": "ch03_015",
+    "chapter": 3,
+    "section": "3.2 基本姿勢とお辞儀",
+    "pdfPage": 41,
+    "tags": ["posture", "rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>立<rt>た</rt></ruby>ち<ruby>姿<rt>すがた</rt></ruby>の<ruby>基本姿勢<rt>きほんしせい</rt></ruby>5つのポイントのうち、<ruby>体幹<rt>たいかん</rt></ruby>・<ruby>顔<rt>かお</rt></ruby>・<ruby>足元<rt>あしもと</rt></ruby>の<ruby>姿勢<rt>しせい</rt></ruby>は？",
+      "jaPlain": "立ち姿の基本姿勢5つのポイントのうち、体幹・顔・足元の姿勢は？",
+      "id": "Dari 5 poin postur berdiri dasar, bagaimana posisi punggung, perut/dagu, serta tumit dan jari kaki?",
+      "en": "In the 5 basic posture points, how should the back, core/chin, and feet be positioned?"
+    },
+    "answer": {
+      "jaRuby": "①<ruby>背筋<rt>せすじ</rt></ruby>を<ruby>伸<rt>の</rt></ruby>ばす、②おなかに<ruby>力<rt>ちから</rt></ruby>を<ruby>入<rt>い</rt></ruby>れあごを<ruby>軽<rt>かる</rt></ruby>く<ruby>引<rt>ひ</rt></ruby>く、③かかとをそろえつま<ruby>先<rt>さき</rt></ruby>を<ruby>少<rt>すこ</rt></ruby>し<ruby>開<rt>ひら</rt></ruby>く、です。",
+      "jaPlain": "①背筋を伸ばす、②おなかに力を入れあごを軽く引く、③かかとをそろえつま先を少し開く、です。",
+      "id": "1) Punggung lurus, 2) Perut dikencangkan dan dagu sedikit ditarik masuk, 3) Tumit dirapatkan dan ujung jari kaki sedikit dibuka.",
+      "en": "1) Back straight, 2) Core tight and chin slightly tucked, 3) Heels together and toes slightly apart."
+    },
+    "ttsText": "背筋を伸ばし、おなかに力を入れてあごを軽く引き、かかとをそろえてつま先を少し開きます。"
+  },
+  {
+    "id": "ch03_016",
+    "chapter": 3,
+    "section": "3.2 基本姿勢とお辞儀",
+    "pdfPage": 41,
+    "tags": ["posture", "rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>基本姿勢<rt>きほんしせい</rt></ruby>5つのポイントのうち、<ruby>肩<rt>かた</rt></ruby>・<ruby>手<rt>て</rt></ruby>の<ruby>位置<rt>いち</rt></ruby>と<ruby>表情<rt>ひょうじょう</rt></ruby>のポイントは？",
+      "jaPlain": "基本姿勢5つのポイントのうち、肩・手の位置と表情のポイントは？",
+      "id": "Dalam 5 poin postur dasar, bagaimana posisi bahu, tangan, dan ekspresi wajah?",
+      "en": "In the 5 basic posture points, how should the shoulders, hands, and facial expression be?"
+    },
+    "answer": {
+      "jaRuby": "④<ruby>肩<rt>かた</rt></ruby>の<ruby>力<rt>ちから</rt></ruby>を<ruby>抜<rt>ぬ</rt></ruby>き、おなかの<ruby>下<rt>した</rt></ruby>で<ruby>右手<rt>みぎて</rt></ruby>を<ruby>下<rt>した</rt></ruby>にして<ruby>手<rt>て</rt></ruby>を<ruby>軽<rt>かる</rt></ruby>く<ruby>重<rt>かさ</rt></ruby>ねる(<ruby>男性<rt>だんせい</rt></ruby>は<ruby>体<rt>からだ</rt></ruby>の<ruby>横<rt>よこ</rt></ruby>に<ruby>自然<rt>しぜん</rt></ruby>に<ruby>下<rt>お</rt></ruby>ろしてもよい)、⑤<ruby>自然<rt>しぜん</rt></ruby>な<ruby>笑顔<rt>えがお</rt></ruby>です。",
+      "jaPlain": "④肩の力を抜き、おなかの下で右手を下にして手を軽く重ねる(男性は体の横に自然に下ろしてもよい)、⑤自然な笑顔です。",
+      "id": "4) Bahu rileks, kedua tangan bertumpuk ringan di bawah perut dengan tangan kanan di bawah (pria boleh menurunkan tangan secara alami di samping tubuh), 5) Ekspresi senyum alami.",
+      "en": "4) Shoulders relaxed, hands lightly overlapping below stomach with right hand underneath (men may keep hands naturally at sides), 5) Natural smiling expression."
+    },
+    "ttsText": "肩の力を抜き、おなかの下で右手を下にして手を軽く重ねます。男性は体の横に自然に下ろしてもよいです。そして自然な笑顔を保ちます。",
+    "examTip": {
+      "id": "Ingat posisi tangan: TANGAN KANAN di bawah (左手 di atas), bukan sebaliknya.",
+      "en": "Exam detail: the RIGHT hand goes underneath (left hand on top), below the stomach."
+    }
+  },
+  {
+    "id": "ch03_017",
+    "chapter": 3,
+    "section": "3.2 基本姿勢とお辞儀",
+    "pdfPage": 42,
+    "tags": ["bowing", "ojigi", "rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "お<ruby>辞儀<rt>じぎ</rt></ruby>をするとき、お<ruby>辞儀<rt>じぎ</rt></ruby>をする「<ruby>前<rt>まえ</rt></ruby>」に<ruby>必<rt>かなら</rt></ruby>ず<ruby>行<rt>おこな</rt></ruby>うことは<ruby>何<rt>なん</rt></ruby>ですか？",
+      "jaPlain": "お辞儀をするとき、お辞儀をする「前」に必ず行うことは何ですか？",
+      "id": "Apa yang wajib dilakukan terlebih dahulu sebelum menundukkan badan saat ojigi?",
+      "en": "What must you do first before performing a bow?"
+    },
+    "answer": {
+      "jaRuby": "まずアイコンタクト(<ruby>相手<rt>あいて</rt></ruby>の<ruby>目<rt>め</rt></ruby>を<ruby>見<rt>み</rt></ruby>ること)をしてから、お<ruby>辞儀<rt>じぎ</rt></ruby>をします。",
+      "jaPlain": "まずアイコンタクト(相手の目を見ること)をしてから、お辞儀をします。",
+      "id": "Lakukan kontak mata terlebih dahulu, baru kemudian membungkuk.",
+      "en": "Make eye contact first, then bow."
+    },
+    "ttsText": "まずアイコンタクトをしてから、お辞儀をします。"
+  },
+  {
+    "id": "ch03_018",
+    "chapter": 3,
+    "section": "3.2 基本姿勢とお辞儀",
+    "pdfPage": 42,
+    "tags": ["bowing", "ojigi", "vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "「<ruby>会釈<rt>えしゃく</rt></ruby>」のお<ruby>辞儀<rt>じぎ</rt></ruby>の<ruby>角度<rt>かくど</rt></ruby>と、<ruby>使<rt>つか</rt></ruby>われる<ruby>場面<rt>ばめん</rt></ruby>は？",
+      "jaPlain": "「会釈」のお辞儀の角度と、使われる場面は？",
+      "id": "Berapa sudut membungkuk Eshaku (会釈) dan kapan digunakan?",
+      "en": "What is the angle and usage of Eshaku (会釈)?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>約<rt>やく</rt></ruby>15<ruby>度<rt>ど</rt></ruby>のお<ruby>辞儀<rt>じぎ</rt></ruby>で、お<ruby>客様<rt>きゃくさま</rt></ruby>とすれ<ruby>違<rt>ちが</rt></ruby>うときや、<ruby>食事<rt>しょくじ</rt></ruby>テーブルに<ruby>近<rt>ちか</rt></ruby>づく・<ruby>離<rt>はな</rt></ruby>れるときに<ruby>使<rt>つか</rt></ruby>います。",
+      "jaPlain": "約15度のお辞儀で、お客様とすれ違うときや、食事テーブルに近づく・離れるときに使います。",
+      "id": "Sekitar 15°. Digunakan saat berpapasan dengan tamu atau saat mendekati maupun meninggalkan meja makan.",
+      "en": "Approximately 15°. Used when passing by guests or approaching/leaving a dining table."
+    },
+    "ttsText": "会釈は約15度のお辞儀で、お客様とすれ違うときや、テーブルに近づく・離れるときに使います。"
+  },
+  {
+    "id": "ch03_019",
+    "chapter": 3,
+    "section": "3.2 基本姿勢とお辞儀",
+    "pdfPage": 42,
+    "tags": ["bowing", "ojigi", "vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "「<ruby>敬礼<rt>けいれい</rt></ruby>(<ruby>普通礼<rt>ふつうれい</rt></ruby>)」の<ruby>角度<rt>かくど</rt></ruby>と、<ruby>使<rt>つか</rt></ruby>われる<ruby>場面<rt>ばめん</rt></ruby>は？",
+      "jaPlain": "「敬礼(普通礼)」の角度と、使われる場面は？",
+      "id": "Berapa sudut membungkuk Keirei / Futsurei (敬礼 / 普通礼) dan kapan digunakan?",
+      "en": "What is the angle and usage of Keirei / Futsurei (敬礼 / 普通礼)?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>約<rt>やく</rt></ruby>30<ruby>度<rt>ど</rt></ruby>のお<ruby>辞儀<rt>じぎ</rt></ruby>で、お<ruby>客様<rt>きゃくさま</rt></ruby>をお<ruby>迎<rt>むか</rt></ruby>えするときに<ruby>使<rt>つか</rt></ruby>い、<ruby>日常<rt>にちじょう</rt></ruby>で<ruby>最<rt>もっと</rt></ruby>もよく<ruby>使<rt>つか</rt></ruby>われます。",
+      "jaPlain": "約30度のお辞儀で、お客様をお迎えするときに使い、日常で最もよく使われます。",
+      "id": "Sekitar 30°. Digunakan saat menyambut tamu dan merupakan jenis membungkuk yang paling sering dipakai.",
+      "en": "Approximately 30°. Used when welcoming guests and is the most frequent bow."
+    },
+    "ttsText": "敬礼、または普通礼は約30度のお辞儀で、お客様をお迎えするときに使い、最もよく使われます。"
+  },
+  {
+    "id": "ch03_020",
+    "chapter": 3,
+    "section": "3.2 基本姿勢とお辞儀",
+    "pdfPage": 43,
+    "tags": ["bowing", "ojigi", "vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "「<ruby>最敬礼<rt>さいけいれい</rt></ruby>」の<ruby>角度<rt>かくど</rt></ruby>と、<ruby>使<rt>つか</rt></ruby>われる<ruby>場面<rt>ばめん</rt></ruby>は？",
+      "jaPlain": "「最敬礼」の角度と、使われる場面は？",
+      "id": "Berapa sudut membungkuk Saikeirei (最敬礼) dan kapan digunakan?",
+      "en": "What is the angle and usage of Saikeirei (最敬礼)?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>約<rt>やく</rt></ruby>45<ruby>度<rt>ど</rt></ruby>の<ruby>深<rt>ふか</rt></ruby>いお<ruby>辞儀<rt>じぎ</rt></ruby>で、<ruby>見送<rt>みおく</rt></ruby>りのときやお<ruby>詫<rt>わ</rt></ruby>び(<ruby>謝罪<rt>しゃざい</rt></ruby>)のときに<ruby>使<rt>つか</rt></ruby>います。",
+      "jaPlain": "約45度の深いお辞儀で、見送りのときやお詫び(謝罪)のときに使います。",
+      "id": "Sekitar 45° (membungkuk paling dalam). Digunakan saat mengantar kepulangan tamu (miokuri) dan saat meminta maaf.",
+      "en": "Approximately 45°. Used when seeing guests off (miokuri) and when apologizing."
+    },
+    "ttsText": "最敬礼は約45度の深いお辞儀で、見送りのときやお詫びのときに使います。"
+  },
+  {
+    "id": "ch03_021",
+    "chapter": 3,
+    "section": "3.2 基本姿勢とお辞儀",
+    "pdfPage": 43,
+    "tags": ["bowing", "ojigi", "high-yield"],
+    "prompt": {
+      "jaRuby": "お<ruby>辞儀<rt>じぎ</rt></ruby>の3<ruby>種類<rt>しゅるい</rt></ruby>(<ruby>会釈<rt>えしゃく</rt></ruby>・<ruby>敬礼<rt>けいれい</rt></ruby>・<ruby>最敬礼<rt>さいけいれい</rt></ruby>)を<ruby>角度<rt>かくど</rt></ruby>の<ruby>浅<rt>あさ</rt></ruby>い<ruby>順<rt>じゅん</rt></ruby>に<ruby>並<rt>なら</rt></ruby>べると？",
+      "jaPlain": "お辞儀の3種類(会釈・敬礼・最敬礼)を角度の浅い順に並べると？",
+      "id": "Urutkan 3 jenis ojigi beserta sudutnya dari yang paling ringan hingga paling dalam!",
+      "en": "List the 3 bow types and their approximate angles from shallowest to deepest."
+    },
+    "answer": {
+      "jaRuby": "①<ruby>会釈<rt>えしゃく</rt></ruby>(<ruby>約<rt>やく</rt></ruby>15<ruby>度<rt>ど</rt></ruby>)、②<ruby>敬礼<rt>けいれい</rt></ruby>/<ruby>普通礼<rt>ふつうれい</rt></ruby>(<ruby>約<rt>やく</rt></ruby>30<ruby>度<rt>ど</rt></ruby>)、③<ruby>最敬礼<rt>さいけいれい</rt></ruby>(<ruby>約<rt>やく</rt></ruby>45<ruby>度<rt>ど</rt></ruby>)です。",
+      "jaPlain": "①会釈(約15度)、②敬礼/普通礼(約30度)、③最敬礼(約45度)です。",
+      "id": "1) Eshaku (sekitar 15°), 2) Keirei / Futsurei (sekitar 30°), 3) Saikeirei (sekitar 45°).",
+      "en": "1) Eshaku (approx. 15°), 2) Keirei / Futsurei (approx. 30°), 3) Saikeirei (approx. 45°)."
+    },
+    "ttsText": "浅い順に、会釈が約15度、敬礼・普通礼が約30度、最敬礼が約45度です。"
+  },
+  {
+    "id": "ch03_022",
+    "chapter": 3,
+    "section": "3.3 話し方と敬語",
+    "pdfPage": 44,
+    "tags": ["rule", "speaking", "high-yield"],
+    "prompt": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>から<ruby>急<rt>きゅう</rt></ruby>な<ruby>依頼<rt>いらい</rt></ruby>や<ruby>無理<rt>むり</rt></ruby>そうな<ruby>要望<rt>ようぼう</rt></ruby>をされたときは、どう<ruby>対応<rt>たいおう</rt></ruby>すべきですか？",
+      "jaPlain": "お客様から急な依頼や無理そうな要望をされたときは、どう対応すべきですか？",
+      "id": "Bagaimana cara menanggapi permintaan mendadak dari tamu?",
+      "en": "How should you respond to an urgent request from a guest?"
+    },
+    "answer": {
+      "jaRuby": "すぐに<ruby>断<rt>ことわ</rt></ruby>らず、どうすれば<ruby>対応<rt>たいおう</rt></ruby>できるかを<ruby>考<rt>かんが</rt></ruby>えます。その<ruby>場<rt>ば</rt></ruby>で<ruby>判断<rt>はんだん</rt></ruby>できない<ruby>場合<rt>ばあい</rt></ruby>は<ruby>責任者<rt>せきにんしゃ</rt></ruby>に<ruby>相談<rt>そうだん</rt></ruby>します。",
+      "jaPlain": "すぐに断らず、どうすれば対応できるかを考えます。その場で判断できない場合は責任者に相談します。",
+      "id": "JANGAN langsung menolak; pikirkan cara agar bisa memenuhinya, dan konsultasikan dengan supervisor jika tidak dapat memutuskan di tempat.",
+      "en": "Do NOT decline immediately; think how to accommodate, and consult a supervisor if unable to decide on the spot."
+    },
+    "ttsText": "すぐに断らず、どうすれば対応できるかを考え、その場で判断できない場合は責任者に相談します。",
+    "examTip": {
+      "id": "Pilihan jawaban yang langsung menolak permintaan tamu ('ムリです/できません') selalu salah dalam ujian CBT.",
+      "en": "Answers that refuse a guest on the spot are always wrong in the SSW CBT exam."
+    }
+  },
+  {
+    "id": "ch03_023",
+    "chapter": 3,
+    "section": "3.3 話し方と敬語",
+    "pdfPage": 44,
+    "tags": ["keigo", "vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>敬語<rt>けいご</rt></ruby>の3つの<ruby>分類<rt>ぶんるい</rt></ruby>とは<ruby>何<rt>なん</rt></ruby>ですか？",
+      "jaPlain": "日本語の敬語の3つの分類とは何ですか？",
+      "id": "Apa 3 kategori utama Keigo (bahasa hormat Jepang) dalam teks SSW?",
+      "en": "What are the 3 categories of Japanese Keigo?"
+    },
+    "answer": {
+      "jaRuby": "①<ruby>尊敬語<rt>そんけいご</rt></ruby>、②<ruby>謙譲語<rt>けんじょうご</rt></ruby>、③<ruby>丁寧語<rt>ていねいご</rt></ruby>の3つです。",
+      "jaPlain": "①尊敬語、②謙譲語、③丁寧語の3つです。",
+      "id": "1) Sonkeigo (bahasa hormat meninggikan lawan bicara), 2) Kenjougo (bahasa rendah hati), dan 3) Teineigo (bahasa sopan).",
+      "en": "1) Sonkeigo (Respectful), 2) Kenjougo (Humble), and 3) Teineigo (Polite)."
+    },
+    "ttsText": "敬語の3つの分類は、尊敬語、謙譲語、丁寧語です。"
+  },
+  {
+    "id": "ch03_024",
+    "chapter": 3,
+    "section": "3.3 話し方と敬語",
+    "pdfPage": 44,
+    "tags": ["keigo", "vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "「<ruby>尊敬語<rt>そんけいご</rt></ruby>」とはどのような<ruby>言葉<rt>ことば</rt></ruby>ですか？<ruby>具体例<rt>ぐたいれい</rt></ruby>も<ruby>挙<rt>あ</rt></ruby>げてください。",
+      "jaPlain": "「尊敬語」とはどのような言葉ですか？具体例も挙げてください。",
+      "id": "Apa yang dimaksud dengan Sonkeigo (尊敬語) dan apa contohnya di buku teks?",
+      "en": "What is Sonkeigo (Respectful language) and what are its textbook examples?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>聞<rt>き</rt></ruby>き<ruby>手<rt>て</rt></ruby>や<ruby>目上<rt>めうえ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>を<ruby>高<rt>たか</rt></ruby>めて<ruby>敬<rt>うやま</rt></ruby>う<ruby>言葉<rt>ことば</rt></ruby>です(<ruby>例<rt>れい</rt></ruby>: <ruby>行<rt>い</rt></ruby>かれる、いらっしゃる)。",
+      "jaPlain": "聞き手や目上の人を高めて敬う言葉です(例: 行かれる、いらっしゃる)。",
+      "id": "Bahasa hormat yang meninggikan lawan bicara atau atasan/tamu (contoh: ikareru, irassharu).",
+      "en": "Respectful language that elevates the listener or superior (e.g., ikareru, irassharu)."
+    },
+    "ttsText": "尊敬語は、聞き手や目上の人を高めて敬う言葉です。例として、行かれる、いらっしゃる、があります。"
+  },
+  {
+    "id": "ch03_025",
+    "chapter": 3,
+    "section": "3.3 話し方と敬語",
+    "pdfPage": 45,
+    "tags": ["keigo", "vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "「<ruby>謙譲語<rt>けんじょうご</rt></ruby>」とはどのような<ruby>言葉<rt>ことば</rt></ruby>ですか？<ruby>具体例<rt>ぐたいれい</rt></ruby>も<ruby>挙<rt>あ</rt></ruby>げてください。",
+      "jaPlain": "「謙譲語」とはどのような言葉ですか？具体例も挙げてください。",
+      "id": "Apa yang dimaksud dengan Kenjougo (謙譲語) dan apa contohnya di buku teks?",
+      "en": "What is Kenjougo (Humble language) and what are its textbook examples?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>自分<rt>じぶん</rt></ruby>を<ruby>低<rt>ひく</rt></ruby>くして<ruby>相手<rt>あいて</rt></ruby>を<ruby>高<rt>たか</rt></ruby>める<ruby>言葉<rt>ことば</rt></ruby>です(<ruby>例<rt>れい</rt></ruby>: <ruby>申<rt>もう</rt></ruby>し<ruby>上<rt>あ</rt></ruby>げる、<ruby>伺<rt>うかが</rt></ruby>う)。",
+      "jaPlain": "自分を低くして相手を高める言葉です(例: 申し上げる、伺う)。",
+      "id": "Bahasa rendah hati yang merendahkan diri sendiri untuk meninggikan lawan bicara (contoh: moushiageru, ukagau).",
+      "en": "Humble language that lowers oneself to elevate the listener (e.g., moushiageru, ukagau)."
+    },
+    "ttsText": "謙譲語は、自分を低くして相手を高める言葉です。例として、申し上げる、伺う、があります。"
+  },
+  {
+    "id": "ch03_026",
+    "chapter": 3,
+    "section": "3.3 話し方と敬語",
+    "pdfPage": 45,
+    "tags": ["keigo", "vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "「<ruby>丁寧語<rt>ていねいご</rt></ruby>」とはどのような<ruby>言葉<rt>ことば</rt></ruby>ですか？<ruby>具体例<rt>ぐたいれい</rt></ruby>も<ruby>挙<rt>あ</rt></ruby>げてください。",
+      "jaPlain": "「丁寧語」とはどのような言葉ですか？具体例も挙げてください。",
+      "id": "Apa yang dimaksud dengan Teineigo (丁寧語) beserta pola dan contohnya?",
+      "en": "What is Teineigo (Polite language) and what are its textbook patterns and examples?"
+    },
+    "answer": {
+      "jaRuby": "「です・ます・ございます」や<ruby>接頭語<rt>せっとうご</rt></ruby>の「お・ご」を<ruby>使<rt>つか</rt></ruby>う<ruby>丁寧<rt>ていねい</rt></ruby>な<ruby>言葉<rt>ことば</rt></ruby>です(<ruby>例<rt>れい</rt></ruby>: お<ruby>料理<rt>りょうり</rt></ruby>、ご<ruby>宿泊<rt>しゅくはく</rt></ruby>)。",
+      "jaPlain": "「です・ます・ございます」や接頭語の「お・ご」を使う丁寧な言葉です(例: お料理、ご宿泊)。",
+      "id": "Bahasa sopan yang menggunakan akhiran 'desu / masu / gozaimasu' serta awalan 'o / go' (contoh: o-ryouri, go-shukuhaku).",
+      "en": "Polite language using 'desu / masu / gozaimasu' and prefixes 'o / go' (e.g., o-ryouri, go-shukuhaku)."
+    },
+    "ttsText": "丁寧語は、です、ます、ございます、や、お、ご、を使う丁寧な言葉です。例として、お料理、ご宿泊、があります。"
+  },
+  {
+    "id": "ch03_027",
+    "chapter": 3,
+    "section": "3.4 接客の具体例",
+    "pdfPage": 46,
+    "tags": ["scenario", "phrase"],
+    "prompt": {
+      "jaRuby": "<ruby>具体例<rt>ぐたいれい</rt></ruby>1: <ruby>道<rt>みち</rt></ruby>に<ruby>迷<rt>まよ</rt></ruby>っていそうなお<ruby>客様<rt>きゃくさま</rt></ruby>には、どのように<ruby>声<rt>こえ</rt></ruby>をかけますか？",
+      "jaPlain": "具体例1: 道に迷っていそうなお客様には、どのように声をかけますか？",
+      "id": "Skenario 1: Bagaimana cara menyapa tamu yang tampak kebingungan atau tersesat?",
+      "en": "Scenario 1: What should you ask when a guest looks lost?"
+    },
+    "answer": {
+      "jaRuby": "「<ruby>何<rt>なに</rt></ruby>かお<ruby>探<rt>さが</rt></ruby>しでしょうか」と<ruby>声<rt>こえ</rt></ruby>をかけます。",
+      "jaPlain": "「何かお探しでしょうか」と声をかけます。",
+      "id": "Tanyakan secara proaktif: 'Nanika osagashi deshou ka' (Apakah ada yang sedang Anda cari?).",
+      "en": "Ask 'Nanika osagashi deshou ka' (Are you looking for something?)."
+    },
+    "ttsText": "何かお探しでしょうか、と声をかけます。"
+  },
+  {
+    "id": "ch03_028",
+    "chapter": 3,
+    "section": "3.4 接客の具体例",
+    "pdfPage": 46,
+    "tags": ["scenario", "rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>具体例<rt>ぐたいれい</rt></ruby>2: <ruby>館内<rt>かんない</rt></ruby>でお<ruby>客様<rt>きゃくさま</rt></ruby>を<ruby>案内<rt>あんない</rt></ruby>するとき、どの<ruby>位置<rt>いち</rt></ruby>をどう<ruby>歩<rt>ある</rt></ruby>きますか？",
+      "jaPlain": "具体例2: 館内でお客様を案内するとき、どの位置をどう歩きますか？",
+      "id": "Skenario 2: Di posisi mana dan bagaimana cara berjalan saat memandu tamu di dalam fasilitas?",
+      "en": "Scenario 2: Where and how should you walk when guiding a guest inside the facility?"
+    },
+    "answer": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>の<ruby>歩<rt>ある</rt></ruby>くペースに<ruby>合<rt>あ</rt></ruby>わせ、2〜3<ruby>歩<rt>ぽ</rt></ruby><ruby>先<rt>さき</rt></ruby>の<ruby>左前方<rt>ひだりぜんぽう</rt></ruby>を<ruby>歩<rt>ある</rt></ruby>きます。",
+      "jaPlain": "お客様の歩くペースに合わせ、2〜3歩先の左前方を歩きます。",
+      "id": "Berjalan 2-3 langkah di depan sebelah kiri (hidari zenpou) sambil menyesuaikan kecepatan langkah tamu.",
+      "en": "Walk 2-3 steps ahead on the left-front (左前方), matching the guest's pace."
+    },
+    "ttsText": "お客様の歩くペースに合わせ、2、3歩先の左前方を歩きます。",
+    "examTip": {
+      "id": "Angka dan arah wajib hafal: 2-3 langkah di depan sebelah KIRI (左前方).",
+      "en": "Key exam specifics: 2-3 steps ahead on the LEFT-front (左前方)."
+    }
+  },
+  {
+    "id": "ch03_029",
+    "chapter": 3,
+    "section": "3.4 接客の具体例",
+    "pdfPage": 46,
+    "tags": ["scenario", "bowing", "ojigi", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>具体例<rt>ぐたいれい</rt></ruby>3: <ruby>廊下<rt>ろうか</rt></ruby>などでお<ruby>客様<rt>きゃくさま</rt></ruby>とすれ<ruby>違<rt>ちが</rt></ruby>うときは、どうしますか？",
+      "jaPlain": "具体例3: 廊下などでお客様とすれ違うときは、どうしますか？",
+      "id": "Skenario 3: Apa yang harus dilakukan saat berpapasan dengan tamu di lorong atau area fasilitas?",
+      "en": "Scenario 3: What should you do when passing a guest?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>立<rt>た</rt></ruby>ち<ruby>止<rt>ど</rt></ruby>まって、お<ruby>客様<rt>きゃくさま</rt></ruby>が<ruby>通<rt>とお</rt></ruby>り<ruby>過<rt>す</rt></ruby>ぎるまで<ruby>会釈<rt>えしゃく</rt></ruby>(15<ruby>度<rt>ど</rt></ruby>)をします。",
+      "jaPlain": "立ち止まって、お客様が通り過ぎるまで会釈(15度)をします。",
+      "id": "Berhenti berjalan dan lakukan Eshaku (membungkuk 15°) hingga tamu lewat.",
+      "en": "Stop and perform Eshaku (15°) until the guest passes."
+    },
+    "ttsText": "立ち止まって、お客様が通り過ぎるまで15度の会釈をします。"
+  },
+  {
+    "id": "ch03_030",
+    "chapter": 3,
+    "section": "3.4 接客の具体例",
+    "pdfPage": 46,
+    "tags": ["scenario", "phrase", "keigo"],
+    "prompt": {
+      "jaRuby": "<ruby>具体例<rt>ぐたいれい</rt></ruby>4: お<ruby>客様<rt>きゃくさま</rt></ruby>に<ruby>呼<rt>よ</rt></ruby>ばれたときは、どのように<ruby>返事<rt>へんじ</rt></ruby>をしますか？",
+      "jaPlain": "具体例4: お客様に呼ばれたときは、どのように返事をしますか？",
+      "id": "Skenario 4: Bagaimana cara menjawab ketika dipanggil oleh tamu?",
+      "en": "Scenario 4: How should you reply when called by a guest?"
+    },
+    "answer": {
+      "jaRuby": "「お<ruby>呼<rt>よ</rt></ruby>びでございますか」と<ruby>返事<rt>へんじ</rt></ruby>をします。",
+      "jaPlain": "「お呼びでございますか」と返事をします。",
+      "id": "Jawab dengan sopan: 'Oyobi de gozaimasu ka' (Apakah Anda memanggil saya / Ada yang bisa dibantu?).",
+      "en": "Reply 'Oyobi de gozaimasu ka' (Did you call for me?)."
+    },
+    "ttsText": "お呼びでございますか、と返事をします。"
+  },
+  {
+    "id": "ch03_031",
+    "chapter": 3,
+    "section": "3.4 接客の具体例",
+    "pdfPage": 46,
+    "tags": ["scenario", "rule"],
+    "prompt": {
+      "jaRuby": "<ruby>具体例<rt>ぐたいれい</rt></ruby>5: お<ruby>客様<rt>きゃくさま</rt></ruby>の<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>運<rt>はこ</rt></ruby>ぶときの<ruby>注意点<rt>ちゅういてん</rt></ruby>は？",
+      "jaPlain": "具体例5: お客様の荷物を運ぶときの注意点は？",
+      "id": "Skenario 5: Bagaimana aturan membawa bagasi atau barang bawaan tamu?",
+      "en": "Scenario 5: How should you handle a guest's luggage?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>客室<rt>きゃくしつ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>まで<ruby>丁寧<rt>ていねい</rt></ruby>に<ruby>取<rt>と</rt></ruby>り<ruby>扱<rt>あつか</rt></ruby>って<ruby>運<rt>はこ</rt></ruby>びます。",
+      "jaPlain": "客室の中まで丁寧に取り扱って運びます。",
+      "id": "Tangani dengan hati-hati dan bawa masuk hingga ke dalam kamar tamu.",
+      "en": "Handle carefully all the way into the guest room."
+    },
+    "ttsText": "客室の中まで丁寧に取り扱って運びます。"
+  },
+  {
+    "id": "ch03_032",
+    "chapter": 3,
+    "section": "3.4 接客の具体例",
+    "pdfPage": 47,
+    "tags": ["scenario", "etiquette", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>具体例<rt>ぐたいれい</rt></ruby>6: <ruby>地図<rt>ちず</rt></ruby>や<ruby>案内板<rt>あんないばん</rt></ruby>を<ruby>指<rt>さ</rt></ruby>し<ruby>示<rt>しめ</rt></ruby>すときの<ruby>手<rt>て</rt></ruby>の<ruby>形<rt>かたち</rt></ruby>は？",
+      "jaPlain": "具体例6: 地図や案内板を指し示すときの手の形は？",
+      "id": "Skenario 6: Bagaimana bentuk tangan saat menunjuk lokasi di peta atau memberi petunjuk arah?",
+      "en": "Scenario 6: How should you position your hand when pointing on a map?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>手<rt>て</rt></ruby>のひらを<ruby>上<rt>うえ</rt></ruby>にして、4<ruby>本<rt>ほん</rt></ruby>の<ruby>指<rt>ゆび</rt></ruby>をそろえて<ruby>指<rt>さ</rt></ruby>し<ruby>示<rt>しめ</rt></ruby>します。",
+      "jaPlain": "手のひらを上にして、4本の指をそろえて指し示します。",
+      "id": "Telapak tangan menghadap ke atas dengan 4 jari dirapatkan (bukan menunjuk dengan 1 jari telunjuk).",
+      "en": "Palm facing up with 4 fingers aligned."
+    },
+    "ttsText": "手のひらを上にして、4本の指をそろえて指し示します。",
+    "examTip": {
+      "id": "Menunjuk dengan jari telunjuk saja dianggap tidak sopan; wajib 4 jari rapat, telapak menghadap atas.",
+      "en": "Never point with a single index finger; keep 4 fingers aligned with palm facing up."
+    }
+  },
+  {
+    "id": "ch03_033",
+    "chapter": 3,
+    "section": "3.4 接客の具体例",
+    "pdfPage": 47,
+    "tags": ["scenario", "etiquette", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>具体例<rt>ぐたいれい</rt></ruby>7: お<ruby>客様<rt>きゃくさま</rt></ruby>にルームキー(<ruby>客室<rt>きゃくしつ</rt></ruby>の<ruby>鍵<rt>かぎ</rt></ruby>)を<ruby>渡<rt>わた</rt></ruby>すときの<ruby>作法<rt>さほう</rt></ruby>は？",
+      "jaPlain": "具体例7: お客様にルームキー(客室の鍵)を渡すときの作法は？",
+      "id": "Skenario 7: Bagaimana tata cara menyerahkan kunci kamar kepada tamu?",
+      "en": "Scenario 7: How should you hand a room key to a guest?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>両手<rt>りょうて</rt></ruby>で<ruby>鍵<rt>かぎ</rt></ruby>をお<ruby>客様<rt>きゃくさま</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>へ<ruby>向<rt>む</rt></ruby>けて<ruby>渡<rt>わた</rt></ruby>します。",
+      "jaPlain": "両手で鍵をお客様の方へ向けて渡します。",
+      "id": "Gunakan kedua tangan dengan posisi kunci menghadap ke arah tamu.",
+      "en": "Face the key toward the guest using both hands."
+    },
+    "ttsText": "両手で鍵をお客様の方へ向けて渡します。"
+  },
+  {
+    "id": "ch03_034",
+    "chapter": 3,
+    "section": "3.4 接客の具体例",
+    "pdfPage": 47,
+    "tags": ["scenario", "rule"],
+    "prompt": {
+      "jaRuby": "<ruby>具体例<rt>ぐたいれい</rt></ruby>8: <ruby>館内<rt>かんない</rt></ruby>のエレベーターを<ruby>利用<rt>りよう</rt></ruby>するときの<ruby>基本<rt>きほん</rt></ruby>ルールは？",
+      "jaPlain": "具体例8: 館内のエレベーターを利用するときの基本ルールは？",
+      "id": "Skenario 8: Apa aturan penggunaan lift bagi staf?",
+      "en": "Scenario 8: What is the rule for elevator usage?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>常<rt>つね</rt></ruby>にお<ruby>客様<rt>きゃくさま</rt></ruby>を<ruby>優先<rt>ゆうせん</rt></ruby>します。",
+      "jaPlain": "常にお客様を優先します。",
+      "id": "Selalu utamakan tamu terlebih dahulu.",
+      "en": "Always prioritize guests."
+    },
+    "ttsText": "エレベーターでは、常にお客様を優先します。"
+  },
+  {
+    "id": "ch03_035",
+    "chapter": 3,
+    "section": "3.4 接客の具体例",
+    "pdfPage": 47,
+    "tags": ["scenario", "accessibility", "vocab"],
+    "prompt": {
+      "jaRuby": "<ruby>具体例<rt>ぐたいれい</rt></ruby>9: <ruby>接客<rt>せっきゃく</rt></ruby>における「バリアフリーの<ruby>心<rt>こころ</rt></ruby>」とはどのような<ruby>考<rt>かんが</rt></ruby>え<ruby>方<rt>かた</rt></ruby>ですか？",
+      "jaPlain": "具体例9: 接客における「バリアフリーの心」とはどのような考え方ですか？",
+      "id": "Skenario 9: Apa yang dimaksud dengan pola pikir bebas hambatan (barrier-free mindset) dalam pelayanan?",
+      "en": "Scenario 9: What is the barrier-free mindset in customer service?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>障<rt>しょう</rt></ruby>がいの<ruby>有無<rt>うむ</rt></ruby>にかかわらず、すべての<ruby>人<rt>ひと</rt></ruby>が<ruby>快適<rt>かいてき</rt></ruby>に<ruby>過<rt>す</rt></ruby>ごせるようにする<ruby>姿勢<rt>しせい</rt></ruby>です。",
+      "jaPlain": "障がいの有無にかかわらず、すべての人が快適に過ごせるようにする姿勢です。",
+      "id": "Sikap memastikan pengalaman menginap yang nyaman bagi semua orang tanpa memandang ada atau tidaknya disabilitas.",
+      "en": "Ensuring a comfortable stay for everyone regardless of disability."
+    },
+    "ttsText": "障がいの有無にかかわらず、すべての人が快適に過ごせるようにする姿勢です。"
+  },
+  {
+    "id": "ch03_036",
+    "chapter": 3,
+    "section": "3.4 接客の具体例",
+    "pdfPage": 47,
+    "tags": ["scenario", "accessibility", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>具体例<rt>ぐたいれい</rt></ruby>10a: <ruby>車<rt>くるま</rt></ruby>いすをお<ruby>使<rt>つか</rt></ruby>いのお<ruby>客様<rt>きゃくさま</rt></ruby>と<ruby>話<rt>はな</rt></ruby>すときは、どうしますか？",
+      "jaPlain": "具体例10a: 車いすをお使いのお客様と話すときは、どうしますか？",
+      "id": "Skenario 10a: Bagaimana posisi saat berbicara dengan tamu yang menggunakan kursi roda?",
+      "en": "Scenario 10a: How should you speak with a guest using a wheelchair?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>腰<rt>こし</rt></ruby>をかがめるなどして、お<ruby>客様<rt>きゃくさま</rt></ruby>と<ruby>目線<rt>めせん</rt></ruby>の<ruby>高<rt>たか</rt></ruby>さを<ruby>合<rt>あ</rt></ruby>わせて<ruby>話<rt>はな</rt></ruby>します。",
+      "jaPlain": "腰をかがめるなどして、お客様と目線の高さを合わせて話します。",
+      "id": "Sejajarkan tinggi pandangan mata dengan tamu (misalnya dengan berjongkok atau membungkuk) saat berbicara.",
+      "en": "Match eye level with the guest when speaking."
+    },
+    "ttsText": "車いすのお客様と話すときは、目線の高さを合わせて話します。"
+  },
+  {
+    "id": "ch03_037",
+    "chapter": 3,
+    "section": "3.4 接客の具体例",
+    "pdfPage": 47,
+    "tags": ["scenario", "accessibility"],
+    "prompt": {
+      "jaRuby": "<ruby>具体例<rt>ぐたいれい</rt></ruby>10b: <ruby>車<rt>くるま</rt></ruby>いすをお<ruby>使<rt>つか</rt></ruby>いのお<ruby>客様<rt>きゃくさま</rt></ruby>には、どの<ruby>駐車<rt>ちゅうしゃ</rt></ruby>スペースを<ruby>案内<rt>あんない</rt></ruby>しますか？",
+      "jaPlain": "具体例10b: 車いすをお使いのお客様には、どの駐車スペースを案内しますか？",
+      "id": "Skenario 10b: Area parkir mana yang harus diarahkan kepada tamu berkursi roda?",
+      "en": "Scenario 10b: Where should you guide a wheelchair guest for parking?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>施設<rt>しせつ</rt></ruby>に<ruby>近<rt>ちか</rt></ruby>く、スペースが<ruby>広<rt>ひろ</rt></ruby>い<ruby>駐車場<rt>ちゅうしゃじょう</rt></ruby>へ<ruby>案内<rt>あんない</rt></ruby>します。",
+      "jaPlain": "施設に近く、スペースが広い駐車場へ案内します。",
+      "id": "Arahkan ke tempat parkir yang luas dan dekat dengan fasilitas bangunan.",
+      "en": "Guide to spacious parking close to the facility."
+    },
+    "ttsText": "施設に近く、スペースが広い駐車場へ案内します。"
+  },
+  {
+    "id": "ch03_038",
+    "chapter": 3,
+    "section": "3.4 接客の具体例",
+    "pdfPage": 47,
+    "tags": ["scenario", "accessibility", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>具体例<rt>ぐたいれい</rt></ruby>11: <ruby>視覚<rt>しかく</rt></ruby>に<ruby>障<rt>しょう</rt></ruby>がいのあるお<ruby>客様<rt>きゃくさま</rt></ruby>に<ruby>声<rt>こえ</rt></ruby>をかけて<ruby>手伝<rt>てつだ</rt></ruby>うときは、どの<ruby>方向<rt>ほうこう</rt></ruby>から<ruby>近<rt>ちか</rt></ruby>づきますか？",
+      "jaPlain": "具体例11: 視覚に障がいのあるお客様に声をかけて手伝うときは、どの方向から近づきますか？",
+      "id": "Skenario 11: Dari arah mana Anda harus mendekati dan menawarkan bantuan kepada tamu tunanetra?",
+      "en": "Scenario 11: From which direction should you approach and offer help to a visually impaired guest?"
+    },
+    "answer": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>を<ruby>驚<rt>おどろ</rt></ruby>かせないよう、<ruby>正面<rt>しょうめん</rt></ruby>から<ruby>近<rt>ちか</rt></ruby>づいて<ruby>声<rt>こえ</rt></ruby>をかけます。",
+      "jaPlain": "お客様を驚かせないよう、正面から近づいて声をかけます。",
+      "id": "Dekati dan tawarkan bantuan dari arah DEPAN (shoumen kara) agar tamu tidak terkejut.",
+      "en": "Approach and offer help from the front (正面から)."
+    },
+    "ttsText": "視覚に障がいのあるお客様には、正面から近づいて声をかけます。"
+  },
+  {
+    "id": "ch03_039",
+    "chapter": 3,
+    "section": "3.4 接客の具体例",
+    "pdfPage": 48,
+    "tags": ["scenario", "accessibility"],
+    "prompt": {
+      "jaRuby": "<ruby>具体例<rt>ぐたいれい</rt></ruby>12: レストランでつえをお<ruby>使<rt>つか</rt></ruby>いのお<ruby>客様<rt>きゃくさま</rt></ruby>には、どの<ruby>席<rt>せき</rt></ruby>を<ruby>提案<rt>ていあん</rt></ruby>しますか？",
+      "jaPlain": "具体例12: レストランでつえをお使いのお客様には、どの席を提案しますか？",
+      "id": "Skenario 12: Tempat duduk mana yang ditawarkan di restoran kepada tamu yang menggunakan tongkat?",
+      "en": "Scenario 12: What seating should you offer a guest with a cane at a restaurant?"
+    },
+    "answer": {
+      "jaRuby": "ご<ruby>希望<rt>きぼう</rt></ruby>があれば、<ruby>入口<rt>いりぐち</rt></ruby><ruby>付近<rt>ふきん</rt></ruby>の<ruby>席<rt>せき</rt></ruby>を<ruby>案内<rt>あんない</rt></ruby>します。",
+      "jaPlain": "ご希望があれば、入口付近の席を案内します。",
+      "id": "Tawarkan tempat duduk di dekat pintu masuk jika tamu berkenan.",
+      "en": "Offer a seat near the entrance if desired."
+    },
+    "ttsText": "ご希望があれば、入口付近の席を案内します。"
+  },
+  {
+    "id": "ch03_040",
+    "chapter": 3,
+    "section": "3.4 接客の具体例",
+    "pdfPage": 48,
+    "tags": ["scenario", "accessibility", "vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>具体例<rt>ぐたいれい</rt></ruby>13: フロントで<ruby>聴覚<rt>ちょうかく</rt></ruby>に<ruby>障<rt>しょう</rt></ruby>がいのあるお<ruby>客様<rt>きゃくさま</rt></ruby>に<ruby>対応<rt>たいおう</rt></ruby>するときの<ruby>方法<rt>ほうほう</rt></ruby>は？",
+      "jaPlain": "具体例13: フロントで聴覚に障がいのあるお客様に対応するときの方法は？",
+      "id": "Skenario 13: Metode komunikasi apa yang digunakan di front desk untuk melayani tamu tunarungu?",
+      "en": "Scenario 13: How should you communicate with a hearing-impaired guest at the front desk?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>手話<rt>しゅわ</rt></ruby>や<ruby>筆談<rt>ひつだん</rt></ruby>(メモなどに<ruby>書<rt>か</rt></ruby>いて<ruby>伝<rt>つた</rt></ruby>えること)を<ruby>用<rt>もち</rt></ruby>いて<ruby>対応<rt>たいおう</rt></ruby>します。",
+      "jaPlain": "手話や筆談(メモなどに書いて伝えること)を用いて対応します。",
+      "id": "Gunakan bahasa isyarat (shuwa) atau komunikasi tertulis (hitsudan).",
+      "en": "Use sign language (手話) or written notes (筆談)."
+    },
+    "ttsText": "手話や筆談を用いて対応します。"
+  },
+  {
+    "id": "ch03_041",
+    "chapter": 3,
+    "section": "3.4 接客の具体例",
+    "pdfPage": 48,
+    "tags": ["scenario", "rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>具体例<rt>ぐたいれい</rt></ruby>14: <ruby>部屋<rt>へや</rt></ruby>に<ruby>鍵<rt>かぎ</rt></ruby>を<ruby>置<rt>お</rt></ruby>き<ruby>忘<rt>わす</rt></ruby>れて<ruby>締<rt>し</rt></ruby>め<ruby>出<rt>だ</rt></ruby>されたお<ruby>客様<rt>きゃくさま</rt></ruby>への<ruby>対応<rt>たいおう</rt></ruby><ruby>手順<rt>てじゅん</rt></ruby>は？",
+      "jaPlain": "具体例14: 部屋に鍵を置き忘れて締め出されたお客様への対応手順は？",
+      "id": "Skenario 14: Bagaimana prosedur penanganan tamu yang terkunci di luar kamar karena kunci tertinggal di dalam?",
+      "en": "Scenario 14: What is the procedure when a guest is locked out (key left inside the room)?"
+    },
+    "answer": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>の<ruby>部屋番号<rt>へやばんごう</rt></ruby>と<ruby>名前<rt>なまえ</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>したうえで、<ruby>部屋<rt>へや</rt></ruby>まで<ruby>同行<rt>どうこう</rt></ruby>して<ruby>解錠<rt>かいじょう</rt></ruby>します。",
+      "jaPlain": "お客様の部屋番号と名前を確認したうえで、部屋まで同行して解錠します。",
+      "id": "Verifikasi nomor kamar dan nama tamu terlebih dahulu, lalu antar tamu langsung ke kamar untuk membukakan pintu.",
+      "en": "Verify the guest's room number and name, then escort the guest to the room to unlock it."
+    },
+    "ttsText": "お客様の部屋番号と名前を確認したうえで、部屋まで同行して解錠します。",
+    "examTip": {
+      "id": "Jangan pernah memberikan kunci cadangan tanpa verifikasi identitas dan tanpa mendampingi ke kamar.",
+      "en": "Never hand out a spare key without verifying room number + name and escorting the guest to the room."
+    }
+  },
+  {
+    "id": "ch03_042",
+    "chapter": 3,
+    "section": "3.4 接客の具体例",
+    "pdfPage": 48,
+    "tags": ["scenario", "staff"],
+    "prompt": {
+      "jaRuby": "<ruby>具体例<rt>ぐたいれい</rt></ruby>15: <ruby>部下<rt>ぶか</rt></ruby>や<ruby>後輩<rt>こうはい</rt></ruby>を<ruby>指導<rt>しどう</rt></ruby>するときに<ruby>大切<rt>たいせつ</rt></ruby>なことは<ruby>何<rt>なん</rt></ruby>ですか？",
+      "jaPlain": "具体例15: 部下や後輩を指導するときに大切なことは何ですか？",
+      "id": "Skenario 15: Apa yang harus ditekankan saat melatih atau membimbing bawahan?",
+      "en": "Scenario 15: What should you teach when coaching subordinates?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>常<rt>つね</rt></ruby>にお<ruby>客様<rt>きゃくさま</rt></ruby>のニーズ(<ruby>要望<rt>ようぼう</rt></ruby>)を<ruby>考<rt>かんが</rt></ruby>えて<ruby>対応<rt>たいおう</rt></ruby>するように<ruby>教<rt>おし</rt></ruby>えます。",
+      "jaPlain": "常にお客様のニーズ(要望)を考えて対応するように教えます。",
+      "id": "Ajarkan agar selalu mempertimbangkan dan menanggapi kebutuhan tamu.",
+      "en": "Teach them to always consider and respond to guest needs."
+    },
+    "ttsText": "常にお客様のニーズを考えて対応するように教えます。"
+  },
+  {
+    "id": "ch03_043",
+    "chapter": 3,
+    "section": "3.4 接客の具体例",
+    "pdfPage": 48,
+    "tags": ["scenario", "rule"],
+    "prompt": {
+      "jaRuby": "<ruby>具体例<rt>ぐたいれい</rt></ruby>16: <ruby>多国籍<rt>たこくせき</rt></ruby>のお<ruby>客様<rt>きゃくさま</rt></ruby>をお<ruby>迎<rt>むか</rt></ruby>えするときに<ruby>大切<rt>たいせつ</rt></ruby>なことは？",
+      "jaPlain": "具体例16: 多国籍のお客様をお迎えするときに大切なことは？",
+      "id": "Skenario 16: Apa sikap yang wajib diterapkan saat melayani tamu dari berbagai negara?",
+      "en": "Scenario 16: What is essential when serving multinational guests?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>文化<rt>ぶんか</rt></ruby>や<ruby>宗教<rt>しゅうきょう</rt></ruby>の<ruby>違<rt>ちが</rt></ruby>いを<ruby>理解<rt>りかい</rt></ruby>し、<ruby>尊重<rt>そんちょう</rt></ruby>することです。",
+      "jaPlain": "文化や宗教の違いを理解し、尊重することです。",
+      "id": "Memahami dan menghormati perbedaan budaya serta agama tamu.",
+      "en": "Understand and respect cultural and religious differences."
+    },
+    "ttsText": "多国籍のお客様に対しては、文化や宗教の違いを理解し、尊重することが大切です。"
+  },
+  {
+    "id": "ch03_044",
+    "chapter": 3,
+    "section": "3.5 電話対応",
+    "pdfPage": 49,
+    "tags": ["phone", "rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>電話対応<rt>でんわたいおう</rt></ruby>の4つの<ruby>重要<rt>じゅうよう</rt></ruby>ポイントとは<ruby>何<rt>なん</rt></ruby>ですか？",
+      "jaPlain": "電話対応の4つの重要ポイントとは何ですか？",
+      "id": "Sebutkan 4 poin penting dalam penanganan telepon (電話対応)!",
+      "en": "What are the 4 key points of phone handling?"
+    },
+    "answer": {
+      "jaRuby": "①メモ<ruby>帳<rt>ちょう</rt></ruby>とペンを<ruby>用意<rt>ようい</rt></ruby>してから<ruby>出<rt>で</rt></ruby>る、②<ruby>最初<rt>さいしょ</rt></ruby>に<ruby>自分<rt>じぶん</rt></ruby>・<ruby>施設名<rt>しせつめい</rt></ruby>を<ruby>名乗<rt>なの</rt></ruby>る、③<ruby>取<rt>と</rt></ruby>り<ruby>次<rt>つ</rt></ruby>ぐ<ruby>前<rt>まえ</rt></ruby>に<ruby>相手<rt>あいて</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>・<ruby>会社名<rt>かいしゃめい</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>する、④お<ruby>客様<rt>きゃくさま</rt></ruby>が<ruby>電話<rt>でんわ</rt></ruby>を<ruby>切<rt>き</rt></ruby>ってから<ruby>受話器<rt>じゅわき</rt></ruby>を<ruby>置<rt>お</rt></ruby>く、の4つです。",
+      "jaPlain": "①メモ帳とペンを用意してから出る、②最初に自分・施設名を名乗る、③取り次ぐ前に相手の名前・会社名を確認する、④お客様が電話を切ってから受話器を置く、の4つです。",
+      "id": "1) Siapkan buku catatan dan pena sebelum menjawab, 2) Sebutkan nama diri/fasilitas terlebih dahulu, 3) Konfirmasi nama dan perusahaan penelepon sebelum menyambungkan, 4) Tunggu tamu menutup telepon terlebih dahulu sebelum meletakkan gagang telepon.",
+      "en": "1) Prepare notepad and pen before answering, 2) Introduce yourself and facility first, 3) Confirm caller's name and company before transferring, 4) Wait for the customer to hang up before placing the receiver down."
+    },
+    "ttsText": "電話対応の4つのポイントは、メモ帳とペンを用意してから出ること、最初に自分と施設名を名乗ること、取り次ぐ前に相手の名前と会社名を確認すること、お客様が電話を切ってから受話器を置くことです。"
+  },
+  {
+    "id": "ch03_045",
+    "chapter": 3,
+    "section": "3.5 電話対応",
+    "pdfPage": 49,
+    "tags": ["phone", "rule"],
+    "prompt": {
+      "jaRuby": "<ruby>電話<rt>でんわ</rt></ruby>に<ruby>出<rt>で</rt></ruby>る<ruby>前<rt>まえ</rt></ruby>の<ruby>準備<rt>じゅんび</rt></ruby>と、<ruby>出<rt>で</rt></ruby>た<ruby>直後<rt>ちょくご</rt></ruby>に<ruby>行<rt>おこな</rt></ruby>うことは<ruby>何<rt>なん</rt></ruby>ですか？",
+      "jaPlain": "電話に出る前の準備と、出た直後に行うことは何ですか？",
+      "id": "Apa yang harus disiapkan sebelum mengangkat telepon dan apa yang diucapkan pertama kali?",
+      "en": "What should you prepare before answering the phone, and what should you say first?"
+    },
+    "answer": {
+      "jaRuby": "メモ<ruby>帳<rt>ちょう</rt></ruby>とペンを<ruby>用意<rt>ようい</rt></ruby>してから<ruby>電話<rt>でんわ</rt></ruby>に<ruby>出<rt>で</rt></ruby>て、<ruby>最初<rt>さいしょ</rt></ruby>に<ruby>自分<rt>じぶん</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>と<ruby>施設名<rt>しせつめい</rt></ruby>を<ruby>名乗<rt>なの</rt></ruby>ります。",
+      "jaPlain": "メモ帳とペンを用意してから電話に出て、最初に自分の名前と施設名を名乗ります。",
+      "id": "Siapkan buku catatan dan pena sebelum mengangkat telepon, lalu perkenalkan nama diri dan nama fasilitas terlebih dahulu.",
+      "en": "Prepare a notepad and pen before answering, and introduce yourself and your facility first."
+    },
+    "ttsText": "メモ帳とペンを用意してから電話に出て、最初に自分の名前と施設名を名乗ります。"
+  },
+  {
+    "id": "ch03_046",
+    "chapter": 3,
+    "section": "3.5 電話対応",
+    "pdfPage": 49,
+    "tags": ["phone", "rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>電話<rt>でんわ</rt></ruby>を<ruby>他<rt>ほか</rt></ruby>の<ruby>担当者<rt>たんとうしゃ</rt></ruby>に<ruby>取<rt>と</rt></ruby>り<ruby>次<rt>つ</rt></ruby>ぐ<ruby>前<rt>まえ</rt></ruby>と、<ruby>通話<rt>つうわ</rt></ruby>を<ruby>終<rt>お</rt></ruby>わるときのルールは？",
+      "jaPlain": "電話を他の担当者に取り次ぐ前と、通話を終わるときのルールは？",
+      "id": "Apa aturan sebelum menyambungkan telepon ke staf lain dan saat mengakhiri panggilan?",
+      "en": "What are the rules before transferring a call and when hanging up?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>取<rt>と</rt></ruby>り<ruby>次<rt>つ</rt></ruby>ぐ<ruby>前<rt>まえ</rt></ruby>に<ruby>相手<rt>あいて</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>・<ruby>会社名<rt>かいしゃめい</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>し、お<ruby>客様<rt>きゃくさま</rt></ruby>が<ruby>電話<rt>でんわ</rt></ruby>を<ruby>切<rt>き</rt></ruby>ってから<ruby>受話器<rt>じゅわき</rt></ruby>を<ruby>置<rt>お</rt></ruby>きます。",
+      "jaPlain": "取り次ぐ前に相手の名前・会社名を確認し、お客様が電話を切ってから受話器を置きます。",
+      "id": "Konfirmasi nama dan perusahaan penelepon sebelum menyambungkan, dan tunggu tamu memutus panggilan sebelum meletakkan gagang telepon.",
+      "en": "Confirm the caller's name and company before transferring, and wait for the customer to hang up before placing the receiver down."
+    },
+    "ttsText": "取り次ぐ前に相手の名前と会社名を確認し、お客様が電話を切ってから受話器を置きます。"
+  },
+  {
+    "id": "ch03_047",
+    "chapter": 3,
+    "section": "3.6 クレーム対応",
+    "pdfPage": 50,
+    "tags": ["complaint", "sequence", "rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "クレーム<ruby>対応<rt>たいおう</rt></ruby>の<ruby>正<rt>ただ</rt></ruby>しい3ステップの<ruby>順番<rt>じゅんばん</rt></ruby>とは<ruby>何<rt>なん</rt></ruby>ですか？",
+      "jaPlain": "クレーム対応の正しい3ステップの順番とは何ですか？",
+      "id": "Apa urutan 3 langkah yang benar dalam menangani keluhan tamu (クレーム対応)?",
+      "en": "What is the correct 3-step sequence for complaint handling?"
+    },
+    "answer": {
+      "jaRuby": "①<ruby>不快<rt>ふかい</rt></ruby>にさせたことをお<ruby>詫<rt>わ</rt></ruby>びする、②クレームの<ruby>原因<rt>げんいん</rt></ruby>を<ruby>丁寧<rt>ていねい</rt></ruby>に<ruby>確認<rt>かくにん</rt></ruby>する、③<ruby>責任者<rt>せきにんしゃ</rt></ruby>に<ruby>報告<rt>ほうこく</rt></ruby>する、の3ステップです。",
+      "jaPlain": "①不快にさせたことをお詫びする、②クレームの原因を丁寧に確認する、③責任者に報告する、の3ステップです。",
+      "id": "1) Minta maaf terlebih dahulu atas ketidaknyamanan, 2) Identifikasi akar penyebab keluhan dengan saksama, 3) Laporkan kepada supervisor.",
+      "en": "1) Apologize first for the discomfort, 2) Carefully identify the root cause, 3) Report to the supervisor."
+    },
+    "ttsText": "クレーム対応の3ステップは、1番目に不快にさせたことをお詫びする、2番目にクレームの原因を丁寧に確認する、3番目に責任者に報告する、です。",
+    "examTip": {
+      "id": "Urutan ini juga muncul sebagai soal Sequence Drill: Minta maaf -> Cek penyebab -> Lapor supervisor.",
+      "en": "Also tested in the Sequence Drill: Apologize first -> Identify root cause -> Report to supervisor."
+    }
+  },
+  {
+    "id": "ch03_048",
+    "chapter": 3,
+    "section": "3.6 クレーム対応",
+    "pdfPage": 50,
+    "tags": ["complaint", "rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>明<rt>あき</rt></ruby>らかに<ruby>自分<rt>じぶん</rt></ruby>のミスによるクレームだった<ruby>場合<rt>ばあい</rt></ruby>、どうすべきですか？",
+      "jaPlain": "明らかに自分のミスによるクレームだった場合、どうすべきですか？",
+      "id": "Apa aturan wajib jika keluhan terjadi karena kesalahan diri sendiri yang sangat jelas?",
+      "en": "What is the strict rule even if a complaint is clearly caused by your own mistake?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>明<rt>あき</rt></ruby>らかに<ruby>自分<rt>じぶん</rt></ruby>のミスであっても、<ruby>責任者<rt>せきにんしゃ</rt></ruby>に<ruby>報告<rt>ほうこく</rt></ruby>せずに<ruby>一人<rt>ひとり</rt></ruby>で<ruby>解決<rt>かいけつ</rt></ruby>しようとしてはなりません。",
+      "jaPlain": "明らかに自分のミスであっても、責任者に報告せずに一人で解決しようとしてはなりません。",
+      "id": "Meskipun jelas kesalahan sendiri, JANGAN pernah mencoba menyelesaikan semuanya sendirian tanpa melapor kepada supervisor.",
+      "en": "Even if clearly your own mistake, never try to resolve everything alone without reporting to a supervisor."
+    },
+    "ttsText": "明らかに自分のミスであっても、責任者に報告せずに一人で解決しようとしてはなりません。",
+    "examTip": {
+      "id": "Jebakan CBT klasik: meski kesalahan sendiri dan sudah selesai di tempat, tetap WAJIB melapor ke atasan.",
+      "en": "Classic CBT trap: even if it was your own mistake and seems resolved, you MUST still report to a supervisor."
+    }
+  }
+]

@@ -1,0 +1,766 @@
+[
+  {
+    "id": "ch01_001",
+    "chapter": 1,
+    "section": "1.0 フロントの役割と4大業務",
+    "pdfPage": 5,
+    "tags": ["overview", "vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "ホテル・<ruby>旅館<rt>りょかん</rt></ruby>におけるフロントの<ruby>役割<rt>やくわり</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "ホテル・旅館におけるフロントの役割は何ですか。",
+      "id": "Apa peran front desk (resepsionis) di fasilitas penginapan (hotel/ryokan)?",
+      "en": "What is the role of the front desk (reception) in a lodging facility?"
+    },
+    "answer": {
+      "jaRuby": "「<ruby>宿泊<rt>しゅくはく</rt></ruby><ruby>施設<rt>しせつ</rt></ruby>の<ruby>顔<rt>かお</rt></ruby>」として、お<ruby>客様<rt>きゃくさま</rt></ruby>の<ruby>到着<rt>とうちゃく</rt></ruby>から<ruby>出発<rt>しゅっぱつ</rt></ruby>までを<ruby>管理<rt>かんり</rt></ruby>する<ruby>役割<rt>やくわり</rt></ruby>です。",
+      "jaPlain": "「宿泊施設の顔」として、お客様の到着から出発までを管理する役割です。",
+      "id": "Sebagai \"wajah fasilitas penginapan\" (宿泊施設の顔), front desk mengelola tamu sejak kedatangan hingga keberangkatan.",
+      "en": "It is the \"face of the lodging facility\" (宿泊施設の顔), managing guests from arrival to departure."
+    },
+    "ttsText": "宿泊施設の顔として、お客様の到着から出発までを管理する役割です。",
+    "examTip": {
+      "id": "Istilah kunci buku teks: 宿泊施設の顔 (wajah fasilitas penginapan). Peran resepsionis mencakup seluruh alur tamu dari datang hingga pulang.",
+      "en": "Textbook keyword: 宿泊施設の顔 (face of the lodging facility). Front desk responsibility spans arrival through departure."
+    }
+  },
+  {
+    "id": "ch01_002",
+    "chapter": 1,
+    "section": "1.0 フロントの役割と4大業務",
+    "pdfPage": 6,
+    "tags": ["overview", "sequence", "numbers", "high-yield"],
+    "prompt": {
+      "jaRuby": "フロントで<ruby>行<rt>おこな</rt></ruby>う4つの<ruby>主<rt>おも</rt></ruby>な<ruby>業務<rt>ぎょうむ</rt></ruby>を<ruby>順番<rt>じゅんばん</rt></ruby>に<ruby>答<rt>こた</rt></ruby>えてください。",
+      "jaPlain": "フロントで行う4つの主な業務を順番に答えてください。",
+      "id": "Sebutkan 4 tugas utama yang dilakukan di front desk secara berurutan.",
+      "en": "What are the 4 main duties performed at the front desk in order?"
+    },
+    "answer": {
+      "jaRuby": "1. <ruby>予約<rt>よやく</rt></ruby><ruby>管理<rt>かんり</rt></ruby> 2. チェックイン<ruby>業務<rt>ぎょうむ</rt></ruby> 3. <ruby>館内<rt>かんない</rt></ruby>でのお<ruby>客様<rt>きゃくさま</rt></ruby><ruby>対応<rt>たいおう</rt></ruby>と<ruby>情報<rt>じょうほう</rt></ruby><ruby>提供<rt>ていきょう</rt></ruby> 4. チェックアウト・<ruby>会計<rt>かいけい</rt></ruby><ruby>業務<rt>ぎょうむ</rt></ruby>",
+      "jaPlain": "1. 予約管理 2. チェックイン業務 3. 館内でのお客様対応と情報提供 4. チェックアウト・会計業務",
+      "id": "1. Manajemen reservasi (予約管理), 2. Proses check-in (チェックイン業務), 3. Pelayanan tamu dan pemberian informasi di dalam fasilitas (館内でのお客様対応と情報提供), 4. Check-out dan pembayaran (チェックアウト・会計業務).",
+      "en": "1. 予約管理 (Reservation Management), 2. チェックイン業務 (Check-in), 3. 館内でのお客様対応と情報提供 (In-house Guest Assistance & Info), 4. チェックアウト・会計業務 (Check-out & Billing)."
+    },
+    "ttsText": "1つ目は予約管理、2つ目はチェックイン業務、3つ目は館内でのお客様対応と情報提供、4つ目はチェックアウトと会計業務です。",
+    "examTip": {
+      "id": "Keempat tugas ini juga muncul dalam latihan pengurutan alur kerja front desk.",
+      "en": "These 4 duties also appear as a sequential ordering drill from reservation to check-out."
+    }
+  },
+  {
+    "id": "ch01_003",
+    "chapter": 1,
+    "section": "1.1 予約管理",
+    "pdfPage": 7,
+    "tags": ["vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>予約<rt>よやく</rt></ruby><ruby>管理<rt>かんり</rt></ruby>で「<ruby>空室<rt>くうしつ</rt></ruby>」とはどのような<ruby>状態<rt>じょうたい</rt></ruby>ですか。",
+      "jaPlain": "予約管理で「空室」とはどのような状態ですか。",
+      "id": "Dalam manajemen reservasi, apa arti status kamar \"空室\" (くうしつ)?",
+      "en": "In reservation management, what room status does 空室 (くうしつ) indicate?"
+    },
+    "answer": {
+      "jaRuby": "お<ruby>部屋<rt>へや</rt></ruby>に<ruby>空<rt>あ</rt></ruby>きがある<ruby>状態<rt>じょうたい</rt></ruby>（<ruby>予約<rt>よやく</rt></ruby>・<ruby>宿泊<rt>しゅくはく</rt></ruby>が<ruby>可能<rt>かのう</rt></ruby>）です。",
+      "jaPlain": "お部屋に空きがある状態（予約・宿泊が可能）です。",
+      "id": "Kamar kosong atau tersedia (vacant) sehingga dapat dipesan atau ditempati tamu.",
+      "en": "Vacant (rooms are available for booking or stay)."
+    },
+    "ttsText": "空室とは、お部屋に空きがある状態のことです。"
+  },
+  {
+    "id": "ch01_004",
+    "chapter": 1,
+    "section": "1.1 予約管理",
+    "pdfPage": 7,
+    "tags": ["vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>予約<rt>よやく</rt></ruby><ruby>管理<rt>かんり</rt></ruby>で「<ruby>満室<rt>まんしつ</rt></ruby>」とはどのような<ruby>状態<rt>じょうたい</rt></ruby>ですか。",
+      "jaPlain": "予約管理で「満室」とはどのような状態ですか。",
+      "id": "Dalam manajemen reservasi, apa arti status kamar \"満室\" (まんしつ)?",
+      "en": "In reservation management, what room status does 満室 (まんしつ) indicate?"
+    },
+    "answer": {
+      "jaRuby": "すべての<ruby>部屋<rt>へや</rt></ruby>がうまっていて、<ruby>空<rt>あ</rt></ruby>きがない<ruby>状態<rt>じょうたい</rt></ruby>です。",
+      "jaPlain": "すべての部屋がうまっていて、空きがない状態です。",
+      "id": "Kamar penuh (full); seluruh kamar sudah terisi dan tidak ada kamar tersedia.",
+      "en": "Full (all rooms are occupied with no vacancies)."
+    },
+    "ttsText": "満室とは、すべての部屋がうまっていて空きがない状態のことです。",
+    "examTip": {
+      "id": "Hafalkan pasangan kontras: 空室 (くうしつ = kosong/tersedia) vs 満室 (まんしつ = penuh).",
+      "en": "Contrast pair: 空室 (くうしつ = vacant) vs 満室 (まんしつ = full)."
+    }
+  },
+  {
+    "id": "ch01_005",
+    "chapter": 1,
+    "section": "1.1 予約管理",
+    "pdfPage": 7,
+    "tags": ["overview", "numbers", "rule"],
+    "prompt": {
+      "jaRuby": "<ruby>予約<rt>よやく</rt></ruby>の<ruby>問<rt>と</rt></ruby>い<ruby>合<rt>あ</rt></ruby>わせに<ruby>対応<rt>たいおう</rt></ruby>するため、<ruby>把握<rt>はあく</rt></ruby>すべき6つの<ruby>項目<rt>こうもく</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "予約の問い合わせに対応するため、把握すべき6つの項目は何ですか。",
+      "id": "Apa 6 hal yang harus dikuasai front desk untuk menjawab pertanyaan reservasi?",
+      "en": "What are the 6 inquiry areas front desk staff must master for reservation inquiries?"
+    },
+    "answer": {
+      "jaRuby": "1. <ruby>料金<rt>りょうきん</rt></ruby><ruby>詳細<rt>しょうさい</rt></ruby> 2. サービス<ruby>内容<rt>ないよう</rt></ruby> 3. <ruby>部屋<rt>へや</rt></ruby>タイプ 4. <ruby>販売<rt>はんばい</rt></ruby>プラン 5. <ruby>眺望<rt>ちょうぼう</rt></ruby>・<ruby>食事<rt>しょくじ</rt></ruby><ruby>内容<rt>ないよう</rt></ruby> 6. <ruby>地域<rt>ちいき</rt></ruby>の<ruby>文化<rt>ぶんか</rt></ruby>・イベント",
+      "jaPlain": "1. 料金詳細 2. サービス内容 3. 部屋タイプ 4. 販売プラン 5. 眺望・食事内容 6. 地域の文化・イベント",
+      "id": "1. Rincian harga, 2. Rincian layanan, 3. Tipe kamar, 4. Paket penjualan, 5. Pemandangan dan detail makanan, 6. Budaya dan acara lokal.",
+      "en": "1. Price details, 2. Service details (check-in/out times), 3. Room types, 4. Sales plans, 5. Views & meal details, 6. Local culture & events."
+    },
+    "ttsText": "料金詳細、サービス内容、部屋タイプ、販売プラン、眺望や食事内容、地域の文化やイベントの6つです。"
+  },
+  {
+    "id": "ch01_006",
+    "chapter": 1,
+    "section": "1.1 予約管理",
+    "pdfPage": 7,
+    "tags": ["rule", "vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>日本<rt>にほん</rt></ruby>の<ruby>宿泊<rt>しゅくはく</rt></ruby><ruby>施設<rt>しせつ</rt></ruby>では、<ruby>部屋<rt>へや</rt></ruby><ruby>料金<rt>りょうきん</rt></ruby>のほかにどのような<ruby>税金<rt>ぜいきん</rt></ruby>・<ruby>追加<rt>ついか</rt></ruby><ruby>料金<rt>りょうきん</rt></ruby>がかかることが<ruby>多<rt>おお</rt></ruby>いですか。",
+      "jaPlain": "日本の宿泊施設では、部屋料金のほかにどのような税金・追加料金がかかることが多いですか。",
+      "id": "Selain tarif kamar, pajak dan biaya tambahan apa saja yang sering dikenakan di penginapan Jepang?",
+      "en": "Besides the room charge, what additional taxes and fee does Japan often charge?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>宿泊税<rt>しゅくはくぜい</rt></ruby>、<ruby>入湯税<rt>にゅうとうぜい</rt></ruby>、サービス<ruby>料<rt>りょう</rt></ruby>です。",
+      "jaPlain": "宿泊税、入湯税、サービス料です。",
+      "id": "Pajak penginapan (宿泊税), pajak pemandian (入湯税), dan biaya layanan (サービス料).",
+      "en": "Accommodation tax (宿泊税), bathing tax (入湯税), and service charge (サービス料)."
+    },
+    "ttsText": "宿泊税、入湯税、サービス料がかかることが多いです。",
+    "examTip": {
+      "id": "Poin penting CBT: jelaskan ketiga biaya tambahan di luar tarif kamar (宿泊税, 入湯税, サービス料) saat tamu menanyakan rincian harga.",
+      "en": "High-yield CBT point: remember all 3 charges often added beyond the room rate (宿泊税, 入湯税, サービス料)."
+    }
+  },
+  {
+    "id": "ch01_007",
+    "chapter": 1,
+    "section": "1.1 予約管理",
+    "pdfPage": 7,
+    "tags": ["vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>料金<rt>りょうきん</rt></ruby><ruby>詳細<rt>しょうさい</rt></ruby>における「<ruby>宿泊税<rt>しゅくはくぜい</rt></ruby>」とは<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "料金詳細における「宿泊税」とは何ですか。",
+      "id": "Apa arti istilah \"宿泊税\" (しゅくはくぜい) dalam rincian harga penginapan?",
+      "en": "What does 宿泊税 (しゅくはくぜい) mean in lodging price details?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>部屋<rt>へや</rt></ruby><ruby>料金<rt>りょうきん</rt></ruby>とは<ruby>別<rt>べつ</rt></ruby>に<ruby>課<rt>か</rt></ruby>されることがある<ruby>宿泊<rt>しゅくはく</rt></ruby>の<ruby>税金<rt>ぜいきん</rt></ruby>（accommodation tax）です。",
+      "jaPlain": "部屋料金とは別に課されることがある宿泊の税金（accommodation tax）です。",
+      "id": "Pajak penginapan (accommodation tax) yang sering dikenakan di luar tarif kamar di Jepang.",
+      "en": "Accommodation tax (often charged in addition to the room charge in Japan)."
+    },
+    "ttsText": "宿泊税とは、部屋料金とは別に課されることがある宿泊の税金のことです。"
+  },
+  {
+    "id": "ch01_008",
+    "chapter": 1,
+    "section": "1.1 予約管理",
+    "pdfPage": 7,
+    "tags": ["vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>料金<rt>りょうきん</rt></ruby><ruby>詳細<rt>しょうさい</rt></ruby>における「<ruby>入湯税<rt>にゅうとうぜい</rt></ruby>」とは<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "料金詳細における「入湯税」とは何ですか。",
+      "id": "Apa arti istilah \"入湯税\" (にゅうとうぜい) dalam rincian harga penginapan?",
+      "en": "What does 入湯税 (にゅうとうぜい) mean in lodging price details?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>部屋<rt>へや</rt></ruby><ruby>料金<rt>りょうきん</rt></ruby>とは<ruby>別<rt>べつ</rt></ruby>に<ruby>課<rt>か</rt></ruby>されることがある<ruby>入浴<rt>にゅうよく</rt></ruby>の<ruby>税金<rt>ぜいきん</rt></ruby>（bathing tax）です。",
+      "jaPlain": "部屋料金とは別に課されることがある入浴の税金（bathing tax）です。",
+      "id": "Pajak pemandian (bathing tax) yang sering dikenakan di luar tarif kamar di Jepang.",
+      "en": "Bathing tax (often charged in addition to the room charge in Japan)."
+    },
+    "ttsText": "入湯税とは、部屋料金とは別に課されることがある入浴の税金のことです。"
+  },
+  {
+    "id": "ch01_009",
+    "chapter": 1,
+    "section": "1.1 予約管理",
+    "pdfPage": 8,
+    "tags": ["vocab", "rule"],
+    "prompt": {
+      "jaRuby": "<ruby>問<rt>と</rt></ruby>い<ruby>合<rt>あ</rt></ruby>わせの「サービス<ruby>内容<rt>ないよう</rt></ruby>」と「<ruby>部屋<rt>へや</rt></ruby>タイプ（シングル・ツイン）」はどう<ruby>説明<rt>せつめい</rt></ruby>しますか。",
+      "jaPlain": "問い合わせの「サービス内容」と「部屋タイプ（シングル・ツイン）」はどう説明しますか。",
+      "id": "Apa yang tercakup dalam \"rincian layanan\" dan apa perbedaan tipe kamar Single dan Twin?",
+      "en": "What does \"service details\" cover, and how do Single and Twin room types differ?"
+    },
+    "answer": {
+      "jaRuby": "サービス<ruby>内容<rt>ないよう</rt></ruby>はチェックイン・チェックアウト<ruby>時間<rt>じかん</rt></ruby>などです。シングルはシングルベッド1つ、ツインはベッド2つです。",
+      "jaPlain": "サービス内容はチェックイン・チェックアウト時間などです。シングルはシングルベッド1つ、ツインはベッド2つです。",
+      "id": "Rincian layanan mencakup waktu check-in dan check-out. Single memiliki 1 tempat tidur single; Twin memiliki 2 tempat tidur.",
+      "en": "Service details cover check-in/out times. Room types: Single = 1 single bed; Twin = 2 beds."
+    },
+    "ttsText": "サービス内容はチェックインとチェックアウトの時間などです。シングルはシングルベッド1つ、ツインはベッド2つです。"
+  },
+  {
+    "id": "ch01_010",
+    "chapter": 1,
+    "section": "1.1 予約管理",
+    "pdfPage": 8,
+    "tags": ["vocab", "rule"],
+    "prompt": {
+      "jaRuby": "<ruby>問<rt>と</rt></ruby>い<ruby>合<rt>あ</rt></ruby>わせ<ruby>項目<rt>こうもく</rt></ruby>の「<ruby>販売<rt>はんばい</rt></ruby>プラン」では、どのようなプランを<ruby>把握<rt>はあく</rt></ruby>しますか。",
+      "jaPlain": "問い合わせ項目の「販売プラン」では、どのようなプランを把握しますか。",
+      "id": "Pada area pertanyaan \"paket penjualan\" (販売プラン), jenis paket apa saja yang perlu dipahami?",
+      "en": "Under the \"sales plans\" inquiry area, what plan types should front desk staff know?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>食事<rt>しょくじ</rt></ruby>やオプションがセットになったプランや、デイユースプランなどです。",
+      "jaPlain": "食事やオプションがセットになったプランや、デイユースプランなどです。",
+      "id": "Paket dengan makanan atau opsi tambahan yang dibundel, serta paket day-use (penggunaan harian).",
+      "en": "Plans with meals/options bundled, and day-use plans."
+    },
+    "ttsText": "食事やオプションがセットになったプランや、デイユースプランなどです。"
+  },
+  {
+    "id": "ch01_011",
+    "chapter": 1,
+    "section": "1.1 予約管理",
+    "pdfPage": 8,
+    "tags": ["rule"],
+    "prompt": {
+      "jaRuby": "<ruby>予約<rt>よやく</rt></ruby><ruby>問<rt>と</rt></ruby>い<ruby>合<rt>あ</rt></ruby>わせで、<ruby>料金<rt>りょうきん</rt></ruby>・<ruby>時間<rt>じかん</rt></ruby>・<ruby>部屋<rt>へや</rt></ruby>・プラン<ruby>以外<rt>いがい</rt></ruby>に<ruby>把握<rt>はあく</rt></ruby>すべき2つの<ruby>項目<rt>こうもく</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "予約問い合わせで、料金・時間・部屋・プラン以外に把握すべき2つの項目は何ですか。",
+      "id": "Selain tarif, jam layanan, tipe kamar, dan paket penjualan, apa 2 area lain yang harus dikuasai saat pertanyaan reservasi?",
+      "en": "Besides price, service times, room types, and sales plans, what other 2 inquiry areas must be mastered?"
+    },
+    "answer": {
+      "jaRuby": "5. <ruby>眺望<rt>ちょうぼう</rt></ruby>・<ruby>食事<rt>しょくじ</rt></ruby>の<ruby>詳細<rt>しょうさい</rt></ruby> 6. <ruby>地域<rt>ちいき</rt></ruby>の<ruby>文化<rt>ぶんか</rt></ruby>・イベント",
+      "jaPlain": "5. 眺望・食事の詳細 6. 地域の文化・イベント",
+      "id": "5. Pemandangan dan detail makanan, 6. Budaya lokal dan acara setempat.",
+      "en": "5. Views & meal details, 6. Local culture & events."
+    },
+    "ttsText": "5つ目は眺望と食事の詳細、6つ目は地域の文化とイベントです。"
+  },
+  {
+    "id": "ch01_012",
+    "chapter": 1,
+    "section": "1.1 予約管理",
+    "pdfPage": 9,
+    "tags": ["rule", "numbers", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>予約<rt>よやく</rt></ruby><ruby>受付<rt>うけつけ</rt></ruby><ruby>時<rt>じ</rt></ruby>に<ruby>確認<rt>かくにん</rt></ruby>する6つの<ruby>必須<rt>ひっす</rt></ruby><ruby>項目<rt>こうもく</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "予約受付時に確認する6つの必須項目は何ですか。",
+      "id": "Sebutkan 6 data wajib tamu yang harus dikonfirmasi saat reservasi.",
+      "en": "What are the 6 mandatory guest info items to confirm at reservation?"
+    },
+    "answer": {
+      "jaRuby": "1. <ruby>宿泊日<rt>しゅくはくび</rt></ruby> 2. <ruby>氏名<rt>しめい</rt></ruby> 3. <ruby>連絡先<rt>れんらくさき</rt></ruby> 4. <ruby>宿泊<rt>しゅくはく</rt></ruby><ruby>人数<rt>にんずう</rt></ruby> 5. <ruby>交通<rt>こうつう</rt></ruby><ruby>手段<rt>しゅだん</rt></ruby> / <ruby>到着<rt>とうちゃく</rt></ruby><ruby>予定<rt>よてい</rt></ruby><ruby>時間<rt>じかん</rt></ruby> 6. <ruby>食事<rt>しょくじ</rt></ruby>のアレルギー",
+      "jaPlain": "1. 宿泊日 2. 氏名 3. 連絡先 4. 宿泊人数 5. 交通手段 / 到着予定時間 6. 食事のアレルギー",
+      "id": "1. Tanggal menginap (宿泊日), 2. Nama lengkap (氏名), 3. Kontak/telepon/email (連絡先), 4. Jumlah tamu (宿泊人数), 5. Transportasi dan perkiraan waktu tiba (交通手段 / 到着予定時間), 6. Alergi makanan (食事のアレルギー).",
+      "en": "1. 宿泊日 (stay date), 2. 氏名 (full name), 3. 連絡先 (phone/email), 4. 宿泊人数 (number of guests), 5. 交通手段 / 到着予定時間 (transportation & ETA), 6. 食事のアレルギー (food allergies)."
+    },
+    "ttsText": "宿泊日、氏名、連絡先、宿泊人数、交通手段と到着予定時間、食事のアレルギーの6つです。",
+    "examTip": {
+      "id": "Hafalkan ke-6 item wajib ini. Alergi makanan dan transportasi/perkiraan waktu tiba sering ditanyakan di ujian.",
+      "en": "Memorize all 6 mandatory items; food allergies and transportation/ETA frequently appear in CBT questions."
+    }
+  },
+  {
+    "id": "ch01_013",
+    "chapter": 1,
+    "section": "1.1 予約管理",
+    "pdfPage": 9,
+    "tags": ["vocab", "rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "「ノーショー」とは<ruby>何<rt>なん</rt></ruby>ですか。また、6つの<ruby>項目<rt>こうもく</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>する<ruby>目的<rt>もくてき</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "「ノーショー」とは何ですか。また、6つの項目を確認する目的は何ですか。",
+      "id": "Apa itu \"ノーショー\" (no-show), dan apa tujuan konfirmasi 6 data wajib tamu?",
+      "en": "What is ノーショー (no-show), and what is the purpose of confirming the 6 guest info items?"
+    },
+    "answer": {
+      "jaRuby": "ノーショーとは<ruby>連絡<rt>れんらく</rt></ruby>なく<ruby>来館<rt>らいかん</rt></ruby>しないことです。<ruby>確認<rt>かくにん</rt></ruby>の<ruby>目的<rt>もくてき</rt></ruby>は、ノーショーを<ruby>防<rt>ふせ</rt></ruby>ぎ、<ruby>最高<rt>さいこう</rt></ruby>のおもてなしを<ruby>準備<rt>じゅんび</rt></ruby>することです。",
+      "jaPlain": "ノーショーとは連絡なく来館しないことです。確認の目的は、ノーショーを防ぎ、最高のおもてなしを準備することです。",
+      "id": "No-show (ノーショー) adalah tamu tidak datang tanpa pemberitahuan. Tujuannya untuk mencegah no-show dan menyiapkan pelayanan terbaik.",
+      "en": "No-show (ノーショー) means failing to arrive without notice. Confirming the 6 items prevents no-shows and prepares the best hospitality."
+    },
+    "ttsText": "ノーショーとは連絡なく来館しないことです。確認の目的は、ノーショーを防ぎ、最高のおもてなしを準備することです。"
+  },
+  {
+    "id": "ch01_014",
+    "chapter": 1,
+    "section": "1.1 予約管理",
+    "pdfPage": 9,
+    "tags": ["vocab"],
+    "prompt": {
+      "jaRuby": "「<ruby>宿泊日<rt>しゅくはくび</rt></ruby>」「<ruby>氏名<rt>しめい</rt></ruby>」「<ruby>連絡先<rt>れんらくさき</rt></ruby>」「<ruby>宿泊<rt>しゅくはく</rt></ruby><ruby>人数<rt>にんずう</rt></ruby>」の<ruby>意味<rt>いみ</rt></ruby>をそれぞれ<ruby>答<rt>こた</rt></ruby>えてください。",
+      "jaPlain": "「宿泊日」「氏名」「連絡先」「宿泊人数」の意味をそれぞれ答えてください。",
+      "id": "Apa arti istilah \"宿泊日\", \"氏名\", \"連絡先\", dan \"宿泊人数\"?",
+      "en": "What do 宿泊日, 氏名, 連絡先, and 宿泊人数 mean?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>宿泊日<rt>しゅくはくび</rt></ruby>（<ruby>泊<rt>と</rt></ruby>まる<ruby>日<rt>ひ</rt></ruby>）、<ruby>氏名<rt>しめい</rt></ruby>（フルネーム）、<ruby>連絡先<rt>れんらくさき</rt></ruby>（<ruby>電話<rt>でんわ</rt></ruby>やメール）、<ruby>宿泊<rt>しゅくはく</rt></ruby><ruby>人数<rt>にんずう</rt></ruby>（<ruby>泊<rt>と</rt></ruby>まる<ruby>人数<rt>にんずう</rt></ruby>）です。",
+      "jaPlain": "宿泊日（泊まる日）、氏名（フルネーム）、連絡先（電話やメール）、宿泊人数（泊まる人数）です。",
+      "id": "宿泊日 = tanggal menginap; 氏名 = nama lengkap; 連絡先 = kontak (telepon/email); 宿泊人数 = jumlah tamu yang menginap.",
+      "en": "宿泊日 = stay date; 氏名 = full name; 連絡先 = phone/email; 宿泊人数 = number of guests."
+    },
+    "ttsText": "宿泊日は泊まる日、氏名はフルネーム、連絡先は電話やメール、宿泊人数は泊まる人数です。"
+  },
+  {
+    "id": "ch01_015",
+    "chapter": 1,
+    "section": "1.1 予約管理",
+    "pdfPage": 9,
+    "tags": ["vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "「<ruby>交通<rt>こうつう</rt></ruby><ruby>手段<rt>しゅだん</rt></ruby>」「<ruby>到着<rt>とうちゃく</rt></ruby><ruby>予定<rt>よてい</rt></ruby><ruby>時間<rt>じかん</rt></ruby>」「<ruby>食事<rt>しょくじ</rt></ruby>のアレルギー」の<ruby>意味<rt>いみ</rt></ruby>を<ruby>答<rt>こた</rt></ruby>えてください。",
+      "jaPlain": "「交通手段」「到着予定時間」「食事のアレルギー」の意味を答えてください。",
+      "id": "Apa arti \"交通手段\", \"到着予定時間\", dan \"食事のアレルギー\"?",
+      "en": "What do 交通手段, 到着予定時間, and 食事のアレルギー mean?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>交通<rt>こうつう</rt></ruby><ruby>手段<rt>しゅだん</rt></ruby>（<ruby>来館<rt>らいかん</rt></ruby><ruby>方法<rt>ほうほう</rt></ruby>）、<ruby>到着<rt>とうちゃく</rt></ruby><ruby>予定<rt>よてい</rt></ruby><ruby>時間<rt>じかん</rt></ruby>（<ruby>到着<rt>とうちゃく</rt></ruby><ruby>見込<rt>みこ</rt></ruby>み<ruby>時刻<rt>じこく</rt></ruby>）、<ruby>食事<rt>しょくじ</rt></ruby>のアレルギー（<ruby>食<rt>た</rt></ruby>べられない<ruby>食材<rt>しょくざい</rt></ruby>）です。",
+      "jaPlain": "交通手段（来館方法）、到着予定時間（到着見込み時刻）、食事のアレルギー（食べられない食材）です。",
+      "id": "交通手段 = sarana transportasi; 到着予定時間 = perkiraan waktu tiba (ETA); 食事のアレルギー = alergi makanan.",
+      "en": "交通手段 = transportation; 到着予定時間 = estimated time of arrival (ETA); 食事のアレルギー = food allergies."
+    },
+    "ttsText": "交通手段は来館方法、到着予定時間は到着見込み時刻、食事のアレルギーは食べられない食材のことです。"
+  },
+  {
+    "id": "ch01_016",
+    "chapter": 1,
+    "section": "1.1 予約管理",
+    "pdfPage": 10,
+    "tags": ["rule"],
+    "prompt": {
+      "jaRuby": "<ruby>予約<rt>よやく</rt></ruby>のキャンセルが<ruby>発生<rt>はっせい</rt></ruby>したとき、キャンセル<ruby>料<rt>りょう</rt></ruby>はどのように<ruby>請求<rt>せいきゅう</rt></ruby>しますか。",
+      "jaPlain": "予約のキャンセルが発生したとき、キャンセル料はどのように請求しますか。",
+      "id": "Bagaimana aturan penagihan biaya pembatalan (cancellation fee) saat tamu membatalkan reservasi?",
+      "en": "How should front desk handle charging a cancellation fee?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>施設<rt>しせつ</rt></ruby>のキャンセルポリシーに<ruby>従<rt>したが</rt></ruby>ってキャンセル<ruby>料<rt>りょう</rt></ruby>を<ruby>請求<rt>せいきゅう</rt></ruby>します。",
+      "jaPlain": "施設のキャンセルポリシーに従ってキャンセル料を請求します。",
+      "id": "Mengenakan biaya pembatalan sesuai dengan kebijakan pembatalan (cancellation policy) yang berlaku di fasilitas.",
+      "en": "Charge the cancellation fee per the facility's cancellation policy."
+    },
+    "ttsText": "施設のキャンセルポリシーに従ってキャンセル料を請求します。"
+  },
+  {
+    "id": "ch01_017",
+    "chapter": 1,
+    "section": "1.1 予約管理",
+    "pdfPage": 10,
+    "tags": ["rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>予約<rt>よやく</rt></ruby>の<ruby>変更<rt>へんこう</rt></ruby>・<ruby>調整<rt>ちょうせい</rt></ruby>や、チェックアウト<ruby>後<rt>ご</rt></ruby>の<ruby>忘<rt>わす</rt></ruby>れ<ruby>物<rt>もの</rt></ruby>の<ruby>問<rt>と</rt></ruby>い<ruby>合<rt>あ</rt></ruby>わせでは、<ruby>必<rt>かなら</rt></ruby>ずどの2つを<ruby>確認<rt>かくにん</rt></ruby>しますか。",
+      "jaPlain": "予約の変更・調整や、チェックアウト後の忘れ物の問い合わせでは、必ずどの2つを確認しますか。",
+      "id": "Untuk perubahan reservasi atau pertanyaan barang tertinggal setelah menginap, 2 hal apa yang SELALU harus dikonfirmasi?",
+      "en": "For any adjustment or post-stay lost-item inquiry, which 2 items must ALWAYS be confirmed?"
+    },
+    "answer": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>を<ruby>正確<rt>せいかく</rt></ruby>に<ruby>特定<rt>とくてい</rt></ruby>するため、<ruby>必<rt>かなら</rt></ruby>ず「<ruby>宿泊日<rt>しゅくはくび</rt></ruby>」と「<ruby>予約者名<rt>よやくしゃめい</rt></ruby>」を<ruby>確認<rt>かくにん</rt></ruby>します。",
+      "jaPlain": "お客様を正確に特定するため、必ず「宿泊日」と「予約者名」を確認します。",
+      "id": "Selalu konfirmasi tanggal menginap (宿泊日) dan nama pemesan (予約者名) untuk mengidentifikasi tamu secara akurat.",
+      "en": "Always confirm stay date (宿泊日) and reserver's name (予約者名) to identify the guest accurately."
+    },
+    "ttsText": "お客様を正確に特定するため、必ず宿泊日と予約者名を確認します。",
+    "examTip": {
+      "id": "Poin jebakan CBT: untuk pertanyaan barang tertinggal setelah check-out, pastikan mengonfirmasi 宿泊日 + 予約者名.",
+      "en": "Classic CBT question: for post-stay lost-item inquiries or adjustments, always confirm stay date (宿泊日) + reserver's name (予約者名)."
+    }
+  },
+  {
+    "id": "ch01_018",
+    "chapter": 1,
+    "section": "1.2 チェックイン業務",
+    "pdfPage": 11,
+    "tags": ["rule", "overview"],
+    "prompt": {
+      "jaRuby": "チェックインはお<ruby>客様<rt>きゃくさま</rt></ruby>が<ruby>入館<rt>にゅうかん</rt></ruby>して<ruby>最初<rt>さいしょ</rt></ruby>の<ruby>体験<rt>たいけん</rt></ruby>です。スタッフはどのような3つを<ruby>心<rt>こころ</rt></ruby>がけますか。",
+      "jaPlain": "チェックインはお客様が入館して最初の体験です。スタッフはどのような3つを心がけますか。",
+      "id": "Check-in adalah pengalaman pertama tamu saat masuk ke penginapan. Apa 3 hal dasar yang harus dijaga staf?",
+      "en": "Check-in is the guest's first experience upon entering. What 3 basics must staff maintain?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>清潔<rt>せいけつ</rt></ruby>な<ruby>身<rt>み</rt></ruby>だしなみ、<ruby>正<rt>ただ</rt></ruby>しい<ruby>姿勢<rt>しせい</rt></ruby>、<ruby>丁寧<rt>ていねい</rt></ruby>な<ruby>言葉遣<rt>ことばづか</rt></ruby>いです。",
+      "jaPlain": "清潔な身だしなみ、正しい姿勢、丁寧な言葉遣いです。",
+      "id": "Penampilan yang bersih dan rapi, postur tubuh yang benar, serta bahasa yang sopan.",
+      "en": "Clean appearance, proper posture, and polite language."
+    },
+    "ttsText": "清潔な身だしなみ、正しい姿勢、丁寧な言葉遣いです。"
+  },
+  {
+    "id": "ch01_019",
+    "chapter": 1,
+    "section": "1.2 チェックイン業務",
+    "pdfPage": 12,
+    "tags": ["rule", "numbers", "high-yield"],
+    "prompt": {
+      "jaRuby": "チェックイン<ruby>時<rt>じ</rt></ruby>に<ruby>確認<rt>かくにん</rt></ruby>すべき4つの<ruby>予約<rt>よやく</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "チェックイン時に確認すべき4つの予約内容は何ですか。",
+      "id": "Apa 4 detail pemesanan yang harus dikonfirmasi saat check-in?",
+      "en": "What are the 4 booking details to confirm at check-in?"
+    },
+    "answer": {
+      "jaRuby": "1. <ruby>宿泊<rt>しゅくはく</rt></ruby><ruby>予約<rt>よやく</rt></ruby>の<ruby>有無<rt>うむ</rt></ruby> 2. お<ruby>客様<rt>きゃくさま</rt></ruby>の<ruby>氏名<rt>しめい</rt></ruby> 3. ご<ruby>予約<rt>よやく</rt></ruby><ruby>人数<rt>にんずう</rt></ruby> 4. ご<ruby>予約<rt>よやく</rt></ruby>のプラン",
+      "jaPlain": "1. 宿泊予約の有無 2. お客様の氏名 3. ご予約人数 4. ご予約のプラン",
+      "id": "1. Ada atau tidaknya reservasi menginap (宿泊予約の有無), 2. Nama lengkap tamu (お客様の氏名), 3. Jumlah tamu reservasi (ご予約人数), 4. Paket reservasi (ご予約のプラン).",
+      "en": "1. 宿泊予約の有無 (whether a booking exists), 2. お客様の氏名 (guest's full name), 3. ご予約人数 (number of reserved guests), 4. ご予約のプラン (reserved plan)."
+    },
+    "ttsText": "宿泊予約の有無、お客様の氏名、ご予約人数、ご予約のプランの4つです。"
+  },
+  {
+    "id": "ch01_020",
+    "chapter": 1,
+    "section": "1.2 チェックイン業務",
+    "pdfPage": 13,
+    "tags": ["legal", "rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>外国人<rt>がいこくじん</rt></ruby>のお<ruby>客様<rt>きゃくさま</rt></ruby>がチェックインする<ruby>際<rt>さい</rt></ruby>、<ruby>日本<rt>にほん</rt></ruby>の<ruby>法律<rt>ほうりつ</rt></ruby>で<ruby>義務<rt>ぎむ</rt></ruby>づけられていることは<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "外国人のお客様がチェックインする際、日本の法律で義務づけられていることは何ですか。",
+      "id": "Apa kewajiban hukum di Jepang saat tamu warga negara asing melakukan check-in?",
+      "en": "What is the Japanese legal requirement for foreign guests at check-in?"
+    },
+    "answer": {
+      "jaRuby": "パスポートのコピーをとって<ruby>保管<rt>ほかん</rt></ruby>することです。",
+      "jaPlain": "パスポートのコピーをとって保管することです。",
+      "id": "Resepsionis WAJIB mengambil dan menyimpan salinan paspor tamu asing (パスポートのコピーをとって保管).",
+      "en": "Reception MUST take and store a copy of their passport (パスポートのコピーをとって保管)."
+    },
+    "ttsText": "パスポートのコピーをとって保管することです。",
+    "examTip": {
+      "id": "Aturan hukum super penting di ujian: sekadar memeriksa paspor tidak cukup; salinannya harus diambil dan disimpan.",
+      "en": "High-yield legal requirement: merely checking the passport is not enough; reception must make and store a copy."
+    }
+  },
+  {
+    "id": "ch01_021",
+    "chapter": 1,
+    "section": "1.2 チェックイン業務",
+    "pdfPage": 14,
+    "tags": ["rule", "numbers", "high-yield"],
+    "prompt": {
+      "jaRuby": "ルームキーの<ruby>受<rt>う</rt></ruby>け<ruby>渡<rt>わた</rt></ruby>し<ruby>時<rt>じ</rt></ruby>に<ruby>説明<rt>せつめい</rt></ruby>する3つの<ruby>内容<rt>ないよう</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "ルームキーの受け渡し時に説明する3つの内容は何ですか。",
+      "id": "Apa 3 hal yang harus dijelaskan resepsionis saat menyerahkan kunci kamar?",
+      "en": "What 3 items must be explained during key handover at check-in?"
+    },
+    "answer": {
+      "jaRuby": "1. <ruby>部屋<rt>へや</rt></ruby>までの<ruby>道順<rt>みちじゅん</rt></ruby> 2. <ruby>利用<rt>りよう</rt></ruby><ruby>可能<rt>かのう</rt></ruby>な<ruby>施設<rt>しせつ</rt></ruby>と<ruby>営業<rt>えいぎょう</rt></ruby><ruby>時間<rt>じかん</rt></ruby> 3. <ruby>非常口<rt>ひじょうぐち</rt></ruby>と<ruby>避難<rt>ひなん</rt></ruby><ruby>経路<rt>けいろ</rt></ruby>",
+      "jaPlain": "1. 部屋までの道順 2. 利用可能な施設と営業時間 3. 非常口と避難経路",
+      "id": "1. Arah menuju kamar, 2. Fasilitas yang dapat digunakan beserta jam operasionalnya, 3. Pintu darurat dan jalur evakuasi (非常口と避難経路).",
+      "en": "1. Directions to room, 2. Usable facilities & operating hours, 3. Emergency exits & evacuation routes (非常口と避難経路)."
+    },
+    "ttsText": "部屋までの道順、利用可能な施設と営業時間、非常口と避難経路の3つです。"
+  },
+  {
+    "id": "ch01_022",
+    "chapter": 1,
+    "section": "1.2 チェックイン業務",
+    "pdfPage": 14,
+    "tags": ["vocab", "rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "「<ruby>非常口<rt>ひじょうぐち</rt></ruby>と<ruby>避難<rt>ひなん</rt></ruby><ruby>経路<rt>けいろ</rt></ruby>」とは<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "「非常口と避難経路」とは何ですか。",
+      "id": "Apa arti istilah \"非常口と避難経路\" (ひじょうぐち と ひなんけいろ)?",
+      "en": "What does 非常口と避難経路 mean?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>緊急時<rt>きんきゅうじ</rt></ruby>の<ruby>出口<rt>でぐち</rt></ruby>（<ruby>非常口<rt>ひじょうぐち</rt></ruby>）と<ruby>逃<rt>に</rt></ruby>げるルート（<ruby>避難<rt>ひなん</rt></ruby><ruby>経路<rt>けいろ</rt></ruby>）のことで、キー<ruby>受<rt>う</rt></ruby>け<ruby>渡<rt>わた</rt></ruby>し<ruby>時<rt>じ</rt></ruby>に<ruby>説明<rt>せつめい</rt></ruby>します。",
+      "jaPlain": "緊急時の出口（非常口）と逃げるルート（避難経路）のことで、キー受け渡し時に説明します。",
+      "id": "Pintu darurat (emergency exits) dan jalur evakuasi (evacuation routes), yang wajib dijelaskan saat penyerahan kunci kamar.",
+      "en": "Emergency exits and evacuation routes, explained to guests at key handover."
+    },
+    "ttsText": "非常口と避難経路とは、緊急時の出口と逃げるルートのことで、鍵の受け渡し時に説明します。"
+  },
+  {
+    "id": "ch01_023",
+    "chapter": 1,
+    "section": "1.2 チェックイン業務",
+    "pdfPage": 14,
+    "tags": ["numbers", "culture", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>日本<rt>にほん</rt></ruby>の<ruby>宿泊<rt>しゅくはく</rt></ruby><ruby>施設<rt>しせつ</rt></ruby>における<ruby>一般的<rt>いっぱんてき</rt></ruby>なチェックインとチェックアウトの<ruby>時間<rt>じかん</rt></ruby>は<ruby>何時<rt>なんじ</rt></ruby>ですか。",
+      "jaPlain": "日本の宿泊施設における一般的なチェックインとチェックアウトの時間は何時ですか。",
+      "id": "Jam berapa waktu check-in dan check-out yang umum di penginapan Jepang?",
+      "en": "What are the typical check-in and check-out hours in Japan?"
+    },
+    "answer": {
+      "jaRuby": "チェックインは14:00または15:00、チェックアウトは10:00または11:00です。",
+      "jaPlain": "チェックインは14:00または15:00、チェックアウトは10:00または11:00です。",
+      "id": "Check-in umumnya pukul 14:00 atau 15:00; check-out pukul 10:00 atau 11:00.",
+      "en": "Check-in: 14:00 or 15:00; Check-out: 10:00 or 11:00."
+    },
+    "ttsText": "チェックインは14時または15時、チェックアウトは10時または11時です。",
+    "examTip": {
+      "id": "Hafalkan jam standar Jepang: check-in 14:00 atau 15:00, check-out 10:00 atau 11:00.",
+      "en": "Memorize the exact typical hours in Japan: check-in 14:00 or 15:00; check-out 10:00 or 11:00."
+    }
+  },
+  {
+    "id": "ch01_024",
+    "chapter": 1,
+    "section": "1.3 館内でのお客様対応と情報提供",
+    "pdfPage": 15,
+    "tags": ["overview", "vocab"],
+    "prompt": {
+      "jaRuby": "フロントの<ruby>第<rt>だい</rt></ruby>3の<ruby>業務<rt>ぎょうむ</rt></ruby>「<ruby>館内<rt>かんない</rt></ruby>でのお<ruby>客様<rt>きゃくさま</rt></ruby><ruby>対応<rt>たいおう</rt></ruby>と<ruby>情報<rt>じょうほう</rt></ruby><ruby>提供<rt>ていきょう</rt></ruby>」では、どのような<ruby>対応<rt>たいおう</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>いますか。",
+      "jaPlain": "フロントの第3の業務「館内でのお客様対応と情報提供」では、どのような対応を行いますか。",
+      "id": "Apa cakupan tugas ke-3 front desk: \"館内でのお客様対応と情報提供\" (pelayanan tamu dan pemberian informasi di dalam fasilitas)?",
+      "en": "What does the 3rd main duty, In-house Guest Assistance & Info (館内でのお客様対応と情報提供), cover?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>電話<rt>でんわ</rt></ruby><ruby>対応<rt>たいおう</rt></ruby>、<ruby>他<rt>ほか</rt></ruby><ruby>部門<rt>ぶもん</rt></ruby>との<ruby>連携<rt>れんけい</rt></ruby>、<ruby>客室<rt>きゃくしつ</rt></ruby><ruby>入室<rt>にゅうしつ</rt></ruby><ruby>時<rt>じ</rt></ruby>のマナーなどを<ruby>守<rt>まも</rt></ruby>りながら<ruby>滞在中<rt>たいざいちゅう</rt></ruby>のお<ruby>客様<rt>きゃくさま</rt></ruby>を<ruby>支援<rt>しえん</rt></ruby>します。",
+      "jaPlain": "電話対応、他部門との連携、客室入室時のマナーなどを守りながら滞在中のお客様を支援します。",
+      "id": "Mendukung tamu selama menginap melalui etika telepon, koordinasi dengan departemen lain, dan aturan masuk kamar tamu.",
+      "en": "Supporting staying guests through proper phone etiquette, understanding other departments, and guest room entry rules."
+    },
+    "ttsText": "電話対応、他部門との連携、客室入室時のマナーなどを守りながら滞在中のお客様を支援します。"
+  },
+  {
+    "id": "ch01_025",
+    "chapter": 1,
+    "section": "1.3 館内でのお客様対応と情報提供",
+    "pdfPage": 16,
+    "tags": ["rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "フロントでの<ruby>電話<rt>でんわ</rt></ruby><ruby>対応<rt>たいおう</rt></ruby>と、ルームサービスの<ruby>電話<rt>でんわ</rt></ruby><ruby>注文<rt>ちゅうもん</rt></ruby>で<ruby>守<rt>まも</rt></ruby>るべき3つのルールは<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "フロントでの電話対応と、ルームサービスの電話注文で守るべき3つのルールは何ですか。",
+      "id": "Apa 3 aturan etika telepon di front desk (termasuk pesanan room service lewat telepon)?",
+      "en": "What are the 3 phone etiquette rules at the front desk (including room service phone orders)?"
+    },
+    "answer": {
+      "jaRuby": "1. はっきりゆっくり<ruby>話<rt>はな</rt></ruby>す 2. <ruby>必<rt>かなら</rt></ruby>ずお<ruby>客様<rt>きゃくさま</rt></ruby>が<ruby>電話<rt>でんわ</rt></ruby>を<ruby>切<rt>き</rt></ruby>るのを<ruby>待<rt>ま</rt></ruby>つ 3. ルームサービスの<ruby>注文<rt>ちゅうもん</rt></ruby>は<ruby>注文<rt>ちゅうもん</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>を<ruby>復唱<rt>ふくしょう</rt></ruby>してミスを<ruby>防<rt>ふせ</rt></ruby>ぐ",
+      "jaPlain": "1. はっきりゆっくり話す 2. 必ずお客様が電話を切るのを待つ 3. ルームサービスの注文は注文内容を復唱してミスを防ぐ",
+      "id": "1. Berbicara jelas dan perlahan, 2. Selalu tunggu tamu menutup telepon terlebih dahulu, 3. Untuk pesanan room service via telepon, ulangi rincian pesanan untuk mencegah kesalahan.",
+      "en": "1. Speak clearly and slowly; 2. Always wait for the guest to hang up first; 3. For room service phone orders, repeat the order details to prevent errors."
+    },
+    "ttsText": "はっきりゆっくり話すこと、必ずお客様が電話を切るのを待つこと、ルームサービスの注文では内容を復唱してミスを防ぐことの3つです。",
+    "examTip": {
+      "id": "Jangan pernah menutup telepon sebelum tamu menutupnya terlebih dahulu, dan selalu ulangi pesanan room service.",
+      "en": "Always let the guest hang up first, and repeat room service order details to prevent mistakes."
+    }
+  },
+  {
+    "id": "ch01_026",
+    "chapter": 1,
+    "section": "1.3 館内でのお客様対応と情報提供",
+    "pdfPage": 17,
+    "tags": ["overview", "numbers", "high-yield"],
+    "prompt": {
+      "jaRuby": "フロントが<ruby>役割<rt>やくわり</rt></ruby>を<ruby>理解<rt>りかい</rt></ruby>しておくべき5つの<ruby>他<rt>ほか</rt></ruby><ruby>部門<rt>ぶもん</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "フロントが役割を理解しておくべき5つの他部門は何ですか。",
+      "id": "Sebutkan 5 departemen lain di penginapan yang harus dipahami oleh front desk.",
+      "en": "What are the 5 other departments that front desk staff must understand?"
+    },
+    "answer": {
+      "jaRuby": "1. ドアマン 2. ハウスキーパー 3. <ruby>仲居<rt>なかい</rt></ruby>（<ruby>旅館<rt>りょかん</rt></ruby>のみ） 4. レストラン 5. コンシェルジュ",
+      "jaPlain": "1. ドアマン 2. ハウスキーパー 3. 仲居（旅館のみ） 4. レストラン 5. コンシェルジュ",
+      "id": "1. Doorman (ドアマン), 2. Housekeeping (ハウスキーパー), 3. Nakai (仲居 - khusus ryokan), 4. Restoran (レストラン), 5. Concierge (コンシェルジュ).",
+      "en": "1. ドアマン (Doorman), 2. ハウスキーパー (Housekeeping), 3. 仲居 (Nakai - Ryokan only), 4. レストラン (Restaurant), 5. コンシェルジュ (Concierge)."
+    },
+    "ttsText": "ドアマン、ハウスキーパー、旅館のみの仲居、レストラン、コンシェルジュの5つです。"
+  },
+  {
+    "id": "ch01_027",
+    "chapter": 1,
+    "section": "1.3 館内でのお客様対応と情報提供",
+    "pdfPage": 17,
+    "tags": ["vocab", "rule"],
+    "prompt": {
+      "jaRuby": "「ドアマン」の<ruby>主<rt>おも</rt></ruby>な<ruby>役割<rt>やくわり</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "「ドアマン」の主な役割は何ですか。",
+      "id": "Apa tugas utama Doorman (ドアマン)?",
+      "en": "What is the role of the Doorman (ドアマン)?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>玄関<rt>げんかん</rt></ruby>でお<ruby>客様<rt>きゃくさま</rt></ruby>をお<ruby>出迎<rt>でむか</rt></ruby>え・お<ruby>見送<rt>みおく</rt></ruby>りし、まずフロントへ<ruby>案内<rt>あんない</rt></ruby>します。",
+      "jaPlain": "玄関でお客様をお出迎え・お見送りし、まずフロントへ案内します。",
+      "id": "Menyambut dan melepas kepergian tamu di pintu masuk, lalu mengarahkan tamu pertama kali ke front desk.",
+      "en": "Greets and sees off guests at the entrance, and guides guests first to the front desk."
+    },
+    "ttsText": "玄関でお客様をお出迎えとお見送りをして、まずフロントへ案内します。"
+  },
+  {
+    "id": "ch01_028",
+    "chapter": 1,
+    "section": "1.3 館内でのお客様対応と情報提供",
+    "pdfPage": 17,
+    "tags": ["vocab", "rule"],
+    "prompt": {
+      "jaRuby": "「ハウスキーパー」の<ruby>主<rt>おも</rt></ruby>な<ruby>役割<rt>やくわり</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "「ハウスキーパー」の主な役割は何ですか。",
+      "id": "Apa tugas utama Housekeeping (ハウスキーパー)?",
+      "en": "What is the role of Housekeeping (ハウスキーパー)?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>客室<rt>きゃくしつ</rt></ruby>や<ruby>館内<rt>かんない</rt></ruby><ruby>共用部<rt>きょうようぶ</rt></ruby>を<ruby>清掃<rt>せいそう</rt></ruby>し、アメニティをセットします。",
+      "jaPlain": "客室や館内共用部を清掃し、アメニティをセットします。",
+      "id": "Membersihkan kamar tamu dan area umum, serta menata perlengkapan (amenities).",
+      "en": "Cleans rooms and public areas, and sets amenities."
+    },
+    "ttsText": "客室や館内共用部を清掃し、アメニティをセットします。"
+  },
+  {
+    "id": "ch01_029",
+    "chapter": 1,
+    "section": "1.3 館内でのお客様対応と情報提供",
+    "pdfPage": 17,
+    "tags": ["vocab", "culture", "high-yield"],
+    "prompt": {
+      "jaRuby": "「<ruby>仲居<rt>なかい</rt></ruby>」とはどの<ruby>施設<rt>しせつ</rt></ruby>にいるスタッフで、どのような<ruby>役割<rt>やくわり</rt></ruby>を<ruby>担<rt>にな</rt></ruby>いますか。",
+      "jaPlain": "「仲居」とはどの施設にいるスタッフで、どのような役割を担いますか。",
+      "id": "Di fasilitas mana staf \"仲居\" (なかい) berada, dan apa tugasnya?",
+      "en": "Which type of property has 仲居 (なかい), and what are their duties?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>旅館<rt>りょかん</rt></ruby>のみにいるスタッフで、お<ruby>客様<rt>きゃくさま</rt></ruby>のお<ruby>世話<rt>せわ</rt></ruby><ruby>全般<rt>ぜんぱん</rt></ruby>、<ruby>客室<rt>きゃくしつ</rt></ruby>への<ruby>案内<rt>あんない</rt></ruby>、<ruby>食事<rt>しょくじ</rt></ruby>の<ruby>提供<rt>ていきょう</rt></ruby>などを<ruby>行<rt>おこな</rt></ruby>います。",
+      "jaPlain": "旅館のみにいるスタッフで、お客様のお世話全般、客室への案内、食事の提供などを行います。",
+      "id": "Khusus di ryokan (penginapan tradisional Jepang). Melayani keperluan tamu secara umum, mengantar tamu ke kamar, dan menyajikan makanan.",
+      "en": "Ryokan only. Provides general guest care, guides guests to their room, and serves meals."
+    },
+    "ttsText": "仲居は旅館のみにいるスタッフで、お客様のお世話全般、客室への案内、食事の提供などを行います。",
+    "examTip": {
+      "id": "仲居 (なかい) hanya ada di ryokan, bukan di hotel gaya Barat.",
+      "en": "Remember 仲居 (なかい) is Ryokan-only."
+    }
+  },
+  {
+    "id": "ch01_030",
+    "chapter": 1,
+    "section": "1.3 館内でのお客様対応と情報提供",
+    "pdfPage": 18,
+    "tags": ["vocab", "rule"],
+    "prompt": {
+      "jaRuby": "「レストラン」<ruby>部門<rt>ぶもん</rt></ruby>の<ruby>主<rt>おも</rt></ruby>な<ruby>役割<rt>やくわり</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "「レストラン」部門の主な役割は何ですか。",
+      "id": "Apa tugas departemen Restoran (レストラン)?",
+      "en": "What is the role of the Restaurant (レストラン) department?"
+    },
+    "answer": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>に<ruby>食事<rt>しょくじ</rt></ruby>や<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>を<ruby>提供<rt>ていきょう</rt></ruby>する<ruby>役割<rt>やくわり</rt></ruby>です。",
+      "jaPlain": "お客様に食事や飲み物を提供する役割です。",
+      "id": "Menyajikan makanan dan minuman kepada tamu.",
+      "en": "Serves food and beverages."
+    },
+    "ttsText": "お客様に食事や飲み物を提供する役割です。"
+  },
+  {
+    "id": "ch01_031",
+    "chapter": 1,
+    "section": "1.3 館内でのお客様対応と情報提供",
+    "pdfPage": 18,
+    "tags": ["vocab", "rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "「コンシェルジュ」の<ruby>役割<rt>やくわり</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。また、<ruby>小規模<rt>しょうきぼ</rt></ruby>な<ruby>施設<rt>しせつ</rt></ruby>ではどのように<ruby>対応<rt>たいおう</rt></ruby>しますか。",
+      "jaPlain": "「コンシェルジュ」の役割は何ですか。また、小規模な施設ではどのように対応しますか。",
+      "id": "Apa peran Concierge (コンシェルジュ), dan bagaimana pengelolaannya di penginapan berskala kecil?",
+      "en": "What is the role of the Concierge (コンシェルジュ), and how is it handled in smaller properties?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>館内外<rt>かんないがい</rt></ruby>の<ruby>情報<rt>じょうほう</rt></ruby><ruby>提供<rt>ていきょう</rt></ruby>や<ruby>手配<rt>てはい</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>います。<ruby>小規模<rt>しょうきぼ</rt></ruby>な<ruby>施設<rt>しせつ</rt></ruby>ではフロントが<ruby>兼務<rt>けんむ</rt></ruby>することが<ruby>多<rt>おお</rt></ruby>いです。",
+      "jaPlain": "館内外の情報提供や手配を行います。小規模な施設ではフロントが兼務することが多いです。",
+      "id": "Memberikan informasi dan mengatur keperluan di dalam maupun luar fasilitas. Di penginapan kecil, peran ini sering digabungkan dengan front desk.",
+      "en": "Provides internal/external info and arrangements (often combined with front desk in smaller properties)."
+    },
+    "ttsText": "館内外の情報提供や手配を行います。小規模な施設ではフロントが兼務することが多いです。"
+  },
+  {
+    "id": "ch01_032",
+    "chapter": 1,
+    "section": "1.3 館内でのお客様対応と情報提供",
+    "pdfPage": 19,
+    "tags": ["rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "スタッフが<ruby>客室<rt>きゃくしつ</rt></ruby>へ<ruby>入室<rt>にゅうしつ</rt></ruby>するとき、<ruby>必<rt>かなら</rt></ruby>ず<ruby>守<rt>まも</rt></ruby>るべきルールは<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "スタッフが客室へ入室するとき、必ず守るべきルールは何ですか。",
+      "id": "Aturan apa yang wajib dipatuhi staf sebelum memasuki kamar tamu?",
+      "en": "What rule must staff follow when entering a guest room?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>必<rt>かなら</rt></ruby>ずノックまたはベルを<ruby>鳴<rt>な</rt></ruby>らし、「<ruby>入<rt>はい</rt></ruby>ってください」という<ruby>明確<rt>めいかく</rt></ruby>な<ruby>許可<rt>きょか</rt></ruby>を<ruby>待<rt>ま</rt></ruby>ってから<ruby>入室<rt>にゅうしつ</rt></ruby>します。<ruby>同意<rt>どうい</rt></ruby>なしに<ruby>入<rt>はい</rt></ruby>ってはいけません。",
+      "jaPlain": "必ずノックまたはベルを鳴らし、「入ってください」という明確な許可を待ってから入室します。同意なしに入ってはいけません。",
+      "id": "Selalu ketuk pintu atau bunyikan bel, lalu tunggu izin jelas (\"入ってください\") sebelum masuk. Jangan pernah masuk tanpa persetujuan tamu.",
+      "en": "Always knock or ring the bell and wait for explicit permission (\"入ってください\") before entering. Never enter without consent."
+    },
+    "ttsText": "必ずノックまたはベルを鳴らし、入ってくださいという許可を待ってから入室します。同意なしに入ってはいけません。"
+  },
+  {
+    "id": "ch01_033",
+    "chapter": 1,
+    "section": "1.4 チェックアウト・会計業務",
+    "pdfPage": 20,
+    "tags": ["vocab", "rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "チェックアウト<ruby>時<rt>じ</rt></ruby>に<ruby>確認<rt>かくにん</rt></ruby>する「<ruby>館内<rt>かんない</rt></ruby><ruby>利用<rt>りよう</rt></ruby>」とは<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "チェックアウト時に確認する「館内利用」とは何ですか。",
+      "id": "Apa yang dimaksud dengan \"館内利用\" (かんないりよう) yang harus dikonfirmasi saat check-out?",
+      "en": "What is 館内利用 (かんないりよう - in-house use) to confirm at check-out?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>宿泊<rt>しゅくはく</rt></ruby>プラン<ruby>以外<rt>いがい</rt></ruby>の<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>、ルームサービス、マッサージなど、<ruby>館内<rt>かんない</rt></ruby>での<ruby>追加<rt>ついか</rt></ruby><ruby>利用<rt>りよう</rt></ruby>のことです。",
+      "jaPlain": "宿泊プラン以外の飲み物、ルームサービス、マッサージなど、館内での追加利用のことです。",
+      "id": "Penggunaan layanan di dalam fasilitas di luar paket menginap, seperti minuman di luar paket, room service, pijat, dan lainnya.",
+      "en": "In-house use outside the room plan: non-plan beverages, room service, massage, etc."
+    },
+    "ttsText": "館内利用とは、宿泊プラン以外の飲み物、ルームサービス、マッサージなどの館内での追加利用のことです。"
+  },
+  {
+    "id": "ch01_034",
+    "chapter": 1,
+    "section": "1.4 チェックアウト・会計業務",
+    "pdfPage": 20,
+    "tags": ["sequence", "rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "チェックアウト<ruby>時<rt>じ</rt></ruby>の<ruby>会計<rt>かいけい</rt></ruby>の<ruby>流<rt>なが</rt></ruby>れを3つのステップで<ruby>答<rt>こた</rt></ruby>えてください。",
+      "jaPlain": "チェックアウト時の会計の流れを3つのステップで答えてください。",
+      "id": "Sebutkan 3 langkah proses penagihan dan pembayaran saat check-out secara berurutan.",
+      "en": "What is the 3-step billing flow at check-out?"
+    },
+    "answer": {
+      "jaRuby": "1. <ruby>請求<rt>せいきゅう</rt></ruby><ruby>明細書<rt>めいさいしょ</rt></ruby>の<ruby>発行<rt>はっこう</rt></ruby> → 2. <ruby>正確<rt>せいかく</rt></ruby>な<ruby>支払<rt>しはら</rt></ruby>いの<ruby>受<rt>う</rt></ruby>け<ruby>取<rt>と</rt></ruby>り → 3. <ruby>領収書<rt>りょうしゅうしょ</rt></ruby>の<ruby>発行<rt>はっこう</rt></ruby>",
+      "jaPlain": "1. 請求明細書の発行 → 2. 正確な支払いの受け取り → 3. 領収書の発行",
+      "id": "1. Terbitkan tagihan terperinci (請求明細書), 2. Terima pembayaran dengan tepat, 3. Terbitkan kuitansi/tanda terima (領収書).",
+      "en": "1. Issue 請求明細書 (itemized bill) → 2. Collect payment accurately → 3. Issue 領収書 (receipt)."
+    },
+    "ttsText": "請求明細書を発行し、正確に支払いを受け取り、領収書を発行する流れです。"
+  },
+  {
+    "id": "ch01_035",
+    "chapter": 1,
+    "section": "1.4 チェックアウト・会計業務",
+    "pdfPage": 21,
+    "tags": ["vocab", "high-yield"],
+    "prompt": {
+      "jaRuby": "「<ruby>請求<rt>せいきゅう</rt></ruby><ruby>明細書<rt>めいさいしょ</rt></ruby>」と「<ruby>領収書<rt>りょうしゅうしょ</rt></ruby>」の<ruby>違<rt>ちが</rt></ruby>いは<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "「請求明細書」と「領収書」の違いは何ですか。",
+      "id": "Apa perbedaan antara \"請求明細書\" (せいきゅうめいさいしょ) dan \"領収書\" (りょうしゅうしょ)?",
+      "en": "What is the difference between 請求明細書 (せいきゅうめいさいしょ) and 領収書 (りょうしゅうしょ)?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>請求<rt>せいきゅう</rt></ruby><ruby>明細書<rt>めいさいしょ</rt></ruby>は<ruby>料金<rt>りょうきん</rt></ruby>の<ruby>内訳<rt>うちわけ</rt></ruby>を<ruby>示<rt>しめ</rt></ruby>す<ruby>書類<rt>しょるい</rt></ruby>（<ruby>支払<rt>しはら</rt></ruby>う<ruby>前<rt>まえ</rt></ruby>）、<ruby>領収書<rt>りょうしゅうしょ</rt></ruby>は<ruby>支払<rt>しはら</rt></ruby>い<ruby>完了<rt>かんりょう</rt></ruby>を<ruby>証明<rt>しょうめい</rt></ruby>する<ruby>書類<rt>しょるい</rt></ruby>（<ruby>支払<rt>しはら</rt></ruby>った<ruby>後<rt>あと</rt></ruby>）です。",
+      "jaPlain": "請求明細書は料金の内訳を示す書類（支払う前）、領収書は支払い完了を証明する書類（支払った後）です。",
+      "id": "請求明細書 adalah tagihan terperinci (itemized bill) sebelum pembayaran; 領収書 adalah kuitansi/tanda terima (receipt) setelah pembayaran diterima.",
+      "en": "請求明細書 is the itemized bill (before payment); 領収書 is the receipt (after collecting payment)."
+    },
+    "ttsText": "請求明細書は支払う前の料金内訳を示す書類で、領収書は支払った後に発行する書類です。"
+  },
+  {
+    "id": "ch01_036",
+    "chapter": 1,
+    "section": "1.4 チェックアウト・会計業務",
+    "pdfPage": 21,
+    "tags": ["culture", "rule", "high-yield"],
+    "prompt": {
+      "jaRuby": "<ruby>日本<rt>にほん</rt></ruby>のチップの<ruby>習慣<rt>しゅうかん</rt></ruby>と、サービス<ruby>料<rt>りょう</rt></ruby>の<ruby>扱<rt>あつか</rt></ruby>いはどうなっていますか。",
+      "jaPlain": "日本のチップの習慣と、サービス料の扱いはどうなっていますか。",
+      "id": "Bagaimana budaya pemberian tip di Jepang dan bagaimana perlakuan biaya layanan (service charge)?",
+      "en": "What is Japan's tipping culture, and how is a service charge handled?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>日本<rt>にほん</rt></ruby>にはチップを<ruby>受<rt>う</rt></ruby>け<ruby>取<rt>と</rt></ruby>る<ruby>習慣<rt>しゅうかん</rt></ruby>はありません。サービス<ruby>料<rt>りょう</rt></ruby>は<ruby>宿泊<rt>しゅくはく</rt></ruby><ruby>料金<rt>りょうきん</rt></ruby>に<ruby>含<rt>ふく</rt></ruby>まれるか、<ruby>別途<rt>べっと</rt></ruby><ruby>請求<rt>せいきゅう</rt></ruby>されます。",
+      "jaPlain": "日本にはチップを受け取る習慣はありません。サービス料は宿泊料金に含まれるか、別途請求されます。",
+      "id": "Di Jepang tidak ada kebiasaan menerima tip. Biaya layanan (service charge) bisa sudah termasuk dalam tarif kamar atau ditagihkan secara terpisah.",
+      "en": "There is no custom of accepting tips in Japan; a service charge may be included in the room rate or billed separately."
+    },
+    "ttsText": "日本にはチップを受け取る習慣はありません。サービス料は宿泊料金に含まれるか、別途請求されます。",
+    "examTip": {
+      "id": "Ingat: tidak ada budaya menerima tip di Jepang, bedakan dengan サービス料 (service charge resmi).",
+      "en": "Japan has no tipping custom; distinguish tips from a formal service charge (サービス料)."
+    }
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "name": "opal",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && tsx scripts/buildSw.ts",
+    "build:apk": "bash scripts/buildApk.sh",
+    "start": "npx serve out",
+    "typecheck": "tsc --noEmit",
+    "validate:data": "tsx scripts/validateData.ts",
+    "test": "vitest run",
+    "verify:ui": "tsx scripts/verifyUi.ts"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.2.5",
+    "@fontsource/noto-sans-jp": "^5.2.5",
+    "idb": "^8.0.2",
+    "lucide-react": "^0.511.0",
+    "next": "^15.3.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "three": "^0.176.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.176.0",
+    "axe-core": "^4.14.1",
+    "playwright-core": "^1.65.1",
+    "tailwindcss": "^4.3.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
+  }
+}

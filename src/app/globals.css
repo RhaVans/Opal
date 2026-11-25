@@ -1,0 +1,348 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand & Liquid Shader Palette */
+  --color-lavender: #E1DAFB;
+  --color-petal-frost: #FFD2F4;
+  --color-glaucous: #758AD1;
+  --color-persian-blue: #4D3EA3;
+  --color-midnight-violet: #450C3F;
+
+  /* Structural Neutrals (Addendum A Section 2 AA fixes) */
+  --surface-light: #F5F5F7;
+  --surface-card: #FFFFFF;
+  --surface-glass: rgba(255, 255, 255, 0.94);
+  --surface-dark: #1D1D1F;
+  --ink-primary: #1D1D1F;
+  --ink-secondary: #5B5B62;
+  --ink-secondary-on-dark: #B4B4B8;
+  --ink-on-dark: #FFFFFF;
+  --glass-border: rgba(255, 255, 255, 0.72);
+
+  /* Semantic SRS & Feedback */
+  --status-again: #CC2F52;
+  --status-hard: #E08E2B;
+  --status-good: #4D3EA3;
+  --status-easy: #1FA87A;
+  --color-accent-warm: #FF7A1A;
+
+  /* Geometry & Elevation */
+  --radius-hero: 28px;
+  --radius-card: 20px;
+  --radius-icon: 14px;
+  --radius-chip: 980px;
+  --radius-pill: 980px;
+  --tap-min: 48px;
+  --shadow-soft: 0 4px 16px rgba(29, 29, 31, 0.06);
+  --shadow-medium: 0 12px 32px rgba(29, 29, 31, 0.10);
+
+  --font-latin: var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-jp: var(--font-noto-jp), "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-latin);
+    color: var(--ink-primary);
+    background-color: var(--surface-light);
+    scroll-padding-bottom: calc(6.5rem + env(safe-area-inset-bottom, 0px));
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    min-height: 100dvh;
+    overflow-wrap: break-word;
+    background-color: transparent;
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
+  p, li {
+    text-wrap: pretty;
+  }
+
+  :lang(ja) {
+    font-family: var(--font-jp);
+    letter-spacing: 0 !important;
+  }
+
+  a[href],
+  button,
+  summary,
+  select,
+  label[for],
+  label:has(> input[type="checkbox"], > input[type="radio"]),
+  [role="button"],
+  [role="link"],
+  [role="tab"],
+  [role="menuitem"],
+  [role="option"],
+  [role="switch"],
+  input[type="checkbox"],
+  input[type="radio"],
+  input[type="file"],
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"],
+  input[type="range"] {
+    cursor: pointer;
+  }
+
+  :disabled,
+  [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-persian-blue);
+    outline-offset: 2px;
+  }
+
+  /* Furigana readability floor (Addendum A Section 3) */
+  ruby {
+    line-height: 1.85;
+    ruby-align: center;
+  }
+
+  rt {
+    font-size: max(0.5em, 10px);
+    user-select: none;
+    font-weight: 500;
+    line-height: 1.1;
+    transition: opacity 150ms ease, filter 150ms ease;
+  }
+
+  /* Native modal backdrop & scroll containment */
+  dialog:modal {
+    overscroll-behavior: contain;
+    max-width: min(100vw - 24px, 460px);
+    width: 100%;
+    margin: auto;
+    border: none;
+    border-radius: var(--radius-hero);
+    background: var(--surface-card);
+    color: var(--ink-primary);
+    box-shadow: var(--shadow-medium);
+    padding: 0;
+  }
+
+  dialog::backdrop {
+    overflow: hidden;
+    overscroll-behavior: contain;
+    background: rgba(29, 29, 31, 0.48);
+  }
+}
+
+.display-headline {
+  font-size: clamp(2.35rem, 6vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.display-headline:lang(ja) {
+  letter-spacing: 0;
+}
+
+.stat-number {
+  font-size: clamp(2.15rem, 5.5vw, 3rem);
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.kanji-prompt {
+  font-family: var(--font-jp);
+  font-size: clamp(1.5rem, 4.5vw, 1.875rem);
+  font-weight: 700;
+  line-height: 1.85;
+  letter-spacing: 0;
+}
+
+.header-scrim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40vh;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(245, 245, 247, 0.88) 0%,
+    rgba(245, 245, 247, 0) 100%
+  );
+}
+
+.eco-shader-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 70% at 50% 24%, rgba(255, 210, 244, 0.85) 0%, rgba(225, 218, 251, 0.72) 40%, rgba(117, 138, 209, 0.45) 75%, rgba(77, 62, 163, 0.55) 100%),
+    conic-gradient(from 200deg at 50% 18%, #E1DAFB 0deg, #FFD2F4 70deg, #758AD1 155deg, #4D3EA3 235deg, #450C3F 300deg, #E1DAFB 360deg);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-safe-only {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* FluidDockOrb tactile spring physics and route-launch ripple */
+.fluid-dock-orb {
+  transition:
+    transform 240ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 220ms ease-out,
+    border-color 220ms ease-out;
+  transition-timing-function: linear(0, 0.48 18%, 1.12 42%, 0.96 68%, 1);
+  will-change: transform;
+}
+
+.fluid-dock-orb:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 26px rgba(77, 62, 163, 0.42);
+}
+
+.fluid-dock-orb.is-pressed,
+.fluid-dock-orb:active {
+  transform: scale(0.84);
+  border-color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(77, 62, 163, 0.55);
+}
+
+.fluid-dock-orb.is-launching {
+  transform: scale(1.16);
+  border-color: #FFD2F4;
+  box-shadow: 0 0 0 6px rgba(225, 218, 251, 0.42), 0 12px 32px rgba(77, 62, 163, 0.55);
+}
+
+.fluid-orb-sparkle {
+  transition: transform 280ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.fluid-dock-orb.is-pressed .fluid-orb-sparkle,
+.fluid-dock-orb:active .fluid-orb-sparkle {
+  transform: scale(0.88) rotate(-18deg);
+}
+
+.fluid-dock-orb.is-launching .fluid-orb-sparkle {
+  transform: scale(1.24) rotate(90deg);
+}
+
+.fluid-orb-halo,
+.fluid-orb-pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.fluid-orb-halo {
+  border: 2px solid #E1DAFB;
+}
+
+.fluid-orb-pulse {
+  background: radial-gradient(circle, rgba(225, 218, 251, 0.55) 0%, rgba(77, 62, 163, 0) 70%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fluid-dock-orb {
+    animation: orb-ambient-breathe 4.4s ease-in-out infinite;
+  }
+
+  .fluid-dock-orb.is-pressed,
+  .fluid-dock-orb.is-launching {
+    animation: none;
+  }
+
+  .fluid-dock-orb.is-pressed .fluid-orb-halo {
+    opacity: 0.75;
+    transform: scale(1.24);
+    transition: transform 220ms ease-out, opacity 220ms ease-out;
+  }
+
+  .fluid-dock-orb.is-launching .fluid-orb-halo {
+    animation: orb-ripple-ring 340ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .fluid-dock-orb.is-launching .fluid-orb-pulse {
+    animation: orb-ripple-bloom 320ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fluid-dock-orb,
+  .fluid-orb-sparkle {
+    transition: none;
+    animation: none;
+  }
+}
+
+@keyframes orb-ambient-breathe {
+  0%, 100% {
+    box-shadow: 0 10px 26px rgba(77, 62, 163, 0.30), 0 0 0 0 rgba(225, 218, 251, 0.25);
+  }
+  50% {
+    box-shadow: 0 14px 32px rgba(77, 62, 163, 0.42), 0 0 0 5px rgba(225, 218, 251, 0.16);
+  }
+}
+
+@keyframes orb-ripple-ring {
+  0% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.15);
+  }
+}
+
+@keyframes orb-ripple-bloom {
+  0% {
+    opacity: 0.85;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3.4);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .route-enter {
+    animation: route-fade-up 240ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@keyframes route-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

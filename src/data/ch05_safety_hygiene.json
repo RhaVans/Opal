@@ -1,0 +1,902 @@
+[
+  {
+    "id": "ch05_001",
+    "chapter": 5,
+    "section": "5.0 安全衛生管理・その他基礎知識",
+    "pdfPage": 68,
+    "tags": [
+      "overview",
+      "high-yield"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>第<rt>だい</rt></ruby>5<ruby>章<rt>しょう</rt></ruby>「<ruby>安全<rt>あんぜん</rt></ruby><ruby>衛生<rt>えいせい</rt></ruby><ruby>管理<rt>かんり</rt></ruby>・その<ruby>他<rt>た</rt></ruby><ruby>基礎<rt>きそ</rt></ruby><ruby>知識<rt>ちしき</rt></ruby>」の5つの<ruby>柱<rt>はしら</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "第5章「安全衛生管理・その他基礎知識」の5つの柱は何ですか。",
+      "id": "Apa 5 pilar utama dalam Bab 05 (Keselamatan, Higienitas & Pengetahuan Dasar)?",
+      "en": "What are the 5 main topics in Chapter 05 (Safety, Health & Basic Knowledge)?"
+    },
+    "answer": {
+      "jaRuby": "1. リスク<ruby>理解<rt>りかい</rt></ruby>と<ruby>回避<rt>かいひ</rt></ruby>、2. お<ruby>客様<rt>きゃくさま</rt></ruby>の<ruby>安全<rt>あんぜん</rt></ruby><ruby>確保<rt>かくほ</rt></ruby>、3. <ruby>衛生<rt>えいせい</rt></ruby><ruby>管理<rt>かんり</rt></ruby>、4. <ruby>設備<rt>せつび</rt></ruby><ruby>管理<rt>かんり</rt></ruby>、5. <ruby>環境<rt>かんきょう</rt></ruby><ruby>対応<rt>たいおう</rt></ruby>・SDGsです。",
+      "jaPlain": "1. リスク理解と回避、2. お客様の安全確保、3. 衛生管理、4. 設備管理、5. 環境対応・SDGsです。",
+      "id": "1. Pemahaman dan pencegahan risiko, 2. Menjaga keselamatan tamu, 3. Manajemen higienitas, 4. Manajemen fasilitas, 5. Respons lingkungan dan SDGs.",
+      "en": "1. Risk Understanding & Avoidance, 2. Ensuring Guest Safety, 3. Hygiene Management, 4. Facility Management, 5. Environmental Response / SDGs."
+    },
+    "ttsText": "第5章の5つの柱は、リスク理解と回避、お客様の安全確保、衛生管理、設備管理、環境対応とSDGsです。",
+    "examTip": {
+      "id": "Bab 05 mencakup halaman 68-75 dan berfokus pada pencegahan kecelakaan, respons darurat, higienitas, fasilitas, serta SDGs.",
+      "en": "Chapter 05 covers pages 68-75, focusing on hazard prevention, emergency response, hygiene, facility upkeep, and SDGs."
+    }
+  },
+  {
+    "id": "ch05_002",
+    "chapter": 5,
+    "section": "5.1 リスク理解と回避",
+    "pdfPage": 69,
+    "tags": [
+      "rule",
+      "safety"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>火災<rt>かさい</rt></ruby>や<ruby>地震<rt>じしん</rt></ruby>に<ruby>備<rt>そな</rt></ruby>えて、<ruby>日頃<rt>ひごろ</rt></ruby>からどのような<ruby>訓練<rt>くんれん</rt></ruby>に<ruby>参加<rt>さんか</rt></ruby>すべきですか。",
+      "jaPlain": "火災や地震に備えて、日頃からどのような訓練に参加すべきですか。",
+      "id": "Untuk mengantisipasi kebakaran dan gempa bumi, latihan apa yang wajib diikuti staf?",
+      "en": "To prepare for fires and earthquakes, what drills must staff participate in?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>火災<rt>かさい</rt></ruby>および<ruby>地震<rt>じしん</rt></ruby>の<ruby>避難<rt>ひなん</rt></ruby><ruby>訓練<rt>くんれん</rt></ruby>に<ruby>参加<rt>さんか</rt></ruby>します。",
+      "jaPlain": "火災および地震の避難訓練に参加します。",
+      "id": "Berpartisipasi dalam latihan evakuasi kebakaran dan gempa bumi.",
+      "en": "Participate in fire and earthquake evacuation drills."
+    },
+    "ttsText": "火災および地震の避難訓練に参加します。"
+  },
+  {
+    "id": "ch05_003",
+    "chapter": 5,
+    "section": "5.1 リスク理解と回避",
+    "pdfPage": 69,
+    "tags": [
+      "vocab",
+      "safety"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>火災<rt>かさい</rt></ruby><ruby>報知器<rt>ほうちき</rt></ruby>",
+      "jaPlain": "火災報知器",
+      "id": "Apa arti istilah ini dan apa yang harus staf ketahui tentangnya?",
+      "en": "What does this term mean, and what must staff know about it?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>火災<rt>かさい</rt></ruby>を<ruby>知<rt>し</rt></ruby>らせる<ruby>設備<rt>せつび</rt></ruby>です。<ruby>設置<rt>せっち</rt></ruby><ruby>場所<rt>ばしょ</rt></ruby>と<ruby>使<rt>つか</rt></ruby>い<ruby>方<rt>かた</rt></ruby>を<ruby>把握<rt>はあく</rt></ruby>しておく<ruby>必要<rt>ひつよう</rt></ruby>があります。",
+      "jaPlain": "火災を知らせる設備です。設置場所と使い方を把握しておく必要があります。",
+      "id": "Alarm kebakaran. Staf wajib mengetahui lokasi pemasangan dan cara penggunaannya.",
+      "en": "Fire alarm. Staff must know its location and how to use it."
+    },
+    "ttsText": "火災報知器。火災を知らせる設備で、場所と使い方を把握しておきます。"
+  },
+  {
+    "id": "ch05_004",
+    "chapter": 5,
+    "section": "5.1 リスク理解と回避",
+    "pdfPage": 69,
+    "tags": [
+      "vocab",
+      "safety",
+      "high-yield"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>消火器<rt>しょうかき</rt></ruby>",
+      "jaPlain": "消火器",
+      "id": "Apa arti istilah ini dan apa yang wajib dipahami staf?",
+      "en": "What does this term mean, and what must staff know about it?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>初期<rt>しょき</rt></ruby><ruby>消火<rt>しょうか</rt></ruby>に<ruby>使<rt>つか</rt></ruby>う<ruby>器具<rt>きぐ</rt></ruby>です。<ruby>設置<rt>せっち</rt></ruby><ruby>場所<rt>ばしょ</rt></ruby>と<ruby>使<rt>つか</rt></ruby>い<ruby>方<rt>かた</rt></ruby>を<ruby>把握<rt>はあく</rt></ruby>しておく<ruby>必要<rt>ひつよう</rt></ruby>があります。",
+      "jaPlain": "初期消火に使う器具です。設置場所と使い方を把握しておく必要があります。",
+      "id": "Alat Pemadam Api Ringan (APAR). Staf wajib mengetahui letak dan cara penggunaannya.",
+      "en": "Fire extinguisher (APAR). Staff must know its location and how to use it."
+    },
+    "ttsText": "消火器。初期消火に使う器具で、場所と使い方を把握しておきます。"
+  },
+  {
+    "id": "ch05_005",
+    "chapter": 5,
+    "section": "5.1 リスク理解と回避",
+    "pdfPage": 69,
+    "tags": [
+      "vocab",
+      "safety"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>避難具<rt>ひなんぐ</rt></ruby>",
+      "jaPlain": "避難具",
+      "id": "Apa arti istilah ini dan apa yang wajib dipahami staf?",
+      "en": "What does this term mean, and what must staff know about it?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>客室<rt>きゃくしつ</rt></ruby>などに<ruby>備<rt>そな</rt></ruby>えられた<ruby>避難用<rt>ひなんよう</rt></ruby>の<ruby>道具<rt>どうぐ</rt></ruby>です。<ruby>場所<rt>ばしょ</rt></ruby>と<ruby>使<rt>つか</rt></ruby>い<ruby>方<rt>かた</rt></ruby>を<ruby>把握<rt>はあく</rt></ruby>しておく<ruby>必要<rt>ひつよう</rt></ruby>があります。",
+      "jaPlain": "客室などに備えられた避難用の道具です。場所と使い方を把握しておく必要があります。",
+      "id": "Alat evakuasi darurat (di kamar tamu). Staf wajib mengetahui letak dan cara penggunaannya.",
+      "en": "Guest-room escape tools. Staff must know their location and how to use them."
+    },
+    "ttsText": "避難具。客室などに備えられた避難用の道具で、場所と使い方を把握しておきます。"
+  },
+  {
+    "id": "ch05_006",
+    "chapter": 5,
+    "section": "5.1 リスク理解と回避",
+    "pdfPage": 69,
+    "tags": [
+      "vocab",
+      "rule",
+      "number",
+      "high-yield"
+    ],
+    "prompt": {
+      "jaRuby": "2<ruby>方向<rt>ほうこう</rt></ruby><ruby>避難<rt>ひなん</rt></ruby>",
+      "jaPlain": "2方向避難",
+      "id": "Apa maksud prinsip keselamatan ini?",
+      "en": "What does this safety principle mean?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>避難<rt>ひなん</rt></ruby><ruby>経路<rt>けいろ</rt></ruby>と<ruby>非常口<rt>ひじょうぐち</rt></ruby>を<ruby>常<rt>つね</rt></ruby>に2つ<ruby>以上<rt>いじょう</rt></ruby><ruby>確認<rt>かくにん</rt></ruby>し、<ruby>確保<rt>かくほ</rt></ruby>しておくことです。",
+      "jaPlain": "避難経路と非常口を常に2つ以上確認し、確保しておくことです。",
+      "id": "Evakuasi dua arah: selalu memastikan jalur evakuasi dan pintu keluar darurat dari dua arah setiap saat.",
+      "en": "Two-way evacuation: verify two-way evacuation routes and exits at all times."
+    },
+    "ttsText": "2方向避難。避難経路と非常口を常に確認しておくことです。",
+    "examTip": {
+      "id": "Jika satu rute terhalang api atau asap, rute kedua menjamin tamu dan staf tetap bisa keluar dengan aman.",
+      "en": "If one route is blocked by smoke or fire, a second exit ensures safe evacuation."
+    }
+  },
+  {
+    "id": "ch05_007",
+    "chapter": 5,
+    "section": "5.1 リスク理解と回避",
+    "pdfPage": 69,
+    "tags": [
+      "rule",
+      "safety"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>施設<rt>しせつ</rt></ruby>の<ruby>緊急時<rt>きんきゅうじ</rt></ruby>マニュアルについて、スタッフに<ruby>求<rt>もと</rt></ruby>められることは<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "施設の緊急時マニュアルについて、スタッフに求められることは何ですか。",
+      "id": "Apa kewajiban staf terkait manual darurat fasilitas?",
+      "en": "What is required of staff regarding the facility emergency manual?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>緊急時<rt>きんきゅうじ</rt></ruby>マニュアルの<ruby>内容<rt>ないよう</rt></ruby>を<ruby>理解<rt>りかい</rt></ruby>し、いざというときに<ruby>実行<rt>じっこう</rt></ruby>できるようにすることです。",
+      "jaPlain": "緊急時マニュアルの内容を理解し、いざというときに実行できるようにすることです。",
+      "id": "Memahami isi manual darurat fasilitas dan mampu menjalankannya saat terjadi keadaan darurat.",
+      "en": "Know and execute the facility emergency manual when needed."
+    },
+    "ttsText": "施設の緊急時マニュアルを理解し、実行できるようにします。"
+  },
+  {
+    "id": "ch05_008",
+    "chapter": 5,
+    "section": "5.1 リスク理解と回避",
+    "pdfPage": 70,
+    "tags": [
+      "rule",
+      "emergency",
+      "number",
+      "high-yield"
+    ],
+    "prompt": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>が<ruby>病気<rt>びょうき</rt></ruby>やけがをした<ruby>場合<rt>ばあい</rt></ruby>の<ruby>医療<rt>いりょう</rt></ruby><ruby>対応<rt>たいおう</rt></ruby>はどうしますか。",
+      "jaPlain": "お客様が病気やけがをした場合の医療対応はどうしますか。",
+      "id": "Bagaimana penanganan darurat medis jika tamu sakit atau terluka?",
+      "en": "How should staff handle medical emergencies for a guest?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>病院<rt>びょういん</rt></ruby>への<ruby>受診<rt>じゅしん</rt></ruby>を<ruby>勧<rt>すす</rt></ruby>め、<ruby>救急車<rt>きゅうきゅうしゃ</rt></ruby>が<ruby>必要<rt>ひつよう</rt></ruby>な<ruby>場合<rt>ばあい</rt></ruby>は<ruby>速<rt>すみ</rt></ruby>やかに119<ruby>番<rt>ばん</rt></ruby>に<ruby>通報<rt>つうほう</rt></ruby>します。",
+      "jaPlain": "病院への受診を勧め、救急車が必要な場合は速やかに119番に通報します。",
+      "id": "Anjurkan kunjungan ke rumah sakit; jika perlu ambulans, segera hubungi 119.",
+      "en": "Encourage a hospital visit; if an ambulance is needed, call 119 promptly."
+    },
+    "ttsText": "病院への受診を勧め、救急車が必要な場合は速やかに119番に通報します。",
+    "examTip": {
+      "id": "Di Jepang, nomor darurat 119 digunakan untuk ambulans dan pemadam kebakaran (berbeda dengan 110 untuk polisi).",
+      "en": "In Japan, 119 is for ambulance and fire emergencies (while 110 is for police)."
+    }
+  },
+  {
+    "id": "ch05_009",
+    "chapter": 5,
+    "section": "5.1 リスク理解と回避",
+    "pdfPage": 70,
+    "tags": [
+      "rule",
+      "emergency",
+      "number",
+      "high-yield"
+    ],
+    "prompt": {
+      "jaRuby": "119<ruby>番<rt>ばん</rt></ruby>で<ruby>救急車<rt>きゅうきゅうしゃ</rt></ruby>を<ruby>呼<rt>よ</rt></ruby>ぶとき、<ruby>詳<rt>くわ</rt></ruby>しく<ruby>報告<rt>ほうこく</rt></ruby>すべき3つの<ruby>項目<rt>こうもく</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "119番で救急車を呼ぶとき、詳しく報告すべき3つの項目は何ですか。",
+      "id": "Saat menelepon 119 untuk memanggil ambulans, 3 informasi apa yang harus dilaporkan secara rinci?",
+      "en": "When calling 119 for an ambulance, what 3 details must be reported in detail?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>症状<rt>しょうじょう</rt></ruby>、<ruby>年齢<rt>ねんれい</rt></ruby>、<ruby>性別<rt>せいべつ</rt></ruby>の3つを<ruby>詳<rt>くわ</rt></ruby>しく<ruby>伝<rt>つた</rt></ruby>えます。",
+      "jaPlain": "症状、年齢、性別の3つを詳しく伝えます。",
+      "id": "Gejala (症状), usia (年齢), dan jenis kelamin (性別) secara terperinci.",
+      "en": "Report symptoms, age, and gender in detail."
+    },
+    "ttsText": "救急車を呼ぶときは、症状、年齢、性別の3つを詳しく伝えます。",
+    "examTip": {
+      "id": "Soal CBT sering menanyakan 3 detail wajib ini: 症状 (gejala), 年齢 (usia), 性別 (jenis kelamin).",
+      "en": "CBT exams frequently test these 3 mandatory report items: symptoms, age, and gender."
+    }
+  },
+  {
+    "id": "ch05_010",
+    "chapter": 5,
+    "section": "5.1 リスク理解と回避",
+    "pdfPage": 70,
+    "tags": [
+      "vocab",
+      "rule",
+      "hygiene"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>感染症<rt>かんせんしょう</rt></ruby>について、スタッフが<ruby>知<rt>し</rt></ruby>っておくべき3つの<ruby>点<rt>てん</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "感染症について、スタッフが知っておくべき3つの点は何ですか。",
+      "id": "Terkait penyakit menular (感染症), 3 hal apa yang harus dipahami staf?",
+      "en": "Regarding infectious diseases, what 3 aspects must staff know?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>感染症<rt>かんせんしょう</rt></ruby>のリスク、<ruby>広<rt>ひろ</rt></ruby>がり<ruby>方<rt>かた</rt></ruby>、<ruby>対応<rt>たいおう</rt></ruby><ruby>方法<rt>ほうほう</rt></ruby>の3つを<ruby>理解<rt>りかい</rt></ruby>しておきます。",
+      "jaPlain": "感染症のリスク、広がり方、対応方法の3つを理解しておきます。",
+      "id": "Risiko penyakit menular, cara penyebarannya, dan cara penanganannya.",
+      "en": "Know the risks, spread, and response for infectious diseases."
+    },
+    "ttsText": "感染症のリスク、広がり方、対応方法を理解しておきます。"
+  },
+  {
+    "id": "ch05_011",
+    "chapter": 5,
+    "section": "5.1 リスク理解と回避",
+    "pdfPage": 70,
+    "tags": [
+      "vocab",
+      "safety"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>不審物<rt>ふしんぶつ</rt></ruby>",
+      "jaPlain": "不審物",
+      "id": "Apa arti istilah ini dan bagaimana sikap staf terhadapnya?",
+      "en": "What does this term mean, and how should staff respond?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>放置<rt>ほうち</rt></ruby>された<ruby>不審<rt>ふしん</rt></ruby>な<ruby>物<rt>もの</rt></ruby>のことです。<ruby>常<rt>つね</rt></ruby>に<ruby>注意<rt>ちゅうい</rt></ruby>して<ruby>警戒<rt>けいかい</rt></ruby>します。",
+      "jaPlain": "放置された不審な物のことです。常に注意して警戒します。",
+      "id": "Benda mencurigakan yang ditinggalkan tanpa pengawasan. Staf harus selalu waspada.",
+      "en": "Unattended suspicious objects. Stay vigilant for them at all times."
+    },
+    "ttsText": "不審物。放置された不審な物に対して常に警戒します。"
+  },
+  {
+    "id": "ch05_012",
+    "chapter": 5,
+    "section": "5.1 リスク理解と回避",
+    "pdfPage": 70,
+    "tags": [
+      "vocab",
+      "safety"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>不審<rt>ふしん</rt></ruby><ruby>人物<rt>じんぶつ</rt></ruby>",
+      "jaPlain": "不審人物",
+      "id": "Apa arti istilah ini dalam konteks keselamatan fasilitas penginapan?",
+      "en": "What does this term mean in accommodation safety?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>施設内<rt>しせつない</rt></ruby>にいる<ruby>不審<rt>ふしん</rt></ruby>な<ruby>人<rt>ひと</rt></ruby>のことです。<ruby>見逃<rt>みのが</rt></ruby>さないよう<ruby>常<rt>つね</rt></ruby>に<ruby>警戒<rt>けいかい</rt></ruby>します。",
+      "jaPlain": "施設内にいる不審な人のことです。見逃さないよう常に警戒します。",
+      "id": "Orang yang mencurigakan. Staf harus selalu waspada terhadap keberadaan orang mencurigakan.",
+      "en": "Suspicious persons. Stay vigilant for suspicious individuals in the facility."
+    },
+    "ttsText": "不審人物。施設内の不審な人に対して常に警戒します。"
+  },
+  {
+    "id": "ch05_013",
+    "chapter": 5,
+    "section": "5.2 お客様の安全確保",
+    "pdfPage": 71,
+    "tags": [
+      "rule",
+      "prohibition",
+      "high-yield"
+    ],
+    "prompt": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>の<ruby>個人<rt>こじん</rt></ruby><ruby>情報<rt>じょうほう</rt></ruby>の<ruby>保護<rt>ほご</rt></ruby>について、DM<ruby>作業<rt>さぎょう</rt></ruby>などのためにデータをパソコンにコピーして<ruby>自宅<rt>じたく</rt></ruby>へ<ruby>持<rt>も</rt></ruby>ち<ruby>帰<rt>かえ</rt></ruby>ってもよいですか。",
+      "jaPlain": "お客様の個人情報の保護について、DM作業などのためにデータをパソコンにコピーして自宅へ持ち帰ってもよいですか。",
+      "id": "Untuk pekerjaan seperti DM (direct mail), bolehkah menyalin data pribadi tamu ke laptop untuk dibawa pulang?",
+      "en": "Regarding customer PII protection, may staff copy customer data onto a laptop to take home for work such as DM?"
+    },
+    "answer": {
+      "jaRuby": "いいえ、<ruby>絶対<rt>ぜったい</rt></ruby>にしてはいけません。<ruby>個人<rt>こじん</rt></ruby><ruby>情報<rt>じょうほう</rt></ruby>はネットワークセキュリティで<ruby>守<rt>まも</rt></ruby>り、<ruby>持<rt>も</rt></ruby>ち<ruby>出<rt>だ</rt></ruby>しは<ruby>禁止<rt>きんし</rt></ruby>です。",
+      "jaPlain": "いいえ、絶対にしてはいけません。個人情報はネットワークセキュリティで守り、持ち出しは禁止です。",
+      "id": "Tidak boleh, dilarang keras! Lindungi data pribadi tamu melalui keamanan jaringan; jangan pernah menyalin data ke laptop untuk dibawa pulang.",
+      "en": "No, NEVER. Protect customer PII via network security, and never copy customer data onto a laptop to take home (e.g., for DM work)."
+    },
+    "ttsText": "いいえ、絶対にしてはいけません。個人情報はネットワークセキュリティで守り、自宅への持ち帰りは禁止です。",
+    "examTip": {
+      "id": "Meski alasannya untuk pekerjaan resmi seperti mengirim DM, membawa pulang data pelanggan tetap dilarang keras.",
+      "en": "Even for legitimate tasks like DM work, taking customer PII home on a laptop is strictly forbidden."
+    }
+  },
+  {
+    "id": "ch05_014",
+    "chapter": 5,
+    "section": "5.2 お客様の安全確保",
+    "pdfPage": 71,
+    "tags": [
+      "rule",
+      "safety"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>火災<rt>かさい</rt></ruby>を<ruby>防<rt>ふせ</rt></ruby>ぐため、<ruby>可燃物<rt>かねんぶつ</rt></ruby>とタバコの<ruby>吸<rt>す</rt></ruby>い<ruby>殻<rt>がら</rt></ruby>はどのように<ruby>扱<rt>あつか</rt></ruby>いますか。",
+      "jaPlain": "火災を防ぐため、可燃物とタバコの吸い殻はどのように扱いますか。",
+      "id": "Untuk mencegah kebakaran, bagaimana cara menangani benda mudah terbakar dan puntung rokok?",
+      "en": "To prevent fires, how should flammables and cigarette butts be handled?"
+    },
+    "answer": {
+      "jaRuby": "リネン<ruby>類<rt>るい</rt></ruby>・<ruby>新聞<rt>しんぶん</rt></ruby>・<ruby>紙<rt>かみ</rt></ruby>くずなどの<ruby>可燃物<rt>かねんぶつ</rt></ruby>を<ruby>火気<rt>かき</rt></ruby>の<ruby>近<rt>ちか</rt></ruby>くに<ruby>置<rt>お</rt></ruby>かず、タバコの<ruby>吸<rt>す</rt></ruby>い<ruby>殻<rt>がら</rt></ruby>は<ruby>確実<rt>かくじつ</rt></ruby>に<ruby>消火<rt>しょうか</rt></ruby>します。",
+      "jaPlain": "リネン類・新聞・紙くずなどの可燃物を火気の近くに置かず、タバコの吸い殻は確実に消火します。",
+      "id": "Jauhkan benda mudah terbakar (linen, koran, sampah kertas) dari api, dan pastikan puntung rokok dipadamkan sepenuhnya.",
+      "en": "Keep flammables (linens, newspapers, paper waste) away from fire, and extinguish cigarette butts properly."
+    },
+    "ttsText": "リネン類、新聞、紙くずなどの可燃物を火気の近くに置かず、タバコの吸い殻は確実に消火します。"
+  },
+  {
+    "id": "ch05_015",
+    "chapter": 5,
+    "section": "5.2 お客様の安全確保",
+    "pdfPage": 71,
+    "tags": [
+      "vocab",
+      "rule",
+      "prohibition",
+      "high-yield"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>盲導犬<rt>もうどうけん</rt></ruby>",
+      "jaPlain": "盲導犬",
+      "id": "Apa arti istilah ini dan bagaimana aturan penerimaan tamu yang membawanya?",
+      "en": "What does this term mean, and what is the rule for guests accompanied by one?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>視覚<rt>しかく</rt></ruby><ruby>障害<rt>しょうがい</rt></ruby>のあるお<ruby>客様<rt>きゃくさま</rt></ruby>に<ruby>同伴<rt>どうはん</rt></ruby>する<ruby>犬<rt>いぬ</rt></ruby>です。<ruby>受<rt>う</rt></ruby>け<ruby>入<rt>い</rt></ruby>れを<ruby>決<rt>けっ</rt></ruby>して<ruby>断<rt>ことわ</rt></ruby>らず、<ruby>高齢者<rt>こうれいしゃ</rt></ruby>や<ruby>障害<rt>しょうがい</rt></ruby>のあるお<ruby>客様<rt>きゃくさま</rt></ruby>も<ruby>支援<rt>しえん</rt></ruby>します。",
+      "jaPlain": "視覚障害のあるお客様に同伴する犬です。受け入れを決して断らず、高齢者や障害のあるお客様も支援します。",
+      "id": "Anjing pemandu (guide dog) untuk tamu tunanetra. JANGAN PERNAH menolak anjing pemandu yang mendampingi tamu tunanetra, dan selalu bantu tamu lansia maupun penyandang disabilitas.",
+      "en": "Guide dog accompanying a visually impaired guest. Support elderly and disabled guests, and NEVER refuse a guide dog."
+    },
+    "ttsText": "盲導犬。視覚障害のあるお客様に同伴する盲導犬は絶対に断ってはいけません。",
+    "examTip": {
+      "id": "Bacaan kanji: 盲導犬 (もうどうけん). Penolakan terhadap anjing pemandu selalu menjadi jawaban salah dalam soal layanan tamu.",
+      "en": "Reading: もうどうけん (moudouken). Refusing a guide dog is strictly prohibited."
+    }
+  },
+  {
+    "id": "ch05_016",
+    "chapter": 5,
+    "section": "5.2 お客様の安全確保",
+    "pdfPage": 72,
+    "tags": [
+      "rule",
+      "emergency"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>火災<rt>かさい</rt></ruby>を<ruby>発見<rt>はっけん</rt></ruby>したとき、スタッフはまず<ruby>何<rt>なに</rt></ruby>をすべきですか。",
+      "jaPlain": "火災を発見したとき、スタッフはまず何をすべきですか。",
+      "id": "Ketika mendeteksi kebakaran, tindakan darurat apa yang harus segera dilakukan staf?",
+      "en": "What should staff do immediately upon detecting a fire?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>速<rt>すみ</rt></ruby>やかに<ruby>初期<rt>しょき</rt></ruby><ruby>消火<rt>しょうか</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>い、お<ruby>客様<rt>きゃくさま</rt></ruby>を<ruby>安全<rt>あんぜん</rt></ruby>に<ruby>避難<rt>ひなん</rt></ruby>させます。",
+      "jaPlain": "速やかに初期消火を行い、お客様を安全に避難させます。",
+      "id": "Segera lakukan pemadaman awal dan evakuasikan tamu dengan aman.",
+      "en": "Perform prompt initial suppression and evacuate guests safely."
+    },
+    "ttsText": "速やかに初期消火を行い、お客様を安全に避難させます。"
+  },
+  {
+    "id": "ch05_017",
+    "chapter": 5,
+    "section": "5.2 お客様の安全確保",
+    "pdfPage": 72,
+    "tags": [
+      "rule",
+      "emergency",
+      "high-yield"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>消火器<rt>しょうかき</rt></ruby>による<ruby>消火<rt>しょうか</rt></ruby>が<ruby>有効<rt>ゆうこう</rt></ruby>なのは、どの<ruby>段階<rt>だんかい</rt></ruby>までですか。",
+      "jaPlain": "消火器による消火が有効なのは、どの段階までですか。",
+      "id": "Sampai tahap mana pemadaman api menggunakan APAR (消火器) efektif dilakukan?",
+      "en": "Until what stage is a fire extinguisher (APAR) effective for fire suppression?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>天井<rt>てんじょう</rt></ruby>に<ruby>火<rt>ひ</rt></ruby>が<ruby>移<rt>うつ</rt></ruby>る<ruby>前<rt>まえ</rt></ruby>までです。",
+      "jaPlain": "天井に火が移る前までです。",
+      "id": "Hanya sebelum api merambat ke langit-langit (天井に火が移る前まで).",
+      "en": "Only before flames reach the ceiling (天井に火が移る前まで)."
+    },
+    "ttsText": "消火器による消火は、天井に火が移る前まで有効です。",
+    "examTip": {
+      "id": "Batas emas APAR: 「天井に火が移る前まで」. Hafalkan frasa Jepang ini kata per kata!",
+      "en": "Critical threshold: before flames reach the ceiling (天井に火が移る前まで)."
+    }
+  },
+  {
+    "id": "ch05_018",
+    "chapter": 5,
+    "section": "5.2 お客様の安全確保",
+    "pdfPage": 72,
+    "tags": [
+      "vocab",
+      "rule",
+      "emergency",
+      "high-yield"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>屋内<rt>おくない</rt></ruby><ruby>消火<rt>しょうか</rt></ruby><ruby>設備<rt>せつび</rt></ruby>",
+      "jaPlain": "屋内消火設備",
+      "id": "Apa arti istilah ini dan kapan alat ini digunakan?",
+      "en": "What does this term mean, and when is it used?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>天井<rt>てんじょう</rt></ruby>に<ruby>火<rt>ひ</rt></ruby>が<ruby>移<rt>うつ</rt></ruby>り、<ruby>消火器<rt>しょうかき</rt></ruby>の<ruby>限界<rt>げんかい</rt></ruby>を<ruby>超<rt>こ</rt></ruby>えた<ruby>際<rt>さい</rt></ruby>に<ruby>使用<rt>しよう</rt></ruby>する<ruby>消火<rt>しょうか</rt></ruby><ruby>設備<rt>せつび</rt></ruby>です。",
+      "jaPlain": "天井に火が移り、消火器の限界を超えた際に使用する消火設備です。",
+      "id": "Sistem pemadam kebakaran dalam ruangan. Digunakan ketika api sudah melampaui batas kemampuan APAR (mencapai langit-langit).",
+      "en": "Indoor fire suppression systems. Used beyond the APAR suppression limit (once flames reach the ceiling)."
+    },
+    "ttsText": "屋内消火設備。天井に火が移るなど消火器の限界を超えたときに使用します。"
+  },
+  {
+    "id": "ch05_019",
+    "chapter": 5,
+    "section": "5.2 お客様の安全確保",
+    "pdfPage": 72,
+    "tags": [
+      "vocab",
+      "prohibition",
+      "emergency",
+      "high-yield"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>火災<rt>かさい</rt></ruby>や<ruby>地震<rt>じしん</rt></ruby>のとき、エレベーターと<ruby>非常<rt>ひじょう</rt></ruby><ruby>階段<rt>かいだん</rt></ruby>のどちらを<ruby>使<rt>つか</rt></ruby>いますか。",
+      "jaPlain": "火災や地震のとき、エレベーターと非常階段のどちらを使いますか。",
+      "id": "Saat terjadi kebakaran atau gempa bumi, mana yang harus digunakan: lift atau tangga darurat (非常階段)?",
+      "en": "During a fire or earthquake, should you use elevators or emergency stairs (非常階段)?"
+    },
+    "answer": {
+      "jaRuby": "エレベーターは<ruby>絶対<rt>ぜったい</rt></ruby>に<ruby>使<rt>つか</rt></ruby>わず、<ruby>必<rt>かなら</rt></ruby>ず<ruby>非常<rt>ひじょう</rt></ruby><ruby>階段<rt>かいだん</rt></ruby>を<ruby>使<rt>つか</rt></ruby>って<ruby>避難<rt>ひなん</rt></ruby>します。",
+      "jaPlain": "エレベーターは絶対に使わず、必ず非常階段を使って避難します。",
+      "id": "JANGAN PERNAH menggunakan lift saat kebakaran atau gempa; selalu evakuasi melalui tangga darurat (非常階段).",
+      "en": "NEVER use elevators during a fire or earthquake; always use emergency stairs (非常階段)."
+    },
+    "ttsText": "火災や地震のときはエレベーターを絶対に使わず、非常階段を使って避難します。",
+    "examTip": {
+      "id": "Lift berisiko mati lampu dan menjebak orang di dalam saat kebakaran atau gempa bumi.",
+      "en": "Elevators can lose power and trap occupants during fires or earthquakes."
+    }
+  },
+  {
+    "id": "ch05_020",
+    "chapter": 5,
+    "section": "5.2 お客様の安全確保",
+    "pdfPage": 72,
+    "tags": [
+      "rule",
+      "emergency",
+      "number"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>火災<rt>かさい</rt></ruby>や<ruby>急病<rt>きゅうびょう</rt></ruby>が<ruby>発生<rt>はっせい</rt></ruby>したときの<ruby>通報<rt>つうほう</rt></ruby><ruby>手順<rt>てじゅん</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "火災や急病が発生したときの通報手順は何ですか。",
+      "id": "Apa prosedur pelaporan ketika terjadi kebakaran atau tamu sakit mendadak?",
+      "en": "What is the reporting procedure when a fire or sudden illness occurs?"
+    },
+    "answer": {
+      "jaRuby": "119<ruby>番<rt>ばん</rt></ruby>へ<ruby>通報<rt>つうほう</rt></ruby>し、<ruby>状況<rt>じょうきょう</rt></ruby>を<ruby>詳<rt>くわ</rt></ruby>しく<ruby>報告<rt>ほうこく</rt></ruby>します。",
+      "jaPlain": "119番へ通報し、状況を詳しく報告します。",
+      "id": "Telepon 119 dan laporkan situasinya secara terperinci.",
+      "en": "Call 119 and provide a detailed situation report."
+    },
+    "ttsText": "火災や急病が発生したら119番へ通報し、状況を詳しく報告します。"
+  },
+  {
+    "id": "ch05_021",
+    "chapter": 5,
+    "section": "5.3 衛生管理",
+    "pdfPage": 73,
+    "tags": [
+      "rule",
+      "hygiene"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>衛生<rt>えいせい</rt></ruby><ruby>管理<rt>かんり</rt></ruby>におけるスタッフの<ruby>身<rt>み</rt></ruby>だしなみ（<ruby>制服<rt>せいふく</rt></ruby>・<ruby>髪<rt>かみ</rt></ruby>・<ruby>爪<rt>つめ</rt></ruby>）の<ruby>基本<rt>きほん</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "衛生管理におけるスタッフの身だしなみ（制服・髪・爪）の基本は何ですか。",
+      "id": "Apa standar dasar penampilan staf (seragam, rambut, kuku) dalam manajemen higienitas?",
+      "en": "What is the hygiene management standard for staff uniform, hair, and nails?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>制服<rt>せいふく</rt></ruby>・<ruby>髪<rt>かみ</rt></ruby>・<ruby>爪<rt>つめ</rt></ruby>を<ruby>常<rt>つね</rt></ruby>に<ruby>清潔<rt>せいけつ</rt></ruby>に<ruby>保<rt>たも</rt></ruby>つことです。",
+      "jaPlain": "制服・髪・爪を常に清潔に保つことです。",
+      "id": "Menjaga seragam, rambut, dan kuku selalu bersih.",
+      "en": "Keep uniform, hair, and nails clean at all times."
+    },
+    "ttsText": "制服、髪、爪を常に清潔に保つことです。"
+  },
+  {
+    "id": "ch05_022",
+    "chapter": 5,
+    "section": "5.3 衛生管理",
+    "pdfPage": 73,
+    "tags": [
+      "rule",
+      "hygiene"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>衛生<rt>えいせい</rt></ruby><ruby>管理<rt>かんり</rt></ruby>でスタッフが<ruby>日常的<rt>にちじょうてき</rt></ruby>に<ruby>行<rt>おこな</rt></ruby>う<ruby>基本<rt>きほん</rt></ruby><ruby>習慣<rt>しゅうかん</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+      "jaPlain": "衛生管理でスタッフが日常的に行う基本習慣は何ですか。",
+      "id": "Kebiasaan higienitas rutin apa yang harus dilakukan staf setiap hari?",
+      "en": "What regular hygiene habits must staff practice in daily operations?"
+    },
+    "answer": {
+      "jaRuby": "こまめな<ruby>手洗<rt>てあら</rt></ruby>いとうがいを<ruby>行<rt>おこな</rt></ruby>うことです。",
+      "jaPlain": "こまめな手洗いとうがいを行うことです。",
+      "id": "Mencuci tangan dan berkumur secara rutin.",
+      "en": "Regular handwashing and gargling."
+    },
+    "ttsText": "こまめな手洗いとうがいを行うことです。"
+  },
+  {
+    "id": "ch05_023",
+    "chapter": 5,
+    "section": "5.3 衛生管理",
+    "pdfPage": 73,
+    "tags": [
+      "rule",
+      "prohibition",
+      "hygiene",
+      "high-yield"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>接客中<rt>せっきゃくちゅう</rt></ruby>の<ruby>香水<rt>こうすい</rt></ruby>について、どのようなルールがありますか。",
+      "jaPlain": "接客中の香水について、どのようなルールがありますか。",
+      "id": "Apa aturan mengenai penggunaan parfum saat melayani tamu?",
+      "en": "What is the rule regarding perfume during service?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>接客中<rt>せっきゃくちゅう</rt></ruby>は<ruby>強<rt>つよ</rt></ruby>い<ruby>香水<rt>こうすい</rt></ruby>をつけてはいけません。",
+      "jaPlain": "接客中は強い香水をつけてはいけません。",
+      "id": "Tidak boleh memakai parfum yang menyengat selama melayani tamu.",
+      "en": "No strong perfume during service."
+    },
+    "ttsText": "接客中は強い香水をつけてはいけません。",
+    "examTip": {
+      "id": "Parfum menyengat mengganggu kenyamanan tamu serta aroma hidangan; aturan ini muncul di Bab 04 dan Bab 05.",
+      "en": "Strong perfume disrupts guest comfort and food aroma; tested across Chapters 04 and 05."
+    }
+  },
+  {
+    "id": "ch05_024",
+    "chapter": 5,
+    "section": "5.3 衛生管理",
+    "pdfPage": 73,
+    "tags": [
+      "rule",
+      "hygiene"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>施設<rt>しせつ</rt></ruby>の<ruby>外装<rt>がいそう</rt></ruby>・<ruby>内装<rt>ないそう</rt></ruby>の<ruby>汚<rt>よご</rt></ruby>れを<ruby>見<rt>み</rt></ruby>つけたとき、どう<ruby>対応<rt>たいおう</rt></ruby>しますか。",
+      "jaPlain": "施設の外装・内装の汚れを見つけたとき、どう対応しますか。",
+      "id": "Bagaimana tindakan yang tepat saat menemukan kotoran di area luar maupun dalam fasilitas?",
+      "en": "How should staff respond when inspecting and finding dirt on exterior or interior surfaces?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>床<rt>ゆか</rt></ruby>・<ruby>壁<rt>かべ</rt></ruby>・<ruby>窓<rt>まど</rt></ruby>（<ruby>外装<rt>がいそう</rt></ruby>）やテーブル・<ruby>椅子<rt>いす</rt></ruby>・<ruby>設備<rt>せつび</rt></ruby>（<ruby>内装<rt>ないそう</rt></ruby>）の<ruby>汚<rt>よご</rt></ruby>れを<ruby>点検<rt>てんけん</rt></ruby>し、すぐに<ruby>清掃<rt>せいそう</rt></ruby>します。",
+      "jaPlain": "床・壁・窓（外装）やテーブル・椅子・設備（内装）の汚れを点検し、すぐに清掃します。",
+      "id": "Periksa dan segera bersihkan kotoran pada bagian luar (lantai, dinding, jendela) dan bagian dalam (meja, kursi, peralatan).",
+      "en": "Inspect and immediately clean dirt on the exterior (floors, walls, windows) and interior (tables, chairs, equipment)."
+    },
+    "ttsText": "床、壁、窓やテーブル、椅子、設備の汚れを点検し、すぐに清掃します。"
+  },
+  {
+    "id": "ch05_025",
+    "chapter": 5,
+    "section": "5.3 衛生管理",
+    "pdfPage": 73,
+    "tags": [
+      "rule",
+      "hygiene",
+      "high-yield"
+    ],
+    "prompt": {
+      "jaRuby": "カビや<ruby>害虫<rt>がいちゅう</rt></ruby>の<ruby>発生<rt>はっせい</rt></ruby>を<ruby>防<rt>ふせ</rt></ruby>ぐために、<ruby>毎日<rt>まいにち</rt></ruby><ruby>何<rt>なに</rt></ruby>を<ruby>管理<rt>かんり</rt></ruby>する<ruby>必要<rt>ひつよう</rt></ruby>がありますか。",
+      "jaPlain": "カビや害虫の発生を防ぐために、毎日何を管理する必要がありますか。",
+      "id": "Untuk mencegah munculnya jamur (カビ) dan hama (害虫), hal apa yang harus dipantau setiap hari?",
+      "en": "To prevent mold (カビ) and pests (害虫), what must be monitored daily?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>毎日<rt>まいにち</rt></ruby>の<ruby>温度<rt>おんど</rt></ruby>と<ruby>湿度<rt>しつど</rt></ruby>を<ruby>管理<rt>かんり</rt></ruby>し、カビや<ruby>害虫<rt>がいちゅう</rt></ruby>を<ruby>防<rt>ふせ</rt></ruby>ぎます。",
+      "jaPlain": "毎日の温度と湿度を管理し、カビや害虫を防ぎます。",
+      "id": "Memantau suhu dan kelembapan harian untuk mencegah jamur dan hama.",
+      "en": "Monitor daily temperature and humidity to prevent mold and pests."
+    },
+    "ttsText": "毎日の温度と湿度を管理し、カビや害虫を防ぎます。"
+  },
+  {
+    "id": "ch05_026",
+    "chapter": 5,
+    "section": "5.3 衛生管理",
+    "pdfPage": 73,
+    "tags": [
+      "vocab",
+      "hygiene"
+    ],
+    "prompt": {
+      "jaRuby": "カビ・<ruby>害虫<rt>がいちゅう</rt></ruby>",
+      "jaPlain": "カビ・害虫",
+      "id": "Apa arti kedua istilah higienitas ini?",
+      "en": "What do these two hygiene terms mean?"
+    },
+    "answer": {
+      "jaRuby": "カビは<ruby>湿気<rt>しっけ</rt></ruby>などで<ruby>生<rt>は</rt></ruby>える<ruby>菌<rt>きん</rt></ruby>、<ruby>害虫<rt>がいちゅう</rt></ruby>は<ruby>衛生<rt>えいせい</rt></ruby>や<ruby>快適性<rt>かいてきせい</rt></ruby>を<ruby>害<rt>がい</rt></ruby>する<ruby>虫<rt>むし</rt></ruby>です。",
+      "jaPlain": "カビは湿気などで生える菌、害虫は衛生や快適性を害する虫です。",
+      "id": "カビ (kabi) = jamur (mold); 害虫 (gaichuu) = hama atau serangga pengganggu (pests).",
+      "en": "カビ = mold; 害虫 = pests."
+    },
+    "ttsText": "カビは湿気などで生える菌、害虫は衛生を害する虫です。"
+  },
+  {
+    "id": "ch05_027",
+    "chapter": 5,
+    "section": "5.4 設備管理",
+    "pdfPage": 74,
+    "tags": [
+      "rule",
+      "facility"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>空調<rt>くうちょう</rt></ruby>・<ruby>機械<rt>きかい</rt></ruby>・<ruby>備品<rt>びひん</rt></ruby>・<ruby>内装<rt>ないそう</rt></ruby>の<ruby>点検<rt>てんけん</rt></ruby>で<ruby>不具合<rt>ふぐあい</rt></ruby>を<ruby>見<rt>み</rt></ruby>つけたらどうしますか。",
+      "jaPlain": "空調・機械・備品・内装の点検で不具合を見つけたらどうしますか。",
+      "id": "Apa yang harus dilakukan jika saat inspeksi rutin AC, mesin, perlengkapan, dan interior ditemukan kerusakan?",
+      "en": "What must staff do after inspecting AC, machinery, fixtures, and interior and finding a defect?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>継続的<rt>けいぞくてき</rt></ruby>に<ruby>点検<rt>てんけん</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>い、<ruby>不具合<rt>ふぐあい</rt></ruby>があれば<ruby>速<rt>すみ</rt></ruby>やかに<ruby>設備<rt>せつび</rt></ruby><ruby>管理者<rt>かんりしゃ</rt></ruby>へ<ruby>報告<rt>ほうこく</rt></ruby>します。",
+      "jaPlain": "継続的に点検を行い、不具合があれば速やかに設備管理者へ報告します。",
+      "id": "Lakukan inspeksi secara berkelanjutan dan segera laporkan kerusakan kepada manajer fasilitas.",
+      "en": "Continuously inspect AC, machinery, fixtures, and interior, and report defects promptly to the facility manager."
+    },
+    "ttsText": "空調、機械、備品、内装を継続的に点検し、不具合があれば速やかに設備管理者へ報告します。"
+  },
+  {
+    "id": "ch05_028",
+    "chapter": 5,
+    "section": "5.4 設備管理",
+    "pdfPage": 74,
+    "tags": [
+      "rule",
+      "facility",
+      "high-yield"
+    ],
+    "prompt": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>から「<ruby>手<rt>て</rt></ruby>すりやスロープがほしい」などの<ruby>改善<rt>かいぜん</rt></ruby><ruby>要望<rt>ようぼう</rt></ruby>があったらどうしますか。",
+      "jaPlain": "お客様から「手すりやスロープがほしい」などの改善要望があったらどうしますか。",
+      "id": "Bagaimana penanganan jika tamu menyampaikan permintaan perbaikan fasilitas (seperti pegangan tangan atau jalur landai)?",
+      "en": "How should staff handle guest facility improvement requests such as handrails or ramps?"
+    },
+    "answer": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>からの<ruby>改善<rt>かいぜん</rt></ruby><ruby>要望<rt>ようぼう</rt></ruby>を<ruby>記録<rt>きろく</rt></ruby>し、<ruby>改善<rt>かいぜん</rt></ruby><ruby>案<rt>あん</rt></ruby>として<ruby>提案<rt>ていあん</rt></ruby>します。",
+      "jaPlain": "お客様からの改善要望を記録し、改善案として提案します。",
+      "id": "Catat dan usulkan permintaan perbaikan dari tamu (seperti handrail dan ramp).",
+      "en": "Record and propose guest improvement requests (handrails, ramps)."
+    },
+    "ttsText": "お客様からの改善要望を記録し、改善案として提案します。"
+  },
+  {
+    "id": "ch05_029",
+    "chapter": 5,
+    "section": "5.4 設備管理",
+    "pdfPage": 74,
+    "tags": [
+      "rule",
+      "facility",
+      "safety"
+    ],
+    "prompt": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>から<ruby>見<rt>み</rt></ruby>えない<ruby>場所<rt>ばしょ</rt></ruby>（バックヤード）はどのように<ruby>管理<rt>かんり</rt></ruby>しますか。",
+      "jaPlain": "お客様から見えない場所（バックヤード）はどのように管理しますか。",
+      "id": "Bagaimana area belakang (back-of-house) yang tidak terlihat oleh tamu harus dikelola?",
+      "en": "How should back-of-house (out-of-sight) areas be managed?"
+    },
+    "answer": {
+      "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>から<ruby>見<rt>み</rt></ruby>えない<ruby>場所<rt>ばしょ</rt></ruby>も<ruby>整理<rt>せいり</rt></ruby><ruby>整頓<rt>せいとん</rt></ruby>し、<ruby>安全<rt>あんぜん</rt></ruby>な<ruby>状態<rt>じょうたい</rt></ruby>を<ruby>保<rt>たも</rt></ruby>ちます。",
+      "jaPlain": "お客様から見えない場所も整理整頓し、安全な状態を保ちます。",
+      "id": "Jaga area belakang (yang tidak terlihat tamu) tetap tertata rapi dan aman.",
+      "en": "Keep back-of-house (out-of-sight) areas organized and safe."
+    },
+    "ttsText": "お客様から見えないバックヤードも整理整頓し、安全な状態を保ちます。",
+    "examTip": {
+      "id": "Area belakang yang berantakan sering memicu kebakaran (可燃物) atau menghambat jalur evakuasi darurat.",
+      "en": "Cluttered back-of-house spaces can trigger fire hazards or block emergency access."
+    }
+  },
+  {
+    "id": "ch05_030",
+    "chapter": 5,
+    "section": "5.5 環境対応・SDGs",
+    "pdfPage": 75,
+    "tags": [
+      "vocab",
+      "sdgs",
+      "high-yield"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>節電<rt>せつでん</rt></ruby>・<ruby>節水<rt>せっすい</rt></ruby>",
+      "jaPlain": "節電・節水",
+      "id": "Apa arti kedua istilah SDGs ini dalam operasional penginapan?",
+      "en": "What do these two environmental response / SDGs terms mean?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>節電<rt>せつでん</rt></ruby>は<ruby>電気<rt>でんき</rt></ruby>を<ruby>節約<rt>せつやく</rt></ruby>すること、<ruby>節水<rt>せっすい</rt></ruby>は<ruby>水<rt>みず</rt></ruby>を<ruby>節約<rt>せつやく</rt></ruby>することです。",
+      "jaPlain": "節電は電気を節約すること、節水は水を節約することです。",
+      "id": "節電 (setsuden) = menghemat listrik; 節水 (sessui) = menghemat air.",
+      "en": "節電 = conserve electricity; 節水 = conserve water."
+    },
+    "ttsText": "節電は電気を節約すること、節水は水を節約することです。"
+  },
+  {
+    "id": "ch05_031",
+    "chapter": 5,
+    "section": "5.5 環境対応・SDGs",
+    "pdfPage": 75,
+    "tags": [
+      "vocab",
+      "rule",
+      "sdgs"
+    ],
+    "prompt": {
+      "jaRuby": "ゴミの<ruby>分別<rt>ぶんべつ</rt></ruby>と<ruby>紙<rt>かみ</rt></ruby>の<ruby>無駄<rt>むだ</rt></ruby>について、<ruby>環境<rt>かんきょう</rt></ruby><ruby>対応<rt>たいおう</rt></ruby>では<ruby>何<rt>なに</rt></ruby>をしますか。",
+      "jaPlain": "ゴミの分別と紙の無駄について、環境対応では何をしますか。",
+      "id": "Dalam respons lingkungan dan SDGs, apa tindakan terkait sampah kertas dan pemilahan sampah (分別)?",
+      "en": "In environmental response / SDGs, what should be done regarding paper waste and garbage separation (分別)?"
+    },
+    "answer": {
+      "jaRuby": "<ruby>紙<rt>かみ</rt></ruby>の<ruby>無駄<rt>むだ</rt></ruby>をなくし、ゴミを<ruby>種類<rt>しゅるい</rt></ruby>ごとに<ruby>分別<rt>ぶんべつ</rt></ruby>します。",
+      "jaPlain": "紙の無駄をなくし、ゴミを種類ごとに分別します。",
+      "id": "Hilangkan pemborosan kertas dan pilah sampah sesuai jenisnya (分別).",
+      "en": "Eliminate paper waste and separate garbage (分別)."
+    },
+    "ttsText": "紙の無駄をなくし、ゴミを分別します。"
+  },
+  {
+    "id": "ch05_032",
+    "chapter": 5,
+    "section": "5.5 環境対応・SDGs",
+    "pdfPage": 75,
+    "tags": [
+      "rule",
+      "sdgs"
+    ],
+    "prompt": {
+      "jaRuby": "リサイクルや<ruby>省資源<rt>しょうしげん</rt></ruby>について、スタッフはどのような<ruby>行動<rt>こうどう</rt></ruby>をとりますか。",
+      "jaPlain": "リサイクルや省資源について、スタッフはどのような行動をとりますか。",
+      "id": "Apa yang sebaiknya dilakukan staf terkait daur ulang dan penghematan sumber daya?",
+      "en": "What action should staff take regarding recycling and resource-saving measures?"
+    },
+    "answer": {
+      "jaRuby": "リサイクルや<ruby>省資源<rt>しょうしげん</rt></ruby><ruby>対策<rt>たいさく</rt></ruby>を<ruby>上司<rt>じょうし</rt></ruby>に<ruby>提案<rt>ていあん</rt></ruby>します。",
+      "jaPlain": "リサイクルや省資源対策を上司に提案します。",
+      "id": "Mengusulkan langkah daur ulang dan penghematan sumber daya kepada atasan.",
+      "en": "Propose recycling and resource-saving measures to supervisors."
+    },
+    "ttsText": "リサイクルや省資源対策を上司に提案します。"
+  },
+  {
+    "id": "ch05_033",
+    "chapter": 5,
+    "section": "5.1 リスク理解と回避",
+    "pdfPage": 69,
+    "tags": [
+      "number",
+      "summary",
+      "safety",
+      "high-yield"
+    ],
+    "prompt": {
+      "jaRuby": "リスク<ruby>理解<rt>りかい</rt></ruby>と<ruby>回避<rt>かいひ</rt></ruby>の7つのポイントを<ruby>挙<rt>あ</rt></ruby>げてください。",
+      "jaPlain": "リスク理解と回避の7つのポイントを挙げてください。",
+      "id": "Sebutkan 7 poin utama Pemahaman dan Pencegahan Risiko (hal. 69-70)!",
+      "en": "List the 7 points of Risk Understanding & Avoidance (p.69-70)."
+    },
+    "answer": {
+      "jaRuby": "1. <ruby>避難<rt>ひなん</rt></ruby><ruby>訓練<rt>くんれん</rt></ruby>への<ruby>参加<rt>さんか</rt></ruby>、2. <ruby>火災<rt>かさい</rt></ruby><ruby>報知器<rt>ほうちき</rt></ruby>・<ruby>消火器<rt>しょうかき</rt></ruby>・<ruby>避難具<rt>ひなんぐ</rt></ruby>の<ruby>把握<rt>はあく</rt></ruby>、3. 2<ruby>方向<rt>ほうこう</rt></ruby><ruby>避難<rt>ひなん</rt></ruby>の<ruby>確認<rt>かくにん</rt></ruby>、4. <ruby>緊急時<rt>きんきゅうじ</rt></ruby>マニュアルの<ruby>理解<rt>りかい</rt></ruby>と<ruby>実行<rt>じっこう</rt></ruby>、5. <ruby>受診<rt>じゅしん</rt></ruby>を<ruby>勧<rt>すす</rt></ruby>める・119<ruby>番<rt>ばん</rt></ruby><ruby>通報<rt>つうほう</rt></ruby>、6. <ruby>感染症<rt>かんせんしょう</rt></ruby>への<ruby>理解<rt>りかい</rt></ruby>、7. <ruby>不審物<rt>ふしんぶつ</rt></ruby>・<ruby>不審<rt>ふしん</rt></ruby><ruby>人物<rt>じんぶつ</rt></ruby>への<ruby>警戒<rt>けいかい</rt></ruby>。",
+      "jaPlain": "1. 避難訓練への参加、2. 火災報知器・消火器・避難具の把握、3. 2方向避難の確認、4. 緊急時マニュアルの理解と実行、5. 受診を勧める・119番通報、6. 感染症への理解、7. 不審物・不審人物への警戒。",
+      "id": "1. Ikut latihan evakuasi, 2. Ketahui letak & pakai alarm/APAR/alat evakuasi, 3. Cek rute evakuasi 2 arah, 4. Pahami & jalankan manual darurat, 5. Anjurkan RS & telepon 119 (gejala/usia/gender), 6. Pahami penyakit menular, 7. Waspadai benda & orang mencurigakan.",
+      "en": "1. Evacuation drills, 2. Fire alarms/extinguishers/escape tools, 3. Two-way evacuation routes, 4. Emergency manual, 5. Medical visit & 119 call, 6. Infectious diseases, 7. Suspicious objects & persons."
+    },
+    "ttsText": "リスク理解と回避の7つのポイントは、避難訓練、防災設備の把握、2方向避難、緊急時マニュアル、119番通報、感染症への理解、不審物と不審人物への警戒です。"
+  },
+  {
+    "id": "ch05_034",
+    "chapter": 5,
+    "section": "5.3 衛生管理",
+    "pdfPage": 73,
+    "tags": [
+      "number",
+      "summary",
+      "hygiene",
+      "high-yield"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>衛生<rt>えいせい</rt></ruby><ruby>管理<rt>かんり</rt></ruby>の5つのポイントを<ruby>挙<rt>あ</rt></ruby>げてください。",
+      "jaPlain": "衛生管理の5つのポイントを挙げてください。",
+      "id": "Sebutkan 5 poin Manajemen Higienitas (hal. 73)!",
+      "en": "List the 5 points of Hygiene Management (p.73)."
+    },
+    "answer": {
+      "jaRuby": "1. <ruby>清潔<rt>せいけつ</rt></ruby>な<ruby>制服<rt>せいふく</rt></ruby>・<ruby>髪<rt>かみ</rt></ruby>・<ruby>爪<rt>つめ</rt></ruby>、2. こまめな<ruby>手洗<rt>てあら</rt></ruby>いとうがい、3. <ruby>強<rt>つよ</rt></ruby>い<ruby>香水<rt>こうすい</rt></ruby>をつけない、4. <ruby>外装<rt>がいそう</rt></ruby>・<ruby>内装<rt>ないそう</rt></ruby>の<ruby>点検<rt>てんけん</rt></ruby>と<ruby>即座<rt>そくざ</rt></ruby>の<ruby>清掃<rt>せいそう</rt></ruby>、5. <ruby>毎日<rt>まいにち</rt></ruby>の<ruby>温度<rt>おんど</rt></ruby>・<ruby>湿度<rt>しつど</rt></ruby><ruby>管理<rt>かんり</rt></ruby>（カビ・<ruby>害虫<rt>がいちゅう</rt></ruby><ruby>防止<rt>ぼうし</rt></ruby>）。",
+      "jaPlain": "1. 清潔な制服・髪・爪、2. こまめな手洗いとうがい、3. 強い香水をつけない、4. 外装・内装の点検と即座の清掃、5. 毎日の温度・湿度管理（カビ・害虫防止）。",
+      "id": "1. Seragam/rambut/kuku bersih, 2. Cuci tangan & berkumur rutin, 3. Tidak memakai parfum menyengat, 4. Cek & langsung bersihkan kotoran luar/dalam, 5. Pantau suhu & kelembapan harian untuk cegah jamur & hama.",
+      "en": "1. Clean uniform/hair/nails, 2. Regular handwashing & gargling, 3. No strong perfume, 4. Inspect & immediately clean exterior/interior dirt, 5. Monitor daily temp & humidity to prevent mold & pests."
+    },
+    "ttsText": "衛生管理の5つのポイントは、清潔な身だしなみ、手洗いとうがい、強い香水をつけないこと、外装と内装の即時清掃、温度と湿度の管理です。"
+  },
+  {
+    "id": "ch05_035",
+    "chapter": 5,
+    "section": "5.4 設備管理",
+    "pdfPage": 74,
+    "tags": [
+      "number",
+      "summary",
+      "facility",
+      "high-yield"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>設備<rt>せつび</rt></ruby><ruby>管理<rt>かんり</rt></ruby>の3つのポイントを<ruby>挙<rt>あ</rt></ruby>げてください。",
+      "jaPlain": "設備管理の3つのポイントを挙げてください。",
+      "id": "Sebutkan 3 poin Manajemen Fasilitas (hal. 74)!",
+      "en": "List the 3 points of Facility Management (p.74)."
+    },
+    "answer": {
+      "jaRuby": "1. <ruby>空調<rt>くうちょう</rt></ruby>・<ruby>機械<rt>きかい</rt></ruby>・<ruby>備品<rt>びひん</rt></ruby>・<ruby>内装<rt>ないそう</rt></ruby>の<ruby>点検<rt>てんけん</rt></ruby>と<ruby>設備<rt>せつび</rt></ruby><ruby>管理者<rt>かんりしゃ</rt></ruby>への<ruby>迅速<rt>じんそく</rt></ruby>な<ruby>報告<rt>ほうこく</rt></ruby>、2. <ruby>手<rt>て</rt></ruby>すりやスロープなど<ruby>改善<rt>かいぜん</rt></ruby><ruby>要望<rt>ようぼう</rt></ruby>の<ruby>記録<rt>きろく</rt></ruby>・<ruby>提案<rt>ていあん</rt></ruby>、3. <ruby>見<rt>み</rt></ruby>えない<ruby>場所<rt>ばしょ</rt></ruby>の<ruby>整理<rt>せいり</rt></ruby><ruby>整頓<rt>せいとん</rt></ruby>と<ruby>安全<rt>あんぜん</rt></ruby><ruby>確保<rt>かくほ</rt></ruby>。",
+      "jaPlain": "1. 空調・機械・備品・内装の点検と設備管理者への迅速な報告、2. 手すりやスロープなど改善要望の記録・提案、3. 見えない場所の整理整頓と安全確保。",
+      "id": "1. Inspeksi AC/mesin/perlengkapan/interior & lapor kerusakan ke pengelola fasilitas, 2. Catat & usulkan permintaan perbaikan tamu (handrail/ramp), 3. Jaga area belakang tetap rapi & aman.",
+      "en": "1. Inspect AC/machinery/fixtures/interior & report defects to facility manager, 2. Record & propose guest improvement requests (handrails/ramps), 3. Keep back-of-house areas organized & safe."
+    },
+    "ttsText": "設備管理の3つのポイントは、設備点検と迅速な報告、改善要望の記録と提案、見えない場所の整理整頓と安全確保です。"
+  },
+  {
+    "id": "ch05_036",
+    "chapter": 5,
+    "section": "5.5 環境対応・SDGs",
+    "pdfPage": 75,
+    "tags": [
+      "number",
+      "summary",
+      "sdgs",
+      "high-yield"
+    ],
+    "prompt": {
+      "jaRuby": "<ruby>環境<rt>かんきょう</rt></ruby><ruby>対応<rt>たいおう</rt></ruby>・SDGsの3つのポイントを<ruby>挙<rt>あ</rt></ruby>げてください。",
+      "jaPlain": "環境対応・SDGsの3つのポイントを挙げてください。",
+      "id": "Sebutkan 3 poin Respons Lingkungan dan SDGs (hal. 75)!",
+      "en": "List the 3 points of Environmental Response / SDGs (p.75)."
+    },
+    "answer": {
+      "jaRuby": "1. <ruby>節電<rt>せつでん</rt></ruby>と<ruby>節水<rt>せっすい</rt></ruby>、2. <ruby>紙<rt>かみ</rt></ruby>の<ruby>無駄<rt>むだ</rt></ruby>をなくしゴミを<ruby>分別<rt>ぶんべつ</rt></ruby>、3. リサイクルと<ruby>省資源<rt>しょうしげん</rt></ruby><ruby>対策<rt>たいさく</rt></ruby>を<ruby>上司<rt>じょうし</rt></ruby>へ<ruby>提案<rt>ていあん</rt></ruby>。",
+      "jaPlain": "1. 節電と節水、2. 紙の無駄をなくしゴミを分別、3. リサイクルと省資源対策を上司へ提案。",
+      "id": "1. Hemat listrik (節電) dan air (節水), 2. Hilangkan pemborosan kertas dan pilah sampah (分別), 3. Usulkan daur ulang dan penghematan sumber daya ke atasan.",
+      "en": "1. Conserve electricity and water, 2. Eliminate paper waste and separate garbage, 3. Propose recycling and resource-saving measures to supervisors."
+    },
+    "ttsText": "環境対応とSDGsの3つのポイントは、節電と節水、紙の無駄をなくしてゴミを分別すること、リサイクルと省資源対策を上司に提案することです。"
+  }
+]

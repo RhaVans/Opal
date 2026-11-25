@@ -1,0 +1,1071 @@
+{
+  "sequences": [
+    {
+      "id": "kaiseki",
+      "title": {
+        "jaRuby": "<ruby>懐石料理<rt>かいせきりょうり</rt></ruby>の<ruby>順番<rt>じゅんばん</rt></ruby>",
+        "jaPlain": "懐石料理の順番",
+        "id": "Urutan Hidangan Kaiseki Ryori (9 Tahap)",
+        "en": "Kaiseki Ryori Course Order (9 Steps)"
+      },
+      "pdfPage": 59,
+      "steps": [
+        {
+          "id": "kaiseki_1",
+          "order": 1,
+          "text": {
+            "jaRuby": "<ruby>前菜<rt>ぜんさい</rt></ruby>",
+            "jaPlain": "前菜",
+            "id": "Hidangan pembuka (Zensai)",
+            "en": "Appetizer (Zensai)"
+          }
+        },
+        {
+          "id": "kaiseki_2",
+          "order": 2,
+          "text": {
+            "jaRuby": "<ruby>碗盛<rt>わんもり</rt></ruby>",
+            "jaPlain": "碗盛",
+            "id": "Hidangan sup berkuah (Wanmori)",
+            "en": "Soup (Wanmori)"
+          }
+        },
+        {
+          "id": "kaiseki_3",
+          "order": 3,
+          "text": {
+            "jaRuby": "お<ruby>造<rt>つく</rt></ruby>り",
+            "jaPlain": "お造り",
+            "id": "Sashimi / ikan segar iris (Otsukuri)",
+            "en": "Sashimi (Otsukuri)"
+          }
+        },
+        {
+          "id": "kaiseki_4",
+          "order": 4,
+          "text": {
+            "jaRuby": "<ruby>焼<rt>や</rt></ruby>き<ruby>物<rt>もの</rt></ruby>",
+            "jaPlain": "焼き物",
+            "id": "Hidangan panggang (Yakimono)",
+            "en": "Grilled dish (Yakimono)"
+          }
+        },
+        {
+          "id": "kaiseki_5",
+          "order": 5,
+          "text": {
+            "jaRuby": "<ruby>煮物<rt>にもの</rt></ruby>",
+            "jaPlain": "煮物",
+            "id": "Hidangan rebus berbumbu (Nimono)",
+            "en": "Stewed dish (Nimono)"
+          }
+        },
+        {
+          "id": "kaiseki_6",
+          "order": 6,
+          "text": {
+            "jaRuby": "<ruby>揚物<rt>あげもの</rt></ruby>",
+            "jaPlain": "揚物",
+            "id": "Hidangan goreng (Agemono)",
+            "en": "Fried dish (Agemono)"
+          }
+        },
+        {
+          "id": "kaiseki_7",
+          "order": 7,
+          "text": {
+            "jaRuby": "<ruby>酢<rt>す</rt></ruby>の<ruby>物<rt>もの</rt></ruby>",
+            "jaPlain": "酢の物",
+            "id": "Hidangan cuka / asam segar (Sunomono)",
+            "en": "Vinegared/Pickled dish (Sunomono)"
+          }
+        },
+        {
+          "id": "kaiseki_8",
+          "order": 8,
+          "text": {
+            "jaRuby": "ごはん・<ruby>香<rt>こう</rt></ruby>の<ruby>物<rt>もの</rt></ruby>",
+            "jaPlain": "ごはん・香の物",
+            "id": "Nasi dan acar (Gohan & Konomono)",
+            "en": "Rice & pickles"
+          }
+        },
+        {
+          "id": "kaiseki_9",
+          "order": 9,
+          "text": {
+            "jaRuby": "<ruby>水菓子<rt>みずがし</rt></ruby>",
+            "jaPlain": "水菓子",
+            "id": "Hidangan penutup / buah (Mizugashi)",
+            "en": "Dessert (Mizugashi)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "western",
+      "title": {
+        "jaRuby": "<ruby>洋食<rt>ようしょく</rt></ruby>コースの<ruby>順番<rt>じゅんばん</rt></ruby>",
+        "jaPlain": "洋食コースの順番",
+        "id": "Urutan Kursus Masakan Barat (6 Tahap)",
+        "en": "Western Course Order (6 Steps)"
+      },
+      "pdfPage": 60,
+      "steps": [
+        {
+          "id": "western_1",
+          "order": 1,
+          "text": {
+            "jaRuby": "オードブル",
+            "jaPlain": "オードブル",
+            "id": "Hidangan pembuka (Hors d'oeuvre)",
+            "en": "Appetizer (Hors d'oeuvre)"
+          }
+        },
+        {
+          "id": "western_2",
+          "order": 2,
+          "text": {
+            "jaRuby": "スープ",
+            "jaPlain": "スープ",
+            "id": "Sup",
+            "en": "Soup"
+          }
+        },
+        {
+          "id": "western_3",
+          "order": 3,
+          "text": {
+            "jaRuby": "<ruby>魚料理<rt>さかなりょうり</rt></ruby>",
+            "jaPlain": "魚料理",
+            "id": "Hidangan ikan",
+            "en": "Fish dish"
+          }
+        },
+        {
+          "id": "western_4",
+          "order": 4,
+          "text": {
+            "jaRuby": "<ruby>肉料理<rt>にくりょうり</rt></ruby>",
+            "jaPlain": "肉料理",
+            "id": "Hidangan daging",
+            "en": "Meat dish"
+          }
+        },
+        {
+          "id": "western_5",
+          "order": 5,
+          "text": {
+            "jaRuby": "デザート",
+            "jaPlain": "デザート",
+            "id": "Hidangan penutup (Dessert)",
+            "en": "Dessert"
+          }
+        },
+        {
+          "id": "western_6",
+          "order": 6,
+          "text": {
+            "jaRuby": "コーヒー",
+            "jaPlain": "コーヒー",
+            "id": "Kopi",
+            "en": "Coffee"
+          }
+        }
+      ]
+    },
+    {
+      "id": "front_desk",
+      "title": {
+        "jaRuby": "フロントで<ruby>行<rt>おこな</rt></ruby>う4つの<ruby>業務<rt>ぎょうむ</rt></ruby>",
+        "jaPlain": "フロントで行う4つの業務",
+        "id": "4 Tugas Utama Front Desk",
+        "en": "Front Desk 4 Main Duties"
+      },
+      "pdfPage": 5,
+      "steps": [
+        {
+          "id": "front_desk_1",
+          "order": 1,
+          "text": {
+            "jaRuby": "<ruby>予約管理<rt>よやくかんり</rt></ruby>",
+            "jaPlain": "予約管理",
+            "id": "Manajemen reservasi",
+            "en": "Reservation Management"
+          }
+        },
+        {
+          "id": "front_desk_2",
+          "order": 2,
+          "text": {
+            "jaRuby": "チェックイン<ruby>業務<rt>ぎょうむ</rt></ruby>",
+            "jaPlain": "チェックイン業務",
+            "id": "Prosedur check-in",
+            "en": "Check-in Operations"
+          }
+        },
+        {
+          "id": "front_desk_3",
+          "order": 3,
+          "text": {
+            "jaRuby": "<ruby>館内<rt>かんない</rt></ruby>でのお<ruby>客様<rt>きゃくさま</rt></ruby><ruby>対応<rt>たいおう</rt></ruby>と<ruby>情報提供<rt>じょうほうていきょう</rt></ruby>",
+            "jaPlain": "館内でのお客様対応と情報提供",
+            "id": "Pelayanan tamu di dalam fasilitas dan penyediaan informasi",
+            "en": "In-house Guest Assistance & Info"
+          }
+        },
+        {
+          "id": "front_desk_4",
+          "order": 4,
+          "text": {
+            "jaRuby": "チェックアウト・<ruby>会計業務<rt>かいけいぎょうむ</rt></ruby>",
+            "jaPlain": "チェックアウト・会計業務",
+            "id": "Prosedur check-out dan pembayaran",
+            "en": "Check-out & Billing"
+          }
+        }
+      ]
+    },
+    {
+      "id": "complaint",
+      "title": {
+        "jaRuby": "クレーム<ruby>対応<rt>たいおう</rt></ruby>の3ステップ",
+        "jaPlain": "クレーム対応の3ステップ",
+        "id": "3 Langkah Penanganan Keluhan",
+        "en": "Complaint Handling 3 Steps"
+      },
+      "pdfPage": 50,
+      "steps": [
+        {
+          "id": "complaint_1",
+          "order": 1,
+          "text": {
+            "jaRuby": "<ruby>不快<rt>ふかい</rt></ruby>にさせたことをお<ruby>詫<rt>わ</rt></ruby>びする",
+            "jaPlain": "不快にさせたことをお詫びする",
+            "id": "Meminta maaf terlebih dahulu atas ketidaknyamanan tamu",
+            "en": "Apologize first for causing discomfort"
+          }
+        },
+        {
+          "id": "complaint_2",
+          "order": 2,
+          "text": {
+            "jaRuby": "クレームの<ruby>原因<rt>げんいん</rt></ruby>を<ruby>丁寧<rt>ていねい</rt></ruby>に<ruby>確認<rt>かくにん</rt></ruby>する",
+            "jaPlain": "クレームの原因を丁寧に確認する",
+            "id": "Memastikan penyebab keluhan secara sopan dan cermat",
+            "en": "Carefully identify the root cause of the complaint"
+          }
+        },
+        {
+          "id": "complaint_3",
+          "order": 3,
+          "text": {
+            "jaRuby": "<ruby>責任者<rt>せきにんしゃ</rt></ruby>に<ruby>報告<rt>ほうこく</rt></ruby>する",
+            "jaPlain": "責任者に報告する",
+            "id": "Melaporkan kepada atasan atau penanggung jawab",
+            "en": "Report to the supervisor"
+          }
+        }
+      ]
+    }
+  ],
+  "washokuZones": [
+    {
+      "id": "front_left",
+      "number": 1,
+      "positionLabel": {
+        "id": "Depan Kiri",
+        "en": "Front-Left"
+      },
+      "x": 24,
+      "y": 118,
+      "w": 128,
+      "h": 82
+    },
+    {
+      "id": "front_right",
+      "number": 2,
+      "positionLabel": {
+        "id": "Depan Kanan",
+        "en": "Front-Right"
+      },
+      "x": 168,
+      "y": 118,
+      "w": 128,
+      "h": 82
+    },
+    {
+      "id": "rear_left",
+      "number": 3,
+      "positionLabel": {
+        "id": "Belakang Kiri",
+        "en": "Rear-Left"
+      },
+      "x": 24,
+      "y": 20,
+      "w": 128,
+      "h": 82
+    },
+    {
+      "id": "rear_right",
+      "number": 4,
+      "positionLabel": {
+        "id": "Belakang Kanan",
+        "en": "Rear-Right"
+      },
+      "x": 168,
+      "y": 20,
+      "w": 128,
+      "h": 82
+    }
+  ],
+  "washokuItems": [
+    {
+      "id": "washoku_rice",
+      "zoneId": "front_left",
+      "label": {
+        "jaRuby": "ご<ruby>飯<rt>はん</rt></ruby>",
+        "jaPlain": "ご飯",
+        "id": "Nasi",
+        "en": "Rice"
+      }
+    },
+    {
+      "id": "washoku_soup",
+      "zoneId": "front_right",
+      "label": {
+        "jaRuby": "<ruby>汁<rt>しる</rt></ruby>",
+        "jaPlain": "汁",
+        "id": "Sup",
+        "en": "Soup"
+      }
+    },
+    {
+      "id": "washoku_side",
+      "zoneId": "rear_left",
+      "label": {
+        "jaRuby": "<ruby>副菜<rt>ふくさい</rt></ruby>",
+        "jaPlain": "副菜",
+        "id": "Lauk pendamping",
+        "en": "Side Dish"
+      }
+    },
+    {
+      "id": "washoku_main",
+      "zoneId": "rear_right",
+      "label": {
+        "jaRuby": "<ruby>主菜<rt>しゅさい</rt></ruby>",
+        "jaPlain": "主菜",
+        "id": "Lauk utama",
+        "en": "Main Dish"
+      }
+    }
+  ],
+  "westernZones": [
+    {
+      "id": "left",
+      "number": 1,
+      "positionLabel": {
+        "id": "Kiri Piring",
+        "en": "Left of Plate"
+      },
+      "x": 18,
+      "y": 76,
+      "w": 72,
+      "h": 112
+    },
+    {
+      "id": "right",
+      "number": 2,
+      "positionLabel": {
+        "id": "Kanan Piring",
+        "en": "Right of Plate"
+      },
+      "x": 230,
+      "y": 76,
+      "w": 72,
+      "h": 112
+    },
+    {
+      "id": "top",
+      "number": 3,
+      "positionLabel": {
+        "id": "Atas Piring",
+        "en": "Top of Plate"
+      },
+      "x": 102,
+      "y": 16,
+      "w": 116,
+      "h": 44
+    },
+    {
+      "id": "top_left",
+      "number": 4,
+      "positionLabel": {
+        "id": "Kiri Atas Piring",
+        "en": "Top-Left of Plate"
+      },
+      "x": 18,
+      "y": 16,
+      "w": 72,
+      "h": 48
+    }
+  ],
+  "westernItems": [
+    {
+      "id": "western_fork",
+      "zoneId": "left",
+      "label": {
+        "jaRuby": "フォーク",
+        "jaPlain": "フォーク",
+        "id": "Garpu",
+        "en": "Fork"
+      }
+    },
+    {
+      "id": "western_knife_spoon",
+      "zoneId": "right",
+      "label": {
+        "jaRuby": "ナイフ・スプーン",
+        "jaPlain": "ナイフ・スプーン",
+        "id": "Pisau & Sendok",
+        "en": "Knife & Spoon"
+      }
+    },
+    {
+      "id": "western_dessert_cutlery",
+      "zoneId": "top",
+      "label": {
+        "jaRuby": "デザートフォーク・スプーン",
+        "jaPlain": "デザートフォーク・スプーン",
+        "id": "Garpu / Sendok Penutup",
+        "en": "Dessert Fork / Spoon"
+      }
+    },
+    {
+      "id": "western_bread_plate",
+      "zoneId": "top_left",
+      "label": {
+        "jaRuby": "パン<ruby>皿<rt>ざら</rt></ruby>",
+        "jaPlain": "パン皿",
+        "id": "Piring Roti",
+        "en": "Bread Plate"
+      }
+    }
+  ],
+  "etiquetteRules": [
+    {
+      "id": "etq_01",
+      "question": {
+        "jaRuby": "<ruby>洋食<rt>ようしょく</rt></ruby>サービスで<ruby>料理<rt>りょうり</rt></ruby>を<ruby>提供<rt>ていきょう</rt></ruby>する<ruby>際<rt>さい</rt></ruby>、どちらから<ruby>提供<rt>ていきょう</rt></ruby>するのが<ruby>基本<rt>きほん</rt></ruby>ですか。",
+        "jaPlain": "洋食サービスで料理を提供する際、どちらから提供するのが基本ですか。",
+        "id": "Dalam layanan hidangan Barat, dari sisi mana makanan umumnya disajikan?",
+        "en": "In Western dining service, from which side should food be served?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "text": {
+            "jaRuby": "<ruby>左側<rt>ひだりがわ</rt></ruby>",
+            "jaPlain": "左側",
+            "id": "Dari sisi kiri tamu",
+            "en": "From the left"
+          }
+        },
+        {
+          "key": "B",
+          "text": {
+            "jaRuby": "<ruby>右側<rt>みぎがわ</rt></ruby>",
+            "jaPlain": "右側",
+            "id": "Dari sisi kanan tamu",
+            "en": "From the right"
+          }
+        },
+        {
+          "key": "C",
+          "text": {
+            "jaRuby": "<ruby>正面<rt>しょうめん</rt></ruby>",
+            "jaPlain": "正面",
+            "id": "Dari depan tamu",
+            "en": "From the front"
+          }
+        },
+        {
+          "key": "D",
+          "text": {
+            "jaRuby": "どちらでもよい",
+            "jaPlain": "どちらでもよい",
+            "id": "Bebas dari sisi mana saja",
+            "en": "Either side is fine"
+          }
+        }
+      ],
+      "correctKey": "A",
+      "explanation": {
+        "jaRuby": "<ruby>洋食<rt>ようしょく</rt></ruby>の<ruby>基本<rt>きほん</rt></ruby>ルールでは、<ruby>料理<rt>りょうり</rt></ruby>はお<ruby>客様<rt>きゃくさま</rt></ruby>の<ruby>左側<rt>ひだりがわ</rt></ruby>から<ruby>提供<rt>ていきょう</rt></ruby>します。",
+        "jaPlain": "洋食の基本ルールでは、料理はお客様の左側から提供します。",
+        "id": "Aturan dasar layanan Barat: makanan disajikan dari sisi kiri tamu.",
+        "en": "Serve Western food from the left side of the guest."
+      },
+      "pdfPage": 56
+    },
+    {
+      "id": "etq_02",
+      "question": {
+        "jaRuby": "<ruby>洋食<rt>ようしょく</rt></ruby>サービスで<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>を<ruby>提供<rt>ていきょう</rt></ruby>する<ruby>際<rt>さい</rt></ruby>、どの<ruby>方向<rt>ほうこう</rt></ruby>から<ruby>提供<rt>ていきょう</rt></ruby>しますか。",
+        "jaPlain": "洋食サービスで飲み物を提供する際、どの方向から提供しますか。",
+        "id": "Dalam layanan hidangan Barat, dari sisi mana minuman disajikan?",
+        "en": "In Western dining service, from which side should drinks be served?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "text": {
+            "jaRuby": "<ruby>左側<rt>ひだりがわ</rt></ruby>",
+            "jaPlain": "左側",
+            "id": "Dari sisi kiri",
+            "en": "From the left"
+          }
+        },
+        {
+          "key": "B",
+          "text": {
+            "jaRuby": "<ruby>右側<rt>みぎがわ</rt></ruby>",
+            "jaPlain": "右側",
+            "id": "Dari sisi kanan",
+            "en": "From the right"
+          }
+        },
+        {
+          "key": "C",
+          "text": {
+            "jaRuby": "<ruby>後方<rt>こうほう</rt></ruby>",
+            "jaPlain": "後方",
+            "id": "Dari arah belakang",
+            "en": "From behind"
+          }
+        },
+        {
+          "key": "D",
+          "text": {
+            "jaRuby": "テーブルの<ruby>端<rt>はし</rt></ruby>",
+            "jaPlain": "テーブルの端",
+            "id": "Dari ujung meja",
+            "en": "From the table edge"
+          }
+        }
+      ],
+      "correctKey": "B",
+      "explanation": {
+        "jaRuby": "<ruby>料理<rt>りょうり</rt></ruby>は<ruby>左側<rt>ひだりがわ</rt></ruby>から、<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>はお<ruby>客様<rt>きゃくさま</rt></ruby>の<ruby>右側<rt>みぎがわ</rt></ruby>から<ruby>提供<rt>ていきょう</rt></ruby>するのが<ruby>基本<rt>きほん</rt></ruby>です。",
+        "jaPlain": "料理は左側から、飲み物はお客様の右側から提供するのが基本です。",
+        "id": "Makanan disajikan dari sisi kiri, sedangkan minuman disajikan dari sisi kanan tamu.",
+        "en": "Serve Western food from the left, and serve drinks from the right."
+      },
+      "pdfPage": 56
+    },
+    {
+      "id": "etq_03",
+      "question": {
+        "jaRuby": "<ruby>洋食<rt>ようしょく</rt></ruby>のコース<ruby>料理<rt>りょうり</rt></ruby>で、カトラリー（ナイフ・フォーク）を<ruby>使<rt>つか</rt></ruby>う<ruby>正<rt>ただ</rt></ruby>しい<ruby>順番<rt>じゅんばん</rt></ruby>はどれですか。",
+        "jaPlain": "洋食のコース料理で、カトラリー（ナイフ・フォーク）を使う正しい順番はどれですか。",
+        "id": "Pada jamuan kursus Barat, bagaimana urutan yang benar menggunakan alat makan (pisau dan garpu)?",
+        "en": "In a Western course meal, what is the correct order for using cutlery?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "text": {
+            "jaRuby": "<ruby>内側<rt>うちがわ</rt></ruby>から<ruby>外側<rt>そとがわ</rt></ruby>へ",
+            "jaPlain": "内側から外側へ",
+            "id": "Dari dalam ke luar",
+            "en": "Inside-out"
+          }
+        },
+        {
+          "key": "B",
+          "text": {
+            "jaRuby": "<ruby>外側<rt>そとがわ</rt></ruby>から<ruby>内側<rt>うちがわ</rt></ruby>へ",
+            "jaPlain": "外側から内側へ",
+            "id": "Dari luar ke dalam",
+            "en": "Outside-in"
+          }
+        },
+        {
+          "key": "C",
+          "text": {
+            "jaRuby": "<ruby>大<rt>おお</rt></ruby>きいものから<ruby>順<rt>じゅん</rt></ruby>",
+            "jaPlain": "大きいものから順",
+            "id": "Mulai dari ukuran terbesar",
+            "en": "Largest to smallest"
+          }
+        },
+        {
+          "key": "D",
+          "text": {
+            "jaRuby": "フォークを<ruby>先<rt>さき</rt></ruby>に<ruby>全<rt>すべ</rt></ruby>て<ruby>使<rt>つか</rt></ruby>う",
+            "jaPlain": "フォークを先に全て使う",
+            "id": "Menggunakan semua garpu lebih dulu",
+            "en": "Use all forks first"
+          }
+        }
+      ],
+      "correctKey": "B",
+      "explanation": {
+        "jaRuby": "コースの<ruby>進行<rt>しんこう</rt></ruby>に<ruby>合<rt>あ</rt></ruby>わせて、<ruby>外側<rt>そとがわ</rt></ruby>に<ruby>置<rt>お</rt></ruby>かれたカトラリーから<ruby>内側<rt>うちがわ</rt></ruby>へと<ruby>順番<rt>じゅんばん</rt></ruby>に<ruby>使<rt>つか</rt></ruby>います。",
+        "jaPlain": "コースの進行に合わせて、外側に置かれたカトラリーから内側へと順番に使います。",
+        "id": "Seiring jalannya hidangan kursus, alat makan digunakan berurutan dari sisi luar ke dalam.",
+        "en": "Cutlery is used from the outside-in as each course is served."
+      },
+      "pdfPage": 61
+    },
+    {
+      "id": "etq_04",
+      "question": {
+        "jaRuby": "<ruby>洋食<rt>ようしょく</rt></ruby>の<ruby>食事中<rt>しょくじちゅう</rt></ruby>に<ruby>一時的<rt>いちじてき</rt></ruby>に<ruby>手<rt>て</rt></ruby>を<ruby>休<rt>やす</rt></ruby>める<ruby>場合<rt>ばあい</rt></ruby>、ナイフとフォークの<ruby>置<rt>お</rt></ruby>き<ruby>方<rt>かた</rt></ruby>はどれですか。",
+        "jaPlain": "洋食の食事中に一時的に手を休める場合、ナイフとフォークの置き方はどれですか。",
+        "id": "Saat beristirahat sejenak di tengah makan hidangan Barat, bagaimana posisi meletakkan pisau dan garpu?",
+        "en": "When resting mid-meal during Western dining, how should the knife and fork be placed?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "text": {
+            "jaRuby": "お<ruby>皿<rt>さら</rt></ruby>の<ruby>右下<rt>みぎした</rt></ruby>にそろえて<ruby>置<rt>お</rt></ruby>く",
+            "jaPlain": "お皿の右下にそろえて置く",
+            "id": "Sejajar di kanan bawah piring",
+            "en": "Aligned together at bottom-right"
+          }
+        },
+        {
+          "key": "B",
+          "text": {
+            "jaRuby": "テーブルクロスの<ruby>上<rt>うえ</rt></ruby>に<ruby>置<rt>お</rt></ruby>く",
+            "jaPlain": "テーブルクロスの上に置く",
+            "id": "Diletakkan di atas taplak meja",
+            "en": "Placed directly on the tablecloth"
+          }
+        },
+        {
+          "key": "C",
+          "text": {
+            "jaRuby": "お<ruby>皿<rt>さら</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>で<ruby>八<rt>はち</rt></ruby>の<ruby>字<rt>じ</rt></ruby>に<ruby>置<rt>お</rt></ruby>く",
+            "jaPlain": "お皿の上で八の字に置く",
+            "id": "Membentuk sudut V terbalik (Hachi no ji) di atas piring",
+            "en": "V-shape (Hachi no ji) on the plate"
+          }
+        },
+        {
+          "key": "D",
+          "text": {
+            "jaRuby": "お<ruby>皿<rt>さら</rt></ruby>の<ruby>左上<rt>ひだりうえ</rt></ruby>に<ruby>交差<rt>こうさ</rt></ruby>して<ruby>置<rt>お</rt></ruby>く",
+            "jaPlain": "お皿の左上に交差して置く",
+            "id": "Menyilang di kiri atas piring",
+            "en": "Crossed at top-left of plate"
+          }
+        }
+      ],
+      "correctKey": "C",
+      "explanation": {
+        "jaRuby": "<ruby>食事中<rt>しょくじちゅう</rt></ruby>に<ruby>休<rt>やす</rt></ruby>むときは、お<ruby>皿<rt>さら</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>で<ruby>八<rt>はち</rt></ruby>の<ruby>字<rt>じ</rt></ruby>（V<ruby>字<rt>じ</rt></ruby>）にして<ruby>置<rt>お</rt></ruby>きます。",
+        "jaPlain": "食事中に休むときは、お皿の上で八の字（V字）にして置きます。",
+        "id": "Saat jeda di tengah makan, letakkan pisau dan garpu membentuk Hachi no ji (V-shape) di atas piring.",
+        "en": "For a mid-meal pause, rest cutlery in a V-shape (Hachi no ji) on the plate."
+      },
+      "pdfPage": 61
+    },
+    {
+      "id": "etq_05",
+      "question": {
+        "jaRuby": "<ruby>食事<rt>しょくじ</rt></ruby>が<ruby>終<rt>お</rt></ruby>わった<ruby>合図<rt>あいず</rt></ruby>として、ナイフとフォークをお<ruby>皿<rt>さら</rt></ruby>のどこにそろえて<ruby>置<rt>お</rt></ruby>きますか。",
+        "jaPlain": "食事が終わった合図として、ナイフとフォークをお皿のどこにそろえて置きますか。",
+        "id": "Sebagai tanda selesai makan, bagaimana pisau dan garpu diletakkan di atas piring?",
+        "en": "As a signal that the meal is finished, where should the knife and fork be placed on the plate?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "text": {
+            "jaRuby": "<ruby>八<rt>はち</rt></ruby>の<ruby>字<rt>じ</rt></ruby>に<ruby>広<rt>ひろ</rt></ruby>げて<ruby>置<rt>お</rt></ruby>く",
+            "jaPlain": "八の字に広げて置く",
+            "id": "Terbuka membentuk Hachi no ji",
+            "en": "Spread in a V-shape"
+          }
+        },
+        {
+          "key": "B",
+          "text": {
+            "jaRuby": "お<ruby>皿<rt>さら</rt></ruby>の<ruby>左上<rt>ひだりうえ</rt></ruby>にそろえる",
+            "jaPlain": "お皿の左上にそろえる",
+            "id": "Sejajar di kiri atas piring",
+            "en": "Aligned at top-left"
+          }
+        },
+        {
+          "key": "C",
+          "text": {
+            "jaRuby": "お<ruby>皿<rt>さら</rt></ruby>の<ruby>中央<rt>ちゅうおう</rt></ruby>に<ruby>縦<rt>たて</rt></ruby>に<ruby>並<rt>なら</rt></ruby>べる",
+            "jaPlain": "お皿の中央に縦に並べる",
+            "id": "Sejajar vertikal di tengah piring",
+            "en": "Vertically in the center"
+          }
+        },
+        {
+          "key": "D",
+          "text": {
+            "jaRuby": "お<ruby>皿<rt>さら</rt></ruby>の<ruby>右下<rt>みぎした</rt></ruby>にそろえて<ruby>置<rt>お</rt></ruby>く",
+            "jaPlain": "お皿の右下にそろえて置く",
+            "id": "Sejajar bersama di kanan bawah piring",
+            "en": "Aligned together at bottom-right"
+          }
+        }
+      ],
+      "correctKey": "D",
+      "explanation": {
+        "jaRuby": "<ruby>食事終了<rt>しょくじしゅうりょう</rt></ruby>の<ruby>合図<rt>あいず</rt></ruby>は、ナイフとフォークをお<ruby>皿<rt>さら</rt></ruby>の<ruby>右下<rt>みぎした</rt></ruby>にそろえて<ruby>置<rt>お</rt></ruby>きます。",
+        "jaPlain": "食事終了の合図は、ナイフとフォークをお皿の右下にそろえて置きます。",
+        "id": "Tanda selesai makan ditunjukkan dengan menyusun pisau dan garpu sejajar di kanan bawah piring.",
+        "en": "When finished, align the knife and fork together at the bottom-right of the plate."
+      },
+      "pdfPage": 61
+    },
+    {
+      "id": "etq_06",
+      "question": {
+        "jaRuby": "グラスをお<ruby>客様<rt>きゃくさま</rt></ruby>に<ruby>提供<rt>ていきょう</rt></ruby>する<ruby>際<rt>さい</rt></ruby>の<ruby>正<rt>ただ</rt></ruby>しい<ruby>扱<rt>あつか</rt></ruby>い<ruby>方<rt>かた</rt></ruby>はどれですか。",
+        "jaPlain": "グラスをお客様に提供する際の正しい扱い方はどれですか。",
+        "id": "Bagaimana cara yang benar memegang dan meletakkan gelas saat menyajikan minuman kepada tamu?",
+        "en": "What is the proper way to handle and place a glass when serving a guest?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "text": {
+            "jaRuby": "<ruby>飲<rt>の</rt></ruby>み<ruby>口<rt>くち</rt></ruby>を<ruby>持<rt>も</rt></ruby>ち、<ruby>音<rt>おと</rt></ruby>を<ruby>立<rt>た</rt></ruby>てて<ruby>置<rt>お</rt></ruby>く",
+            "jaPlain": "飲み口を持ち、音を立てて置く",
+            "id": "Pegang bibir gelas dan letakkan cepat",
+            "en": "Hold the rim and set down audibly"
+          }
+        },
+        {
+          "key": "B",
+          "text": {
+            "jaRuby": "グラスの<ruby>上部<rt>じょうぶ</rt></ruby>を<ruby>持<rt>も</rt></ruby>ち、<ruby>正面<rt>しょうめん</rt></ruby>から<ruby>置<rt>お</rt></ruby>く",
+            "jaPlain": "グラスの上部を持ち、正面から置く",
+            "id": "Pegang bagian atas gelas dari depan",
+            "en": "Hold the upper half from the front"
+          }
+        },
+        {
+          "key": "C",
+          "text": {
+            "jaRuby": "グラスの<ruby>下半分<rt>したはんぶん</rt></ruby>を<ruby>持<rt>も</rt></ruby>ち、<ruby>音<rt>おと</rt></ruby>を<ruby>立<rt>た</rt></ruby>てずに<ruby>置<rt>お</rt></ruby>く",
+            "jaPlain": "グラスの下半分を持ち、音を立てずに置く",
+            "id": "Pegang bagian setengah bawah gelas dan letakkan tanpa suara",
+            "en": "Hold by the bottom half and place silently"
+          }
+        },
+        {
+          "key": "D",
+          "text": {
+            "jaRuby": "<ruby>親指<rt>おやゆび</rt></ruby>をグラスの<ruby>縁<rt>ふち</rt></ruby>に<ruby>掛<rt>か</rt></ruby>けて<ruby>運<rt>はこ</rt></ruby>ぶ",
+            "jaPlain": "親指をグラスの縁に掛けて運ぶ",
+            "id": "Mengaitkan ibu jari pada tepi gelas",
+            "en": "Hook thumb over the rim while carrying"
+          }
+        }
+      ],
+      "correctKey": "C",
+      "explanation": {
+        "jaRuby": "<ruby>衛生面<rt>えいせいめん</rt></ruby>のため<ruby>飲<rt>の</rt></ruby>み<ruby>口<rt>くち</rt></ruby>には<ruby>触<rt>ふ</rt></ruby>れず、グラスの<ruby>下半分<rt>したはんぶん</rt></ruby>を<ruby>持<rt>も</rt></ruby>って<ruby>音<rt>おと</rt></ruby>を<ruby>立<rt>た</rt></ruby>てずに<ruby>置<rt>お</rt></ruby>きます。",
+        "jaPlain": "衛生面のため飲み口には触れず、グラスの下半分を持って音を立てずに置きます。",
+        "id": "Jangan menyentuh bibir gelas; pegang setengah bagian bawah dan letakkan di meja tanpa suara.",
+        "en": "Hold glasses by the bottom half (never touch the rim) and place on the table silently."
+      },
+      "pdfPage": 56
+    }
+  ],
+  "ojigiScenarios": [
+    {
+      "id": "ojigi_01",
+      "angle": "15",
+      "scenario": {
+        "jaRuby": "<ruby>廊下<rt>ろうか</rt></ruby>でお<ruby>客様<rt>きゃくさま</rt></ruby>とすれ<ruby>違<rt>ちが</rt></ruby>うとき（<ruby>立<rt>た</rt></ruby>ち<ruby>止<rt>ど</rt></ruby>まって<ruby>挨拶<rt>あいさつ</rt></ruby>）",
+        "jaPlain": "廊下でお客様とすれ違うとき（立ち止まって挨拶）",
+        "id": "Saat berpapasan dengan tamu di koridor (berhenti sejenak dan memberi salam)",
+        "en": "Passing by a guest in a hallway (stopping to greet)"
+      },
+      "pdfPage": 46
+    },
+    {
+      "id": "ojigi_02",
+      "angle": "15",
+      "scenario": {
+        "jaRuby": "レストランのテーブルへ<ruby>近<rt>ちか</rt></ruby>づくとき・<ruby>離<rt>はな</rt></ruby>れるとき",
+        "jaPlain": "レストランのテーブルへ近づくとき・離れるとき",
+        "id": "Saat mendekati atau meninggalkan meja tamu di restoran",
+        "en": "Approaching or leaving a dining table"
+      },
+      "pdfPage": 42
+    },
+    {
+      "id": "ojigi_03",
+      "angle": "15",
+      "scenario": {
+        "jaRuby": "<ruby>客室<rt>きゃくしつ</rt></ruby>へ<ruby>入退室<rt>にゅうたいしつ</rt></ruby>するとき（「<ruby>失礼<rt>しつれい</rt></ruby>します」）",
+        "jaPlain": "客室へ入退室するとき（「失礼します」）",
+        "id": "Saat masuk atau keluar kamar tamu (Shitsurei shimasu)",
+        "en": "Entering or leaving a guest room (Shitsurei shimasu)"
+      },
+      "pdfPage": 42
+    },
+    {
+      "id": "ojigi_04",
+      "angle": "30",
+      "scenario": {
+        "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>をお<ruby>迎<rt>むか</rt></ruby>えするとき（「いらっしゃいませ」）",
+        "jaPlain": "お客様をお迎えするとき（「いらっしゃいませ」）",
+        "id": "Saat menyambut kedatangan tamu (Irasshaimase)",
+        "en": "Welcoming arriving guests (Irasshaimase)"
+      },
+      "pdfPage": 42
+    },
+    {
+      "id": "ojigi_05",
+      "angle": "30",
+      "scenario": {
+        "jaRuby": "<ruby>日常<rt>にちじょう</rt></ruby>の<ruby>接客<rt>せっきゃく</rt></ruby>で<ruby>最<rt>もっと</rt></ruby>も<ruby>多<rt>おお</rt></ruby>く<ruby>使<rt>つか</rt></ruby>う<ruby>基本<rt>きほん</rt></ruby>のお<ruby>辞儀<rt>じぎ</rt></ruby>",
+        "jaPlain": "日常の接客で最も多く使う基本のお辞儀",
+        "id": "Membungkuk standar yang paling sering digunakan dalam pelayanan sehari-hari",
+        "en": "Most common daily service bow"
+      },
+      "pdfPage": 42
+    },
+    {
+      "id": "ojigi_06",
+      "angle": "30",
+      "scenario": {
+        "jaRuby": "フロントでチェックイン<ruby>時<rt>じ</rt></ruby>にお<ruby>客様<rt>きゃくさま</rt></ruby>へ<ruby>挨拶<rt>あいさつ</rt></ruby>するとき",
+        "jaPlain": "フロントでチェックイン時にお客様へ挨拶するとき",
+        "id": "Saat menyapa tamu ketika melayani check-in di front desk",
+        "en": "Greeting a guest at front desk check-in"
+      },
+      "pdfPage": 42
+    },
+    {
+      "id": "ojigi_07",
+      "angle": "45",
+      "scenario": {
+        "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>のお<ruby>見送<rt>みおく</rt></ruby>りをする<ruby>場面<rt>ばめん</rt></ruby>",
+        "jaPlain": "お客様のお見送りをする場面",
+        "id": "Saat mengantar dan melepas kepulangan tamu (Miokuri)",
+        "en": "Seeing guests off at departure (Miokuri)"
+      },
+      "pdfPage": 43
+    },
+    {
+      "id": "ojigi_08",
+      "angle": "45",
+      "scenario": {
+        "jaRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>へ<ruby>深<rt>ふか</rt></ruby>くお<ruby>詫<rt>わ</rt></ruby>びをするとき（「<ruby>申<rt>もう</rt></ruby>し<ruby>訳<rt>わけ</rt></ruby>ございません」）",
+        "jaPlain": "お客様へ深くお詫びをするとき（「申し訳ございません」）",
+        "id": "Saat menyampaikan permohonan maaf mendalam kepada tamu (Owabi)",
+        "en": "Apologizing sincerely to a guest (Owabi)"
+      },
+      "pdfPage": 43
+    },
+    {
+      "id": "ojigi_09",
+      "angle": "45",
+      "scenario": {
+        "jaRuby": "<ruby>特別<rt>とくべつ</rt></ruby>な<ruby>感謝<rt>かんしゃ</rt></ruby>や<ruby>最大級<rt>さいだいきゅう</rt></ruby>の<ruby>敬意<rt>けいい</rt></ruby>を<ruby>表<rt>あらわ</rt></ruby>すとき",
+        "jaPlain": "特別な感謝や最大級の敬意を表すとき",
+        "id": "Saat mengungkapkan terima kasih khusus atau rasa hormat tertinggi",
+        "en": "Expressing special gratitude or highest respect"
+      },
+      "pdfPage": 43
+    }
+  ],
+  "keigoItems": [
+    {
+      "id": "keigo_01",
+      "category": "sonkeigo",
+      "phrase": {
+        "jaRuby": "いらっしゃる",
+        "jaPlain": "いらっしゃる",
+        "id": "Ada / Datang / Pergi (bentuk hormat)",
+        "en": "To be / come / go (respectful)"
+      },
+      "note": {
+        "id": "Sonkeigo dari いる, 来る, atau 行く untuk menghormati tamu.",
+        "en": "Sonkeigo (respectful) for iru, kuru, or iku, elevating the guest."
+      },
+      "pdfPage": 44
+    },
+    {
+      "id": "keigo_02",
+      "category": "sonkeigo",
+      "phrase": {
+        "jaRuby": "<ruby>行<rt>い</rt></ruby>かれる",
+        "jaPlain": "行かれる",
+        "id": "Pergi (bentuk hormat)",
+        "en": "To go (respectful)"
+      },
+      "note": {
+        "id": "Sonkeigo dari 行く yang digunakan untuk pergerakan tamu.",
+        "en": "Sonkeigo (respectful) form of iku for a guest's movement."
+      },
+      "pdfPage": 44
+    },
+    {
+      "id": "keigo_03",
+      "category": "sonkeigo",
+      "phrase": {
+        "jaRuby": "お<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がりになる",
+        "jaPlain": "お召し上がりになる",
+        "id": "Makan / Minum (bentuk hormat)",
+        "en": "To eat / drink (respectful)"
+      },
+      "note": {
+        "id": "Sonkeigo dari 食べる / 飲む untuk tindakan makan atau minum tamu.",
+        "en": "Sonkeigo (respectful) for taberu / nomu when referring to a guest."
+      },
+      "pdfPage": 45
+    },
+    {
+      "id": "keigo_04",
+      "category": "sonkeigo",
+      "phrase": {
+        "jaRuby": "ご<ruby>覧<rt>らん</rt></ruby>になる",
+        "jaPlain": "ご覧になる",
+        "id": "Melihat (bentuk hormat)",
+        "en": "To see / look at (respectful)"
+      },
+      "note": {
+        "id": "Sonkeigo dari 見る ketika tamu melihat menu atau fasilitas.",
+        "en": "Sonkeigo (respectful) for miru when a guest looks at something."
+      },
+      "pdfPage": 45
+    },
+    {
+      "id": "keigo_05",
+      "category": "kenjougo",
+      "phrase": {
+        "jaRuby": "<ruby>申<rt>もう</rt></ruby>し<ruby>上<rt>あ</rt></ruby>げる",
+        "jaPlain": "申し上げる",
+        "id": "Mengatakan / Menyampaikan (bentuk merendah)",
+        "en": "To say / tell (humble)"
+      },
+      "note": {
+        "id": "Kenjougo dari 言う dengan merendahkan diri untuk meninggikan tamu.",
+        "en": "Kenjougo (humble) for iu, lowering self to elevate the listener."
+      },
+      "pdfPage": 45
+    },
+    {
+      "id": "keigo_06",
+      "category": "kenjougo",
+      "phrase": {
+        "jaRuby": "<ruby>伺<rt>うかが</rt></ruby>う",
+        "jaPlain": "伺う",
+        "id": "Bertanya / Mendengar / Berkunjung (bentuk merendah)",
+        "en": "To ask / hear / visit (humble)"
+      },
+      "note": {
+        "id": "Kenjougo dari 聞く / 行く saat staf bertanya kepada tamu atau berkunjung.",
+        "en": "Kenjougo (humble) for kiku / iku when staff asks or visits."
+      },
+      "pdfPage": 45
+    },
+    {
+      "id": "keigo_07",
+      "category": "kenjougo",
+      "phrase": {
+        "jaRuby": "<ruby>参<rt>まい</rt></ruby>る",
+        "jaPlain": "参る",
+        "id": "Pergi / Datang (bentuk merendah)",
+        "en": "To come / go (humble)"
+      },
+      "note": {
+        "id": "Kenjougo dari 行く / 来る untuk tindakan staf sendiri.",
+        "en": "Kenjougo (humble) for iku / kuru for staff actions."
+      },
+      "pdfPage": 45
+    },
+    {
+      "id": "keigo_08",
+      "category": "kenjougo",
+      "phrase": {
+        "jaRuby": "いたす",
+        "jaPlain": "いたす",
+        "id": "Melakukan (bentuk merendah)",
+        "en": "To do (humble)"
+      },
+      "note": {
+        "id": "Kenjougo dari する yang digunakan untuk tindakan staf sendiri.",
+        "en": "Kenjougo (humble) for suru for staff actions."
+      },
+      "pdfPage": 45
+    },
+    {
+      "id": "keigo_09",
+      "category": "teineigo",
+      "phrase": {
+        "jaRuby": "です・ます・ございます",
+        "jaPlain": "です・ます・ございます",
+        "id": "Akhiran kalimat sopan (desu / masu / gozaimasu)",
+        "en": "Polite endings (desu / masu / gozaimasu)"
+      },
+      "note": {
+        "id": "Teineigo dasar untuk berbicara secara sopan kepada tamu.",
+        "en": "Teineigo (polite) sentence endings used when speaking politely."
+      },
+      "pdfPage": 45
+    },
+    {
+      "id": "keigo_10",
+      "category": "teineigo",
+      "phrase": {
+        "jaRuby": "お<ruby>料理<rt>りょうり</rt></ruby>",
+        "jaPlain": "お料理",
+        "id": "Masakan / Hidangan (prefiks sopan)",
+        "en": "Cuisine / Dish (polite prefix)"
+      },
+      "note": {
+        "id": "Teineigo menggunakan prefiks sopan お sebelum kata 料理.",
+        "en": "Teineigo using the polite prefix o- on ryouri (dish)."
+      },
+      "pdfPage": 45
+    },
+    {
+      "id": "keigo_11",
+      "category": "teineigo",
+      "phrase": {
+        "jaRuby": "ご<ruby>宿泊<rt>しゅくはく</rt></ruby>",
+        "jaPlain": "ご宿泊",
+        "id": "Penginapan / Menginap (prefiks sopan)",
+        "en": "Stay / Accommodation (polite prefix)"
+      },
+      "note": {
+        "id": "Teineigo menggunakan prefiks sopan ご sebelum kata 宿泊.",
+        "en": "Teineigo using the polite prefix go- on shukuhaku (stay)."
+      },
+      "pdfPage": 45
+    },
+    {
+      "id": "keigo_12",
+      "category": "teineigo",
+      "phrase": {
+        "jaRuby": "お<ruby>名前<rt>なまえ</rt></ruby>",
+        "jaPlain": "お名前",
+        "id": "Nama (prefiks sopan)",
+        "en": "Name (polite prefix)"
+      },
+      "note": {
+        "id": "Teineigo menggunakan prefiks sopan お sebelum kata 名前.",
+        "en": "Teineigo using the polite prefix o- on namae (name)."
+      },
+      "pdfPage": 45
+    }
+  ]
+}
