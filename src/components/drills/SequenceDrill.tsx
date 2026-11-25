@@ -7,6 +7,9 @@ import { useApp } from '@/components/AppProvider';
 import { TrilingualBlock } from '@/components/text/TrilingualBlock';
 import { Chip } from '@/components/ui/Chip';
 import { Sparkle } from '@/components/ui/Sparkle';
+import { InteractiveSurface } from '@/components/motion/InteractiveSurface';
+import { AnimatedNumber } from '@/components/motion/AnimatedNumber';
+import { emitFeedback } from '@/lib/motion/feedbackBus';
 
 interface SequenceDrillProps {
   onExit: () => void;
@@ -55,6 +58,10 @@ export function SequenceDrill({ onExit }: SequenceDrillProps) {
       const next = [...selectedIds, stepId];
       setSelectedIds(next);
       setWrongStepId(null);
+      emitFeedback({
+        intent: 'positive',
+        shaderPulse: { energy: next.length === orderedSteps.length ? 0.30 : 0.16, origin: [0.5, 0.5] },
+      });
 
       if (next.length === orderedSteps.length) {
         const total = orderedSteps.length;
@@ -66,6 +73,10 @@ export function SequenceDrill({ onExit }: SequenceDrillProps) {
     } else {
       setMistakes((m) => m + 1);
       setWrongStepId(stepId);
+      emitFeedback({
+        intent: 'negative',
+        shaderPulse: { energy: 0.22, origin: [0.5, 0.65] },
+      });
     }
   };
 
@@ -211,7 +222,7 @@ export function SequenceDrill({ onExit }: SequenceDrillProps) {
       {wrongStepId ? (
         <div
           role="status"
-          className="rounded-[var(--radius-card)] bg-[#CC2F52] text-white px-4 py-3 text-xs font-semibold flex items-center gap-2"
+          className="reveal-panel rounded-[var(--radius-card)] bg-[#CC2F52] text-white px-4 py-3 text-xs font-semibold flex items-center gap-2"
         >
           <XCircle size={18} aria-hidden="true" />
           Not the next step in order. Check step #{selectedIds.length + 1} and try again.
@@ -219,7 +230,7 @@ export function SequenceDrill({ onExit }: SequenceDrillProps) {
       ) : null}
 
       {isDone ? (
-        <section className="rounded-[var(--radius-hero)] bg-[#1D1D1F] text-white p-5 space-y-3">
+        <section className="reveal-panel rounded-[var(--radius-hero)] bg-[#1D1D1F] text-white p-5 space-y-3">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-[var(--radius-icon)] bg-[#4D3EA3] flex items-center justify-center">
               <Sparkle size={18} color="#FFFFFF" />
@@ -231,11 +242,14 @@ export function SequenceDrill({ onExit }: SequenceDrillProps) {
               </h2>
               <p className="text-xs text-[#B4B4B8] tabular-nums">
                 Accuracy:{' '}
-                {Math.max(
-                  20,
-                  Math.round((orderedSteps.length / (orderedSteps.length + mistakes)) * 100)
-                )}
-                % ({mistakes} mistakes)
+                <AnimatedNumber
+                  value={Math.max(
+                    20,
+                    Math.round((orderedSteps.length / (orderedSteps.length + mistakes)) * 100)
+                  )}
+                  suffix="%"
+                />{' '}
+                ({mistakes} mistakes)
               </p>
             </div>
           </div>
@@ -244,7 +258,7 @@ export function SequenceDrill({ onExit }: SequenceDrillProps) {
               <button
                 type="button"
                 onClick={() => handleSelectDataset(datasetIdx + 1)}
-                className="min-h-[48px] px-5 rounded-[var(--radius-chip)] bg-[#4D3EA3] text-white text-sm font-bold"
+                className="min-h-[48px] px-5 rounded-[var(--radius-chip)] bg-[#4D3EA3] text-white text-sm font-bold active:scale-95 transition-transform"
               >
                 Next Sequence
               </button>
@@ -252,7 +266,7 @@ export function SequenceDrill({ onExit }: SequenceDrillProps) {
             <button
               type="button"
               onClick={handleReset}
-              className="min-h-[48px] px-5 rounded-[var(--radius-chip)] bg-white text-[#1D1D1F] text-sm font-bold"
+              className="min-h-[48px] px-5 rounded-[var(--radius-chip)] bg-white text-[#1D1D1F] text-sm font-bold active:scale-95 transition-transform"
             >
               Replay
             </button>
@@ -262,27 +276,33 @@ export function SequenceDrill({ onExit }: SequenceDrillProps) {
         <section aria-label="Scrambled step cards" className="grid grid-cols-1 gap-2.5">
           {scrambled
             .filter((step) => !selectedIds.includes(step.id))
-            .map((step) => (
-              <button
-                key={step.id}
-                type="button"
-                onClick={() => handleTapCard(step.id)}
-                className={[
-                  'w-full min-h-[56px] text-left rounded-[var(--radius-card)] p-4 bg-white shadow-[var(--shadow-soft)] border transition',
-                  wrongStepId === step.id
-                    ? 'border-[#CC2F52] bg-[#FFD2F4]/40'
-                    : 'border-black/8 hover:bg-[#E1DAFB]/35',
-                ].join(' ')}
-              >
-                <TrilingualBlock
-                  text={step.text}
-                  furiganaMode={settings.furiganaMode}
-                  langPreset={settings.langPreset}
-                  jaClassName="text-base font-bold leading-[1.75]"
-                  secondaryClassName="text-xs"
-                />
-              </button>
-            ))}
+            .map((step) => {
+              const isWrong = wrongStepId === step.id;
+              return (
+                <InteractiveSurface
+                  key={step.id}
+                  type="button"
+                  intent={isWrong ? 'negative' : 'neutral'}
+                  pressScale={0.97}
+                  feedbackKey={isWrong ? `wrong:${mistakes}` : null}
+                  onClick={() => handleTapCard(step.id)}
+                  className={[
+                    'w-full min-h-[56px] text-left rounded-[var(--radius-card)] p-4 bg-white shadow-[var(--shadow-soft)] border',
+                    isWrong
+                      ? 'border-[#CC2F52] bg-[#FFD2F4]/40'
+                      : 'border-black/8 hover:bg-[#E1DAFB]/35',
+                  ].join(' ')}
+                >
+                  <TrilingualBlock
+                    text={step.text}
+                    furiganaMode={settings.furiganaMode}
+                    langPreset={settings.langPreset}
+                    jaClassName="text-base font-bold leading-[1.75]"
+                    secondaryClassName="text-xs"
+                  />
+                </InteractiveSurface>
+              );
+            })}
         </section>
       )}
     </div>

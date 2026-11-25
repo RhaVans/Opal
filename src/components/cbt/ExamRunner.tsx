@@ -6,6 +6,10 @@ import type { CBTAttemptRecord, CBTQuestionItem, ChapterId } from '@/lib/types';
 import { useApp } from '@/components/AppProvider';
 import { TrilingualBlock } from '@/components/text/TrilingualBlock';
 import { TTSButton } from '@/components/text/TTSButton';
+import { InteractiveSurface } from '@/components/motion/InteractiveSurface';
+import { SemanticIcon } from '@/components/motion/SemanticIcon';
+import { StateTransition } from '@/components/motion/StateTransition';
+import { emitFeedback } from '@/lib/motion/feedbackBus';
 
 interface ExamRunnerProps {
   questions: CBTQuestionItem[];
@@ -141,6 +145,13 @@ export function ExamRunner({
 
   const handleSelectOption = (key: 'A' | 'B' | 'C' | 'D') => {
     if (mode === 'practice' && pickedKey !== null) return;
+    if (mode === 'practice') {
+      const ok = key === currentQ.correctKey;
+      emitFeedback({
+        intent: ok ? 'positive' : 'negative',
+        shaderPulse: { energy: 0.24, origin: [0.5, 0.5] },
+      });
+    }
     setSelectedMap((prev) => {
       const next = new Map(prev);
       next.set(currentQ.id, key);
@@ -172,21 +183,32 @@ export function ExamRunner({
           </div>
           <div className="h-2 rounded-full bg-black/10 overflow-hidden">
             <div
-              className="h-full rounded-full bg-[#4D3EA3] transition-all"
-              style={{ width: `${progressPct}%` }}
+              className="w-full h-full rounded-full bg-[#4D3EA3] origin-left transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none"
+              style={{ transform: `scaleX(${progressPct / 100})` }}
             />
           </div>
         </div>
 
         {mode === 'exam' ? (
-          <div className="inline-flex items-center gap-1.5 min-h-[40px] px-3.5 py-2 rounded-[var(--radius-chip)] bg-[#1D1D1F] text-white text-xs font-bold tabular-nums shrink-0">
-            <Clock size={14} aria-hidden="true" />
+          <div
+            className={[
+              'inline-flex items-center gap-1.5 min-h-[40px] px-3.5 py-2 rounded-[var(--radius-chip)] text-xs font-bold tabular-nums shrink-0 transition-colors',
+              remainingSec < 300 ? 'bg-[#E08E2B] text-[#1D1D1F]' : 'bg-[#1D1D1F] text-white',
+            ].join(' ')}
+          >
+            <SemanticIcon
+              behavior="rock-bell"
+              trigger={remainingSec < 300 ? Math.floor(remainingSec / 60) + 1 : 0}
+            >
+              <Clock size={14} aria-hidden="true" />
+            </SemanticIcon>
             <span>{formatTimer(remainingSec)}</span>
           </div>
         ) : null}
       </div>
 
-      <article className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-medium)] space-y-4">
+      <StateTransition keyId={currentQ.id} direction="forward">
+        <article className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-medium)] space-y-4">
         <div className="flex items-center justify-between gap-2">
           <span className="eyebrow text-[#4D3EA3]">
             CH 0{currentQ.chapter} · p.{currentQ.pdfPage}
@@ -228,13 +250,33 @@ export function ExamRunner({
               (mode === 'exam' && isPicked) ||
               (mode === 'practice' && pickedKey !== null && isPicked && !isCorrect);
 
+            const practiceIntent =
+              mode === 'practice' && pickedKey !== null
+                ? isCorrect
+                  ? 'positive'
+                  : isPicked
+                    ? 'negative'
+                    : 'neutral'
+                : isPicked
+                  ? 'primary'
+                  : 'neutral';
+
             return (
-              <button
+              <InteractiveSurface
                 key={opt.key}
                 type="button"
-                aria-pressed={isPicked}
+                intent={practiceIntent}
+                pressScale={0.98}
+                feedbackKey={
+                  mode === 'practice' && pickedKey !== null
+                    ? `${currentQ.id}:${opt.key}:${pickedKey}`
+                    : isPicked
+                      ? `${currentQ.id}:${opt.key}`
+                      : null
+                }
+                ariaPressed={isPicked}
                 onClick={() => handleSelectOption(opt.key)}
-                className={`w-full min-h-[56px] p-3.5 rounded-[var(--radius-card)] flex items-start gap-3 text-left transition ${style}`}
+                className={`w-full min-h-[56px] p-3.5 rounded-[var(--radius-card)] flex items-start gap-3 text-left ${style}`}
               >
                 <span
                   className={`w-7 h-7 rounded-full text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 ${badgeStyle}`}
@@ -251,7 +293,7 @@ export function ExamRunner({
                     secondaryClassName="text-xs leading-snug"
                   />
                 </div>
-              </button>
+              </InteractiveSurface>
             );
           })}
         </div>
@@ -260,7 +302,7 @@ export function ExamRunner({
         {mode === 'practice' && pickedKey !== null ? (
           <div
             role="status"
-            className="rounded-[var(--radius-card)] bg-[#E1DAFB]/65 p-4 space-y-2"
+            className="reveal-panel rounded-[var(--radius-card)] bg-[#E1DAFB]/65 p-4 space-y-2"
           >
             <div className="flex items-center gap-2 text-sm font-bold text-[#1D1D1F]">
               {pickedKey === currentQ.correctKey ? (
@@ -313,7 +355,8 @@ export function ExamRunner({
             </button>
           )}
         </div>
-      </article>
+        </article>
+      </StateTransition>
     </div>
   );
 }

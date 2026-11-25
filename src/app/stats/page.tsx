@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState, type ChangeEvent } from 'react';
 import {
+  CheckCircle2,
   Download,
   Gauge,
   Leaf,
@@ -31,6 +32,8 @@ import { SettingsRow } from '@/components/ui/SettingsRow';
 import { Chip } from '@/components/ui/Chip';
 import { SegmentedControl } from '@/components/ui/SegmentedControl';
 import { Sparkle } from '@/components/ui/Sparkle';
+import { AnimatedNumber } from '@/components/motion/AnimatedNumber';
+import { SemanticIcon } from '@/components/motion/SemanticIcon';
 
 export default function StatsPage() {
   const {
@@ -185,14 +188,14 @@ export default function StatsPage() {
             <div className="grid grid-cols-2 gap-3">
               <StatCard
                 eyebrow="Reviews"
-                value={totalWeekReviews}
+                value={<AnimatedNumber value={totalWeekReviews} />}
                 sublabel="items"
                 variant="tone"
                 toneBg="#F5F5F7"
               />
               <StatCard
                 eyebrow="Minutes"
-                value={totalWeekMinutes}
+                value={<AnimatedNumber value={totalWeekMinutes} />}
                 sublabel="studied"
                 variant="tone"
                 toneBg="#F5F5F7"
@@ -392,6 +395,7 @@ export default function StatsPage() {
                   ).map((item) => (
                     <Chip
                       key={item.id}
+                      pillGroupId="stats-lang"
                       selected={settings.langPreset === item.id}
                       onClick={() => void updateSettings({ langPreset: item.id })}
                     >
@@ -472,13 +476,18 @@ export default function StatsPage() {
               <div
                 role="status"
                 className={[
-                  'rounded-[var(--radius-card)] p-3.5 text-xs font-semibold',
+                  'reveal-panel rounded-[var(--radius-card)] p-3.5 text-xs font-semibold flex items-center gap-2',
                   statusMessage.kind === 'ok'
                     ? 'bg-[#1FA87A]/20 text-[#1D1D1F]'
                     : 'bg-[#CC2F52] text-white',
                 ].join(' ')}
               >
-                {statusMessage.text}
+                {statusMessage.kind === 'ok' ? (
+                  <SemanticIcon behavior="draw-check" trigger={statusMessage.text}>
+                    <CheckCircle2 size={16} aria-hidden="true" />
+                  </SemanticIcon>
+                ) : null}
+                <span>{statusMessage.text}</span>
               </div>
             ) : null}
 
@@ -486,7 +495,7 @@ export default function StatsPage() {
               <button
                 type="button"
                 onClick={() => void handleExport()}
-                className="min-h-[48px] px-4 rounded-[var(--radius-chip)] bg-[#1D1D1F] text-white text-sm font-bold inline-flex items-center justify-center gap-2"
+                className="min-h-[48px] px-4 rounded-[var(--radius-chip)] bg-[#1D1D1F] text-white text-sm font-bold inline-flex items-center justify-center gap-2 active:scale-95 transition-transform"
               >
                 <Download size={16} aria-hidden="true" />
                 Export JSON
@@ -495,7 +504,7 @@ export default function StatsPage() {
               <button
                 type="button"
                 onClick={() => fileInputRef.current?.click()}
-                className="min-h-[48px] px-4 rounded-[var(--radius-chip)] bg-white text-[#1D1D1F] border border-black/15 text-sm font-bold inline-flex items-center justify-center gap-2 shadow-[var(--shadow-soft)]"
+                className="min-h-[48px] px-4 rounded-[var(--radius-chip)] bg-white text-[#1D1D1F] border border-black/15 text-sm font-bold inline-flex items-center justify-center gap-2 shadow-[var(--shadow-soft)] active:scale-95 transition-transform"
               >
                 <Upload size={16} aria-hidden="true" />
                 Import JSON

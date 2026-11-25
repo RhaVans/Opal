@@ -443,11 +443,33 @@ async function run() {
         page.locator('nav[aria-label="Primary navigation"] a[href="/study?mode=due"]').click(),
       ]);
       await page.waitForSelector('article');
+      const motionModeFull = await page.evaluate(() => document.documentElement.dataset.motionMode);
+      if (motionModeFull !== 'full') {
+        failures.push(`Expected data-motion-mode="full", got ${motionModeFull}`);
+      }
+      // Rapid tap test across SegmentedControl pills to confirm zero stuck transitions
+      await page.getByRole('button', { name: 'Peek', exact: true }).click();
+      await page.getByRole('button', { name: 'Off', exact: true }).click();
+      await page.getByRole('button', { name: 'On', exact: true }).click();
+
       const qTtsCount = await page.getByRole('button', { name: 'Listen to question pronunciation' }).count();
       if (qTtsCount !== 1) failures.push('Study front card missing Question TTS button');
+      await page.getByRole('button', { name: 'Bookmark card' }).click();
       await page.getByRole('button', { name: 'Reveal Answer' }).click();
+      await page.waitForSelector('.reveal-panel');
       const aTtsCount = await page.getByRole('button', { name: 'Listen to answer pronunciation' }).count();
       if (aTtsCount !== 1) failures.push('Study back card missing separate Answer TTS button');
+      await page.getByRole('button', { name: /Good/ }).click();
+      await page.waitForTimeout(150);
+
+      // Verify OS prefers-reduced-motion dynamically switches document data-motion-mode
+      await page.emulateMedia({ reducedMotion: 'reduce' });
+      await page.waitForTimeout(60);
+      const motionModeReduced = await page.evaluate(() => document.documentElement.dataset.motionMode);
+      if (motionModeReduced !== 'reduced') {
+        failures.push(`Expected data-motion-mode="reduced" under prefers-reduced-motion, got ${motionModeReduced}`);
+      }
+      await page.emulateMedia({ reducedMotion: null });
     }
 
     await page.goto(`${baseUrl}/cbt`, { waitUntil: 'networkidle' });
@@ -496,6 +518,7 @@ async function run() {
     summaryLines.push(`- Persistence round-trip (SRS -> Export -> Reset -> Import): PASS (${afterImportCount} states restored)`);
     summaryLines.push(`- Offline reload across all 6 routes: ${failures.some((f) => f.includes('Offline')) ? 'FAIL' : 'PASS'}`);
     summaryLines.push(`- Axe color-contrast (WebGL + ecoMode): ${failures.some((f) => f.includes('axe')) ? 'FAIL' : 'PASS'}`);
+    summaryLines.push(`- Motion mode switching (full <-> reduced) & rapid-tap checks: ${failures.some((f) => f.includes('motion-mode')) ? 'FAIL' : 'PASS'}`);
     summaryLines.push(`- Touch targets >= 48px & zero horizontal overflow: ${failures.some((f) => f.includes('touch') || f.includes('horizontal') || f.includes('overlap')) ? 'FAIL' : 'PASS'}`);
     summaryLines.push('');
     summaryLines.push('## Addendum A Section 9.2 Visual Rubric');

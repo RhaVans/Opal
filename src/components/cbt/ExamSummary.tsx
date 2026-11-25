@@ -8,6 +8,7 @@ import { useApp } from '@/components/AppProvider';
 import { Sparkle } from '@/components/ui/Sparkle';
 import { TrilingualBlock } from '@/components/text/TrilingualBlock';
 import { TTSButton } from '@/components/text/TTSButton';
+import { AnimatedNumber } from '@/components/motion/AnimatedNumber';
 
 interface ExamSummaryProps {
   attempt: CBTAttemptRecord;
@@ -45,9 +46,11 @@ export function ExamSummary({ attempt, results, onDone }: ExamSummaryProps) {
             <span className="eyebrow text-[#B4B4B8]">
               {attempt.mode === 'exam' ? 'Exam Simulation Result' : 'Practice Result'}
             </span>
-            <h1 className="stat-number mt-1">{scorePct}%</h1>
+            <h1 className="stat-number mt-1">
+              <AnimatedNumber value={scorePct} suffix="%" />
+            </h1>
             <p className="text-sm text-[#B4B4B8] mt-1 tabular-nums">
-              {attempt.correctCount}/{attempt.totalQuestions} correct · {Math.round(attempt.durationSec / 60)}m {attempt.durationSec % 60}s
+              <AnimatedNumber value={attempt.correctCount} />/{attempt.totalQuestions} correct · {Math.round(attempt.durationSec / 60)}m {attempt.durationSec % 60}s
             </p>
           </div>
 

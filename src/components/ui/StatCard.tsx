@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 
 interface StatCardProps {
   eyebrow: string;
-  value: string | number;
+  value: ReactNode;
   sublabel?: string;
   variant?: 'light' | 'dark' | 'tone';
   toneBg?: string;

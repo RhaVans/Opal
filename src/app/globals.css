@@ -21,6 +21,23 @@
 
   /* Semantic SRS & Feedback */
   --status-again: #CC2F52;
+  --dur-instant: 90ms;
+  --dur-micro: 160ms;
+  --dur-standard: 260ms;
+  --dur-macro: 380ms;
+  --dur-decay: 520ms;
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-decel: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-accel: cubic-bezier(0.4, 0, 1, 1);
+  --ease-flash: cubic-bezier(0.25, 0.9, 0.35, 1);
+  --flash-primary-border: rgba(77, 62, 163, 0.68);
+  --flash-primary-wash: rgba(225, 218, 251, 0.36);
+  --flash-positive-border: rgba(31, 168, 122, 0.72);
+  --flash-positive-wash: rgba(31, 168, 122, 0.14);
+  --flash-negative-border: rgba(204, 47, 82, 0.78);
+  --flash-negative-wash: rgba(204, 47, 82, 0.14);
+  --flash-caution-border: rgba(224, 142, 43, 0.72);
+  --flash-caution-wash: rgba(224, 142, 43, 0.14);
   --status-hard: #E08E2B;
   --status-good: #4D3EA3;
   --status-easy: #1FA87A;
@@ -111,7 +128,7 @@
     user-select: none;
     font-weight: 500;
     line-height: 1.1;
-    transition: opacity 150ms ease, filter 150ms ease;
+    transition: opacity 150ms ease, filter 150ms ease, transform 150ms ease;
   }
 
   /* Native modal backdrop & scroll containment */
@@ -126,12 +143,40 @@
     color: var(--ink-primary);
     box-shadow: var(--shadow-medium);
     padding: 0;
+    opacity: 0;
+    transition-property: opacity, display, overlay;
+    transition-duration: 220ms;
+    transition-timing-function: var(--ease-standard);
+    transition-behavior: allow-discrete;
+  }
+
+  dialog:modal[open] {
+    opacity: 1;
   }
 
   dialog::backdrop {
     overflow: hidden;
     overscroll-behavior: contain;
     background: rgba(29, 29, 31, 0.48);
+    opacity: 0;
+    transition-property: opacity, display, overlay;
+    transition-duration: 220ms;
+    transition-timing-function: ease-out;
+    transition-behavior: allow-discrete;
+  }
+
+  dialog[open]::backdrop {
+    opacity: 1;
+  }
+
+  @starting-style {
+    dialog:modal[open] {
+      opacity: 0;
+    }
+
+    dialog[open]::backdrop {
+      opacity: 0;
+    }
   }
 }
 
@@ -331,8 +376,103 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .route-enter {
+  :root:not([data-motion-mode="reduced"]) dialog:modal {
+    transform: translateY(10px) scale(0.985);
+    transition-property: opacity, transform, display, overlay;
+  }
+
+  :root:not([data-motion-mode="reduced"]) dialog:modal[open] {
+    transform: translateY(0) scale(1);
+  }
+
+  @starting-style {
+    :root:not([data-motion-mode="reduced"]) dialog:modal[open] {
+      transform: translateY(10px) scale(0.985);
+    }
+  }
+
+  :root:not([data-motion-mode="reduced"]) .route-enter {
     animation: route-fade-up 240ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  :root:not([data-motion-mode="reduced"]) .soundwave-bar {
+    width: 2.5px;
+    height: 14px;
+    border-radius: 9999px;
+    background: currentColor;
+    transform-origin: center bottom;
+    animation: soundwave-bounce 680ms ease-in-out infinite;
+  }
+
+  :root:not([data-motion-mode="reduced"]) .soundwave-bar-1 {
+    animation-delay: 0ms;
+  }
+
+  :root:not([data-motion-mode="reduced"]) .soundwave-bar-2 {
+    animation-delay: 140ms;
+  }
+
+  :root:not([data-motion-mode="reduced"]) .soundwave-bar-3 {
+    animation-delay: 280ms;
+  }
+
+  :root:not([data-motion-mode="reduced"]) .soundwave-ring {
+    position: absolute;
+    inset: -4px;
+    border-radius: 9999px;
+    border: 1.5px solid currentColor;
+    opacity: 0;
+    animation: soundwave-ripple 1.2s ease-out infinite;
+  }
+}
+
+@keyframes soundwave-bounce {
+  0%, 100% {
+    transform: scaleY(0.32);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes soundwave-ripple {
+  0% {
+    opacity: 0.45;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.55);
+  }
+}
+
+:root[data-motion-mode="reduced"] rt,
+:root[data-motion-mode="reduced"] svg circle,
+:root[data-motion-mode="reduced"] .origin-bottom,
+:root[data-motion-mode="reduced"] .origin-left {
+  transition-duration: 0.01ms;
+}
+
+.reveal-panel {
+  animation: reveal-fade 150ms ease-out both;
+}
+
+:root:not([data-motion-mode="reduced"]) .reveal-panel {
+  animation: route-fade-up 240ms var(--ease-standard) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root .reveal-panel {
+    animation: reveal-fade 140ms ease-out both;
+  }
+}
+
+@keyframes reveal-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

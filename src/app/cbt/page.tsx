@@ -148,15 +148,15 @@ function CbtHubInner() {
         <div className="space-y-2">
           <span className="eyebrow text-[#5B5B62] block">Scope</span>
           <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
-            <Chip selected={scope === 'all'} onClick={() => setScope('all')}>
+            <Chip pillGroupId="cbt-scope" selected={scope === 'all'} onClick={() => setScope('all')}>
               All 5
             </Chip>
             {(['1', '2', '3', '4', '5'] as const).map((ch) => (
-              <Chip key={ch} selected={scope === ch} onClick={() => setScope(ch)}>
+              <Chip pillGroupId="cbt-scope" key={ch} selected={scope === ch} onClick={() => setScope(ch)}>
                 Ch {ch}
               </Chip>
             ))}
-            <Chip selected={scope === 'weak'} onClick={() => setScope('weak')}>
+            <Chip pillGroupId="cbt-scope" selected={scope === 'weak'} onClick={() => setScope('weak')}>
               Weak ({cbtWeakList.length})
             </Chip>
           </div>
@@ -212,6 +212,7 @@ function CbtHubInner() {
           ).map((f) => (
             <Chip
               key={f.id}
+              pillGroupId="cbt-history"
               selected={historyFilter === f.id}
               onClick={() => setHistoryFilter(f.id)}
             >

@@ -7,6 +7,8 @@ import { useApp } from '@/components/AppProvider';
 import { TrilingualBlock } from '@/components/text/TrilingualBlock';
 import { Chip } from '@/components/ui/Chip';
 import { Sparkle } from '@/components/ui/Sparkle';
+import { InteractiveSurface } from '@/components/motion/InteractiveSurface';
+import { emitFeedback } from '@/lib/motion/feedbackBus';
 
 interface TableLayoutDrillProps {
   onExit: () => void;
@@ -53,9 +55,11 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
       setPlacements((prev) => ({ ...prev, [zoneId]: item.id }));
       setSelectedItemId(null);
       setSpatialError(null);
+      emitFeedback({ intent: 'positive', shaderPulse: { energy: 0.22, origin: [0.5, 0.45] } });
     } else {
       setMistakes((m) => m + 1);
       setSpatialError(`Incorrect position for ${item.label.en}. Try another zone.`);
+      emitFeedback({ intent: 'negative', shaderPulse: { energy: 0.22, origin: [0.5, 0.5] } });
     }
   };
 
@@ -64,6 +68,10 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
     setEtiquettePicked(key);
     const current = etiquetteList[etiquetteIdx];
     const ok = current && key === current.correctKey;
+    emitFeedback({
+      intent: ok ? 'positive' : 'negative',
+      shaderPulse: { energy: ok ? 0.24 : 0.22, origin: [0.5, 0.5] },
+    });
     if (ok) {
       setEtiquetteCorrectCount((c) => c + 1);
     } else {
@@ -122,21 +130,21 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
           </div>
           <div className="h-2 rounded-full bg-black/10 overflow-hidden">
             <div
-              className="h-full rounded-full bg-[#4D3EA3] transition-all"
-              style={{ width: `${progressPct}%` }}
+              className="w-full h-full rounded-full bg-[#4D3EA3] origin-left transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none"
+              style={{ transform: `scaleX(${progressPct / 100})` }}
             />
           </div>
         </div>
       </div>
 
       <div role="group" aria-label="Choose table drill round" className="flex gap-2 overflow-x-auto no-scrollbar">
-        <Chip selected={round === 'washoku'} onClick={() => switchRound('washoku')}>
+        <Chip pillGroupId="table-round" selected={round === 'washoku'} onClick={() => switchRound('washoku')}>
           1. Washoku Tray
         </Chip>
-        <Chip selected={round === 'western'} onClick={() => switchRound('western')}>
+        <Chip pillGroupId="table-round" selected={round === 'western'} onClick={() => switchRound('western')}>
           2. Western Setting
         </Chip>
-        <Chip selected={round === 'etiquette'} onClick={() => switchRound('etiquette')}>
+        <Chip pillGroupId="table-round" selected={round === 'etiquette'} onClick={() => switchRound('etiquette')}>
           3. Etiquette
         </Chip>
       </div>
@@ -187,12 +195,15 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
                     else if (picked) style = 'bg-[#CC2F52] text-white border-[#CC2F52]';
                   }
                   return (
-                    <button
+                    <InteractiveSurface
                       key={opt.key}
                       type="button"
                       disabled={etiquettePicked !== null}
+                      intent={picked ? (isCorrect ? 'positive' : 'negative') : isCorrect && etiquettePicked ? 'positive' : 'neutral'}
+                      pressScale={0.97}
+                      feedbackKey={etiquettePicked ? `${etiquetteIdx}:${opt.key}:${etiquettePicked}` : null}
                       onClick={() => handleEtiquetteAnswer(opt.key)}
-                      className={`w-full min-h-[56px] p-3.5 rounded-[var(--radius-card)] border text-left transition ${style}`}
+                      className={`w-full min-h-[56px] p-3.5 rounded-[var(--radius-card)] border text-left ${style}`}
                     >
                       <TrilingualBlock
                         text={opt.text}
@@ -202,13 +213,13 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
                         jaClassName="text-sm font-bold leading-[1.6]"
                         secondaryClassName="text-xs"
                       />
-                    </button>
+                    </InteractiveSurface>
                   );
                 })}
               </div>
 
               {etiquettePicked ? (
-                <div className="rounded-[var(--radius-card)] bg-[#E1DAFB]/55 p-4 space-y-3">
+                <div className="reveal-panel rounded-[var(--radius-card)] bg-[#E1DAFB]/55 p-4 space-y-3">
                   <TrilingualBlock
                     text={current.explanation}
                     furiganaMode={settings.furiganaMode}
@@ -301,7 +312,7 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
           {spatialError ? (
             <div
               role="status"
-              className="rounded-[var(--radius-card)] bg-[#CC2F52] text-white px-3.5 py-2.5 text-xs font-semibold flex items-center gap-2"
+              className="reveal-panel rounded-[var(--radius-card)] bg-[#CC2F52] text-white px-3.5 py-2.5 text-xs font-semibold flex items-center gap-2"
             >
               <XCircle size={16} aria-hidden="true" />
               {spatialError}

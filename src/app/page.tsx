@@ -17,6 +17,7 @@ import { ArrowButton } from '@/components/ui/ArrowButton';
 import { RingBadge } from '@/components/ui/RingBadge';
 import { StatCard } from '@/components/ui/StatCard';
 import { Sparkle } from '@/components/ui/Sparkle';
+import { AnimatedNumber } from '@/components/motion/AnimatedNumber';
 
 export default function HomePage() {
   const {
@@ -133,17 +134,19 @@ export default function HomePage() {
             <div className="flex items-start justify-between gap-3">
               <div>
                 <span className="eyebrow text-[#B4B4B8]">SSW Readiness</span>
-                <p className="stat-number mt-1">{readiness.readinessPct}%</p>
+                <p className="stat-number mt-1">
+                  <AnimatedNumber value={readiness.readinessPct} suffix="%" />
+                </p>
               </div>
               <span className="text-xs font-semibold text-[#E1DAFB] tabular-nums">
-                {totalMastered}/{ALL_FLASHCARDS.length} mastered
+                <AnimatedNumber value={totalMastered} />/{ALL_FLASHCARDS.length} mastered
               </span>
             </div>
 
             <div className="w-full h-2 rounded-full bg-white/15 overflow-hidden">
               <div
-                className="h-full rounded-full bg-[#FFD2F4] transition-all"
-                style={{ width: `${Math.max(4, readiness.readinessPct)}%` }}
+                className="w-full h-full rounded-full bg-[#FFD2F4] origin-left transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none"
+                style={{ transform: `scaleX(${Math.max(0.04, readiness.readinessPct / 100)})` }}
               />
             </div>
 
@@ -152,20 +155,24 @@ export default function HomePage() {
                 <p className="text-[11px] uppercase tracking-wider text-[#B4B4B8] font-semibold">
                   Mastery
                 </p>
-                <p className="text-base font-bold tabular-nums mt-0.5">{readiness.masteryPct}%</p>
+                <p className="text-base font-bold tabular-nums mt-0.5">
+                  <AnimatedNumber value={readiness.masteryPct} suffix="%" />
+                </p>
               </div>
               <div className="px-2">
                 <p className="text-[11px] uppercase tracking-wider text-[#B4B4B8] font-semibold">
                   CBT avg
                 </p>
-                <p className="text-base font-bold tabular-nums mt-0.5">{readiness.avgCbtPct}%</p>
+                <p className="text-base font-bold tabular-nums mt-0.5">
+                  <AnimatedNumber value={readiness.avgCbtPct} suffix="%" />
+                </p>
               </div>
               <div className="px-2">
                 <p className="text-[11px] uppercase tracking-wider text-[#B4B4B8] font-semibold">
                   Drills
                 </p>
                 <p className="text-base font-bold tabular-nums mt-0.5">
-                  {readiness.drillCompletionPct}%
+                  <AnimatedNumber value={readiness.drillCompletionPct} suffix="%" />
                 </p>
               </div>
             </div>
@@ -179,7 +186,9 @@ export default function HomePage() {
             >
               <div className="space-y-1">
                 <span className="eyebrow text-[#FFD2F4]">Active Recall</span>
-                <h2 className="text-2xl font-bold tabular-nums">{dueCount} cards due</h2>
+                <h2 className="text-2xl font-bold tabular-nums">
+                  <AnimatedNumber value={dueCount} /> cards due
+                </h2>
                 <p className="text-sm text-white/90">Start review</p>
               </div>
               <ArrowButton
@@ -214,7 +223,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 gap-3">
             <StatCard
               eyebrow="Daily goal"
-              value={todayReviews}
+              value={<AnimatedNumber value={todayReviews} />}
               sublabel={`of ${settings.dailyGoal}`}
               variant="light"
               rightSlot={
@@ -227,7 +236,7 @@ export default function HomePage() {
             />
             <StatCard
               eyebrow="Streak"
-              value={`${streak}d`}
+              value={<AnimatedNumber value={streak} suffix="d" />}
               sublabel={streak === 1 ? '1 day active' : 'local days'}
               variant="dark"
             />

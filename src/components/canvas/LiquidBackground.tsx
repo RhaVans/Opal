@@ -5,11 +5,13 @@ import { usePathname } from 'next/navigation';
 import * as THREE from 'three';
 import { LIQUID_FRAGMENT_SHADER, LIQUID_VERTEX_SHADER } from './liquidFragment.glsl';
 import { useApp } from '@/components/AppProvider';
+import { subscribeFeedback } from '@/lib/motion/feedbackBus';
+import { INTENT_SHADER_RGB } from '@/lib/motion/tokens';
 
 function getCalmnessForRoute(pathname: string): number {
-  if (pathname === '/') return 0.2;
-  if (pathname.startsWith('/chapters') || pathname.startsWith('/stats')) return 0.5;
-  return 1.0; // /study, /drills, /cbt
+  if (pathname === '/' || pathname === '/stats') return 0.0;
+  if (pathname.startsWith('/chapters') || pathname.startsWith('/drills')) return 0.45;
+  return 0.80; // /study, /cbt
 }
 
 export function LiquidBackground() {
@@ -91,6 +93,9 @@ export function LiquidBackground() {
       },
       u_pointer: { value: new THREE.Vector2(0.5, 0.5) },
       u_calmness: { value: calmnessRef.current },
+      u_feedbackColor: { value: new THREE.Vector3(...INTENT_SHADER_RGB.neutral) },
+      u_feedbackEnergy: { value: 0 },
+      u_feedbackOrigin: { value: new THREE.Vector2(0.5, 0.5) },
     };
 
     const material = new THREE.ShaderMaterial({
@@ -121,6 +126,20 @@ export function LiquidBackground() {
 
     window.addEventListener('pointermove', onPointerMove, { passive: true });
     window.addEventListener('resize', onResize, { passive: true });
+
+    const unsubscribeFeedback = subscribeFeedback((signal) => {
+      const rgb = INTENT_SHADER_RGB[signal.intent];
+      uniforms.u_feedbackColor.value.set(rgb[0], rgb[1], rgb[2]);
+      if (signal.shaderPulse) {
+        uniforms.u_feedbackEnergy.value = Math.min(0.4, Math.max(0, signal.shaderPulse.energy));
+        if (signal.shaderPulse.origin) {
+          uniforms.u_feedbackOrigin.value.set(
+            signal.shaderPulse.origin[0],
+            signal.shaderPulse.origin[1]
+          );
+        }
+      }
+    });
 
     let rafId: number | null = null;
     let lastTs = performance.now();
@@ -157,7 +176,11 @@ export function LiquidBackground() {
 
       uniforms.u_time.value = elapsedSec * 0.15;
       uniforms.u_pointer.value.lerp(targetPointer, 0.05);
-      uniforms.u_calmness.value += (calmnessRef.current - uniforms.u_calmness.value) * 0.08;
+      uniforms.u_calmness.value += (calmnessRef.current - uniforms.u_calmness.value) * 0.05;
+      uniforms.u_feedbackEnergy.value *= Math.exp(-3.5 * (clampedDt * 0.001));
+      if (uniforms.u_feedbackEnergy.value < 0.001) {
+        uniforms.u_feedbackEnergy.value = 0;
+      }
 
       renderer?.render(scene, camera);
       rafId = window.requestAnimationFrame(renderFrame);
@@ -188,6 +211,7 @@ export function LiquidBackground() {
     return () => {
       if (rafId !== null) window.cancelAnimationFrame(rafId);
       document.removeEventListener('visibilitychange', onVisibilityChange);
+      unsubscribeFeedback();
       window.removeEventListener('pointermove', onPointerMove);
       window.removeEventListener('resize', onResize);
       geometry.dispose();

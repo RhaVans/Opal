@@ -13,6 +13,9 @@ uniform float u_time;
 uniform vec2 u_resolution;
 uniform vec2 u_pointer;
 uniform float u_calmness;
+uniform vec3 u_feedbackColor;
+uniform float u_feedbackEnergy;
+uniform vec2 u_feedbackOrigin;
 
 varying vec2 vUv;
 
@@ -107,6 +110,11 @@ void main() {
 
   // Calmness softens contrast on study/drills/cbt routes toward lavender mist
   col = mix(col, mix(C_LAVENDER, C_PETAL, 0.32), 0.28 * clamp(u_calmness, 0.0, 1.0));
+
+  // Subtle localized chromatic ripple driven by semantic feedback bus (energy capped <= 0.40)
+  float pulseDist = distance(uv, u_feedbackOrigin);
+  float pulseFalloff = exp(-pulseDist * 2.6) * clamp(u_feedbackEnergy, 0.0, 0.40);
+  col = mix(col, u_feedbackColor, pulseFalloff * 0.48);
 
   gl_FragColor = vec4(col, 1.0);
 }

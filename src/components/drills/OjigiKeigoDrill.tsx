@@ -8,6 +8,10 @@ import { SegmentedControl } from '@/components/ui/SegmentedControl';
 import { TrilingualBlock } from '@/components/text/TrilingualBlock';
 import { TTSButton } from '@/components/text/TTSButton';
 import { Sparkle } from '@/components/ui/Sparkle';
+import { InteractiveSurface } from '@/components/motion/InteractiveSurface';
+import { StateTransition } from '@/components/motion/StateTransition';
+import { AnimatedNumber } from '@/components/motion/AnimatedNumber';
+import { emitFeedback } from '@/lib/motion/feedbackBus';
 
 interface OjigiKeigoDrillProps {
   onExit: () => void;
@@ -20,7 +24,13 @@ function BowDiagram({ angle }: { angle: '15' | '30' | '45' }) {
   return (
     <svg width="56" height="44" viewBox="0 0 56 44" aria-hidden="true" className="shrink-0">
       <line x1="18" y1="40" x2="18" y2="24" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-      <g transform={`rotate(${deg} 18 24)`}>
+      <g
+        style={{
+          transform: `rotate(${deg}deg)`,
+          transformOrigin: '18px 24px',
+        }}
+        className="transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none"
+      >
         <line x1="18" y1="24" x2="18" y2="9" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
         <circle cx="18" cy="5" r="4" fill="currentColor" />
       </g>
@@ -59,7 +69,12 @@ export function OjigiKeigoDrill({ onExit }: OjigiKeigoDrillProps) {
   const handlePick = (choice: string) => {
     if (picked !== null) return;
     setPicked(choice);
-    if (choice === expected) {
+    const isOk = choice === expected;
+    emitFeedback({
+      intent: isOk ? 'positive' : 'negative',
+      shaderPulse: { energy: 0.24, origin: [0.5, 0.5] },
+    });
+    if (isOk) {
       setCorrectCount((c) => c + 1);
     }
   };
@@ -111,25 +126,28 @@ export function OjigiKeigoDrill({ onExit }: OjigiKeigoDrillProps) {
       </div>
 
       {finished ? (
-        <section className="rounded-[var(--radius-hero)] bg-[#1D1D1F] text-white p-6 space-y-4">
+        <section className="reveal-panel rounded-[var(--radius-hero)] bg-[#1D1D1F] text-white p-6 space-y-4">
           <div className="w-12 h-12 rounded-[var(--radius-icon)] bg-[#4D3EA3] flex items-center justify-center">
             <Sparkle size={22} color="#FFFFFF" />
           </div>
-          <h2 className="stat-number">{Math.round((correctCount / list.length) * 100)}%</h2>
+          <h2 className="stat-number">
+            <AnimatedNumber value={Math.round((correctCount / list.length) * 100)} suffix="%" />
+          </h2>
           <p className="text-sm text-[#B4B4B8] tabular-nums">
-            {correctCount} of {list.length} classified accurately
+            <AnimatedNumber value={correctCount} /> of {list.length} classified accurately
           </p>
           <button
             type="button"
             onClick={() => switchMode(mode)}
-            className="inline-flex items-center gap-2 min-h-[48px] px-5 rounded-[var(--radius-chip)] bg-white text-[#1D1D1F] text-sm font-bold"
+            className="inline-flex items-center gap-2 min-h-[48px] px-5 rounded-[var(--radius-chip)] bg-white text-[#1D1D1F] text-sm font-bold active:scale-95 transition-transform"
           >
             <RotateCcw size={16} aria-hidden="true" />
             Retry Mode
           </button>
         </section>
       ) : (
-        <section className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-soft)] space-y-4">
+        <StateTransition keyId={`${mode}:${idx}`} direction="forward">
+          <section className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-soft)] space-y-4">
           <div className="flex items-center justify-between">
             <span className="eyebrow text-[#4D3EA3]">
               Item {idx + 1}/{list.length} · p.
@@ -177,12 +195,15 @@ export function OjigiKeigoDrill({ onExit }: OjigiKeigoDrillProps) {
               }
 
               return (
-                <button
+                <InteractiveSurface
                   key={choice.key}
                   type="button"
                   disabled={picked !== null}
+                  intent={picked ? (isCorrect ? 'positive' : isPicked ? 'negative' : 'neutral') : 'neutral'}
+                  pressScale={0.97}
+                  feedbackKey={picked ? `${mode}:${idx}:${choice.key}:${picked}` : null}
                   onClick={() => handlePick(choice.key)}
-                  className={`w-full min-h-[60px] px-4 py-3 rounded-[var(--radius-card)] border flex items-center justify-between gap-3 text-left transition ${classes}`}
+                  className={`w-full min-h-[60px] px-4 py-3 rounded-[var(--radius-card)] border flex items-center justify-between gap-3 text-left ${classes}`}
                 >
                   <div>
                     <p className="text-sm font-bold">{choice.label}</p>
@@ -191,13 +212,13 @@ export function OjigiKeigoDrill({ onExit }: OjigiKeigoDrillProps) {
                   {mode === 'ojigi' ? (
                     <BowDiagram angle={choice.key as '15' | '30' | '45'} />
                   ) : null}
-                </button>
+                </InteractiveSurface>
               );
             })}
           </div>
 
           {picked !== null ? (
-            <div className="rounded-[var(--radius-card)] bg-[#E1DAFB]/60 p-4 space-y-2">
+            <div className="reveal-panel rounded-[var(--radius-card)] bg-[#E1DAFB]/60 p-4 space-y-2">
               <div className="flex items-center gap-2 text-sm font-bold text-[#1D1D1F]">
                 {picked === expected ? (
                   <>
@@ -221,13 +242,14 @@ export function OjigiKeigoDrill({ onExit }: OjigiKeigoDrillProps) {
               <button
                 type="button"
                 onClick={handleNext}
-                className="w-full min-h-[48px] rounded-[var(--radius-chip)] bg-[#1D1D1F] text-white text-sm font-bold mt-2"
+                className="w-full min-h-[48px] rounded-[var(--radius-chip)] bg-[#1D1D1F] text-white text-sm font-bold mt-2 active:scale-95 transition-transform"
               >
                 {idx + 1 < list.length ? 'Next' : 'Finish'}
               </button>
             </div>
           ) : null}
-        </section>
+          </section>
+        </StateTransition>
       )}
     </div>
   );

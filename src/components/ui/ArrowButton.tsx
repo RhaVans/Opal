@@ -1,5 +1,9 @@
-import Link from 'next/link';
+'use client';
+
+import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { InteractiveSurface } from '@/components/motion/InteractiveSurface';
+import { SemanticIcon } from '@/components/motion/SemanticIcon';
 
 interface ArrowButtonBaseProps {
   ariaLabel: string;
@@ -38,31 +42,46 @@ export function ArrowButton({
       : 'border-[1.5px] border-[#1D1D1F] text-[#1D1D1F] hover:bg-[#1D1D1F]/10';
   }
 
+  const [nudgeTick, setNudgeTick] = useState(0);
+
   const classes = [
-    'inline-flex items-center justify-center w-12 h-12 min-w-[48px] min-h-[48px] rounded-[var(--radius-chip)] shrink-0 transition-transform active:scale-95 disabled:opacity-40 disabled:active:scale-100',
+    'inline-flex items-center justify-center w-12 h-12 min-w-[48px] min-h-[48px] rounded-[var(--radius-chip)] shrink-0 disabled:opacity-40',
     palette,
     className,
   ].join(' ');
 
-  const icon = <ArrowRight size={20} strokeWidth={2} aria-hidden="true" />;
+  const icon = (
+    <SemanticIcon behavior="nudge-right" trigger={nudgeTick}>
+      <ArrowRight size={20} strokeWidth={2} aria-hidden="true" />
+    </SemanticIcon>
+  );
 
   if (href) {
     return (
-      <Link href={href} aria-label={ariaLabel} className={classes}>
+      <InteractiveSurface
+        as="a"
+        href={href}
+        ariaLabel={ariaLabel}
+        pressScale={0.94}
+        onPointerDown={() => setNudgeTick((n) => n + 1)}
+        className={classes}
+      >
         {icon}
-      </Link>
+      </InteractiveSurface>
     );
   }
 
   return (
-    <button
+    <InteractiveSurface
       type="button"
       disabled={disabled}
-      aria-label={ariaLabel}
+      ariaLabel={ariaLabel}
+      pressScale={0.94}
+      onPointerDown={() => setNudgeTick((n) => n + 1)}
       onClick={onClick}
       className={classes}
     >
       {icon}
-    </button>
+    </InteractiveSurface>
   );
 }

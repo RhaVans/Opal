@@ -15,6 +15,18 @@ import { Chip } from '@/components/ui/Chip';
 import { Sparkle } from '@/components/ui/Sparkle';
 import { TTSButton } from '@/components/text/TTSButton';
 import { TrilingualBlock } from '@/components/text/TrilingualBlock';
+import { InteractiveSurface } from '@/components/motion/InteractiveSurface';
+import { SemanticIcon } from '@/components/motion/SemanticIcon';
+import { StateTransition } from '@/components/motion/StateTransition';
+import { emitFeedback } from '@/lib/motion/feedbackBus';
+import type { InteractionIntent } from '@/lib/motion/tokens';
+
+const RATING_INTENT: Record<SRSRating, InteractionIntent> = {
+  again: 'negative',
+  hard: 'caution',
+  good: 'positive',
+  easy: 'primary',
+};
 
 const LANG_ORDER: LangPreset[] = ['jp_id', 'jp_en', 'jp_id_en', 'jp_only'];
 const LANG_LABEL: Record<LangPreset, string> = {
@@ -124,6 +136,13 @@ export function StudyStudio() {
       ratingPendingRef.current = true;
       try {
         stopSpeaking();
+        emitFeedback({
+          intent: RATING_INTENT[rating],
+          shaderPulse: {
+            energy: rating === 'good' || rating === 'easy' ? 0.26 : 0.22,
+            origin: [0.5, 0.14],
+          },
+        });
         const elapsedSec = Math.max(2, (Date.now() - cardShownAtRef.current) / 1000);
         await reviewCard(currentCard.id, currentCard.chapter, rating, elapsedSec);
 
@@ -218,8 +237,8 @@ export function StudyStudio() {
           </div>
           <div className="w-full h-2 rounded-full bg-black/10 overflow-hidden">
             <div
-              className="h-full rounded-full bg-[#4D3EA3] transition-all"
-              style={{ width: `${progressPct}%` }}
+              className="w-full h-full rounded-full bg-[#4D3EA3] origin-left transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none"
+              style={{ transform: `scaleX(${progressPct / 100})` }}
             />
           </div>
         </div>
@@ -282,12 +301,13 @@ export function StudyStudio() {
         <div className="space-y-4">
           <h1 className="sr-only">Active Recall Flashcard Studio</h1>
 
-          <article
-            className={[
-              'rounded-[var(--radius-hero)] p-5 shadow-[var(--shadow-medium)] transition-colors space-y-4',
-              flipped ? 'bg-[#1D1D1F] text-white' : 'bg-white text-[#1D1D1F]',
-            ].join(' ')}
-          >
+          <StateTransition keyId={currentCard.id} direction="forward">
+            <article
+              className={[
+                'rounded-[var(--radius-hero)] p-5 shadow-[var(--shadow-medium)] transition-colors space-y-4',
+                flipped ? 'bg-[#1D1D1F] text-white' : 'bg-white text-[#1D1D1F]',
+              ].join(' ')}
+            >
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-2 flex-wrap">
                 <span
@@ -314,13 +334,16 @@ export function StudyStudio() {
                   ariaLabel="Listen to question pronunciation"
                   variant={flipped ? 'dark' : 'light'}
                 />
-                <button
+                <InteractiveSurface
                   type="button"
+                  intent="caution"
+                  pressScale={0.94}
+                  feedbackKey={currentState?.bookmarked ? `${currentCard.id}:bm` : null}
                   onClick={() => void toggleBookmark(currentCard.id, currentCard.chapter)}
-                  aria-pressed={Boolean(currentState?.bookmarked)}
-                  aria-label={currentState?.bookmarked ? 'Remove bookmark' : 'Bookmark card'}
+                  ariaPressed={Boolean(currentState?.bookmarked)}
+                  ariaLabel={currentState?.bookmarked ? 'Remove bookmark' : 'Bookmark card'}
                   className={[
-                    'inline-flex items-center justify-center w-12 h-12 min-w-[48px] min-h-[48px] rounded-[var(--radius-chip)] transition-colors',
+                    'inline-flex items-center justify-center w-12 h-12 min-w-[48px] min-h-[48px] rounded-[var(--radius-chip)] shrink-0',
                     currentState?.bookmarked
                       ? 'bg-[#FF7A1A] text-[#1D1D1F]'
                       : flipped
@@ -328,12 +351,14 @@ export function StudyStudio() {
                         : 'bg-[#F5F5F7] text-[#1D1D1F] hover:bg-black/10',
                   ].join(' ')}
                 >
-                  <Bookmark
-                    size={20}
-                    fill={currentState?.bookmarked ? 'currentColor' : 'none'}
-                    aria-hidden="true"
-                  />
-                </button>
+                  <SemanticIcon behavior="pop-fill" active={Boolean(currentState?.bookmarked)}>
+                    <Bookmark
+                      size={20}
+                      fill={currentState?.bookmarked ? 'currentColor' : 'none'}
+                      aria-hidden="true"
+                    />
+                  </SemanticIcon>
+                </InteractiveSurface>
               </div>
             </div>
 
@@ -349,17 +374,19 @@ export function StudyStudio() {
 
             {!flipped ? (
               <div className="pt-2">
-                <button
+                <InteractiveSurface
                   type="button"
+                  intent="primary"
+                  pressScale={0.97}
                   onClick={() => setFlipped(true)}
-                  className="w-full min-h-[56px] rounded-[var(--radius-card)] bg-[#4D3EA3] text-white text-base font-bold hover:bg-[#3f328b] active:scale-[0.99] transition flex items-center justify-center gap-2"
+                  className="w-full min-h-[56px] rounded-[var(--radius-card)] bg-[#4D3EA3] text-white text-base font-bold hover:bg-[#3f328b] flex items-center justify-center gap-2"
                 >
                   <RotateCw size={18} aria-hidden="true" />
                   Reveal Answer
-                </button>
+                </InteractiveSurface>
               </div>
             ) : (
-              <div className="pt-4 border-t border-white/15 space-y-4">
+              <div className="pt-4 border-t border-white/15 space-y-4 reveal-panel">
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-2">
                     <span className="eyebrow text-[#FFD2F4]">Answer</span>
@@ -396,7 +423,8 @@ export function StudyStudio() {
                 ) : null}
               </div>
             )}
-          </article>
+            </article>
+          </StateTransition>
         </div>
       )}
 
@@ -410,49 +438,57 @@ export function StudyStudio() {
           }}
           className="fixed left-1/2 -translate-x-1/2 z-40 grid grid-cols-4 gap-2 p-2 rounded-[24px] bg-white/95 border border-black/10 shadow-[var(--shadow-medium)]"
         >
-          <button
+          <InteractiveSurface
             type="button"
+            intent="negative"
+            pressScale={0.95}
             onClick={() => void handleRate('again')}
             style={{ backgroundColor: 'var(--status-again)' }}
-            className="min-h-[56px] rounded-[16px] text-white px-2 py-2 flex flex-col items-center justify-center hover:brightness-95 active:scale-95 transition"
+            className="min-h-[56px] rounded-[16px] text-white px-2 py-2 flex flex-col items-center justify-center hover:brightness-95"
           >
             <span className="text-xs font-bold">Again</span>
             <span className="text-[11px] font-semibold opacity-95 tabular-nums">
               {previews.again}
             </span>
-          </button>
+          </InteractiveSurface>
 
-          <button
+          <InteractiveSurface
             type="button"
+            intent="caution"
+            pressScale={0.95}
             onClick={() => void handleRate('hard')}
             style={{ backgroundColor: 'var(--status-hard)' }}
-            className="min-h-[56px] rounded-[16px] text-[#1D1D1F] px-2 py-2 flex flex-col items-center justify-center hover:brightness-95 active:scale-95 transition"
+            className="min-h-[56px] rounded-[16px] text-[#1D1D1F] px-2 py-2 flex flex-col items-center justify-center hover:brightness-95"
           >
             <span className="text-xs font-bold">Hard</span>
             <span className="text-[11px] font-semibold tabular-nums">{previews.hard}</span>
-          </button>
+          </InteractiveSurface>
 
-          <button
+          <InteractiveSurface
             type="button"
+            intent="positive"
+            pressScale={0.95}
             onClick={() => void handleRate('good')}
             style={{ backgroundColor: 'var(--status-good)' }}
-            className="min-h-[56px] rounded-[16px] text-white px-2 py-2 flex flex-col items-center justify-center hover:brightness-95 active:scale-95 transition"
+            className="min-h-[56px] rounded-[16px] text-white px-2 py-2 flex flex-col items-center justify-center hover:brightness-95"
           >
             <span className="text-xs font-bold">Good</span>
             <span className="text-[11px] font-semibold opacity-95 tabular-nums">
               {previews.good}
             </span>
-          </button>
+          </InteractiveSurface>
 
-          <button
+          <InteractiveSurface
             type="button"
+            intent="primary"
+            pressScale={0.95}
             onClick={() => void handleRate('easy')}
             style={{ backgroundColor: 'var(--status-easy)' }}
-            className="min-h-[56px] rounded-[16px] text-[#1D1D1F] px-2 py-2 flex flex-col items-center justify-center hover:brightness-95 active:scale-95 transition"
+            className="min-h-[56px] rounded-[16px] text-[#1D1D1F] px-2 py-2 flex flex-col items-center justify-center hover:brightness-95"
           >
             <span className="text-xs font-bold">Easy</span>
             <span className="text-[11px] font-semibold tabular-nums">{previews.easy}</span>
-          </button>
+          </InteractiveSurface>
         </div>
       ) : null}
     </div>

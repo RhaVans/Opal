@@ -1,5 +1,9 @@
 'use client';
 
+import { useId } from 'react';
+import { SharedPill } from '@/components/motion/SharedPill';
+import { InteractiveSurface } from '@/components/motion/InteractiveSurface';
+
 export interface SegmentOption<T extends string> {
   value: T;
   label: string;
@@ -20,6 +24,8 @@ export function SegmentedControl<T extends string>({
   onChange,
   className = '',
 }: SegmentedControlProps<T>) {
+  const pillGroupId = useId();
+
   return (
     <div
       role="group"
@@ -32,20 +38,22 @@ export function SegmentedControl<T extends string>({
       {options.map((opt) => {
         const active = opt.value === value;
         return (
-          <button
+          <InteractiveSurface
             key={opt.value}
             type="button"
-            aria-pressed={active}
+            pressScale={0.96}
+            ariaPressed={active}
             onClick={() => onChange(opt.value)}
             className={[
-              'min-w-[48px] min-h-[48px] px-3.5 rounded-[var(--radius-chip)] text-xs sm:text-sm font-semibold transition-colors whitespace-nowrap',
+              'shrink-0 inline-flex items-center justify-center min-w-[48px] min-h-[48px] px-3.5 rounded-[var(--radius-chip)] text-xs sm:text-sm font-semibold whitespace-nowrap',
               active
-                ? 'bg-[#1D1D1F] text-white shadow-sm'
+                ? 'text-white'
                 : 'text-[#1D1D1F] hover:bg-[rgba(29,29,31,0.06)]',
             ].join(' ')}
           >
-            {opt.label}
-          </button>
+            <SharedPill groupId={pillGroupId} active={active} className="bg-[#1D1D1F] shadow-sm" />
+            <span className="relative z-10">{opt.label}</span>
+          </InteractiveSurface>
         );
       })}
     </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useMotionMode } from '@/components/motion/MotionProvider';
 import type { FuriganaMode } from '@/lib/types';
 import { parseRubyTokens } from '@/lib/furigana';
 
@@ -22,6 +23,7 @@ export function FuriganaText({
   className = '',
 }: FuriganaTextProps) {
   const [revealedIndices, setRevealedIndices] = useState<Set<number>>(() => new Set());
+  const { reduced } = useMotionMode();
 
   if (mode === 'off') {
     return (
@@ -73,7 +75,7 @@ export function FuriganaText({
               toggleIndex(idx);
             }}
             className={[
-              'inline-flex items-center justify-center min-w-[48px] min-h-[48px] px-1.5 mx-0.5 rounded-xl align-baseline transition-colors',
+              'inline-flex items-center justify-center min-w-[48px] min-h-[48px] px-1.5 mx-0.5 rounded-xl align-baseline transition-[colors,transform] active:scale-95',
               darkSurface
                 ? 'hover:bg-white/10 focus-visible:outline-white'
                 : 'hover:bg-black/5',
@@ -91,7 +93,8 @@ export function FuriganaText({
                 style={{
                   ...rtStyle,
                   opacity: isShown ? 1 : 0,
-                  filter: isShown ? 'none' : 'blur(3px)',
+                  filter: reduced || isShown ? 'none' : 'blur(3px)',
+                  transform: reduced ? undefined : isShown ? 'translateY(0)' : 'translateY(2px)',
                 }}
               >
                 {tok.reading}

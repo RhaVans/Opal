@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Volume2, Square } from 'lucide-react';
+import { InteractiveSurface } from '@/components/motion/InteractiveSurface';
+import { SemanticIcon } from '@/components/motion/SemanticIcon';
 import { speakJapanese, stopSpeaking, subscribeActiveTTS } from '@/lib/tts';
 import { useApp } from '@/components/AppProvider';
 
@@ -20,6 +22,7 @@ export function TTSButton({
 }: TTSButtonProps) {
   const { settings } = useApp();
   const [speaking, setSpeaking] = useState(false);
+  const [speakTick, setSpeakTick] = useState(0);
   const myTokenRef = useRef<number | null>(null);
 
   useEffect(() => {
@@ -68,6 +71,7 @@ export function TTSButton({
     });
     if (token !== null) {
       myTokenRef.current = token;
+      setSpeakTick((t) => t + 1);
       setSpeaking(true);
     } else {
       setSpeaking(false);
@@ -88,22 +92,28 @@ export function TTSButton({
     : ariaLabel ?? 'Listen to Japanese pronunciation';
 
   return (
-    <button
+    <InteractiveSurface
       type="button"
       onClick={handleToggle}
-      aria-pressed={speaking}
-      aria-label={label}
+      ariaPressed={speaking}
+      ariaLabel={label}
+      intent="primary"
+      pressScale={0.94}
+      feedbackKey={speakTick}
+      emitAmbientPulse={speakTick > 0}
       className={[
-        'inline-flex items-center justify-center w-12 h-12 min-w-[48px] min-h-[48px] rounded-[var(--radius-chip)] transition-all active:scale-95 shrink-0',
+        'inline-flex items-center justify-center w-12 h-12 min-w-[48px] min-h-[48px] rounded-[var(--radius-chip)] shrink-0',
         palette,
         className,
       ].join(' ')}
     >
-      {speaking ? (
-        <Square size={18} fill="currentColor" aria-hidden="true" />
-      ) : (
-        <Volume2 size={20} strokeWidth={2} aria-hidden="true" />
-      )}
-    </button>
+      <SemanticIcon behavior="soundwave" active={speaking}>
+        {speaking ? (
+          <Square size={18} fill="currentColor" aria-hidden="true" />
+        ) : (
+          <Volume2 size={20} strokeWidth={2} aria-hidden="true" />
+        )}
+      </SemanticIcon>
+    </InteractiveSurface>
   );
 }

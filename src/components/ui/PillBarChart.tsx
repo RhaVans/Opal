@@ -25,9 +25,9 @@ export function PillBarChart({ data, ariaLabel }: PillBarChartProps) {
               </span>
               <div className="relative w-full max-w-[34px] flex-1 rounded-full bg-[rgba(77,62,163,0.12)] overflow-hidden flex items-end">
                 <div
-                  className="w-full rounded-full transition-all"
+                  className="w-full h-full rounded-full origin-bottom transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none"
                   style={{
-                    height: `${heightPct}%`,
+                    transform: `scaleY(${heightPct / 100})`,
                     backgroundColor: item.highlight ? 'var(--color-accent-warm)' : 'var(--color-persian-blue)',
                   }}
                 />

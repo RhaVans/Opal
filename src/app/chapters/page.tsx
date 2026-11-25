@@ -85,6 +85,7 @@ export default function ChaptersPage() {
         ).map((item) => (
           <Chip
             key={item.id}
+            pillGroupId="chapters-filter"
             selected={filter === item.id}
             onClick={() => setFilter(item.id)}
           >

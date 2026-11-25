@@ -7,6 +7,7 @@ import '@fontsource/noto-sans-jp/japanese-400.css';
 import '@fontsource/noto-sans-jp/japanese-700.css';
 import './globals.css';
 import { AppProvider } from '@/components/AppProvider';
+import { MotionProvider } from '@/components/motion/MotionProvider';
 import { LiquidBackground } from '@/components/canvas/LiquidBackground';
 import { BottomDock } from '@/components/layout/BottomDock';
 
@@ -47,15 +48,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to main content
         </a>
         <AppProvider>
-          <LiquidBackground />
-          <main
-            id="main-content"
-            tabIndex={-1}
-            className="relative z-10 min-h-dvh mx-auto w-full max-w-[480px] md:max-w-3xl px-4 pt-6 pb-[calc(7.5rem+env(safe-area-inset-bottom,0px))] outline-none"
-          >
-            {children}
-          </main>
-          <BottomDock />
+          <MotionProvider>
+            <LiquidBackground />
+            <main
+              id="main-content"
+              tabIndex={-1}
+              className="relative z-10 min-h-dvh mx-auto w-full max-w-[480px] md:max-w-3xl px-4 pt-6 pb-[calc(7.5rem+env(safe-area-inset-bottom,0px))] outline-none"
+            >
+              {children}
+            </main>
+            <BottomDock />
+          </MotionProvider>
         </AppProvider>
       </body>
     </html>

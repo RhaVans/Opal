@@ -5,6 +5,8 @@ import { usePathname } from 'next/navigation';
 import { BarChart3, BookOpen, Home, Layers } from 'lucide-react';
 import { useApp } from '@/components/AppProvider';
 import { FluidDockOrb } from '@/components/layout/FluidDockOrb';
+import { SharedPill } from '@/components/motion/SharedPill';
+import { SemanticIcon } from '@/components/motion/SemanticIcon';
 
 export function BottomDock() {
   const pathname = usePathname() || '/';
@@ -34,12 +36,15 @@ export function BottomDock() {
         aria-label="Home"
         aria-current={isHome ? 'page' : undefined}
         className={[
-          'relative flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-2 rounded-full transition-colors',
-          isHome ? 'text-white bg-white/12' : 'text-[#B4B4B8] hover:text-white',
+          'relative flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-2 rounded-full transition-colors active:scale-95',
+          isHome ? 'text-white' : 'text-[#B4B4B8] hover:text-white',
         ].join(' ')}
       >
-        <Home size={22} strokeWidth={2} aria-hidden="true" />
-        <span className="text-[10px] font-semibold mt-0.5 leading-none">Home</span>
+        <SharedPill groupId="bottom-dock" active={isHome} className="bg-white/12" />
+        <SemanticIcon behavior="pop-fill" active={isHome} className="relative z-10">
+          <Home size={22} strokeWidth={2} aria-hidden="true" />
+        </SemanticIcon>
+        <span className="relative z-10 text-[10px] font-semibold mt-0.5 leading-none">Home</span>
       </Link>
 
       <Link
@@ -47,12 +52,15 @@ export function BottomDock() {
         aria-label="Chapters"
         aria-current={isChapters ? 'page' : undefined}
         className={[
-          'relative flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-2 rounded-full transition-colors',
-          isChapters ? 'text-white bg-white/12' : 'text-[#B4B4B8] hover:text-white',
+          'relative flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-2 rounded-full transition-colors active:scale-95',
+          isChapters ? 'text-white' : 'text-[#B4B4B8] hover:text-white',
         ].join(' ')}
       >
-        <BookOpen size={22} strokeWidth={2} aria-hidden="true" />
-        <span className="text-[10px] font-semibold mt-0.5 leading-none">Chapters</span>
+        <SharedPill groupId="bottom-dock" active={isChapters} className="bg-white/12" />
+        <SemanticIcon behavior="pop-fill" active={isChapters} className="relative z-10">
+          <BookOpen size={22} strokeWidth={2} aria-hidden="true" />
+        </SemanticIcon>
+        <span className="relative z-10 text-[10px] font-semibold mt-0.5 leading-none">Chapters</span>
       </Link>
 
       <FluidDockOrb
@@ -65,12 +73,15 @@ export function BottomDock() {
         aria-label="Drills and CBT"
         aria-current={isDrillsOrCbt ? 'page' : undefined}
         className={[
-          'relative flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-2 rounded-full transition-colors',
-          isDrillsOrCbt ? 'text-white bg-white/12' : 'text-[#B4B4B8] hover:text-white',
+          'relative flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-2 rounded-full transition-colors active:scale-95',
+          isDrillsOrCbt ? 'text-white' : 'text-[#B4B4B8] hover:text-white',
         ].join(' ')}
       >
-        <Layers size={22} strokeWidth={2} aria-hidden="true" />
-        <span className="text-[10px] font-semibold mt-0.5 leading-none">Drills</span>
+        <SharedPill groupId="bottom-dock" active={isDrillsOrCbt} className="bg-white/12" />
+        <SemanticIcon behavior="pop-fill" active={isDrillsOrCbt} className="relative z-10">
+          <Layers size={22} strokeWidth={2} aria-hidden="true" />
+        </SemanticIcon>
+        <span className="relative z-10 text-[10px] font-semibold mt-0.5 leading-none">Drills</span>
       </Link>
 
       <Link
@@ -78,12 +89,15 @@ export function BottomDock() {
         aria-label="Progress and settings"
         aria-current={isStats ? 'page' : undefined}
         className={[
-          'relative flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-2 rounded-full transition-colors',
-          isStats ? 'text-white bg-white/12' : 'text-[#B4B4B8] hover:text-white',
+          'relative flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-2 rounded-full transition-colors active:scale-95',
+          isStats ? 'text-white' : 'text-[#B4B4B8] hover:text-white',
         ].join(' ')}
       >
-        <BarChart3 size={22} strokeWidth={2} aria-hidden="true" />
-        <span className="text-[10px] font-semibold mt-0.5 leading-none">Stats</span>
+        <SharedPill groupId="bottom-dock" active={isStats} className="bg-white/12" />
+        <SemanticIcon behavior="pop-fill" active={isStats} className="relative z-10">
+          <BarChart3 size={22} strokeWidth={2} aria-hidden="true" />
+        </SemanticIcon>
+        <span className="relative z-10 text-[10px] font-semibold mt-0.5 leading-none">Stats</span>
       </Link>
     </nav>
   );

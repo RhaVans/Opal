@@ -9,6 +9,10 @@ import {
 } from '@/lib/mathGenerator';
 import { useApp } from '@/components/AppProvider';
 import { Sparkle } from '@/components/ui/Sparkle';
+import { InteractiveSurface } from '@/components/motion/InteractiveSurface';
+import { StateTransition } from '@/components/motion/StateTransition';
+import { AnimatedNumber } from '@/components/motion/AnimatedNumber';
+import { emitFeedback } from '@/lib/motion/feedbackBus';
 
 interface MathSprintDrillProps {
   onExit: () => void;
@@ -32,6 +36,10 @@ export function MathSprintDrill({ onExit }: MathSprintDrillProps) {
     if (!current || checked !== null || !input.trim()) return;
     const isOk = isNumericAnswerMatch(input, current.answer);
     setChecked(isOk ? 'correct' : 'wrong');
+    emitFeedback({
+      intent: isOk ? 'positive' : 'negative',
+      shaderPulse: { energy: isOk ? 0.24 : 0.22, origin: [0.5, 0.5] },
+    });
     if (isOk) {
       setCorrectCount((c) => c + 1);
     }
@@ -135,23 +143,26 @@ export function MathSprintDrill({ onExit }: MathSprintDrillProps) {
       </div>
 
       {finished ? (
-        <section className="rounded-[var(--radius-hero)] bg-[#1D1D1F] text-white p-6 space-y-4">
+        <section className="reveal-panel rounded-[var(--radius-hero)] bg-[#1D1D1F] text-white p-6 space-y-4">
           <div className="w-12 h-12 rounded-[var(--radius-icon)] bg-[#4D3EA3] flex items-center justify-center">
             <Sparkle size={22} color="#FFFFFF" />
           </div>
           <div>
             <span className="eyebrow text-[#B4B4B8]">10-Question Sprint</span>
             <h2 className="stat-number mt-1">
-              {Math.round((correctCount / problems.length) * 100)}%
+              <AnimatedNumber
+                value={Math.round((correctCount / problems.length) * 100)}
+                suffix="%"
+              />
             </h2>
             <p className="text-sm text-[#B4B4B8] mt-1 tabular-nums">
-              {correctCount} of {problems.length} solved accurately
+              <AnimatedNumber value={correctCount} /> of {problems.length} solved accurately
             </p>
           </div>
           <button
             type="button"
             onClick={handleRestart}
-            className="inline-flex items-center gap-2 min-h-[48px] px-5 rounded-[var(--radius-chip)] bg-white text-[#1D1D1F] text-sm font-bold"
+            className="inline-flex items-center gap-2 min-h-[48px] px-5 rounded-[var(--radius-chip)] bg-white text-[#1D1D1F] text-sm font-bold active:scale-95 transition-transform"
           >
             <RotateCcw size={16} aria-hidden="true" />
             New 10 Questions
@@ -159,37 +170,43 @@ export function MathSprintDrill({ onExit }: MathSprintDrillProps) {
         </section>
       ) : current ? (
         <>
-          <section className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-soft)] space-y-3">
-            <span className="eyebrow text-[#4D3EA3]">{current.formulaLabel}</span>
-            <p lang="ja" className="text-lg font-bold text-[#1D1D1F] leading-relaxed">
-              {current.prompt.ja}
-            </p>
-            {settings.langPreset === 'jp_id' || settings.langPreset === 'jp_id_en' ? (
-              <p className="text-sm text-[#1D1D1F]">{current.prompt.id}</p>
-            ) : null}
-            {settings.langPreset === 'jp_en' || settings.langPreset === 'jp_id_en' ? (
-              <p className="text-xs text-[#5B5B62]">{current.prompt.en}</p>
-            ) : null}
+          <StateTransition keyId={current.id} direction="forward">
+            <section className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-soft)] space-y-3">
+              <span className="eyebrow text-[#4D3EA3]">{current.formulaLabel}</span>
+              <p lang="ja" className="text-lg font-bold text-[#1D1D1F] leading-relaxed">
+                {current.prompt.ja}
+              </p>
+              {settings.langPreset === 'jp_id' || settings.langPreset === 'jp_id_en' ? (
+                <p className="text-sm text-[#1D1D1F]">{current.prompt.id}</p>
+              ) : null}
+              {settings.langPreset === 'jp_en' || settings.langPreset === 'jp_id_en' ? (
+                <p className="text-xs text-[#5B5B62]">{current.prompt.en}</p>
+              ) : null}
 
-            <div className="rounded-[var(--radius-card)] bg-[#F5F5F7] p-4 flex items-center justify-between gap-3 border border-black/10">
-              <span className="text-xs font-semibold text-[#5B5B62]">Your answer</span>
-              <div className="text-2xl font-bold text-[#1D1D1F] tabular-nums">
-                {current.unit === '¥' ? '¥' : ''}
-                {input || '0'}
-                {current.unit === '%' ? '%' : ''}
-              </div>
-            </div>
-
-            {checked ? (
-              <div
-                role="status"
-                className={[
-                  'rounded-[var(--radius-card)] p-4 space-y-2',
-                  checked === 'correct'
-                    ? 'bg-[#1FA87A]/20 text-[#1D1D1F]'
-                    : 'bg-[#FFD2F4] text-[#450C3F]',
-                ].join(' ')}
+              <InteractiveSurface
+                as="div"
+                intent={checked === 'correct' ? 'positive' : checked === 'wrong' ? 'negative' : 'neutral'}
+                feedbackKey={checked ? `${current.id}:${checked}` : null}
+                className="rounded-[var(--radius-card)] bg-[#F5F5F7] p-4 flex items-center justify-between gap-3 border border-black/10"
               >
+                <span className="text-xs font-semibold text-[#5B5B62]">Your answer</span>
+                <div className="text-2xl font-bold text-[#1D1D1F] tabular-nums">
+                  {current.unit === '¥' ? '¥' : ''}
+                  {input || '0'}
+                  {current.unit === '%' ? '%' : ''}
+                </div>
+              </InteractiveSurface>
+
+              {checked ? (
+                <div
+                  role="status"
+                  className={[
+                    'reveal-panel rounded-[var(--radius-card)] p-4 space-y-2',
+                    checked === 'correct'
+                      ? 'bg-[#1FA87A]/20 text-[#1D1D1F]'
+                      : 'bg-[#FFD2F4] text-[#450C3F]',
+                  ].join(' ')}
+                >
                 <div className="flex items-center gap-2 font-bold text-sm">
                   {checked === 'correct' ? (
                     <>
@@ -217,7 +234,8 @@ export function MathSprintDrill({ onExit }: MathSprintDrillProps) {
                 </button>
               </div>
             ) : null}
-          </section>
+            </section>
+          </StateTransition>
 
           {!checked ? (
             <section

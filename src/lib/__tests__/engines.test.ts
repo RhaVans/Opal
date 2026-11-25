@@ -15,6 +15,8 @@ import {
 } from '../mathGenerator';
 import { getGreetingForPreset } from '../chapters';
 import { formatJapaneseForTTS } from '../tts';
+import { emitFeedback, subscribeFeedback } from '../motion/feedbackBus';
+import { DURATIONS, INTENT_SHADER_RGB, type FeedbackSignal } from '../motion/tokens';
 import {
   computeChapterStats,
   computeExamReadiness,
@@ -183,5 +185,29 @@ describe('Comma numeric matching, Concierge greeting, and TTS normalization', ()
     expect(
       formatJapaneseForTTS('「宿泊税」は宿泊の税金（accommodation tax）です。')
     ).toBe('宿泊税 は宿泊の税金です。');
+  });
+});
+
+describe('Motion feedbackBus and tokens', () => {
+  it('clamps shaderPulse energy strictly inside [0, 0.4] and supports unsubscribing', () => {
+    const received: FeedbackSignal[] = [];
+    const unsub = subscribeFeedback((sig) => received.push(sig));
+
+    emitFeedback({ intent: 'positive', shaderPulse: { energy: 0.95, origin: [0.5, 0.2] } });
+    emitFeedback({ intent: 'negative', shaderPulse: { energy: -0.3 } });
+    expect(received).toHaveLength(2);
+    expect(received[0].shaderPulse?.energy).toBe(0.4);
+    expect(received[1].shaderPulse?.energy).toBe(0);
+
+    unsub();
+    emitFeedback({ intent: 'primary', shaderPulse: { energy: 0.25 } });
+    expect(received).toHaveLength(2);
+  });
+
+  it('keeps semantic shader colors and motion duration tokens well-formed', () => {
+    expect(INTENT_SHADER_RGB.negative).toHaveLength(3);
+    expect(DURATIONS.instant).toBeLessThan(DURATIONS.micro);
+    expect(DURATIONS.micro).toBeLessThan(DURATIONS.standard);
+    expect(DURATIONS.standard).toBeLessThan(DURATIONS.macro);
   });
 });
