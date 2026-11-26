@@ -59,6 +59,7 @@
 
 @layer base {
   html {
+    color-scheme: light;
     font-family: var(--font-latin);
     color: var(--ink-primary);
     background-color: var(--surface-light);
@@ -262,6 +263,7 @@
   inset: 0;
   z-index: -1;
   pointer-events: none;
+  background-color: #E1DAFB;
   background:
     radial-gradient(120% 70% at 50% 24%, rgba(255, 210, 244, 0.85) 0%, rgba(225, 218, 251, 0.72) 40%, rgba(117, 138, 209, 0.45) 75%, rgba(77, 62, 163, 0.55) 100%),
     conic-gradient(from 200deg at 50% 18%, #E1DAFB 0deg, #FFD2F4 70deg, #758AD1 155deg, #4D3EA3 235deg, #450C3F 300deg, #E1DAFB 360deg);

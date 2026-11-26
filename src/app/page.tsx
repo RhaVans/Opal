@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useRef } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Flame, AlertCircle, RotateCcw } from 'lucide-react';
 import { useApp } from '@/components/AppProvider';
 import { ALL_FLASHCARDS } from '@/lib/curriculum';
@@ -25,6 +25,7 @@ import { StreakDialog } from '@/components/home/StreakDialog';
 export default function HomePage() {
   const streakDialogRef = useRef<HTMLDialogElement>(null);
   const streakOriginRef = useRef<'pill' | 'card'>('pill');
+  const [mounted, setMounted] = useState(false);
   const { runDomTransition } = useViewTransition();
   const {
     hydrated,
@@ -38,65 +39,9 @@ export default function HomePage() {
     reloadFromDB,
   } = useApp();
 
-  if (dbError) {
-    return (
-      <div className="pt-4 space-y-4">
-        <h1 className="display-headline text-[#1D1D1F]">Opal</h1>
-        <div
-          role="alert"
-          className="rounded-[var(--radius-hero)] bg-white p-6 shadow-[var(--shadow-soft)] space-y-4"
-        >
-          <div className="flex items-center gap-3 text-[#CC2F52]">
-            <AlertCircle size={22} aria-hidden="true" />
-            <h2 className="text-lg font-bold">Local storage unavailable</h2>
-          </div>
-          <p className="text-sm text-[#5B5B62]">{dbError}</p>
-          <button
-            type="button"
-            onClick={() => void reloadFromDB()}
-            className="inline-flex items-center gap-2 min-h-[48px] px-5 rounded-[var(--radius-chip)] bg-[#1D1D1F] text-white text-sm font-semibold"
-          >
-            <RotateCcw size={16} aria-hidden="true" />
-            Retry storage
-          </button>
-        </div>
-      </div>
-    );
-  }
-
-  const now = new Date();
-  const nowMs = now.getTime();
-  const todayKey = getLocalDateKey(now);
-  const dateLabel = now.toLocaleDateString('en-US', {
-    weekday: 'short',
-    month: 'short',
-    day: 'numeric',
-  });
-
-  const greeting = getGreetingForPreset(settings.langPreset, now);
-  const streak = computeStreak(dailyLogs, now);
-  const todayLog = dailyLogs.find((l) => l.dateKey === todayKey);
-  const todayReviews = todayLog ? todayLog.reviewsCompleted : 0;
-
-  let dueCount = 0;
-  let weakCardCount = 0;
-  for (const card of ALL_FLASHCARDS) {
-    const st = srsMap.get(card.id);
-    if (!st || st.dueTimestamp <= nowMs) {
-      dueCount += 1;
-    }
-    if (isCardWeakSpot(st)) {
-      weakCardCount += 1;
-    }
-  }
-  const totalWeakCount = weakCardCount + cbtWeakList.length;
-
-  const overallMasteryPct = computeOverallMasteryPct(ALL_FLASHCARDS, srsMap);
-  const readiness = computeExamReadiness(overallMasteryPct, cbtAttempts, drillProgress);
-  const weakChapterCounts = CHAPTER_META.map((ch) =>
-    computeChapterStats(ch.id, ALL_FLASHCARDS, srsMap, nowMs)
-  );
-  const totalMastered = weakChapterCounts.reduce((acc, c) => acc + c.mature, 0);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const openStreakOverlay = useCallback(
     (origin: 'pill' | 'card') => {
@@ -141,6 +86,70 @@ export default function HomePage() {
   const handleNativeStreakClose = useCallback(() => {
     // Native Esc/backdrop close already closed the dialog and returned focus to invoker.
   }, []);
+
+  if (dbError) {
+    return (
+      <div className="pt-4 space-y-4">
+        <h1 className="display-headline text-[#1D1D1F]">Opal</h1>
+        <div
+          role="alert"
+          className="rounded-[var(--radius-hero)] bg-white p-6 shadow-[var(--shadow-soft)] space-y-4"
+        >
+          <div className="flex items-center gap-3 text-[#CC2F52]">
+            <AlertCircle size={22} aria-hidden="true" />
+            <h2 className="text-lg font-bold">Local storage unavailable</h2>
+          </div>
+          <p className="text-sm text-[#5B5B62]">{dbError}</p>
+          <button
+            type="button"
+            onClick={() => void reloadFromDB()}
+            className="inline-flex items-center gap-2 min-h-[48px] px-5 rounded-[var(--radius-chip)] bg-[#1D1D1F] text-white text-sm font-semibold"
+          >
+            <RotateCcw size={16} aria-hidden="true" />
+            Retry storage
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  const now = mounted ? new Date() : new Date(0);
+  const nowMs = now.getTime();
+  const todayKey = mounted ? getLocalDateKey(now) : '';
+  const dateLabel = mounted
+    ? now.toLocaleDateString('en-US', {
+        weekday: 'short',
+        month: 'short',
+        day: 'numeric',
+      })
+    : 'Today';
+
+  const greeting = mounted
+    ? getGreetingForPreset(settings.langPreset, now)
+    : { line1: 'Welcome,', line2: 'Concierge' };
+  const streak = computeStreak(dailyLogs, now);
+  const todayLog = dailyLogs.find((l) => l.dateKey === todayKey);
+  const todayReviews = todayLog ? todayLog.reviewsCompleted : 0;
+
+  let dueCount = 0;
+  let weakCardCount = 0;
+  for (const card of ALL_FLASHCARDS) {
+    const st = srsMap.get(card.id);
+    if (!st || st.dueTimestamp <= nowMs) {
+      dueCount += 1;
+    }
+    if (isCardWeakSpot(st)) {
+      weakCardCount += 1;
+    }
+  }
+  const totalWeakCount = weakCardCount + cbtWeakList.length;
+
+  const overallMasteryPct = computeOverallMasteryPct(ALL_FLASHCARDS, srsMap);
+  const readiness = computeExamReadiness(overallMasteryPct, cbtAttempts, drillProgress);
+  const weakChapterCounts = CHAPTER_META.map((ch) =>
+    computeChapterStats(ch.id, ALL_FLASHCARDS, srsMap, nowMs)
+  );
+  const totalMastered = weakChapterCounts.reduce((acc, c) => acc + c.mature, 0);
 
   return (
     <div className="space-y-4">

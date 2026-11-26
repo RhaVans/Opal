@@ -569,6 +569,39 @@ async function run() {
     }
     await context.setOffline(false);
 
+    // 10. Verify ?eco=1 fallback and inline fixed positioning on LiquidBackground
+    await page.goto(`${baseUrl}/?eco=1`, { waitUntil: 'networkidle' });
+    await page.waitForTimeout(150);
+    const ecoFallbackCheck = await page.evaluate(() => {
+      const el = document.querySelector<HTMLElement>('[data-shader-mode]');
+      if (!el) return { mode: 'none', pos: '' };
+      return { mode: el.getAttribute('data-shader-mode') ?? '', pos: el.style.position };
+    });
+    if (ecoFallbackCheck.mode !== 'eco' || ecoFallbackCheck.pos !== 'fixed') {
+      failures.push(`Eco query / inline fixed check failed: ${JSON.stringify(ecoFallbackCheck)}`);
+    }
+
+    // 11. Verify IndexedDB blocked/SecurityError renders storage fallback UI instead of white crash
+    const idbErrPage = await browser.newPage({ viewport: { width: 360, height: 800 } });
+    const idbPageErrors: string[] = [];
+    idbErrPage.on('pageerror', (err) => idbPageErrors.push(err.message));
+    await idbErrPage.addInitScript(() => {
+      Object.defineProperty(window, 'indexedDB', {
+        get() {
+          throw new Error('SecurityError: IndexedDB unavailable');
+        },
+      });
+    });
+    await idbErrPage.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+    await idbErrPage.waitForSelector('text=Local storage unavailable', { timeout: 5000 }).catch(() => {});
+    const idbFallbackText = await idbErrPage.locator('main').innerText().catch(() => '');
+    await idbErrPage.close();
+    if (!idbFallbackText.includes('Local storage unavailable') || idbPageErrors.length > 0) {
+      failures.push(
+        `IndexedDB error recovery failed: text=${JSON.stringify(idbFallbackText.slice(0, 80))}, pageErrors=${JSON.stringify(idbPageErrors)}`
+      );
+    }
+
     if (externalRequests.size > 0) {
       failures.push(`External network requests detected: ${Array.from(externalRequests).join(', ')}`);
     }

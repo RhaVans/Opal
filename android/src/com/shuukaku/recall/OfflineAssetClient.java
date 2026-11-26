@@ -2,6 +2,8 @@ package com.shuukaku.recall;
 
 import android.content.res.AssetManager;
 import android.net.Uri;
+import android.webkit.RenderProcessGoneDetail;
+import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
 import android.webkit.WebView;
@@ -14,9 +16,11 @@ import java.util.Locale;
 import java.util.Map;
 
 final class OfflineAssetClient extends WebViewClient {
+    private final MainActivity activity;
     private final AssetManager assets;
 
-    OfflineAssetClient(AssetManager assets) {
+    OfflineAssetClient(MainActivity activity, AssetManager assets) {
+        this.activity = activity;
         this.assets = assets;
     }
 
@@ -51,12 +55,16 @@ final class OfflineAssetClient extends WebViewClient {
             rel = rel + "index.html";
         }
 
-        String[] candidates = new String[]{
-                "www/" + rel,
-                "www/" + rel + ".html",
-                "www/" + rel + "/index.html",
-                "www/index.html"
-        };
+        String[] candidates = shouldFallbackToIndex(rel)
+                ? new String[]{
+                        "www/" + rel,
+                        "www/" + rel + ".html",
+                        "www/" + rel + "/index.html",
+                        "www/index.html"
+                }
+                : new String[]{
+                        "www/" + rel
+                };
 
         for (String candidate : candidates) {
             try {
@@ -71,6 +79,31 @@ final class OfflineAssetClient extends WebViewClient {
             }
         }
         return emptyResponse(404, "Not Found");
+    }
+
+    @Override
+    public void onReceivedError(
+            WebView view, WebResourceRequest request, WebResourceError error) {
+        super.onReceivedError(view, request, error);
+        if (request != null && request.isForMainFrame() && error != null) {
+            CharSequence desc = error.getDescription();
+            activity.handleMainFrameError(
+                    error.getErrorCode(), desc != null ? desc.toString() : "Page load failed");
+        }
+    }
+
+    @Override
+    public boolean onRenderProcessGone(WebView view, RenderProcessGoneDetail detail) {
+        boolean crashed = detail != null && detail.didCrash();
+        activity.handleRenderProcessGone(crashed);
+        return true;
+    }
+
+    private static boolean shouldFallbackToIndex(String rel) {
+        if ("sw.js".equals(rel)) return false;
+        int lastSlash = rel.lastIndexOf('/');
+        String leaf = lastSlash >= 0 ? rel.substring(lastSlash + 1) : rel;
+        return !leaf.contains(".") || leaf.endsWith(".html");
     }
 
     private static WebResourceResponse emptyResponse(int code, String reason) {
@@ -99,6 +132,8 @@ final class OfflineAssetClient extends WebViewClient {
     }
 
     private static boolean isBinaryMime(String mime) {
-        return mime.startsWith("font/") || (mime.startsWith("image/") && !mime.contains("svg"));
+        return "application/octet-stream".equals(mime)
+                || mime.startsWith("font/")
+                || (mime.startsWith("image/") && !mime.contains("svg"));
     }
 }

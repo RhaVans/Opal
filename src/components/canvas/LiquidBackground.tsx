@@ -43,26 +43,22 @@ export function LiquidBackground() {
 
     let renderer: THREE.WebGLRenderer | null = null;
     try {
-      const probeCanvas = document.createElement('canvas');
-      const gl2 = probeCanvas.getContext('webgl2', {
+      const canvas = document.createElement('canvas');
+      const ctxOpts: WebGLContextAttributes = {
         antialias: false,
         alpha: false,
         depth: false,
         stencil: false,
-      });
-      const gl1 =
-        gl2 ||
-        probeCanvas.getContext('webgl', {
-          antialias: false,
-          alpha: false,
-          depth: false,
-          stencil: false,
-        });
-      if (!gl1) {
+        powerPreference: 'low-power',
+      };
+      const gl = canvas.getContext('webgl2', ctxOpts) || canvas.getContext('webgl', ctxOpts);
+      if (!gl || (typeof gl.isContextLost === 'function' && gl.isContextLost())) {
         triggerAdaptiveEco();
         return;
       }
       renderer = new THREE.WebGLRenderer({
+        canvas,
+        context: gl as WebGLRenderingContext,
         antialias: false,
         alpha: false,
         depth: false,
@@ -75,12 +71,18 @@ export function LiquidBackground() {
       return;
     }
 
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+    renderer.setPixelRatio(1);
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.domElement.style.width = '100%';
     renderer.domElement.style.height = '100%';
     renderer.domElement.style.display = 'block';
     container.appendChild(renderer.domElement);
+
+    const onContextLost = (e: Event) => {
+      e.preventDefault();
+      triggerAdaptiveEco();
+    };
+    renderer.domElement.addEventListener('webglcontextlost', onContextLost, false);
 
     const scene = new THREE.Scene();
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
@@ -119,7 +121,7 @@ export function LiquidBackground() {
 
     const onResize = () => {
       if (!renderer) return;
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+      renderer.setPixelRatio(1);
       renderer.setSize(window.innerWidth, window.innerHeight);
       uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight);
     };
@@ -182,7 +184,12 @@ export function LiquidBackground() {
         uniforms.u_feedbackEnergy.value = 0;
       }
 
-      renderer?.render(scene, camera);
+      try {
+        renderer?.render(scene, camera);
+      } catch {
+        triggerAdaptiveEco();
+        return;
+      }
       rafId = window.requestAnimationFrame(renderFrame);
     };
 
@@ -214,6 +221,7 @@ export function LiquidBackground() {
       unsubscribeFeedback();
       window.removeEventListener('pointermove', onPointerMove);
       window.removeEventListener('resize', onResize);
+      renderer?.domElement.removeEventListener('webglcontextlost', onContextLost);
       geometry.dispose();
       material.dispose();
       renderer?.dispose();
@@ -223,12 +231,22 @@ export function LiquidBackground() {
     };
   }, [useStaticFallback, triggerAdaptiveEco]);
 
+  const fixedBackdropStyle = {
+    position: 'fixed' as const,
+    inset: 0,
+    width: '100%',
+    height: '100%',
+    zIndex: -10,
+    pointerEvents: 'none' as const,
+  };
+
   return (
     <>
       {useStaticFallback ? (
         <div
           aria-hidden="true"
           data-shader-mode="eco"
+          style={fixedBackdropStyle}
           className="eco-shader-backdrop"
         />
       ) : (
@@ -236,6 +254,7 @@ export function LiquidBackground() {
           ref={containerRef}
           aria-hidden="true"
           data-shader-mode="webgl"
+          style={fixedBackdropStyle}
           className="fixed inset-0 w-screen h-screen -z-10 pointer-events-none"
         />
       )}

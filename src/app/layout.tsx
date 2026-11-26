@@ -55,7 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <main
                 id="main-content"
                 tabIndex={-1}
-                style={{ viewTransitionName: 'app-stage' }}
+                style={{ viewTransitionName: 'app-stage', position: 'relative', zIndex: 10 }}
                 className="relative z-10 min-h-dvh mx-auto w-full max-w-[480px] md:max-w-3xl px-4 pt-6 pb-[calc(7.5rem+env(safe-area-inset-bottom,0px))] outline-none"
               >
                 {children}

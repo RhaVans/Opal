@@ -130,6 +130,10 @@ export function AppProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
+    if (window.location.search.includes('eco=1')) {
+      setAdaptiveEco(true);
+    }
+
     const refreshVoices = () => {
       setTtsAvailability(getTTSAvailability());
     };
@@ -138,7 +142,10 @@ export function AppProvider({ children }: { children: ReactNode }) {
       window.speechSynthesis.addEventListener('voiceschanged', refreshVoices);
     }
 
-    if ('serviceWorker' in navigator) {
+    const isAndroidApk = Boolean(
+      window.AndroidTTS || (window as unknown as { AndroidBackup?: unknown }).AndroidBackup
+    );
+    if ('serviceWorker' in navigator && !isAndroidApk) {
       navigator.serviceWorker.register('/sw.js').catch(() => {
         // Ignore registration errors in unsupported dev contexts
       });

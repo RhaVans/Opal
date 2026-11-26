@@ -30,8 +30,18 @@ APK_OUT="${APK_OUT}"
 ANDROID_JAR="\$ANDROID_HOME/platforms/android-35/android.jar"
 BT="\$ANDROID_HOME/build-tools/34.0.0"
 
-aapt2 compile --dir android/res -o android/build/res.zip
-aapt2 link \
+AAPT2="\$BT/aapt2"
+if "\$AAPT2" version >/dev/null 2>&1; then
+  AAPT2_CMD=("\$AAPT2")
+elif command -v qemu-x86_64-static >/dev/null 2>&1 && [ -d /usr/x86_64-linux-gnu ]; then
+  AAPT2_CMD=(qemu-x86_64-static -L /usr/x86_64-linux-gnu "\$AAPT2")
+else
+  echo "No runnable aapt2 found in container." >&2
+  exit 1
+fi
+
+"\${AAPT2_CMD[@]}" compile --dir android/res -o android/build/res.zip
+"\${AAPT2_CMD[@]}" link \
   -I "\$ANDROID_JAR" \
   --manifest android/AndroidManifest.xml \
   --java android/build/gen \
