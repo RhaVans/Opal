@@ -4,6 +4,8 @@ import type {
   DailyActivityLog,
   DrillProgressRecord,
   FlashcardItem,
+  KotobaCardItem,
+  KotobaSRSState,
   SRSCardState,
 } from './types';
 import { DAY_MS } from './srs';
@@ -124,7 +126,9 @@ export function computeExamReadiness(
           ) / last5.length
         );
 
-  const completedDrills = drillProgress.filter((d) => d.completedCount >= 1).length;
+  const completedDrills = drillProgress.filter(
+    (d) => d.drillId !== 'kotoba' && d.completedCount >= 1
+  ).length;
   const drillCompletionPct = Math.round((Math.min(4, completedDrills) / 4) * 100);
 
   const readinessPct = Math.round(
@@ -246,4 +250,49 @@ export function getStreakCycleDays(streak: number): StreakCycleDay[] {
       completed: idx < completedInCycle,
     };
   });
+}
+
+export interface KotobaSummaryStats {
+  total: number;
+  due: number;
+  learning: number;
+  mastered: number;
+  weak: number;
+  bookmarked: number;
+}
+
+export function computeKotobaSummary(
+  cards: KotobaCardItem[],
+  statesById: Map<string, KotobaSRSState>,
+  nowMs: number
+): KotobaSummaryStats {
+  let due = 0;
+  let learning = 0;
+  let mastered = 0;
+  let weak = 0;
+  let bookmarked = 0;
+
+  for (const card of cards) {
+    const st = statesById.get(card.id);
+    if (!st) {
+      due += 1;
+      continue;
+    }
+    if (st.dueTimestamp <= nowMs) due += 1;
+    if (st.intervalDays >= 7) mastered += 1;
+    else if (st.repetitions >= 1) learning += 1;
+    if (st.lapses >= 2 || (st.reviewCount >= 3 && st.correctCount / st.reviewCount < 0.6)) {
+      weak += 1;
+    }
+    if (st.bookmarked) bookmarked += 1;
+  }
+
+  return {
+    total: cards.length,
+    due,
+    learning,
+    mastered,
+    weak,
+    bookmarked,
+  };
 }

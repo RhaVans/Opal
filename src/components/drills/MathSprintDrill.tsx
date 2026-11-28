@@ -8,6 +8,12 @@ import {
   type MathProblem,
 } from '@/lib/mathGenerator';
 import { useApp } from '@/components/AppProvider';
+import { FuriganaText } from '@/components/text/FuriganaText';
+import {
+  LangCycleChip,
+  PeekTranslationButton,
+  QuestionStudyControls,
+} from '@/components/text/QuestionStudyControls';
 import { Sparkle } from '@/components/ui/Sparkle';
 import { InteractiveSurface } from '@/components/motion/InteractiveSurface';
 import { StateTransition } from '@/components/motion/StateTransition';
@@ -27,6 +33,7 @@ export function MathSprintDrill({ onExit }: MathSprintDrillProps) {
   const [input, setInput] = useState('');
   const [checked, setChecked] = useState<'correct' | 'wrong' | null>(null);
   const [correctCount, setCorrectCount] = useState(0);
+  const [peekTranslation, setPeekTranslation] = useState(false);
   const [finished, setFinished] = useState(false);
   const [startedAt, setStartedAt] = useState(() => Date.now());
 
@@ -50,6 +57,7 @@ export function MathSprintDrill({ onExit }: MathSprintDrillProps) {
       setIdx((i) => i + 1);
       setInput('');
       setChecked(null);
+      setPeekTranslation(false);
     } else {
       setFinished(true);
       const accuracy = Math.round((correctCount / problems.length) * 100);
@@ -103,12 +111,14 @@ export function MathSprintDrill({ onExit }: MathSprintDrillProps) {
     setIdx(0);
     setInput('');
     setChecked(null);
+    setPeekTranslation(false);
     setCorrectCount(0);
     setFinished(false);
     setStartedAt(Date.now());
   };
 
   const useIndonesian = settings.langPreset === 'jp_id' || settings.langPreset === 'jp_id_en';
+  const hideTrans = settings.hideTranslation && !peekTranslation;
 
   return (
     <div className="space-y-4 pb-10">
@@ -140,7 +150,10 @@ export function MathSprintDrill({ onExit }: MathSprintDrillProps) {
             ))}
           </div>
         </div>
+        <LangCycleChip />
       </div>
+
+      <QuestionStudyControls />
 
       {finished ? (
         <section className="reveal-panel rounded-[var(--radius-hero)] bg-[#1D1D1F] text-white p-6 space-y-4">
@@ -175,14 +188,24 @@ export function MathSprintDrill({ onExit }: MathSprintDrillProps) {
               data-vt-id="drill-math"
               className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-soft)] space-y-3"
             >
-              <span className="eyebrow text-[#4D3EA3]">{current.formulaLabel}</span>
-              <p lang="ja" className="text-lg font-bold text-[#1D1D1F] leading-relaxed">
-                {current.prompt.ja}
-              </p>
-              {settings.langPreset === 'jp_id' || settings.langPreset === 'jp_id_en' ? (
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <span className="eyebrow text-[#4D3EA3]">{current.formulaLabel}</span>
+                <PeekTranslationButton
+                  peeking={peekTranslation}
+                  onToggle={() => setPeekTranslation((p) => !p)}
+                />
+              </div>
+              <div className="text-lg font-bold text-[#1D1D1F] leading-[1.8]">
+                <FuriganaText
+                  jaRuby={current.prompt.jaRuby}
+                  jaPlain={current.prompt.jaPlain}
+                  mode={settings.furiganaMode}
+                />
+              </div>
+              {!hideTrans && (settings.langPreset === 'jp_id' || settings.langPreset === 'jp_id_en') ? (
                 <p className="text-sm text-[#1D1D1F]">{current.prompt.id}</p>
               ) : null}
-              {settings.langPreset === 'jp_en' || settings.langPreset === 'jp_id_en' ? (
+              {!hideTrans && (settings.langPreset === 'jp_en' || settings.langPreset === 'jp_id_en') ? (
                 <p className="text-xs text-[#5B5B62]">{current.prompt.en}</p>
               ) : null}
 
@@ -223,11 +246,13 @@ export function MathSprintDrill({ onExit }: MathSprintDrillProps) {
                     </>
                   )}
                 </div>
-                {(useIndonesian ? current.steps.id : current.steps.en).map((line, i) => (
-                  <p key={i} className="text-xs font-medium">
-                    {line}
-                  </p>
-                ))}
+                {!hideTrans
+                  ? (useIndonesian ? current.steps.id : current.steps.en).map((line, i) => (
+                      <p key={i} className="text-xs font-medium">
+                        {line}
+                      </p>
+                    ))
+                  : null}
                 <button
                   type="button"
                   onClick={handleNext}

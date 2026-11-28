@@ -5,6 +5,12 @@ import { ArrowLeft, CheckCircle2, RotateCcw, XCircle } from 'lucide-react';
 import { DRILLS_DATA } from '@/lib/curriculum';
 import { useApp } from '@/components/AppProvider';
 import { TrilingualBlock } from '@/components/text/TrilingualBlock';
+import { FuriganaText } from '@/components/text/FuriganaText';
+import {
+  LangCycleChip,
+  PeekTranslationButton,
+  QuestionStudyControls,
+} from '@/components/text/QuestionStudyControls';
 import { Chip } from '@/components/ui/Chip';
 import { Sparkle } from '@/components/ui/Sparkle';
 import { InteractiveSurface } from '@/components/motion/InteractiveSurface';
@@ -28,6 +34,7 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
   const [etiquetteIdx, setEtiquetteIdx] = useState(0);
   const [etiquettePicked, setEtiquettePicked] = useState<string | null>(null);
   const [etiquetteCorrectCount, setEtiquetteCorrectCount] = useState(0);
+  const [peekTranslation, setPeekTranslation] = useState(false);
   const [finished, setFinished] = useState(false);
   const startedAtRef = useRef<number>(Date.now());
 
@@ -45,6 +52,7 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
         setSelectedItemId(null);
         setPlacements({});
         setSpatialError(null);
+        setPeekTranslation(false);
       },
       {
         type: 'state-morph',
@@ -95,6 +103,7 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
     if (etiquetteIdx + 1 < etiquetteList.length) {
       setEtiquetteIdx((i) => i + 1);
       setEtiquettePicked(null);
+      setPeekTranslation(false);
     } else {
       setFinished(true);
       const totalSteps = 4 + 4 + etiquetteList.length;
@@ -113,9 +122,12 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
     setEtiquetteIdx(0);
     setEtiquettePicked(null);
     setEtiquetteCorrectCount(0);
+    setPeekTranslation(false);
     setFinished(false);
     startedAtRef.current = Date.now();
   };
+
+  const hideTrans = settings.hideTranslation && !peekTranslation;
 
   const progressPct =
     round === 'washoku'
@@ -147,7 +159,10 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
             />
           </div>
         </div>
+        <LangCycleChip />
       </div>
+
+      <QuestionStudyControls />
 
       <div role="group" aria-label="Choose table drill round" className="flex gap-2 overflow-x-auto no-scrollbar">
         <Chip pillGroupId="table-round" selected={round === 'washoku'} onClick={() => switchRound('washoku')}>
@@ -189,15 +204,20 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
               data-vt-id="drill-table"
               className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-soft)] space-y-4"
             >
-              <div className="flex items-center justify-between">
+              <div className="flex flex-wrap items-center justify-between gap-2">
                 <span className="eyebrow text-[#4D3EA3]">
                   Question {etiquetteIdx + 1}/{etiquetteList.length} · p.{current.pdfPage}
                 </span>
+                <PeekTranslationButton
+                  peeking={peekTranslation}
+                  onToggle={() => setPeekTranslation((p) => !p)}
+                />
               </div>
               <TrilingualBlock
                 text={current.question}
                 furiganaMode={settings.furiganaMode}
                 langPreset={settings.langPreset}
+                hideTranslation={hideTrans}
                 jaClassName="text-lg font-bold leading-[1.75]"
               />
               <div className="space-y-2.5">
@@ -224,6 +244,8 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
                         text={opt.text}
                         furiganaMode={settings.furiganaMode}
                         langPreset={settings.langPreset}
+                        hideTranslation={hideTrans}
+                        interactivePeek={false}
                         darkSurface={Boolean(etiquettePicked && picked && !isCorrect)}
                         jaClassName="text-sm font-bold leading-[1.6]"
                         secondaryClassName="text-xs"
@@ -239,6 +261,7 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
                     text={current.explanation}
                     furiganaMode={settings.furiganaMode}
                     langPreset={settings.langPreset}
+                    hideTranslation={hideTrans}
                     jaClassName="text-sm font-bold leading-[1.7]"
                     secondaryClassName="text-xs"
                   />
@@ -259,7 +282,7 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
           data-vt-id="drill-table"
           className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-soft)] space-y-4"
         >
-          <div className="flex items-center justify-between">
+          <div className="flex flex-wrap items-center justify-between gap-2">
             <div>
               <span className="eyebrow text-[#4D3EA3]">
                 {round === 'washoku' ? 'Round 1 · p.58' : 'Round 2 · p.61'}
@@ -268,9 +291,15 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
                 {round === 'washoku' ? 'Washoku Ichiju-Sansai (一汁三菜)' : 'Western Table Setting'}
               </h2>
             </div>
-            <span className="text-xs font-semibold text-[#5B5B62] tabular-nums">
-              {placedItemIds.size}/4 placed
-            </span>
+            <div className="flex items-center gap-2">
+              <PeekTranslationButton
+                peeking={peekTranslation}
+                onToggle={() => setPeekTranslation((p) => !p)}
+              />
+              <span className="text-xs font-semibold text-[#5B5B62] tabular-nums">
+                {placedItemIds.size}/4 placed
+              </span>
+            </div>
           </div>
 
           <p className="text-xs text-[#5B5B62]">
@@ -319,9 +348,11 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
                   <span className="text-[11px] font-bold">
                     {placedItem ? placedItem.label.jaPlain : `#${z.number}`}
                   </span>
-                  <span className="text-[10px] font-semibold leading-tight">
-                    {placedItem ? placedItem.label.en : z.positionLabel.en}
-                  </span>
+                  {placedItem && hideTrans ? null : (
+                    <span className="text-[10px] font-semibold leading-tight">
+                      {placedItem ? placedItem.label.en : z.positionLabel.en}
+                    </span>
+                  )}
                 </button>
               );
             })}
@@ -352,12 +383,22 @@ export function TableLayoutDrill({ onExit }: TableLayoutDrillProps) {
                     className="w-full justify-center py-2.5"
                   >
                     <span className="text-center leading-tight">
-                      <span className="block text-sm font-bold">{item.label.jaPlain}</span>
-                      <span className="block text-[11px] opacity-85">
-                        {settings.langPreset === 'jp_id' || settings.langPreset === 'jp_id_en'
-                          ? item.label.id
-                          : item.label.en}
+                      <span className="block text-sm font-bold">
+                        <FuriganaText
+                          jaRuby={item.label.jaRuby}
+                          jaPlain={item.label.jaPlain}
+                          mode={settings.furiganaMode}
+                          darkSurface={selectedItemId === item.id}
+                          interactivePeek={false}
+                        />
                       </span>
+                      {!hideTrans && settings.langPreset !== 'jp_only' ? (
+                        <span className="block text-[11px] opacity-85">
+                          {settings.langPreset === 'jp_id' || settings.langPreset === 'jp_id_en'
+                            ? item.label.id
+                            : item.label.en}
+                        </span>
+                      ) : null}
                     </span>
                   </Chip>
                 ))}

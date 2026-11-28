@@ -9,12 +9,15 @@ import { ALL_FLASHCARDS } from '@/lib/curriculum';
 import { createInitialSRSState, getRatingPreviews } from '@/lib/srs';
 import { isCardWeakSpot } from '@/lib/analytics';
 import { speakJapanese, stopSpeaking } from '@/lib/tts';
-import type { ChapterId, FlashcardItem, FuriganaMode, LangPreset, SRSRating } from '@/lib/types';
-import { SegmentedControl } from '@/components/ui/SegmentedControl';
-import { Chip } from '@/components/ui/Chip';
+import type { ChapterId, FlashcardItem, SRSRating } from '@/lib/types';
 import { Sparkle } from '@/components/ui/Sparkle';
 import { TTSButton } from '@/components/text/TTSButton';
 import { TrilingualBlock } from '@/components/text/TrilingualBlock';
+import {
+  LangCycleChip,
+  PeekTranslationButton,
+  QuestionStudyControls,
+} from '@/components/text/QuestionStudyControls';
 import { InteractiveSurface } from '@/components/motion/InteractiveSurface';
 import { SemanticIcon } from '@/components/motion/SemanticIcon';
 import { StateTransition } from '@/components/motion/StateTransition';
@@ -28,14 +31,6 @@ const RATING_INTENT: Record<SRSRating, InteractionIntent> = {
   easy: 'primary',
 };
 
-const LANG_ORDER: LangPreset[] = ['jp_id', 'jp_en', 'jp_id_en', 'jp_only'];
-const LANG_LABEL: Record<LangPreset, string> = {
-  jp_id: 'JP+ID',
-  jp_en: 'JP+EN',
-  jp_id_en: 'JP+ID+EN',
-  jp_only: 'JP',
-};
-
 export function StudyStudio() {
   const searchParams = useSearchParams();
   const {
@@ -45,7 +40,6 @@ export function StudyStudio() {
     ttsAvailability,
     ttsTipDismissed,
     dismissTtsTip,
-    updateSettings,
     reviewCard,
     toggleBookmark,
   } = useApp();
@@ -60,6 +54,7 @@ export function StudyStudio() {
   const [queueIds, setQueueIds] = useState<string[] | null>(null);
   const [reviewedCount, setReviewedCount] = useState(0);
   const [flipped, setFlipped] = useState(false);
+  const [peekTranslation, setPeekTranslation] = useState(false);
   const cardShownAtRef = useRef<number>(Date.now());
   const ratingPendingRef = useRef(false);
   const lastAutoSpokenKeyRef = useRef<string | null>(null);
@@ -75,6 +70,7 @@ export function StudyStudio() {
       setQueueIds(null);
       setReviewedCount(0);
       setFlipped(false);
+      setPeekTranslation(false);
     }
   }, [sessionKey]);
 
@@ -161,6 +157,7 @@ export function StudyStudio() {
 
         setReviewedCount((c) => c + 1);
         setFlipped(false);
+        setPeekTranslation(false);
         cardShownAtRef.current = Date.now();
       } finally {
         ratingPendingRef.current = false;
@@ -198,12 +195,6 @@ export function StudyStudio() {
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [currentCard, flipped, handleRate, handleReveal]);
 
-  const cycleLangPreset = () => {
-    const idx = LANG_ORDER.indexOf(settings.langPreset);
-    const next = LANG_ORDER[(idx + 1) % LANG_ORDER.length];
-    void updateSettings({ langPreset: next });
-  };
-
   const totalRemaining = queueIds?.length ?? 0;
   const totalSession = reviewedCount + totalRemaining;
   const progressPct = totalSession === 0 ? 100 : Math.round((reviewedCount / totalSession) * 100);
@@ -226,38 +217,27 @@ export function StudyStudio() {
             <ArrowLeft size={20} aria-hidden="true" />
           </TransitionLink>
 
-          <SegmentedControl<FuriganaMode>
-            ariaLabel="Furigana display mode"
-            value={settings.furiganaMode}
-            onChange={(m) => void updateSettings({ furiganaMode: m })}
-            options={[
-              { value: 'on', label: 'On' },
-              { value: 'peek', label: 'Peek' },
-              { value: 'off', label: 'Off' },
-            ]}
-          />
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center justify-between text-xs font-semibold text-[#5B5B62] tabular-nums mb-1">
+              <span className="truncate">
+                {parsedChapter ? `Chapter 0${parsedChapter}` : modeParam.toUpperCase()}
+              </span>
+              <span>
+                {reviewedCount} done · {totalRemaining} left
+              </span>
+            </div>
+            <div className="w-full h-2 rounded-full bg-black/10 overflow-hidden">
+              <div
+                className="w-full h-full rounded-full bg-[#4D3EA3] origin-left transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none"
+                style={{ transform: `scaleX(${progressPct / 100})` }}
+              />
+            </div>
+          </div>
 
-          <Chip onClick={cycleLangPreset} aria-label={`Switch language preset, current ${LANG_LABEL[settings.langPreset]}`}>
-            {LANG_LABEL[settings.langPreset]}
-          </Chip>
+          <LangCycleChip />
         </div>
 
-        <div className="space-y-1">
-          <div className="flex items-center justify-between text-xs font-semibold text-[#5B5B62] tabular-nums">
-            <span>
-              {parsedChapter ? `Chapter 0${parsedChapter}` : modeParam.toUpperCase()}
-            </span>
-            <span>
-              {reviewedCount} done · {totalRemaining} left
-            </span>
-          </div>
-          <div className="w-full h-2 rounded-full bg-black/10 overflow-hidden">
-            <div
-              className="w-full h-full rounded-full bg-[#4D3EA3] origin-left transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none"
-              style={{ transform: `scaleX(${progressPct / 100})` }}
-            />
-          </div>
-        </div>
+        <QuestionStudyControls />
       </header>
 
       {!ttsAvailability.hasJapaneseVoice && !ttsTipDismissed ? (
@@ -345,7 +325,13 @@ export function StudyStudio() {
                 </span>
               </div>
 
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2">
+                {!flipped ? (
+                  <PeekTranslationButton
+                    peeking={peekTranslation}
+                    onToggle={() => setPeekTranslation((p) => !p)}
+                  />
+                ) : null}
                 <TTSButton
                   text={currentCard.prompt.jaPlain}
                   ariaLabel="Listen to question pronunciation"
@@ -384,6 +370,7 @@ export function StudyStudio() {
                 text={currentCard.prompt}
                 furiganaMode={settings.furiganaMode}
                 langPreset={settings.langPreset}
+                hideTranslation={!flipped && settings.hideTranslation && !peekTranslation}
                 darkSurface={flipped}
                 jaClassName="kanji-prompt"
               />

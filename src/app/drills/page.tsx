@@ -1,8 +1,10 @@
 'use client';
 
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useApp } from '@/components/AppProvider';
+import { ALL_KOTOBA_CARDS } from '@/lib/curriculum';
+import { computeKotobaSummary } from '@/lib/analytics';
 import type { DrillId } from '@/lib/types';
 import { DrillsCbtSwitch } from '@/components/layout/DrillsCbtSwitch';
 import { Sparkle } from '@/components/ui/Sparkle';
@@ -12,6 +14,7 @@ import { SequenceDrill } from '@/components/drills/SequenceDrill';
 import { TableLayoutDrill } from '@/components/drills/TableLayoutDrill';
 import { MathSprintDrill } from '@/components/drills/MathSprintDrill';
 import { OjigiKeigoDrill } from '@/components/drills/OjigiKeigoDrill';
+import { KotobaFlashcardDrill } from '@/components/drills/KotobaFlashcardDrill';
 
 interface DrillCardConfig {
   id: DrillId;
@@ -62,20 +65,27 @@ const DRILL_CARDS: DrillCardConfig[] = [
   },
 ];
 
+const VALID_DRILLS: readonly DrillId[] = ['sequence', 'table', 'math', 'ojigi_keigo', 'kotoba'];
+
 function DrillsHubInner() {
   const searchParams = useSearchParams();
-  const { hydrated, drillProgress, setHideDockOverride } = useApp();
+  const { hydrated, drillProgress, kotobaMap, setHideDockOverride } = useApp();
   const { runDomTransition } = useViewTransition();
   const initialParam = searchParams.get('drill') as DrillId | null;
   const initialDrill =
-    initialParam && ['sequence', 'table', 'math', 'ojigi_keigo'].includes(initialParam)
+    initialParam && VALID_DRILLS.includes(initialParam)
       ? initialParam
       : null;
   const [activeDrill, setActiveDrill] = useState<DrillId | null>(initialDrill);
 
+  const kotobaStats = useMemo(
+    () => computeKotobaSummary(ALL_KOTOBA_CARDS, kotobaMap, Date.now()),
+    [kotobaMap]
+  );
+
   useEffect(() => {
     const param = searchParams.get('drill') as DrillId | null;
-    if (param && ['sequence', 'table', 'math', 'ojigi_keigo'].includes(param)) {
+    if (param && VALID_DRILLS.includes(param)) {
       setActiveDrill(param);
     }
   }, [searchParams]);
@@ -114,6 +124,9 @@ function DrillsHubInner() {
   if (activeDrill === 'ojigi_keigo') {
     return <OjigiKeigoDrill onExit={exitDrill} />;
   }
+  if (activeDrill === 'kotoba') {
+    return <KotobaFlashcardDrill onExit={exitDrill} />;
+  }
 
   return (
     <div className="space-y-4">
@@ -131,6 +144,54 @@ function DrillsHubInner() {
         </div>
       ) : (
         <div className="grid grid-cols-2 gap-3">
+          {/* Featured Full-Width Kotoba & Kanji Perhotelan Bento Card */}
+          <article
+            data-vt-id="drill-kotoba"
+            style={{
+              background: 'linear-gradient(135deg, #450C3F 0%, #4D3EA3 100%)',
+            }}
+            className="col-span-2 min-w-0 rounded-[var(--radius-hero)] p-5 shadow-[var(--shadow-medium)] text-white flex flex-col justify-between gap-4"
+          >
+            <div className="flex items-start justify-between gap-3">
+              <div className="flex items-center gap-2.5 min-w-0">
+                <div className="w-10 h-10 rounded-[var(--radius-icon)] bg-white/14 flex items-center justify-center shrink-0">
+                  <Sparkle size={18} color="#FFD2F4" />
+                </div>
+                <span className="eyebrow text-[#FFD2F4]">
+                  Kotoba &amp; Kanji
+                </span>
+              </div>
+              <span className="px-2.5 py-1 rounded-[var(--radius-chip)] bg-white/14 text-white text-[11px] font-bold tabular-nums whitespace-nowrap shrink-0">
+                {kotobaStats.due} due
+              </span>
+            </div>
+
+            <div className="space-y-1">
+              <h2 className="text-xl sm:text-2xl font-bold leading-tight text-white">
+                Kotoba &amp; Kanji Perhotelan
+              </h2>
+              <p lang="ja" className="text-xs font-semibold text-[#FFD2F4]">
+                ホテル・旅館の言葉と漢字 · CH 01-05 ({kotobaStats.total} items)
+              </p>
+              <p className="text-xs text-[#E1DAFB] leading-relaxed">
+                SM-2 vocabulary &amp; kanji breakdown, exam traps, free swipe practice, and 4-option Quick Quiz.
+              </p>
+            </div>
+
+            <div className="flex items-center justify-between gap-3 pt-1">
+              <div className="flex flex-wrap items-center gap-3 text-xs font-semibold tabular-nums text-white/90">
+                <span>Mastered: {kotobaStats.mastered}/{kotobaStats.total}</span>
+                <span>Bookmarked: {kotobaStats.bookmarked}</span>
+              </div>
+              <ArrowButton
+                onClick={() => openDrill('kotoba')}
+                variant="outline"
+                darkSurface
+                ariaLabel="Start Kotoba & Kanji Perhotelan"
+              />
+            </div>
+          </article>
+
           {DRILL_CARDS.map((card) => {
             const prog = drillProgress.find((d) => d.drillId === card.id);
             const badgeText = prog ? `Best ${prog.bestAccuracy}%` : 'New';

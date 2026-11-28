@@ -5,6 +5,11 @@ import { ArrowLeft, CheckCircle2, RotateCcw, Undo2, XCircle } from 'lucide-react
 import { DRILLS_DATA } from '@/lib/curriculum';
 import { useApp } from '@/components/AppProvider';
 import { TrilingualBlock } from '@/components/text/TrilingualBlock';
+import {
+  LangCycleChip,
+  PeekTranslationButton,
+  QuestionStudyControls,
+} from '@/components/text/QuestionStudyControls';
 import { Chip } from '@/components/ui/Chip';
 import { Sparkle } from '@/components/ui/Sparkle';
 import { InteractiveSurface } from '@/components/motion/InteractiveSurface';
@@ -33,6 +38,7 @@ export function SequenceDrill({ onExit }: SequenceDrillProps) {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [mistakes, setMistakes] = useState(0);
   const [wrongStepId, setWrongStepId] = useState<string | null>(null);
+  const [peekTranslation, setPeekTranslation] = useState(false);
   const [completedSets, setCompletedSets] = useState<Set<string>>(() => new Set());
   const startedAtRef = useRef<number>(Date.now());
 
@@ -84,6 +90,7 @@ export function SequenceDrill({ onExit }: SequenceDrillProps) {
     setSelectedIds([]);
     setMistakes(0);
     setWrongStepId(null);
+    setPeekTranslation(false);
     setSeed((s) => s + 1);
     startedAtRef.current = Date.now();
   };
@@ -93,9 +100,12 @@ export function SequenceDrill({ onExit }: SequenceDrillProps) {
     setSelectedIds([]);
     setMistakes(0);
     setWrongStepId(null);
+    setPeekTranslation(false);
     setSeed((s) => s + 1);
     startedAtRef.current = Date.now();
   };
+
+  const hideTrans = !isDone && settings.hideTranslation && !peekTranslation;
 
   const stepProgress = orderedSteps.length
     ? Math.round((selectedIds.length / orderedSteps.length) * 100)
@@ -126,7 +136,10 @@ export function SequenceDrill({ onExit }: SequenceDrillProps) {
             />
           </div>
         </div>
+        <LangCycleChip />
       </div>
+
+      <QuestionStudyControls />
 
       <div
         role="group"
@@ -149,16 +162,25 @@ export function SequenceDrill({ onExit }: SequenceDrillProps) {
         data-vt-id="drill-sequence"
         className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-soft)] space-y-3"
       >
-        <div className="flex items-center justify-between gap-2">
+        <div className="flex flex-wrap items-center justify-between gap-2">
           <span className="eyebrow text-[#4D3EA3]">p.{active.pdfPage}</span>
-          <span className="text-xs font-semibold text-[#5B5B62] tabular-nums">
-            Mistakes: {mistakes}
-          </span>
+          <div className="flex items-center gap-2">
+            {!isDone ? (
+              <PeekTranslationButton
+                peeking={peekTranslation}
+                onToggle={() => setPeekTranslation((p) => !p)}
+              />
+            ) : null}
+            <span className="text-xs font-semibold text-[#5B5B62] tabular-nums">
+              Mistakes: {mistakes}
+            </span>
+          </div>
         </div>
         <TrilingualBlock
           text={active.title}
           furiganaMode={settings.furiganaMode}
           langPreset={settings.langPreset}
+          hideTranslation={hideTrans}
           jaClassName="text-xl font-bold leading-[1.75]"
         />
         <p className="text-xs text-[#5B5B62]">
@@ -189,6 +211,7 @@ export function SequenceDrill({ onExit }: SequenceDrillProps) {
                       text={placedStep.text}
                       furiganaMode={settings.furiganaMode}
                       langPreset={settings.langPreset}
+                      hideTranslation={hideTrans}
                       jaClassName="text-sm font-bold leading-[1.6]"
                       secondaryClassName="text-xs"
                     />
@@ -300,6 +323,8 @@ export function SequenceDrill({ onExit }: SequenceDrillProps) {
                     text={step.text}
                     furiganaMode={settings.furiganaMode}
                     langPreset={settings.langPreset}
+                    hideTranslation={hideTrans}
+                    interactivePeek={false}
                     jaClassName="text-base font-bold leading-[1.75]"
                     secondaryClassName="text-xs"
                   />

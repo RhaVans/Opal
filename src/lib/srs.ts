@@ -1,4 +1,21 @@
-import type { ChapterId, SRSCardState, SRSRating } from './types';
+import type {
+  ChapterId,
+  KotobaCategory,
+  KotobaSRSState,
+  SRSCardState,
+  SRSRating,
+} from './types';
+
+export interface SchedulableSRSFields {
+  repetitions: number;
+  intervalDays: number;
+  easeFactor: number;
+  lapses: number;
+  correctCount: number;
+  reviewCount: number;
+  dueTimestamp: number;
+  lastReviewedAt: number | null;
+}
 
 export const DAY_MS = 86_400_000;
 export const RELEARN_MS = 60_000;
@@ -25,6 +42,18 @@ export function createInitialSRSState(
   };
 }
 
+export function createInitialKotobaState(
+  cardId: string,
+  chapter: ChapterId,
+  category: KotobaCategory,
+  nowMs = 0
+): KotobaSRSState {
+  return {
+    ...createInitialSRSState(cardId, chapter, nowMs),
+    category,
+  };
+}
+
 export function formatIntervalLabel(intervalDays: number): string {
   if (intervalDays <= 0) return '<1m';
   if (intervalDays < 1) {
@@ -39,11 +68,11 @@ export function formatIntervalLabel(intervalDays: number): string {
   return `${Math.round(intervalDays / 365)}y`;
 }
 
-export function scheduleCard(
-  prev: SRSCardState,
+export function scheduleCard<T extends SchedulableSRSFields>(
+  prev: T,
   rating: SRSRating,
   nowMs: number
-): { next: SRSCardState; nextLabel: string } {
+): { next: T; nextLabel: string } {
   let repetitions = prev.repetitions;
   let intervalDays = prev.intervalDays;
   let easeFactor = prev.easeFactor;
@@ -114,8 +143,8 @@ export function scheduleCard(
   };
 }
 
-export function getRatingPreviews(
-  prev: SRSCardState,
+export function getRatingPreviews<T extends SchedulableSRSFields>(
+  prev: T,
   nowMs: number
 ): Record<SRSRating, string> {
   return {

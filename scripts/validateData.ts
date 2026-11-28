@@ -1,6 +1,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import type { CBTQuestionItem, DrillsStaticData, FlashcardItem, TrilingualText } from '../src/lib/types';
+import type {
+  CBTQuestionItem,
+  DrillsStaticData,
+  FlashcardItem,
+  KotobaCardItem,
+  KotobaCategory,
+  KotobaWordType,
+  TrilingualText,
+} from '../src/lib/types';
 import { hasMalformedHtmlOutsideRuby, parseRubyTokens } from '../src/lib/furigana';
 
 const DATA_DIR = path.join(process.cwd(), 'src', 'data');
@@ -111,6 +119,9 @@ if (!fs.existsSync(cbtPath)) {
       if (keys !== 'A,B,C,D') errors.push(`${q.id}: option keys invalid (${keys})`);
       for (const opt of q.options) {
         checkTrilingual(`${q.id}.option.${opt.key}`, opt.text);
+        if (/[a-z]{2,}/.test(opt.text.jaPlain)) {
+          errors.push(`${q.id}.option.${opt.key}.jaPlain: leaked lowercase Latin gloss (${opt.text.jaPlain})`);
+        }
       }
     }
     if (!['A', 'B', 'C', 'D'].includes(q.correctKey)) {
@@ -143,8 +154,81 @@ if (!fs.existsSync(drillsPath)) {
   if ((drills.keigoItems?.length ?? 0) < 8) errors.push('drills_static.json: expected >= 8 keigoItems');
 }
 
+// Validate kotoba_kanji.json
+const VALID_KOTOBA_CATEGORIES = new Set<KotobaCategory>([
+  'front_desk',
+  'planning_revenue',
+  'customer_keigo',
+  'restaurant_food',
+  'safety_hygiene',
+  'kanji_compounds',
+]);
+const VALID_KOTOBA_TYPES = new Set<KotobaWordType>(['kanji', 'katakana', 'phrase', 'keigo']);
+const kotobaPath = path.join(DATA_DIR, 'kotoba_kanji.json');
+let kotobaItems: KotobaCardItem[] = [];
+if (!fs.existsSync(kotobaPath)) {
+  errors.push('Missing kotoba_kanji.json');
+} else {
+  kotobaItems = JSON.parse(fs.readFileSync(kotobaPath, 'utf-8')) as KotobaCardItem[];
+  if (!Array.isArray(kotobaItems) || kotobaItems.length < 135) {
+    errors.push(`kotoba_kanji.json: expected >= 135 items, found ${kotobaItems.length}`);
+  } else {
+    const kotobaIds = new Set<string>();
+    const chapterPageBounds: Record<number, [number, number]> = {
+      1: [5, 21],
+      2: [23, 35],
+      3: [37, 50],
+      4: [52, 66],
+      5: [68, 75],
+    };
+    for (const k of kotobaItems) {
+      if (!k.id) errors.push('kotoba item missing id');
+      else if (kotobaIds.has(k.id)) errors.push(`duplicate kotoba id ${k.id}`);
+      else kotobaIds.add(k.id);
+
+      const bounds = chapterPageBounds[k.chapter];
+      if (!bounds) {
+        errors.push(`${k.id}: invalid chapter ${k.chapter}`);
+      } else if (typeof k.pdfPage !== 'number' || k.pdfPage < bounds[0] || k.pdfPage > bounds[1]) {
+        errors.push(`${k.id}: pdfPage ${k.pdfPage} out of Chapter ${k.chapter} range [${bounds[0]}, ${bounds[1]}]`);
+      }
+      if (!VALID_KOTOBA_CATEGORIES.has(k.category)) errors.push(`${k.id}: invalid category ${k.category}`);
+      if (!VALID_KOTOBA_TYPES.has(k.wordType)) errors.push(`${k.id}: invalid wordType ${k.wordType}`);
+      if (!k.readingKana?.trim()) errors.push(`${k.id}: missing readingKana`);
+      if (!k.ttsText?.trim()) errors.push(`${k.id}: missing ttsText`);
+      if (!Array.isArray(k.tags) || k.tags.length === 0) errors.push(`${k.id}: missing tags`);
+      checkTrilingual(`${k.id}.word`, k.word);
+      if (k.example) checkTrilingual(`${k.id}.example`, k.example);
+      if (k.wordType === 'kanji' && (!Array.isArray(k.kanjiBreakdown) || k.kanjiBreakdown.length === 0)) {
+        errors.push(`${k.id}: kanjiBreakdown required when wordType is 'kanji'`);
+      }
+      if (k.kanjiBreakdown) {
+        for (const part of k.kanjiBreakdown) {
+          if (!part.char || !part.meaningId || !part.meaningEn) {
+            errors.push(`${k.id}: incomplete kanjiBreakdown entry`);
+          }
+          if (
+            [part.char, part.on, part.kun, part.meaningId, part.meaningEn].some(
+              (s) => s.includes('—') || s.includes('–')
+            )
+          ) {
+            errors.push(`${k.id}.kanjiBreakdown: contains forbidden em/en dash (R-02)`);
+          }
+        }
+      }
+    }
+    for (const k of kotobaItems) {
+      for (const ref of k.confusableWith ?? []) {
+        if (ref === k.id || !kotobaIds.has(ref)) {
+          errors.push(`${k.id}: invalid confusableWith reference "${ref}"`);
+        }
+      }
+    }
+  }
+}
+
 // Check Section 7 invariant coverage across all flashcards + CBT
-const corpusText = JSON.stringify({ allCards, cbtQuestions });
+const corpusText = JSON.stringify({ allCards, cbtQuestions, kotobaItems });
 const requiredInvariants = [
   '空室',
   '満室',
@@ -186,5 +270,5 @@ if (errors.length > 0) {
 }
 
 console.log(
-  `validateData PASS: ${allCards.length} flashcards, ${cbtQuestions.length} CBT questions, 0 broken ruby tags, 0 missing fields, all ${requiredInvariants.length} Section 7 invariants covered.`
+  `validateData PASS: ${allCards.length} flashcards, ${cbtQuestions.length} CBT questions, ${kotobaItems.length} kotoba items, 0 broken ruby tags, 0 missing fields, all ${requiredInvariants.length} Section 7 invariants covered.`
 );

@@ -5,7 +5,13 @@ import { ArrowLeft, CheckCircle2, RotateCcw, XCircle } from 'lucide-react';
 import { DRILLS_DATA } from '@/lib/curriculum';
 import { useApp } from '@/components/AppProvider';
 import { SegmentedControl } from '@/components/ui/SegmentedControl';
+import { FuriganaText } from '@/components/text/FuriganaText';
 import { TrilingualBlock } from '@/components/text/TrilingualBlock';
+import {
+  LangCycleChip,
+  PeekTranslationButton,
+  QuestionStudyControls,
+} from '@/components/text/QuestionStudyControls';
 import { TTSButton } from '@/components/text/TTSButton';
 import { Sparkle } from '@/components/ui/Sparkle';
 import { InteractiveSurface } from '@/components/motion/InteractiveSurface';
@@ -47,6 +53,7 @@ export function OjigiKeigoDrill({ onExit }: OjigiKeigoDrillProps) {
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
   const [correctCount, setCorrectCount] = useState(0);
+  const [peekTranslation, setPeekTranslation] = useState(false);
   const [finished, setFinished] = useState(false);
   const [startedAt, setStartedAt] = useState(() => Date.now());
 
@@ -61,6 +68,7 @@ export function OjigiKeigoDrill({ onExit }: OjigiKeigoDrillProps) {
     setMode(nextMode);
     setIdx(0);
     setPicked(null);
+    setPeekTranslation(false);
     setCorrectCount(0);
     setFinished(false);
     setStartedAt(Date.now());
@@ -83,6 +91,7 @@ export function OjigiKeigoDrill({ onExit }: OjigiKeigoDrillProps) {
     if (idx + 1 < list.length) {
       setIdx((i) => i + 1);
       setPicked(null);
+      setPeekTranslation(false);
     } else {
       setFinished(true);
       const accuracy = Math.round((correctCount / Math.max(1, list.length)) * 100);
@@ -91,26 +100,64 @@ export function OjigiKeigoDrill({ onExit }: OjigiKeigoDrillProps) {
     }
   };
 
+  const hideTrans = settings.hideTranslation && !peekTranslation;
+
   const ojigiChoices = [
-    { key: '15' as const, label: '会釈 (Eshaku)', sub: '15° · passing by / table' },
-    { key: '30' as const, label: '敬礼 / 普通礼 (Keirei)', sub: '30° · welcoming / daily service' },
-    { key: '45' as const, label: '最敬礼 (Saikeirei)', sub: '45° · miokuri / apology' },
+    {
+      key: '15' as const,
+      label: '会釈 (Eshaku)',
+      jaRuby: '<ruby>会釈<rt>えしゃく</rt></ruby>',
+      jaPlain: '会釈',
+      sub: '15° · passing by / table',
+    },
+    {
+      key: '30' as const,
+      label: '敬礼 / 普通礼 (Keirei)',
+      jaRuby: '<ruby>敬礼<rt>けいれい</rt></ruby>・<ruby>普通礼<rt>ふつうれい</rt></ruby>',
+      jaPlain: '敬礼・普通礼',
+      sub: '30° · welcoming / daily service',
+    },
+    {
+      key: '45' as const,
+      label: '最敬礼 (Saikeirei)',
+      jaRuby: '<ruby>最敬礼<rt>さいけいれい</rt></ruby>',
+      jaPlain: '最敬礼',
+      sub: '45° · miokuri / apology',
+    },
   ];
 
   const keigoChoices = [
-    { key: 'sonkeigo', label: '尊敬語 (Sonkeigo)', sub: 'Respectful: elevates guest' },
-    { key: 'kenjougo', label: '謙譲語 (Kenjougo)', sub: 'Humble: lowers self' },
-    { key: 'teineigo', label: '丁寧語 (Teineigo)', sub: 'Polite: desu / masu / o-go' },
+    {
+      key: 'sonkeigo',
+      label: '尊敬語 (Sonkeigo)',
+      jaRuby: '<ruby>尊敬語<rt>そんけいご</rt></ruby>',
+      jaPlain: '尊敬語',
+      sub: 'Respectful: elevates guest',
+    },
+    {
+      key: 'kenjougo',
+      label: '謙譲語 (Kenjougo)',
+      jaRuby: '<ruby>謙譲語<rt>けんじょうご</rt></ruby>',
+      jaPlain: '謙譲語',
+      sub: 'Humble: lowers self',
+    },
+    {
+      key: 'teineigo',
+      label: '丁寧語 (Teineigo)',
+      jaRuby: '<ruby>丁寧語<rt>ていねいご</rt></ruby>',
+      jaPlain: '丁寧語',
+      sub: 'Polite: desu / masu / o-go',
+    },
   ];
 
   return (
     <div className="space-y-4 pb-10">
-      <div className="flex items-center justify-between gap-3">
+      <div className="flex items-center justify-between gap-2">
         <button
           type="button"
           onClick={onExit}
           aria-label="Back to drills"
-          className="inline-flex items-center justify-center w-12 h-12 min-w-[48px] min-h-[48px] rounded-[var(--radius-chip)] bg-white text-[#1D1D1F] shadow-[var(--shadow-soft)]"
+          className="inline-flex items-center justify-center w-12 h-12 min-w-[48px] min-h-[48px] rounded-[var(--radius-chip)] bg-white text-[#1D1D1F] shadow-[var(--shadow-soft)] shrink-0"
         >
           <ArrowLeft size={20} aria-hidden="true" />
         </button>
@@ -123,6 +170,11 @@ export function OjigiKeigoDrill({ onExit }: OjigiKeigoDrillProps) {
             { value: 'keigo', label: 'Keigo Sorter' },
           ]}
         />
+      </div>
+
+      <div className="flex flex-wrap items-center gap-2">
+        <QuestionStudyControls />
+        <LangCycleChip />
       </div>
 
       {finished ? (
@@ -151,18 +203,24 @@ export function OjigiKeigoDrill({ onExit }: OjigiKeigoDrillProps) {
             data-vt-id="drill-ojigi_keigo"
             className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-soft)] space-y-4"
           >
-          <div className="flex items-center justify-between">
+          <div className="flex flex-wrap items-center justify-between gap-2">
             <span className="eyebrow text-[#4D3EA3]">
               Item {idx + 1}/{list.length} · p.
               {mode === 'ojigi' ? currentOjigi?.pdfPage : currentKeigo?.pdfPage}
             </span>
-            <TTSButton
-              text={
-                mode === 'ojigi'
-                  ? currentOjigi?.scenario.jaPlain ?? ''
-                  : currentKeigo?.phrase.jaPlain ?? ''
-              }
-            />
+            <div className="flex items-center gap-2">
+              <PeekTranslationButton
+                peeking={peekTranslation}
+                onToggle={() => setPeekTranslation((p) => !p)}
+              />
+              <TTSButton
+                text={
+                  mode === 'ojigi'
+                    ? currentOjigi?.scenario.jaPlain ?? ''
+                    : currentKeigo?.phrase.jaPlain ?? ''
+                }
+              />
+            </div>
           </div>
 
           {mode === 'ojigi' && currentOjigi ? (
@@ -170,6 +228,7 @@ export function OjigiKeigoDrill({ onExit }: OjigiKeigoDrillProps) {
               text={currentOjigi.scenario}
               furiganaMode={settings.furiganaMode}
               langPreset={settings.langPreset}
+              hideTranslation={hideTrans}
               jaClassName="text-xl font-bold leading-[1.8]"
             />
           ) : currentKeigo ? (
@@ -177,6 +236,7 @@ export function OjigiKeigoDrill({ onExit }: OjigiKeigoDrillProps) {
               text={currentKeigo.phrase}
               furiganaMode={settings.furiganaMode}
               langPreset={settings.langPreset}
+              hideTranslation={hideTrans}
               jaClassName="text-2xl font-bold leading-[1.8]"
             />
           ) : null}
@@ -209,8 +269,22 @@ export function OjigiKeigoDrill({ onExit }: OjigiKeigoDrillProps) {
                   className={`w-full min-h-[60px] px-4 py-3 rounded-[var(--radius-card)] border flex items-center justify-between gap-3 text-left ${classes}`}
                 >
                   <div>
-                    <p className="text-sm font-bold">{choice.label}</p>
-                    <p className={subTextClass}>{choice.sub}</p>
+                    {hideTrans ? (
+                      <p className="text-base font-bold leading-[1.7]">
+                        <FuriganaText
+                          jaRuby={choice.jaRuby}
+                          jaPlain={choice.jaPlain}
+                          mode={settings.furiganaMode}
+                          darkSurface={Boolean(picked && isPicked && !isCorrect)}
+                          interactivePeek={false}
+                        />
+                      </p>
+                    ) : (
+                      <>
+                        <p className="text-sm font-bold">{choice.label}</p>
+                        <p className={subTextClass}>{choice.sub}</p>
+                      </>
+                    )}
                   </div>
                   {mode === 'ojigi' ? (
                     <BowDiagram angle={choice.key as '15' | '30' | '45'} />
@@ -235,7 +309,7 @@ export function OjigiKeigoDrill({ onExit }: OjigiKeigoDrillProps) {
                   </>
                 )}
               </div>
-              {currentKeigo ? (
+              {currentKeigo && !hideTrans ? (
                 <p className="text-xs text-[#1D1D1F]">
                   {settings.langPreset === 'jp_id' || settings.langPreset === 'jp_id_en'
                     ? currentKeigo.note.id

@@ -5,7 +5,14 @@ import ch04 from '@/data/ch04_restaurant.json';
 import ch05 from '@/data/ch05_safety_hygiene.json';
 import cbtBank from '@/data/cbt_bank.json';
 import drillsStatic from '@/data/drills_static.json';
-import type { CBTQuestionItem, ChapterId, DrillsStaticData, FlashcardItem } from './types';
+import kotobaKanji from '@/data/kotoba_kanji.json';
+import type {
+  CBTQuestionItem,
+  ChapterId,
+  DrillsStaticData,
+  FlashcardItem,
+  KotobaCardItem,
+} from './types';
 
 export const ALL_FLASHCARDS: FlashcardItem[] = [
   ...(ch01 as FlashcardItem[]),
@@ -17,6 +24,7 @@ export const ALL_FLASHCARDS: FlashcardItem[] = [
 
 export const ALL_CBT_QUESTIONS: CBTQuestionItem[] = cbtBank as CBTQuestionItem[];
 export const DRILLS_DATA: DrillsStaticData = drillsStatic as DrillsStaticData;
+export const ALL_KOTOBA_CARDS: KotobaCardItem[] = kotobaKanji as KotobaCardItem[];
 
 export function getCardsForChapter(chapter: ChapterId): FlashcardItem[] {
   return ALL_FLASHCARDS.filter((c) => c.chapter === chapter);

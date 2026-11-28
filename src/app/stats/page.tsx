@@ -13,6 +13,7 @@ import {
   Target,
   Type,
   Globe,
+  EyeOff,
 } from 'lucide-react';
 import { useApp } from '@/components/AppProvider';
 import { ALL_CBT_QUESTIONS, ALL_FLASHCARDS } from '@/lib/curriculum';
@@ -428,6 +429,27 @@ export default function StatsPage() {
                   ]}
                 />
               </div>
+
+              <SettingsRow
+                icon={<EyeOff size={18} aria-hidden="true" />}
+                label="Hide Translations"
+                description="Show Japanese only during active questions"
+                control={
+                  <button
+                    type="button"
+                    role="switch"
+                    aria-checked={settings.hideTranslation}
+                    aria-label="Toggle Hide Translations"
+                    onClick={() => void updateSettings({ hideTranslation: !settings.hideTranslation })}
+                    className={[
+                      'w-14 h-12 min-w-[56px] min-h-[48px] rounded-[var(--radius-chip)] p-1.5 flex items-center transition-colors',
+                      settings.hideTranslation ? 'bg-[#4D3EA3] justify-end' : 'bg-black/15 justify-start',
+                    ].join(' ')}
+                  >
+                    <span className="w-6 h-6 rounded-full bg-white shadow" />
+                  </button>
+                }
+              />
 
               <SettingsRow
                 icon={<Volume2 size={18} aria-hidden="true" />}

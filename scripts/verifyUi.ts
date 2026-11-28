@@ -305,8 +305,9 @@ async function run() {
     if (!homeTextAfterReview.includes('184 cards due') && !homeTextAfterReview.includes('1 of 25')) {
       // At least verify daily goal count >= 1
       const srsCount = await page.evaluate(async () => {
-        return await new Promise<number>((resolve) => {
-          const req = indexedDB.open('ssw_shukuhaku_db', 1);
+        return await new Promise<number>((resolve, reject) => {
+          const req = indexedDB.open('ssw_shukuhaku_db');
+          req.onerror = () => reject(req.error);
           req.onsuccess = () => {
             const db = req.result;
             const tx = db.transaction('srs_states', 'readonly');
@@ -333,8 +334,9 @@ async function run() {
     await page.waitForTimeout(300);
 
     const afterResetCount = await page.evaluate(async () => {
-      return await new Promise<number>((resolve) => {
-        const req = indexedDB.open('ssw_shukuhaku_db', 1);
+      return await new Promise<number>((resolve, reject) => {
+        const req = indexedDB.open('ssw_shukuhaku_db');
+        req.onerror = () => reject(req.error);
         req.onsuccess = () => {
           const c = req.result.transaction('srs_states', 'readonly').objectStore('srs_states').count();
           c.onsuccess = () => resolve(c.result);
@@ -349,8 +351,9 @@ async function run() {
     await page.waitForTimeout(400);
 
     const afterImportCount = await page.evaluate(async () => {
-      return await new Promise<number>((resolve) => {
-        const req = indexedDB.open('ssw_shukuhaku_db', 1);
+      return await new Promise<number>((resolve, reject) => {
+        const req = indexedDB.open('ssw_shukuhaku_db');
+        req.onerror = () => reject(req.error);
         req.onsuccess = () => {
           const c = req.result.transaction('srs_states', 'readonly').objectStore('srs_states').count();
           c.onsuccess = () => resolve(c.result);
@@ -547,7 +550,185 @@ async function run() {
     await page.waitForTimeout(150);
     const dockHiddenInCbt = (await page.locator('nav[aria-label="Primary navigation"]').count()) === 0;
     if (!dockHiddenInCbt) failures.push('BottomDock stayed visible during active CBT');
+
+    // Verify QuestionStudyControls Hide Translation + Peek translation in CBT Practice options A-D
+    await page.getByRole('button', { name: /Hide translation for Japanese immersion/i }).click();
+    await page.waitForTimeout(120);
+    const cbtOptHiddenCheck = await page.evaluate(() => {
+      const article = document.querySelector('article[data-vt-id="cbt-stage"]');
+      if (!article) return { hasEnId: true };
+      const idEnNodes = article.querySelectorAll('p[lang="id"], p[lang="en"]');
+      return { hasEnId: idEnNodes.length > 0 };
+    });
+    if (cbtOptHiddenCheck.hasEnId) {
+      failures.push('CBT Hide Translation failed to suppress ID/EN blocks across question and A-D options');
+    }
+    await page.getByRole('button', { name: 'Peek translation', exact: true }).click();
+    await page.waitForTimeout(100);
+    const cbtPeekCheck = await page.evaluate(() => {
+      const article = document.querySelector('article[data-vt-id="cbt-stage"]');
+      return article ? article.querySelectorAll('p[lang="id"], p[lang="en"]').length : 0;
+    });
+    if (cbtPeekCheck < 2) {
+      failures.push('CBT Peek translation button did not reveal ID/EN translations');
+    }
+    // Reset Hide Translation back to off
+    await page.getByRole('button', { name: /Show translations/i }).click();
+    await page.waitForTimeout(100);
     await page.screenshot({ path: path.join(SHOT_DIR, `360x800_cbt_runner.png`), fullPage: true });
+
+    // 12. Verify Feature 2 Kotoba & Kanji Perhotelan full flow (Hub card -> Filter -> Index -> Flip -> Rate -> Quiz)
+    await page.goto(`${baseUrl}/drills`, { waitUntil: 'networkidle' });
+    await page.screenshot({ path: path.join(SHOT_DIR, `360x800_drills_featured_kotoba.png`), fullPage: true });
+    await page.getByRole('button', { name: 'Start Kotoba & Kanji Perhotelan' }).click();
+    await page.waitForTimeout(250);
+    await page.addScriptTag({ content: axeScript });
+    const kotobaFrontAxe = await page.evaluate(async () => {
+      // @ts-expect-error injected global
+      return await window.axe.run(document, { runOnly: { type: 'rule', values: ['color-contrast'] } });
+    });
+    if (kotobaFrontAxe.violations.length > 0) {
+      failures.push(`Kotoba front: axe color-contrast violations (${kotobaFrontAxe.violations.length})`);
+    }
+    const kotobaOverflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
+    if (kotobaOverflow) failures.push('Kotoba front: horizontal overflow at 360px');
+    await page.screenshot({ path: path.join(SHOT_DIR, `360x800_drill_kotoba_front.png`), fullPage: true });
+
+    // Verify Filter drawer
+    await page.getByRole('button', { name: /Filter/ }).click();
+    await page.waitForTimeout(150);
+    await page.getByRole('button', { name: 'Safety & Hygiene', exact: true }).click();
+    await page.getByRole('button', { name: /Done \(/ }).click();
+    await page.waitForTimeout(150);
+    await page.getByRole('button', { name: /Filter \(/ }).click();
+    await page.getByRole('button', { name: 'Reset Filters', exact: true }).click();
+    await page.getByRole('button', { name: /Done \(/ }).click();
+
+    // Verify Deck Index search & jump
+    await page.getByRole('button', { name: /Index \(/ }).click();
+    await page.locator('#kotoba-index-search').fill('満室');
+    await page.waitForTimeout(150);
+    await page.getByRole('button', { name: /満室/ }).first().click();
+    await page.waitForTimeout(150);
+
+    await page.getByRole('button', { name: /Reveal Meaning/i }).click();
+    await page.waitForTimeout(250);
+    await page.addScriptTag({ content: axeScript });
+    const kotobaBackAxe = await page.evaluate(async () => {
+      // @ts-expect-error injected global
+      return await window.axe.run(document, { runOnly: { type: 'rule', values: ['color-contrast'] } });
+    });
+    if (kotobaBackAxe.violations.length > 0) {
+      failures.push(`Kotoba back: axe color-contrast violations (${kotobaBackAxe.violations.length})`);
+    }
+    await page.screenshot({ path: path.join(SHOT_DIR, `360x800_drill_kotoba_back.png`), fullPage: true });
+    await page.getByRole('button', { name: /Good/ }).click();
+    await page.waitForTimeout(200);
+    const kotobaDbCount = await page.evaluate(async () => {
+      return await new Promise<number>((resolve, reject) => {
+        const req = indexedDB.open('ssw_shukuhaku_db');
+        req.onerror = () => reject(req.error);
+        req.onsuccess = () => {
+          const c = req.result.transaction('kotoba_states', 'readonly').objectStore('kotoba_states').count();
+          c.onsuccess = () => resolve(c.result);
+        };
+      });
+    });
+    if (kotobaDbCount < 1) {
+      failures.push('Kotoba SRS rate did not persist to IndexedDB kotoba_states');
+    }
+    await page.getByRole('button', { name: 'Quick Quiz', exact: true }).click();
+    await page.waitForTimeout(200);
+    await page.screenshot({ path: path.join(SHOT_DIR, `360x800_drill_kotoba_quiz.png`), fullPage: true });
+    await page.getByRole('button', { name: 'Back to drills' }).click();
+
+    // Verify QuestionStudyControls present in Sequence & OjigiKeigo too
+    await page.getByRole('button', { name: 'Start Sequence Builder' }).click();
+    await page.waitForTimeout(150);
+    if ((await page.getByRole('button', { name: /Hide translation for Japanese immersion/i }).count()) !== 1) {
+      failures.push('SequenceDrill missing QuestionStudyControls Hide Translation toggle');
+    }
+    await page.getByRole('button', { name: 'Back to drills' }).click();
+
+    await page.getByRole('button', { name: 'Start Ojigi & Keigo' }).click();
+    await page.waitForTimeout(150);
+    if ((await page.getByRole('button', { name: /Hide translation for Japanese immersion/i }).count()) !== 1) {
+      failures.push('OjigiKeigoDrill missing QuestionStudyControls Hide Translation toggle');
+    }
+    await page.getByRole('button', { name: 'Back to drills' }).click();
+
+    // 13. Non-destructive IndexedDB v1 -> v2 upgrade check in isolated context
+    const v1MigrationCtx = await browser.newContext({ viewport: { width: 360, height: 800 } });
+    const migPage = await v1MigrationCtx.newPage();
+    await migPage.goto(`${baseUrl}/`, { waitUntil: 'domcontentloaded' });
+    await migPage.evaluate(async () => {
+      await new Promise<void>((resolve, reject) => {
+        const del = indexedDB.deleteDatabase('ssw_shukuhaku_db');
+        del.onerror = () => reject(del.error);
+        del.onsuccess = () => {
+          const open = indexedDB.open('ssw_shukuhaku_db', 1);
+          open.onupgradeneeded = () => {
+            const db = open.result;
+            const srs = db.createObjectStore('srs_states', { keyPath: 'cardId' });
+            srs.createIndex('dueTimestamp', 'dueTimestamp');
+            srs.createIndex('chapter', 'chapter');
+            srs.createIndex('lapses', 'lapses');
+            db.createObjectStore('cbt_attempts', { keyPath: 'id' }).createIndex('timestamp', 'timestamp');
+            db.createObjectStore('cbt_weak_ids', { keyPath: 'questionId' });
+            db.createObjectStore('drill_progress', { keyPath: 'drillId' });
+            db.createObjectStore('daily_logs', { keyPath: 'dateKey' });
+            db.createObjectStore('settings', { keyPath: 'key' });
+          };
+          open.onsuccess = () => {
+            const db = open.result;
+            const tx = db.transaction(['srs_states', 'settings'], 'readwrite');
+            tx.objectStore('srs_states').put({
+              cardId: 'ch01_001',
+              chapter: 1,
+              repetitions: 2,
+              intervalDays: 6,
+              easeFactor: 2.5,
+              lapses: 0,
+              correctCount: 2,
+              reviewCount: 2,
+              dueTimestamp: 9999999999999,
+              lastReviewedAt: 1700000000000,
+              bookmarked: true,
+            });
+            tx.objectStore('settings').put({
+              key: 'user_prefs',
+              furiganaMode: 'peek',
+              langPreset: 'jp_id',
+              dailyGoal: 25,
+              ttsRate: 1.0,
+              ttsAutoPlay: false,
+              ecoMode: false,
+            });
+            tx.oncomplete = () => {
+              db.close();
+              resolve();
+            };
+          };
+        };
+      });
+    });
+    await migPage.reload({ waitUntil: 'networkidle' });
+    const migResult = await migPage.evaluate(async () => {
+      return await new Promise<{ version: number; srsCount: number; hasKotobaStore: boolean }>((resolve, reject) => {
+        const req = indexedDB.open('ssw_shukuhaku_db');
+        req.onerror = () => reject(req.error);
+        req.onsuccess = () => {
+          const db = req.result;
+          const hasKotobaStore = db.objectStoreNames.contains('kotoba_states');
+          const cnt = db.transaction('srs_states', 'readonly').objectStore('srs_states').count();
+          cnt.onsuccess = () => resolve({ version: db.version, srsCount: cnt.result, hasKotobaStore });
+        };
+      });
+    });
+    await v1MigrationCtx.close();
+    if (migResult.version !== 2 || !migResult.hasKotobaStore || migResult.srsCount !== 1) {
+      failures.push(`IndexedDB v1->v2 migration failed: ${JSON.stringify(migResult)}`);
+    }
 
     // 4. Offline hard-reload across all 6 routes (wait for SW ready first)
     await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });

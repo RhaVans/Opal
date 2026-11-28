@@ -12,15 +12,21 @@ interface FuriganaTextProps {
   darkSurface?: boolean;
   rtColor?: string;
   className?: string;
+  interactivePeek?: boolean;
 }
 
-export function FuriganaText({
+export function FuriganaText(props: FuriganaTextProps) {
+  return <FuriganaTextInner key={props.jaRuby} {...props} />;
+}
+
+function FuriganaTextInner({
   jaRuby,
   jaPlain,
   mode,
   darkSurface = false,
   rtColor,
   className = '',
+  interactivePeek = true,
 }: FuriganaTextProps) {
   const [revealedIndices, setRevealedIndices] = useState<Set<number>>(() => new Set());
   const { reduced } = useMotionMode();
@@ -63,6 +69,23 @@ export function FuriganaText({
           );
         }
         const isShown = revealedIndices.has(idx);
+        if (!interactivePeek) {
+          return (
+            <ruby key={idx}>
+              {tok.base}
+              <rt
+                className={rtColor ? undefined : rtClass}
+                style={{
+                  ...rtStyle,
+                  opacity: 0,
+                  filter: reduced ? 'none' : 'blur(3px)',
+                }}
+              >
+                {tok.reading}
+              </rt>
+            </ruby>
+          );
+        }
         return (
           <button
             key={idx}

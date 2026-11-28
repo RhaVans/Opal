@@ -1,23 +1,27 @@
 import { openDB, type DBSchema, type IDBPDatabase } from 'idb';
 import type {
   BackupPayload,
+  BackupPayloadV2,
   CBTAttemptRecord,
   CBTWeakRecord,
   ChapterId,
   DailyActivityLog,
   DrillId,
   DrillProgressRecord,
+  KotobaCategory,
+  KotobaSRSState,
   SRSCardState,
   UserSettings,
 } from './types';
 import { getLocalDateKey } from './analytics';
 
 export const DB_NAME = 'ssw_shukuhaku_db';
-export const DB_VERSION = 1;
+export const DB_VERSION = 2;
 
 export const DEFAULT_SETTINGS: UserSettings = {
   furiganaMode: 'on',
   langPreset: 'jp_id',
+  hideTranslation: false,
   dailyGoal: 25,
   ttsRate: 1.0,
   ttsAutoPlay: false,
@@ -34,6 +38,16 @@ interface ShukuhakuDB extends DBSchema {
     value: SRSCardState;
     indexes: {
       dueTimestamp: number;
+      chapter: ChapterId;
+      lapses: number;
+    };
+  };
+  kotoba_states: {
+    key: string;
+    value: KotobaSRSState;
+    indexes: {
+      dueTimestamp: number;
+      category: KotobaCategory;
       chapter: ChapterId;
       lapses: number;
     };
@@ -77,6 +91,13 @@ export function getDB(): Promise<IDBPDatabase<ShukuhakuDB>> {
           store.createIndex('dueTimestamp', 'dueTimestamp');
           store.createIndex('chapter', 'chapter');
           store.createIndex('lapses', 'lapses');
+        }
+        if (!db.objectStoreNames.contains('kotoba_states')) {
+          const kotobaStore = db.createObjectStore('kotoba_states', { keyPath: 'cardId' });
+          kotobaStore.createIndex('dueTimestamp', 'dueTimestamp');
+          kotobaStore.createIndex('category', 'category');
+          kotobaStore.createIndex('chapter', 'chapter');
+          kotobaStore.createIndex('lapses', 'lapses');
         }
         if (!db.objectStoreNames.contains('cbt_attempts')) {
           const store = db.createObjectStore('cbt_attempts', { keyPath: 'id' });
@@ -124,16 +145,41 @@ export async function saveSRSState(state: SRSCardState): Promise<void> {
   await db.put('srs_states', state);
 }
 
+export async function getAllKotobaStates(): Promise<KotobaSRSState[]> {
+  const db = await getDB();
+  return db.getAll('kotoba_states');
+}
+
+export async function saveKotobaState(state: KotobaSRSState): Promise<void> {
+  const db = await getDB();
+  await db.put('kotoba_states', state);
+}
+
 export async function clearWeakSpotCards(): Promise<void> {
   const db = await getDB();
-  const all = await db.getAll('srs_states');
-  const tx = db.transaction(['srs_states', 'cbt_weak_ids'], 'readwrite');
+  const [allSrs, allKotoba] = await Promise.all([
+    db.getAll('srs_states'),
+    db.getAll('kotoba_states'),
+  ]);
+  const tx = db.transaction(['srs_states', 'kotoba_states', 'cbt_weak_ids'], 'readwrite');
   const srsStore = tx.objectStore('srs_states');
-  for (const st of all) {
+  for (const st of allSrs) {
     const isWeak =
       st.lapses >= 2 || (st.reviewCount >= 3 && st.correctCount / st.reviewCount < 0.6);
     if (isWeak) {
       await srsStore.put({
+        ...st,
+        lapses: 0,
+        correctCount: Math.max(st.correctCount, st.reviewCount),
+      });
+    }
+  }
+  const kotobaStore = tx.objectStore('kotoba_states');
+  for (const st of allKotoba) {
+    const isWeak =
+      st.lapses >= 2 || (st.reviewCount >= 3 && st.correctCount / st.reviewCount < 0.6);
+    if (isWeak) {
+      await kotobaStore.put({
         ...st,
         lapses: 0,
         correctCount: Math.max(st.correctCount, st.reviewCount),
@@ -240,22 +286,31 @@ export async function incrementDailyActivity(
   return next;
 }
 
-export async function exportBackupPayload(): Promise<BackupPayload> {
+export async function exportBackupPayload(): Promise<BackupPayloadV2> {
   const db = await getDB();
-  const [srs_states, cbt_attempts, cbt_weak_ids, drill_progress, daily_logs, settings] =
-    await Promise.all([
-      db.getAll('srs_states'),
-      db.getAll('cbt_attempts'),
-      db.getAll('cbt_weak_ids'),
-      db.getAll('drill_progress'),
-      db.getAll('daily_logs'),
-      getSettings(),
-    ]);
+  const [
+    srs_states,
+    kotoba_states,
+    cbt_attempts,
+    cbt_weak_ids,
+    drill_progress,
+    daily_logs,
+    settings,
+  ] = await Promise.all([
+    db.getAll('srs_states'),
+    db.getAll('kotoba_states'),
+    db.getAll('cbt_attempts'),
+    db.getAll('cbt_weak_ids'),
+    db.getAll('drill_progress'),
+    db.getAll('daily_logs'),
+    getSettings(),
+  ]);
 
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     exportedAt: new Date().toISOString(),
     srs_states,
+    kotoba_states,
     cbt_attempts,
     cbt_weak_ids,
     drill_progress,
@@ -267,8 +322,10 @@ export async function exportBackupPayload(): Promise<BackupPayload> {
 export function validateBackupPayload(raw: unknown): raw is BackupPayload {
   if (!raw || typeof raw !== 'object') return false;
   const obj = raw as Record<string, unknown>;
-  if (obj.schemaVersion !== 1) return false;
+  if (obj.schemaVersion !== 1 && obj.schemaVersion !== 2) return false;
   if (!Array.isArray(obj.srs_states)) return false;
+  if (obj.schemaVersion === 2 && !Array.isArray(obj.kotoba_states)) return false;
+  if (obj.kotoba_states !== undefined && !Array.isArray(obj.kotoba_states)) return false;
   if (!Array.isArray(obj.cbt_attempts)) return false;
   if (!Array.isArray(obj.cbt_weak_ids)) return false;
   if (!Array.isArray(obj.drill_progress)) return false;
@@ -279,16 +336,25 @@ export function validateBackupPayload(raw: unknown): raw is BackupPayload {
 
 export async function importBackupPayload(raw: unknown): Promise<void> {
   if (!validateBackupPayload(raw)) {
-    throw new Error('Invalid backup file: expected schemaVersion 1 and valid store arrays.');
+    throw new Error('Invalid backup file: expected schemaVersion 1 or 2 and valid store arrays.');
   }
   const db = await getDB();
   const tx = db.transaction(
-    ['srs_states', 'cbt_attempts', 'cbt_weak_ids', 'drill_progress', 'daily_logs', 'settings'],
+    [
+      'srs_states',
+      'kotoba_states',
+      'cbt_attempts',
+      'cbt_weak_ids',
+      'drill_progress',
+      'daily_logs',
+      'settings',
+    ],
     'readwrite'
   );
 
   await Promise.all([
     tx.objectStore('srs_states').clear(),
+    tx.objectStore('kotoba_states').clear(),
     tx.objectStore('cbt_attempts').clear(),
     tx.objectStore('cbt_weak_ids').clear(),
     tx.objectStore('drill_progress').clear(),
@@ -297,6 +363,7 @@ export async function importBackupPayload(raw: unknown): Promise<void> {
   ]);
 
   for (const row of raw.srs_states) await tx.objectStore('srs_states').put(row);
+  for (const row of raw.kotoba_states ?? []) await tx.objectStore('kotoba_states').put(row);
   for (const row of raw.cbt_attempts) await tx.objectStore('cbt_attempts').put(row);
   for (const row of raw.cbt_weak_ids) await tx.objectStore('cbt_weak_ids').put(row);
   for (const row of raw.drill_progress) await tx.objectStore('drill_progress').put(row);
@@ -314,11 +381,20 @@ export async function importBackupPayload(raw: unknown): Promise<void> {
 export async function clearAllUserProgress(): Promise<void> {
   const db = await getDB();
   const tx = db.transaction(
-    ['srs_states', 'cbt_attempts', 'cbt_weak_ids', 'drill_progress', 'daily_logs', 'settings'],
+    [
+      'srs_states',
+      'kotoba_states',
+      'cbt_attempts',
+      'cbt_weak_ids',
+      'drill_progress',
+      'daily_logs',
+      'settings',
+    ],
     'readwrite'
   );
   await Promise.all([
     tx.objectStore('srs_states').clear(),
+    tx.objectStore('kotoba_states').clear(),
     tx.objectStore('cbt_attempts').clear(),
     tx.objectStore('cbt_weak_ids').clear(),
     tx.objectStore('drill_progress').clear(),

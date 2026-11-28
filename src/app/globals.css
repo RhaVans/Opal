@@ -716,3 +716,28 @@ html:active-view-transition-type(orb-reveal)::view-transition-new(app-stage) {
 :root[data-motion-mode="reduced"]::view-transition-new(*) {
   animation: none !important;
 }
+
+@keyframes kotoba-flip-in {
+  from {
+    opacity: 0.68;
+    transform: perspective(1100px) rotateY(-10deg) scale(0.988);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(1100px) rotateY(0deg) scale(1);
+  }
+}
+
+.kotoba-card-face {
+  animation: kotoba-flip-in 300ms var(--ease-standard) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kotoba-card-face {
+    animation: none !important;
+  }
+}
+
+:root[data-motion-mode="reduced"] .kotoba-card-face {
+  animation: none !important;
+}

@@ -1,12 +1,12 @@
-# UI & PWA Verification Report (2026-11-26)
+# UI & PWA Verification Report (2026-11-28)
 
 - Viewports tested: 360x800, 412x915
 - Routes verified: /, /chapters, /study, /drills, /cbt, /stats
-- Screenshots saved under: `docs/verification/2026-11-26/`
+- Screenshots saved under: `docs/verification/2026-11-28/`
 - External network requests: 0
 - Console/page errors: 0
-- Shader mode detected on /: webgl
-- Visibility pause rAF delta: visible=9, hidden=0
+- Shader mode detected on /: eco
+- Visibility pause rAF delta: visible=43, hidden=0
 - Persistence round-trip (SRS -> Export -> Reset -> Import): PASS (1 states restored)
 - Offline reload across all 6 routes: PASS
 - Axe color-contrast (WebGL + ecoMode): PASS

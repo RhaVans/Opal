@@ -6,6 +6,10 @@ import type { CBTAttemptRecord, CBTQuestionItem, ChapterId } from '@/lib/types';
 import { useApp } from '@/components/AppProvider';
 import { TrilingualBlock } from '@/components/text/TrilingualBlock';
 import { TTSButton } from '@/components/text/TTSButton';
+import {
+  PeekTranslationButton,
+  QuestionStudyControls,
+} from '@/components/text/QuestionStudyControls';
 import { InteractiveSurface } from '@/components/motion/InteractiveSurface';
 import { SemanticIcon } from '@/components/motion/SemanticIcon';
 import { StateTransition } from '@/components/motion/StateTransition';
@@ -58,6 +62,7 @@ export function ExamRunner({
   );
 
   const [index, setIndex] = useState(0);
+  const [peekTranslation, setPeekTranslation] = useState(false);
   const [selectedMap, setSelectedMap] = useState<Map<string, 'A' | 'B' | 'C' | 'D'>>(
     () => new Map()
   );
@@ -161,6 +166,12 @@ export function ExamRunner({
 
   const isLast = index === sessionItems.length - 1;
   const progressPct = Math.round(((index + 1) / sessionItems.length) * 100);
+  const hideTrans = settings.hideTranslation && !peekTranslation;
+
+  const goToIndex = (nextIdx: number) => {
+    setIndex(nextIdx);
+    setPeekTranslation(false);
+  };
 
   return (
     <div className="space-y-4 pb-10">
@@ -207,22 +218,31 @@ export function ExamRunner({
         ) : null}
       </div>
 
+      <QuestionStudyControls />
+
       <StateTransition keyId={currentQ.id} direction="forward">
         <article
           data-vt-id="cbt-stage"
           className="rounded-[var(--radius-hero)] bg-white p-5 shadow-[var(--shadow-medium)] space-y-4"
         >
-        <div className="flex items-center justify-between gap-2">
+        <div className="flex flex-wrap items-center justify-between gap-2">
           <span className="eyebrow text-[#4D3EA3]">
             CH 0{currentQ.chapter} · p.{currentQ.pdfPage}
           </span>
-          <TTSButton text={currentQ.question.jaPlain} />
+          <div className="flex items-center gap-2">
+            <PeekTranslationButton
+              peeking={peekTranslation}
+              onToggle={() => setPeekTranslation((p) => !p)}
+            />
+            <TTSButton text={currentQ.question.jaPlain} />
+          </div>
         </div>
 
         <TrilingualBlock
           text={currentQ.question}
           furiganaMode={settings.furiganaMode}
           langPreset={settings.langPreset}
+          hideTranslation={hideTrans}
           jaClassName="text-lg font-bold leading-[1.8]"
         />
 
@@ -291,6 +311,8 @@ export function ExamRunner({
                     text={opt.text}
                     furiganaMode={settings.furiganaMode}
                     langPreset={settings.langPreset}
+                    hideTranslation={hideTrans}
+                    interactivePeek={false}
                     darkSurface={darkText}
                     jaClassName="text-sm font-bold leading-[1.65]"
                     secondaryClassName="text-xs leading-snug"
@@ -324,6 +346,7 @@ export function ExamRunner({
               text={currentQ.rationale}
               furiganaMode={settings.furiganaMode}
               langPreset={settings.langPreset}
+              hideTranslation={hideTrans}
               jaClassName="text-sm font-bold leading-[1.7]"
               secondaryClassName="text-xs"
             />
@@ -334,7 +357,7 @@ export function ExamRunner({
           <button
             type="button"
             disabled={index === 0}
-            onClick={() => setIndex((i) => Math.max(0, i - 1))}
+            onClick={() => goToIndex(Math.max(0, index - 1))}
             className="min-h-[48px] px-4 rounded-[var(--radius-chip)] bg-[#F5F5F7] text-[#1D1D1F] text-sm font-bold disabled:bg-[#E5E5EA] disabled:text-[#5B5B62]"
           >
             Previous
@@ -343,7 +366,7 @@ export function ExamRunner({
           {!isLast ? (
             <button
               type="button"
-              onClick={() => setIndex((i) => Math.min(sessionItems.length - 1, i + 1))}
+              onClick={() => goToIndex(Math.min(sessionItems.length - 1, index + 1))}
               className="min-h-[48px] px-5 rounded-[var(--radius-chip)] bg-[#1D1D1F] text-white text-sm font-bold"
             >
               Next

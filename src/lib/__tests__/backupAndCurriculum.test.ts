@@ -4,8 +4,8 @@ import { computeOverallMasteryPct, getLast7DaysSummary } from '../analytics';
 import { createInitialSRSState } from '../srs';
 
 describe('Backup schema validator', () => {
-  it('accepts valid schemaVersion 1 payload and rejects malformed payloads', () => {
-    const valid = {
+  it('accepts v1 and v2 backup payloads and rejects malformed or unsupported versions', () => {
+    const validV1 = {
       schemaVersion: 1,
       exportedAt: '2026-11-25T00:00:00.000Z',
       srs_states: [],
@@ -22,10 +22,21 @@ describe('Backup schema validator', () => {
         ecoMode: false,
       },
     };
-    expect(validateBackupPayload(valid)).toBe(true);
-    expect(validateBackupPayload({ ...valid, schemaVersion: 2 })).toBe(false);
+    const validV2 = {
+      ...validV1,
+      schemaVersion: 2,
+      kotoba_states: [],
+      settings: {
+        ...validV1.settings,
+        hideTranslation: false,
+      },
+    };
+    expect(validateBackupPayload(validV1)).toBe(true);
+    expect(validateBackupPayload(validV2)).toBe(true);
+    expect(validateBackupPayload({ ...validV1, schemaVersion: 2 })).toBe(false);
+    expect(validateBackupPayload({ ...validV2, schemaVersion: 99 })).toBe(false);
     expect(validateBackupPayload(null)).toBe(false);
-    expect(validateBackupPayload({ ...valid, srs_states: 'bad' })).toBe(false);
+    expect(validateBackupPayload({ ...validV1, srs_states: 'bad' })).toBe(false);
   });
 });
 

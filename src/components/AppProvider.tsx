@@ -17,6 +17,8 @@ import type {
   DailyActivityLog,
   DrillId,
   DrillProgressRecord,
+  KotobaCategory,
+  KotobaSRSState,
   SRSCardState,
   SRSRating,
   UserSettings,
@@ -30,16 +32,18 @@ import {
   getAllCBTWeakIds,
   getAllDailyLogs,
   getAllDrillProgress,
+  getAllKotobaStates,
   getAllSRSStates,
   getSettings,
   importBackupPayload,
   incrementDailyActivity,
   recordCBTAttempt,
   recordDrillCompletion,
+  saveKotobaState,
   saveSettings,
   saveSRSState,
 } from '@/lib/db';
-import { createInitialSRSState, scheduleCard } from '@/lib/srs';
+import { createInitialKotobaState, createInitialSRSState, scheduleCard } from '@/lib/srs';
 import { getTTSAvailability, type TTSAvailability } from '@/lib/tts';
 
 interface AppContextValue {
@@ -49,6 +53,7 @@ interface AppContextValue {
   adaptiveEco: boolean;
   triggerAdaptiveEco: () => void;
   srsMap: Map<string, SRSCardState>;
+  kotobaMap: Map<string, KotobaSRSState>;
   cbtAttempts: CBTAttemptRecord[];
   cbtWeakList: CBTWeakRecord[];
   drillProgress: DrillProgressRecord[];
@@ -66,6 +71,18 @@ interface AppContextValue {
     elapsedSec?: number
   ) => Promise<{ next: SRSCardState; nextLabel: string }>;
   toggleBookmark: (cardId: string, chapter: ChapterId) => Promise<void>;
+  reviewKotoba: (
+    cardId: string,
+    chapter: ChapterId,
+    category: KotobaCategory,
+    rating: SRSRating,
+    elapsedSec?: number
+  ) => Promise<{ next: KotobaSRSState; nextLabel: string }>;
+  toggleKotobaBookmark: (
+    cardId: string,
+    chapter: ChapterId,
+    category: KotobaCategory
+  ) => Promise<void>;
   saveCBTResult: (
     attempt: CBTAttemptRecord,
     questionResults: Array<{ questionId: string; chapter: ChapterId; correct: boolean }>
@@ -86,6 +103,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [settings, setSettings] = useState<UserSettings>(DEFAULT_SETTINGS);
   const [adaptiveEco, setAdaptiveEco] = useState(false);
   const [srsMap, setSrsMap] = useState<Map<string, SRSCardState>>(() => new Map());
+  const [kotobaMap, setKotobaMap] = useState<Map<string, KotobaSRSState>>(() => new Map());
   const [cbtAttempts, setCbtAttempts] = useState<CBTAttemptRecord[]>([]);
   const [cbtWeakList, setCbtWeakList] = useState<CBTWeakRecord[]>([]);
   const [drillProgress, setDrillProgress] = useState<DrillProgressRecord[]>([]);
@@ -101,9 +119,10 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   const reloadFromDB = useCallback(async () => {
     try {
-      const [prefs, srsList, attempts, weakIds, drills, logs] = await Promise.all([
+      const [prefs, srsList, kotobaList, attempts, weakIds, drills, logs] = await Promise.all([
         getSettings(),
         getAllSRSStates(),
+        getAllKotobaStates(),
         getAllCBTAttempts(),
         getAllCBTWeakIds(),
         getAllDrillProgress(),
@@ -111,6 +130,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       ]);
       setSettings(prefs);
       setSrsMap(new Map(srsList.map((s) => [s.cardId, s])));
+      setKotobaMap(new Map(kotobaList.map((s) => [s.cardId, s])));
       setCbtAttempts(attempts);
       setCbtWeakList(weakIds);
       setDrillProgress(drills);
@@ -210,6 +230,53 @@ export function AppProvider({ children }: { children: ReactNode }) {
     [srsMap]
   );
 
+  const reviewKotoba = useCallback(
+    async (
+      cardId: string,
+      chapter: ChapterId,
+      category: KotobaCategory,
+      rating: SRSRating,
+      elapsedSec = 6
+    ) => {
+      const nowMs = Date.now();
+      const prev =
+        kotobaMap.get(cardId) ?? createInitialKotobaState(cardId, chapter, category, nowMs);
+      const res = scheduleCard(prev, rating, nowMs);
+      await saveKotobaState(res.next);
+      const updatedLog = await incrementDailyActivity({
+        reviewsCompleted: 1,
+        studySeconds: Math.max(1, Math.round(elapsedSec)),
+      });
+
+      setKotobaMap((old) => {
+        const copy = new Map(old);
+        copy.set(cardId, res.next);
+        return copy;
+      });
+      setDailyLogs((old) => {
+        const filtered = old.filter((l) => l.dateKey !== updatedLog.dateKey);
+        return [...filtered, updatedLog];
+      });
+      return res;
+    },
+    [kotobaMap]
+  );
+
+  const toggleKotobaBookmark = useCallback(
+    async (cardId: string, chapter: ChapterId, category: KotobaCategory) => {
+      const prev =
+        kotobaMap.get(cardId) ?? createInitialKotobaState(cardId, chapter, category, Date.now());
+      const next: KotobaSRSState = { ...prev, bookmarked: !prev.bookmarked };
+      await saveKotobaState(next);
+      setKotobaMap((old) => {
+        const copy = new Map(old);
+        copy.set(cardId, next);
+        return copy;
+      });
+    },
+    [kotobaMap]
+  );
+
   const saveCBTResult = useCallback(
     async (
       attempt: CBTAttemptRecord,
@@ -267,6 +334,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       adaptiveEco,
       triggerAdaptiveEco,
       srsMap,
+      kotobaMap,
       cbtAttempts,
       cbtWeakList,
       drillProgress,
@@ -279,6 +347,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
       updateSettings,
       reviewCard,
       toggleBookmark,
+      reviewKotoba,
+      toggleKotobaBookmark,
       saveCBTResult,
       saveDrillResult,
       clearWeakSpots,
@@ -294,6 +364,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       adaptiveEco,
       triggerAdaptiveEco,
       srsMap,
+      kotobaMap,
       cbtAttempts,
       cbtWeakList,
       drillProgress,
@@ -305,6 +376,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
       updateSettings,
       reviewCard,
       toggleBookmark,
+      reviewKotoba,
+      toggleKotobaBookmark,
       saveCBTResult,
       saveDrillResult,
       clearWeakSpots,

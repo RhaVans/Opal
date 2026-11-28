@@ -7,6 +7,8 @@ interface TrilingualBlockProps {
   text: TrilingualText;
   furiganaMode: FuriganaMode;
   langPreset: LangPreset;
+  hideTranslation?: boolean;
+  interactivePeek?: boolean;
   darkSurface?: boolean;
   jaClassName?: string;
   secondaryClassName?: string;
@@ -16,12 +18,14 @@ export function TrilingualBlock({
   text,
   furiganaMode,
   langPreset,
+  hideTranslation = false,
+  interactivePeek = true,
   darkSurface = false,
   jaClassName = 'text-lg font-bold leading-[1.85]',
   secondaryClassName = 'text-sm leading-relaxed',
 }: TrilingualBlockProps) {
-  const showId = langPreset === 'jp_id' || langPreset === 'jp_id_en';
-  const showEn = langPreset === 'jp_en' || langPreset === 'jp_id_en';
+  const showId = !hideTranslation && (langPreset === 'jp_id' || langPreset === 'jp_id_en');
+  const showEn = !hideTranslation && (langPreset === 'jp_en' || langPreset === 'jp_id_en');
   const subColor = darkSurface ? 'text-[#B4B4B8]' : 'text-[#5B5B62]';
 
   return (
@@ -32,6 +36,7 @@ export function TrilingualBlock({
           jaPlain={text.jaPlain}
           mode={furiganaMode}
           darkSurface={darkSurface}
+          interactivePeek={interactivePeek}
         />
       </div>
       {showId ? (

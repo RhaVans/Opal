@@ -5,6 +5,8 @@ export interface MathProblem {
   kind: MathFormulaKind;
   prompt: {
     ja: string;
+    jaRuby: string;
+    jaPlain: string;
     id: string;
     en: string;
   };
@@ -42,11 +44,14 @@ export function generateOccProblem(index: number, rng: () => number = Math.rando
     }
   }
   const chosen = pick(validPairs, rng);
+  const jaPlain = `総客室数 ${chosen.total} 室のうち、販売（予約）客室数が ${chosen.reserved} 室のとき、稼働率（OCC）は何%ですか。`;
   return {
     id: `math_occ_${index}_${chosen.total}_${chosen.reserved}`,
     kind: 'occ',
     prompt: {
-      ja: `総客室数 ${chosen.total} 室のうち、販売（予約）客室数が ${chosen.reserved} 室のとき、稼働率（OCC）は何%ですか。`,
+      ja: jaPlain,
+      jaPlain,
+      jaRuby: `<ruby>総客室数<rt>そうきゃくしつすう</rt></ruby> ${chosen.total} <ruby>室<rt>しつ</rt></ruby>のうち、<ruby>販売<rt>はんばい</rt></ruby>（<ruby>予約<rt>よやく</rt></ruby>）<ruby>客室数<rt>きゃくしつすう</rt></ruby>が ${chosen.reserved} <ruby>室<rt>しつ</rt></ruby>のとき、<ruby>稼働率<rt>かどうりつ</rt></ruby>（OCC）は<ruby>何<rt>なん</rt></ruby>%ですか。`,
       id: `Dari total ${chosen.total} kamar, ${chosen.reserved} kamar terisi/dipesan. Berapa OCC (%)?`,
       en: `Out of ${chosen.total} total rooms, ${chosen.reserved} rooms are occupied/reserved. What is the OCC (%)?`,
     },
@@ -70,11 +75,14 @@ export function generateAdrProblem(index: number, rng: () => number = Math.rando
   const occupied = pick([30, 40, 45, 50, 60, 75, 80, 90, 100, 120, 150], rng);
   const adr = pick(ADR_POOL, rng);
   const revenue = occupied * adr;
+  const jaPlain = `販売客室数 ${occupied} 室で、客室総売上が ${formatYen(revenue)} のとき、ADR（平均客室単価）は何円ですか。`;
   return {
     id: `math_adr_${index}_${occupied}_${adr}`,
     kind: 'adr',
     prompt: {
-      ja: `販売客室数 ${occupied} 室で、客室総売上が ${formatYen(revenue)} のとき、ADR（平均客室単価）は何円ですか。`,
+      ja: jaPlain,
+      jaPlain,
+      jaRuby: `<ruby>販売<rt>はんばい</rt></ruby><ruby>客室数<rt>きゃくしつすう</rt></ruby> ${occupied} <ruby>室<rt>しつ</rt></ruby>で、<ruby>客室<rt>きゃくしつ</rt></ruby><ruby>総売上<rt>そううりあげ</rt></ruby>が ${formatYen(revenue)} のとき、ADR（<ruby>平均<rt>へいきん</rt></ruby><ruby>客室<rt>きゃくしつ</rt></ruby><ruby>単価<rt>たんか</rt></ruby>）は<ruby>何円<rt>なんえん</rt></ruby>ですか。`,
       id: `Dengan ${occupied} kamar terjual dan total pendapatan kamar ${formatYen(revenue)}, berapa ADR (yen)?`,
       en: `With ${occupied} occupied rooms and ${formatYen(revenue)} total room revenue, what is the ADR (yen)?`,
     },
@@ -108,11 +116,14 @@ export function generateRevparProblem(
   }
   const chosen = pick(cleanPairs, rng);
   const decimalOcc = Number((chosen.occ / 100).toFixed(3));
+  const jaPlain = `稼働率（OCC）が ${chosen.occ}%、平均客室単価（ADR）が ${formatYen(chosen.adr)} のとき、RevPAR は何円ですか。`;
   return {
     id: `math_revpar_${index}_${chosen.occ}_${chosen.adr}`,
     kind: 'revpar',
     prompt: {
-      ja: `稼働率（OCC）が ${chosen.occ}%、平均客室単価（ADR）が ${formatYen(chosen.adr)} のとき、RevPAR は何円ですか。`,
+      ja: jaPlain,
+      jaPlain,
+      jaRuby: `<ruby>稼働率<rt>かどうりつ</rt></ruby>（OCC）が ${chosen.occ}%、<ruby>平均<rt>へいきん</rt></ruby><ruby>客室<rt>きゃくしつ</rt></ruby><ruby>単価<rt>たんか</rt></ruby>（ADR）が ${formatYen(chosen.adr)} のとき、RevPAR は<ruby>何円<rt>なんえん</rt></ruby>ですか。`,
       id: `Jika OCC adalah ${chosen.occ}% dan ADR adalah ${formatYen(chosen.adr)}, berapa nilai RevPAR (yen)?`,
       en: `If OCC is ${chosen.occ}% and ADR is ${formatYen(chosen.adr)}, what is the RevPAR (yen)?`,
     },

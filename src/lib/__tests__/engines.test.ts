@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
+  createInitialKotobaState,
   createInitialSRSState,
   getRatingPreviews,
   MIN_EASE_FACTOR,
@@ -20,11 +21,14 @@ import { DURATIONS, INTENT_SHADER_RGB, type FeedbackSignal } from '../motion/tok
 import {
   computeChapterStats,
   computeExamReadiness,
+  computeKotobaSummary,
   computeStreak,
   getLocalDateKey,
   getStreakCycleDays,
   isCardWeakSpot,
 } from '../analytics';
+import { ALL_KOTOBA_CARDS } from '../curriculum';
+import { buildKotobaQuiz, filterKotobaCards } from '../kotoba';
 import { hasMalformedHtmlOutsideRuby, parseRubyTokens } from '../furigana';
 
 describe('SM-2 SRS engine', () => {
@@ -225,5 +229,46 @@ describe('Motion feedbackBus and tokens', () => {
     expect(DURATIONS.instant).toBeLessThan(DURATIONS.micro);
     expect(DURATIONS.micro).toBeLessThan(DURATIONS.standard);
     expect(DURATIONS.standard).toBeLessThan(DURATIONS.macro);
+  });
+});
+
+describe('Kotoba & Kanji SRS, filtering, quiz, and math ruby checks', () => {
+  it('contains >= 135 verified textbook Kotoba items with valid math ruby tags', () => {
+    expect(ALL_KOTOBA_CARDS.length).toBeGreaterThanOrEqual(135);
+    const problem = generateOccProblem(1, () => 0.25);
+    expect(hasMalformedHtmlOutsideRuby(problem.prompt.jaRuby)).toBe(false);
+    expect(parseRubyTokens(problem.prompt.jaRuby).some((t) => t.type === 'ruby')).toBe(true);
+  });
+
+  it('schedules Kotoba cards cleanly with shared SM-2 engine and updates summary stats', () => {
+    const now = 1_700_000_000_000;
+    const init = createInitialKotobaState(ALL_KOTOBA_CARDS[0].id, 1, 'front_desk', now);
+    const { next: afterGood } = scheduleCard(init, 'good', now);
+    const { next: afterGood2 } = scheduleCard(afterGood, 'good', now + 86_400_000);
+    const { next: mastered } = scheduleCard(afterGood2, 'easy', now + 86_400_000 * 7);
+    expect(mastered.intervalDays).toBeGreaterThanOrEqual(7);
+
+    const map = new Map([[init.cardId, { ...mastered, bookmarked: true }]]);
+    const stats = computeKotobaSummary(ALL_KOTOBA_CARDS, map, now + 86_400_000 * 7);
+    expect(stats.total).toBe(ALL_KOTOBA_CARDS.length);
+    expect(stats.mastered).toBe(1);
+    expect(stats.bookmarked).toBe(1);
+  });
+
+  it('filters Kotoba cards accurately and prioritizes confusable distractors in Quick Quiz', () => {
+    const fdKanji = filterKotobaCards(
+      ALL_KOTOBA_CARDS,
+      new Map(),
+      { category: 'front_desk', chapter: 1, wordType: 'kanji', status: 'all' },
+      0,
+      'くうしつ'
+    );
+    expect(fdKanji.some((c) => c.id === 'ktb_fd_001')).toBe(true);
+
+    const targetCard = ALL_KOTOBA_CARDS.find((c) => c.id === 'ktb_fd_001')!;
+    const quiz = buildKotobaQuiz([targetCard], ALL_KOTOBA_CARDS, 1, () => 0.1);
+    expect(quiz).toHaveLength(1);
+    expect(quiz[0].options).toHaveLength(4);
+    expect(quiz[0].options.some((o) => o.id === 'ktb_fd_002')).toBe(true);
   });
 });

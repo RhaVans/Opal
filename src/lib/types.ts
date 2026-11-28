@@ -2,7 +2,59 @@ export type ChapterId = 1 | 2 | 3 | 4 | 5;
 export type FuriganaMode = 'on' | 'peek' | 'off';
 export type LangPreset = 'jp_id' | 'jp_en' | 'jp_id_en' | 'jp_only';
 export type SRSRating = 'again' | 'hard' | 'good' | 'easy';
-export type DrillId = 'sequence' | 'table' | 'math' | 'ojigi_keigo';
+export type DrillId = 'sequence' | 'table' | 'math' | 'ojigi_keigo' | 'kotoba';
+
+export type KotobaCategory =
+  | 'front_desk'
+  | 'planning_revenue'
+  | 'customer_keigo'
+  | 'restaurant_food'
+  | 'safety_hygiene'
+  | 'kanji_compounds';
+
+export type KotobaWordType = 'kanji' | 'katakana' | 'phrase' | 'keigo';
+export type KotobaFrontMode = 'jp_to_meaning' | 'meaning_to_jp' | 'kana_to_kanji';
+export type KotobaStudyMode = 'srs' | 'free' | 'quiz';
+
+export interface KanjiPart {
+  char: string;
+  on: string;
+  kun: string;
+  meaningId: string;
+  meaningEn: string;
+}
+
+export interface KotobaCardItem {
+  id: string;
+  chapter: ChapterId;
+  pdfPage: number;
+  category: KotobaCategory;
+  wordType: KotobaWordType;
+  word: TrilingualText;
+  readingKana: string;
+  romaji?: string;
+  pitchAccent?: string;
+  kanjiBreakdown?: KanjiPart[];
+  example?: TrilingualText;
+  confusableWith?: string[];
+  tags: string[];
+  ttsText: string;
+}
+
+export interface KotobaSRSState {
+  cardId: string;
+  chapter: ChapterId;
+  category: KotobaCategory;
+  repetitions: number;
+  intervalDays: number;
+  easeFactor: number;
+  lapses: number;
+  correctCount: number;
+  reviewCount: number;
+  dueTimestamp: number;
+  lastReviewedAt: number | null;
+  bookmarked: boolean;
+}
 
 export interface TrilingualText {
   /** Japanese HTML string using strictly <ruby>Kanji<rt>kana</rt></ruby> tags */
@@ -94,22 +146,38 @@ export interface DailyActivityLog {
 export interface UserSettings {
   furiganaMode: FuriganaMode;
   langPreset: LangPreset;
+  hideTranslation: boolean;
   dailyGoal: number;
   ttsRate: 0.75 | 1.0 | 1.2;
   ttsAutoPlay: boolean;
   ecoMode: boolean;
 }
 
-export interface BackupPayload {
+export interface BackupPayloadV1 {
   schemaVersion: 1;
   exportedAt: string;
   srs_states: SRSCardState[];
+  kotoba_states?: KotobaSRSState[];
   cbt_attempts: CBTAttemptRecord[];
   cbt_weak_ids: CBTWeakRecord[];
   drill_progress: DrillProgressRecord[];
   daily_logs: DailyActivityLog[];
   settings: UserSettings;
 }
+
+export interface BackupPayloadV2 {
+  schemaVersion: 2;
+  exportedAt: string;
+  srs_states: SRSCardState[];
+  kotoba_states: KotobaSRSState[];
+  cbt_attempts: CBTAttemptRecord[];
+  cbt_weak_ids: CBTWeakRecord[];
+  drill_progress: DrillProgressRecord[];
+  daily_logs: DailyActivityLog[];
+  settings: UserSettings;
+}
+
+export type BackupPayload = BackupPayloadV1 | BackupPayloadV2;
 
 export interface SequenceStep {
   id: string;
